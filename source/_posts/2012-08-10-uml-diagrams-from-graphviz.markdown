@@ -26,7 +26,7 @@ Graphviz's disadvantages:
 
 For a long time graphviz supported the inclusion of PostScript files to define shapes, but this was only useful if you were outputting PostScript as a final result. I like using SVG as my format of choice since it can be freely scaled and works in most web browsers these days. Looking around the other day, I found a reference to the fact that Graphviz also supports the inclusion of SVG files as an image format.  With a little experimentation, I found that it works pretty well.
 
-First, I created a series of UML images in SVG format for inclusion. The full set is in the Github project referenced below, but an example for a Component icon looks like this:
+First, I created a series of UML images in SVG format for inclusion. The full set is in the GitHub project referenced below, but an example for a Component icon looks like this:
 
 ``` xml component.svg
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
@@ -161,6 +161,6 @@ Which is not too bad of a start. From here, there's a few things I think I could
 
 1. Pre-process the dot file. Come up with an annotation to denote the type of image to include for a node without having to reference the image file.
 2. Assign ids and classes as appropriate in the output which is handy for animating the resulting SVG or otherwise working with the SVG DOM later.
-3. Post-process the SVG output to look nicer. Apply a better look to the subgraphs, round the corners, add add gradients, etc. This sort of thing has been done before with XSLT.
+3. Post-process the SVG output to look nicer. Apply a better look to the sub-graphs, round the corners, add add gradients, etc. This sort of thing has been done before with XSLT.
 
 I think this approach is reasonable for some UML types: component, use case, collaboration, activity, and maybe deployment. Sequence diagrams are different in layout and probably aren't worth the effort to attempt.
