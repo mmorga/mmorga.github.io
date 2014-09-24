@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Dot Graphviz Uml Architecture | Comanche Hill]]></title>
+  <link href="http://mmorga.github.io/blog/categories/dot-graphviz-uml-architecture/atom.xml" rel="self"/>
+  <link href="http://mmorga.github.io/"/>
+  <updated>2014-09-24T08:25:55-05:00</updated>
+  <id>http://mmorga.github.io/</id>
+  <author>
+    <name><![CDATA[Mark Morga]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[UML Diagrams From Graphviz]]></title>
+    <link href="http://mmorga.github.io/blog/2012/08/10/uml-diagrams-from-graphviz/"/>
+    <updated>2012-08-10T11:35:00-05:00</updated>
+    <id>http://mmorga.github.io/blog/2012/08/10/uml-diagrams-from-graphviz</id>
+    <content type="html"><![CDATA[<p>I&rsquo;m not a huge fan of UML. I find that it took a simple idea (standard conceptual drawings) and made it much more complex than necessary with the unwise goal of allowing commercial UML tools to flourish and make code-to-diagram round trip conversion something people might want to do. Something like MagicDraw I find horrible from a performance and usability perspective.</p>
+
+<p>I&rsquo;m also not a big fan of a lot of drawing software. Visio is great unless you don&rsquo;t run on Windows, don&rsquo;t own a copy, or care about usability. Omnigraffle on the Mac is arguably better on the usability front, but you still end up tweaking the drawing a lot more than just entering your relationships and drawing connections. With any drawing software, the saved file is not human readable - and looking at diffs in a source control system tells you nothing</p>
+
+<p>I like Graphviz for making quick drawings that are minimalistic and take away the tweaking factor of a lot of apps. You describe the nodes and edges and Graphviz figures out how to handle the layout of the drawing. Need to add something later? No problem, just put it in the dot file and regenerate your results.</p>
+
+<p>Graphviz has the advantages of:</p>
+
+<ol>
+<li>Runs everywhere</li>
+<li>Free</li>
+<li>Text based - diff friendly changes</li>
+<li>Supports a wide variety of output formats: bmp, eps, fig, gd, gd2, gif, gtk, ico, imap, cmapx, jpg, pdf, plain, png, ps, svg, tiff, vml, vrml, wbmp, webp, xlib</li>
+</ol>
+
+
+<p>Graphviz&rsquo;s disadvantages:</p>
+
+<ol>
+<li>Sometimes the layout is less than perfect</li>
+<li>The output is pretty plain unless you spend a lot of adding style in the dot (which hurts the simplicity of the input format). Or spend time tweaking the output format (which gets you back into the image software trap)</li>
+<li>Doesn&rsquo;t support UML style graphics</li>
+</ol>
+
+
+<p>For a long time graphviz supported the inclusion of PostScript files to define shapes, but this was only useful if you were outputting PostScript as a final result. I like using SVG as my format of choice since it can be freely scaled and works in most web browsers these days. Looking around the other day, I found a reference to the fact that Graphviz also supports the inclusion of SVG files as an image format.  With a little experimentation, I found that it works pretty well.</p>
+
+<p>First, I created a series of UML images in SVG format for inclusion. The full set is in the Github project referenced below, but an example for a Component icon looks like this:</p>
+
+<pre><code class="xml component.svg">&lt;?xml version="1.0" encoding="UTF-8" standalone="no"?&gt;
+&lt;svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   version="1.1"
+   width="91"
+   height="36"
+   id="component-svg"&gt;
+   &lt;defs&gt;
+     &lt;symbol id="component-badge" class="badge" preserveAspectRatio="xMaxYMin" viewBox="-1 -1 14 12" style="fill:#ffffff;stroke:#000000;stroke-width:0.75"&gt;
+        &lt;rect height="10" width="10" x="3" y="0"/&gt;
+        &lt;rect height="2" width="6" x="0" y="2"/&gt;
+        &lt;rect height="2" width="6" x="0" y="6"/&gt;
+      &lt;/symbol&gt;
+    &lt;/defs&gt;
+    &lt;g&gt;
+      &lt;rect
+           height="35"
+           width="90"
+           y="0"
+           x="0"
+           class="umlbox" 
+           style="fill:#ffffff;stroke:#000000;stroke-width:1;"/&gt;
+        &lt;use x="72" y="4" xlink:href="#component-badge" width="15" height="11"/&gt;
+   &lt;/g&gt;
+&lt;/svg&gt;
+</code></pre>
+
+<p>Then you can create a file describing your Component Diagram which looks like this:</p>
+
+<pre><code class="ruby sample.dot">digraph EventAggregationComponentDiagram {
+    label="Event Aggregation Component Diagram";
+    fontname="Helvetica";
+    fontsize="10";
+    node [fontname="Helvetica",fontsize="10",shape=none];
+    edge [arrowhead="vee",style="dashed",color="#003388",fontname="Helvetica",fontsize="8"];
+
+    rankdir=LR;
+
+    subgraph cluster0 {
+        style=filled;
+        color="#2b6f6f";
+        fillcolor="#fc93cb";
+        label = "Monitoring Services";
+
+        // Services
+        radar [id="radar",label="Radar",image="service.svg"];
+        monitoringServices [id="monitoring-services",label="Monitoring\nServices",image="service.svg"];
+        enterpriseEventIntegration [id="enterprise-event-integration",label="Enterprise\nEvent\nIntegration",image="service.svg"];
+    }
+
+    subgraph cluster1 {
+        style=filled;
+        color="#2b6f6f";
+        fillcolor="#96f4eb";
+        label = "Event Aggregation";
+
+        eventApi [id="event-api",label="Event\nREST API",image="service.svg"];
+
+        // Databases
+        rbaSqlServer [label="RBA\nSQL\nServer",image="database.svg"];
+        riak [label="Riak",image="cloud.svg"];
+
+        // Components
+        eventSimulator [id="event-simulator",label="Event\nSimulator",image="component.svg"];
+        eventPreProcessor [id="event-pre-processor",label="Event Pre-\nProcessor",image="component.svg"];
+        eventCorrelation [id="event-correlation",label="Event\nCorrelation",image="component.svg"];
+        gridMaintainer [id="grid-maintainer",label="Grid\nMaintainer",image="component.svg"];
+        loggingJournal [label="Logging\nJournal",image="component.svg"];
+        loggingSqlAdapter [label="SQL\nAdapter",image="component.svg"];
+        watchdog [label="Watchdog",image="component.svg"];
+
+        // Portals
+        devOps [label="DevOps\nControl\nPanel", image="portal.svg"];
+        riakAdmin [label="Riak\nAdmin\nWeb\nPortal",image="portal.svg"];
+    }
+
+    subgraph cluster2 {
+        style=filled;
+        color="#2b6f6f";
+        fillcolor="#c5eb83";
+        label = "RBA";
+
+        eventLegacyApi [id="event-legacy-api",label="Event\n2.0 API",image="service.svg"];
+        processAutomation [label="Process\nAutomation",image="component.svg"];
+        rbaActiveMQ [label="RBA ActiveMQ",image="queue.svg"];
+    }
+
+    subgraph cluster3 {
+        color="none";
+        siteScope [label="SiteScope",image="user.svg"];
+        scom [label="SCOM",image="user.svg"];
+        maas [label="MaaS",image="user.svg"];
+    }
+
+    subgraph cluster4 {
+        color="none";
+        atomFeeds [label="Atom\nFeeds",image="user.svg"];
+        futureSources [label="Future\nSources",image="user.svg"];       
+    }
+
+    subgraph cluster5 {
+        color="none";
+        // Users
+        publicRestClients [label="Public\nREST\nClients",image="user.svg"];
+        restClients [label="REST\nClients",image="user.svg"];
+    }
+
+    // Connections
+    watchdog-&gt;riak;
+    watchdog-&gt;eventPreProcessor;
+    watchdog-&gt;eventCorrelation;
+
+    devOps-&gt;eventApi;
+    devOps-&gt;riak;
+    devOps-&gt;rbaSqlServer;
+    riakAdmin-&gt;riak;
+
+    siteScope-&gt;radar[color="#c0151b"];
+    siteScope-&gt;enterpriseEventIntegration[color="#6bc001"];
+    scom-&gt;monitoringServices[color="#c0151b"];
+    scom-&gt;enterpriseEventIntegration[color="#6bc001"];
+    maas-&gt;monitoringServices[color="#c0151b"];
+    maas-&gt;enterpriseEventIntegration[color="#6bc001"];
+    atomFeeds-&gt;enterpriseEventIntegration;
+    futureSources-&gt;enterpriseEventIntegration;
+    publicRestClients-&gt;eventApi;
+    restClients-&gt;eventApi;
+    loggingSqlAdapter-&gt;rbaSqlServer;
+    gridMaintainer-&gt;rbaSqlServer;
+    gridMaintainer-&gt;riak;
+    eventCorrelation-&gt;riak;
+    eventApi-&gt;riak;
+    eventPreProcessor-&gt;riak;
+
+    radar -&gt; eventLegacyApi [color="#c0151b"];
+    monitoringServices -&gt; eventLegacyApi [color="#c0151b"];
+
+    enterpriseEventIntegration -&gt; eventApi;
+    eventSimulator-&gt;eventApi;
+    eventApi-&gt;eventPreProcessor [label="ZeroMQ"];
+    eventPreProcessor-&gt;eventCorrelation [label="ZeroMQ"];
+    eventPreProcessor-&gt;gridMaintainer [label="Registration"];
+    eventPreProcessor-&gt;loggingJournal;
+    loggingSqlAdapter-&gt;loggingJournal;
+    eventCorrelation-&gt;loggingJournal;
+
+    eventPreProcessor-&gt;rbaActiveMQ;
+    eventCorrelation-&gt;rbaActiveMQ;
+    eventLegacyApi-&gt;rbaActiveMQ;
+    rbaActiveMQ-&gt;processAutomation;
+};
+</code></pre>
+
+<p>Running the file through graphviz like this:</p>
+
+<pre><code class="bash Process the dot file">dot -Tsvg -o sample.svg sample.dot
+</code></pre>
+
+<p>Results in an image that looks like this:</p>
+
+<p><img src="/images/2012-08-10/sample.svg" alt="Sample Component Diagram" /></p>
+
+<p>Which is not too bad of a start. From here, there&rsquo;s a few things I think I could do to make it even better.</p>
+
+<ol>
+<li>Pre-process the dot file. Come up with an annotation to denote the type of image to include for a node without having to reference the image file.</li>
+<li>Assign ids and classes as appropriate in the output which is handy for animating the resulting SVG or otherwise working with the SVG DOM later.</li>
+<li>Post-process the SVG output to look nicer. Apply a better look to the subgraphs, round the corners, add add gradients, etc. This sort of thing has been done before with XSLT.</li>
+</ol>
+
+
+<p>I think this approach is reasonable for some UML types: component, use case, collaboration, activity, and maybe deployment. Sequence diagrams are different in layout and probably aren&rsquo;t worth the effort to attempt.</p>
+]]></content>
+  </entry>
+  
+</feed>
