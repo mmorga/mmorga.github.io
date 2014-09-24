@@ -3,12 +3,6 @@
   
   
   <url>
-    <loc>http://mmorga.github.io/blog/2012/09/24/converted-again/</loc>
-    <lastmod>2012-09-24T20:48:00-05:00</lastmod>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
     <loc>http://mmorga.github.io/blog/2012/08/10/uml-diagrams-from-graphviz/</loc>
     <lastmod>2012-08-10T11:35:00-05:00</lastmod>
     <priority>0.8</priority>
@@ -1475,14 +1469,14 @@
   
   <url>
     <loc>http://mmorga.github.io/blog/archives/</loc>
-    <lastmod>2014-09-24T08:25:55-05:00</lastmod>
+    <lastmod>2014-09-24T09:19:49-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://mmorga.github.io/</loc>
-    <lastmod>2014-09-24T08:25:55-05:00</lastmod>
+    <lastmod>2014-09-24T09:19:49-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
