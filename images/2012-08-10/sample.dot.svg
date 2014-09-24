@@ -29,7 +29,7 @@
 </g>
 <!-- payment -->
 <g id="payment" class="node"><title>payment</title>
-<image xlink:href="/images/2012-08-10/service.svg" width="86px" height="36px" preserveAspectRatio="xMinYMin meet" x="112.463" y="-95"/>
+<image xlink:href="service.svg" width="86px" height="36px" preserveAspectRatio="xMinYMin meet" x="112.463" y="-95"/>
 <text text-anchor="middle" x="155.463" y="-74" font-family="Helvetica,sans-Serif" font-size="10.00">Payment</text>
 </g>
 <!-- eventQueue -->
