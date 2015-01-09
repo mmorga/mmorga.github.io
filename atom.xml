@@ -4,7 +4,7 @@
   <title><![CDATA[Comanche Hill]]></title>
   <link href="http://mmorga.github.io/atom.xml" rel="self"/>
   <link href="http://mmorga.github.io/"/>
-  <updated>2015-01-08T21:44:48-06:00</updated>
+  <updated>2015-01-09T14:01:43-06:00</updated>
   <id>http://mmorga.github.io/</id>
   <author>
     <name><![CDATA[Mark Morga]]></name>
@@ -448,7 +448,7 @@ isn&rsquo;t yet.</p>
     <link href="http://mmorga.github.io/blog/2012/01/01/hmm-been-a-couple-of-years/"/>
     <updated>2012-01-01T00:00:00-06:00</updated>
     <id>http://mmorga.github.io/blog/2012/01/01/hmm-been-a-couple-of-years</id>
-    <content type="html"><![CDATA[Happy New Year!  Here's to a great one for you and yours.
+    <content type="html"><![CDATA[<p>Happy New Year!  Here&rsquo;s to a great one for you and yours.</p>
 ]]></content>
   </entry>
   
@@ -457,44 +457,73 @@ isn&rsquo;t yet.</p>
     <link href="http://mmorga.github.io/blog/2009/12/18/spoiler-free-avatar-review/"/>
     <updated>2009-12-18T00:00:00-06:00</updated>
     <id>http://mmorga.github.io/blog/2009/12/18/spoiler-free-avatar-review</id>
-    <content type="html"><![CDATA[			<p>The bottom line, it’s well worth seeing with a couple of caveats below.</p>
+    <content type="html"><![CDATA[<pre><code>        &lt;p&gt;The bottom line, it’s well worth seeing with a couple of caveats below.&lt;/p&gt;
+</code></pre>
 
-<strong>The Good:</strong><br>
+<p><strong>The Good:</strong><br></p>
+
 <ul>
-	<li>The most amazing visuals that I’ve seen in a movie.  The imagery is like seeing great science fiction paintings come to life.</li>
+    <li>The most amazing visuals that I’ve seen in a movie.  The imagery is like seeing great science fiction paintings come to life.</li>
          <li>The 3d on a 4k digital projection is by far the best I’ve ever seen.  It does take a bit to get used to and there are moments that look somewhat video game-like.  
 </li></ul>
-<strong>The Bad:</strong><br>
+
+
+<p><strong>The Bad:</strong><br></p>
+
 <ul>
-	<li>The story is pretty pedestrian and has a lot of cliches</li>
+    <li>The story is pretty pedestrian and has a lot of cliches</li>
 <li>Most of the characters are two dimensional</li>
-	<li>I would have liked aliens that were a little more alien and a little less “thinly veiled Native Americans”</li>
+    <li>I would have liked aliens that were a little more alien and a little less “thinly veiled Native Americans”</li>
 </ul>
+
+
+
 
 <p><strong>The Really Bad:</strong></p>
 
-Like the Dude said:<br>
+
+<p>Like the Dude said:<br></p>
+
 <blockquote><dl><dt>The Dude:</dt> <dd>I don’t see any connection to Vietnam, Walter.</dd>
 <dt>Walter Sobchak:</dt><dd>Well, there isn’t a literal connection, Dude.</dd><dt>The Dude:</dt><dd>Walter, face it, there isn’t any connection.</dd></dl></blockquote>
 
+
+
+
 <ol><li>The Vietcong weren’t primarily armed with bows and arrows.</li>
-	<li>To imply (as this film seems to) that Al Qaeda and/or the Taliban were just innocent people sitting on a resource we wanted to steal is ridiculous.</li>
+    <li>To imply (as this film seems to) that Al Qaeda and/or the Taliban were just innocent people sitting on a resource we wanted to steal is ridiculous.</li>
          <li>To imply further that Al Qaeda or the Taliban were just declared terrorists (despite doing nothing to provoke us) to justify attacking them is outright offensive.</li>
 <li>“Daisy Cutters?”  Seriously?  Afraid that the audience wouldn’t get your subtle effort at analogy?
 </li></ol>
 
+
+
+
 <p>The class and race politics in Avatar are almost of caricature of rich, white, liberal guilt and self-loathing.  </p>
+
+
+
 
 <ul>
 <li>Business (and the military**) = universally bad (hate nature, greedy, lie, cheat, steal)</li>
 <li>Shamanistic and low technology people = universally good (love nature, peaceful – except, of course, when righteously killing the above)</li>
 </ul>
 
+
+
+
 <p>** Except for the female soldier of color.</p>
+
+
+
 
 <p><strong>The Bottom Line</strong></p>
 
+
+
+
 <p>James Cameron spent tens of thousands of hours to build one of the most beautiful and engaging worlds yet seen in the movies.  Unfortunately, he should have spent a weekend with a real science fiction author to come up with a story deserving of that world.  </p>
+
 ]]></content>
   </entry>
   
@@ -503,7 +532,7 @@ Like the Dude said:<br>
     <link href="http://mmorga.github.io/blog/2009/08/01/moved-to-slicehost/"/>
     <updated>2009-08-01T00:00:00-05:00</updated>
     <id>http://mmorga.github.io/blog/2009/08/01/moved-to-slicehost</id>
-    <content type="html"><![CDATA[I’ve moved my blog off of my Rackspace personal server onto a SliceHost server.
+    <content type="html"><![CDATA[<p>I’ve moved my blog off of my Rackspace personal server onto a SliceHost server.</p>
 ]]></content>
   </entry>
   
@@ -512,7 +541,7 @@ Like the Dude said:<br>
     <link href="http://mmorga.github.io/blog/2008/12/28/the-year-in-review-according-to-dave-barry/"/>
     <updated>2008-12-28T00:00:00-06:00</updated>
     <id>http://mmorga.github.io/blog/2008/12/28/the-year-in-review-according-to-dave-barry</id>
-    <content type="html"><![CDATA[There's too much comedy gold here to cherry pick.  <a href="http://www.washingtonpost.com/wp-dyn/content/article/2008/12/19/AR2008121901343.html">Read the whole thing!</a>
+    <content type="html"><![CDATA[<p>There&rsquo;s too much comedy gold here to cherry pick.  <a href="http://www.washingtonpost.com/wp-dyn/content/article/2008/12/19/AR2008121901343.html">Read the whole thing!</a></p>
 ]]></content>
   </entry>
   
@@ -521,10 +550,10 @@ Like the Dude said:<br>
     <link href="http://mmorga.github.io/blog/2008/12/02/film-personality-test/"/>
     <updated>2008-12-02T00:00:00-06:00</updated>
     <id>http://mmorga.github.io/blog/2008/12/02/film-personality-test</id>
-    <content type="html"><![CDATA[via <a href="http://www.kottke.org/08/12/film-personality-test">Kottke </a>via <a href="http://nelsnelson.blogspot.com/2008/12/kottke-favorite-movie-per-director-re.html">Nels</a>
+    <content type="html"><![CDATA[<p>via <a href="http://www.kottke.org/08/12/film-personality-test">Kottke </a>via <a href="http://nelsnelson.blogspot.com/2008/12/kottke-favorite-movie-per-director-re.html">Nels</a></p>
 
-Choose your favorite movie per director.
-1) Joel Coen, 2) Wes Anderson, 3) Hal Ashby, 4) Kevin Smith, 5) Quentin Tarantino, 6) Stanley Kubrick, 7) P.T. Anderson, 8) Errol Morris
+<p>Choose your favorite movie per director.
+1) Joel Coen, 2) Wes Anderson, 3) Hal Ashby, 4) Kevin Smith, 5) Quentin Tarantino, 6) Stanley Kubrick, 7) P.T. Anderson, 8) Errol Morris</p>
 
 <ol>
 
@@ -538,6 +567,7 @@ Choose your favorite movie per director.
 <li>Errol Morris: The Thin Blue Line
 
 </ol>
+
 ]]></content>
   </entry>
   
@@ -546,27 +576,27 @@ Choose your favorite movie per director.
     <link href="http://mmorga.github.io/blog/2008/11/25/letus35-mini-review/"/>
     <updated>2008-11-25T00:00:00-06:00</updated>
     <id>http://mmorga.github.io/blog/2008/11/25/letus35-mini-review</id>
-    <content type="html"><![CDATA[I've been wanting to get back into filmmaking.  I've been working periodically on a feature length script but in the meantime, I was asked to work on a music video (more on this soon).  The <a href="http://www.adapterplace.com/component/page,shop.product_details/flypage,shop.garden_flypage/product_id,43/category_id,11/manufacturer_id,0/option,com_virtuemart/Itemid,56/vmcchk,1/">Letus35 mini</a> has had me interested for quite a while.  I had made a deal with myself that I would purchase one if I made enough progress on the script, but the opportunity to shake it out on a music video was too tempting.
+    <content type="html"><![CDATA[<p>I&rsquo;ve been wanting to get back into filmmaking.  I&rsquo;ve been working periodically on a feature length script but in the meantime, I was asked to work on a music video (more on this soon).  The <a href="http://www.adapterplace.com/component/page,shop.product_details/flypage,shop.garden_flypage/product_id,43/category_id,11/manufacturer_id,0/option,com_virtuemart/Itemid,56/vmcchk,1/">Letus35 mini</a> has had me interested for quite a while.  I had made a deal with myself that I would purchase one if I made enough progress on the script, but the opportunity to shake it out on a music video was too tempting.</p>
 
-This summer, I purchased a <a href="http://www.usa.canon.com/consumer/controller?act=ModelInfoAct&fcategoryid=177&modelid=16186">Canon HF10 HDV camcorder</a>.  I had been looking at the HV20 and HV30, but the reviews indicated that the sensor quality on the HF10 was similar and I couldn&#8217;t pass up the opportunity to leave tape behind.  So this post is more of a collection of my experiences with the combination of the HF10 and the Letus35 mini rather than a comprehensive review.
+<p>This summer, I purchased a <a href="http://www.usa.canon.com/consumer/controller?act=ModelInfoAct&fcategoryid=177&modelid=16186">Canon HF10 HDV camcorder</a>.  I had been looking at the HV20 and HV30, but the reviews indicated that the sensor quality on the HF10 was similar and I couldn&rsquo;t pass up the opportunity to leave tape behind.  So this post is more of a collection of my experiences with the combination of the HF10 and the Letus35 mini rather than a comprehensive review.</p>
 
-I chose to go with the Canon FD lens mount because I already had a few FD lenses and FD lenses are plentiful and inexpensive on eBay.  The Canon EF mount is also available, but due to the lack of aperture ring on EF lenses, you need to set the aperture via a fairly hacky process involving an EOS body, not the best way to work.  In practice, this may not be as bad as it sounds, because you have a tendency to want to use the lenses close to wide open anyway to get the shallow depth of field that is one of the prime features of this sort of adapter.
+<p>I chose to go with the Canon FD lens mount because I already had a few FD lenses and FD lenses are plentiful and inexpensive on eBay.  The Canon EF mount is also available, but due to the lack of aperture ring on EF lenses, you need to set the aperture via a fairly hacky process involving an EOS body, not the best way to work.  In practice, this may not be as bad as it sounds, because you have a tendency to want to use the lenses close to wide open anyway to get the shallow depth of field that is one of the prime features of this sort of adapter.</p>
 
-I ordered the kit which included the FD mount, the rails system to mount the camcorder and lens securely and a nice case.  After working with the adapter for a few days, I&#8217;m convinced the rails kit is a requirement.  The rails from Letus are high quality and I wouldn&#8217;t feel comfortable using the adapter without the extra support that the rails provide.  The weak link in this system is definitely the filter threads that are used to join the camcorder to the adapter - you don&#8217;t want to risk damaging them.
+<p>I ordered the kit which included the FD mount, the rails system to mount the camcorder and lens securely and a nice case.  After working with the adapter for a few days, I&rsquo;m convinced the rails kit is a requirement.  The rails from Letus are high quality and I wouldn&rsquo;t feel comfortable using the adapter without the extra support that the rails provide.  The weak link in this system is definitely the filter threads that are used to join the camcorder to the adapter - you don&rsquo;t want to risk damaging them.</p>
 
-The setup of the system is a little involved, but with practice I believe I&#8217;ll be able to assemble, align, and focus the system in about 15 minutes.  The focus process is pretty easy to accomplish, but the HF10&#8217;s screen is too small to be used to focus on the ground glass.  Using the A/V out to my old standard-def TV was sufficient to focus correctly.  Since you will need to accomplish focus each time you re-assemble the system, you will probably want to bring a portable monitor with you on location.
+<p>The setup of the system is a little involved, but with practice I believe I&rsquo;ll be able to assemble, align, and focus the system in about 15 minutes.  The focus process is pretty easy to accomplish, but the HF10&rsquo;s screen is too small to be used to focus on the ground glass.  Using the A/V out to my old standard-def TV was sufficient to focus correctly.  Since you will need to accomplish focus each time you re-assemble the system, you will probably want to bring a portable monitor with you on location.</p>
 
-My first feature request is for transport of the system.  It would be nice to have a case in which you could securely store the assembled system.  I will likely purchase one in the near future.  As an alternative, it would be nice to be able to leave the 37mm threaded ring on the camcorder when storing the adapter, but there isn&#8217;t a cover to protect the adapter if you do this, so you end up having to fully disassemble the adapter when putting any part of it back in the case. 
+<p>My first feature request is for transport of the system.  It would be nice to have a case in which you could securely store the assembled system.  I will likely purchase one in the near future.  As an alternative, it would be nice to be able to leave the 37mm threaded ring on the camcorder when storing the adapter, but there isn&rsquo;t a cover to protect the adapter if you do this, so you end up having to fully disassemble the adapter when putting any part of it back in the case.</p>
 
-When the HF10 is mounted on the riser on the rails system, the camcorder is pretty close to the power button on the adapter.  I thought this might be a problem at first, but in practice it wasn&#8217;t at all.  The only potential problem here is that you can&#8217;t immediately see if the power light is on.  I did forget once or twice to power the adapter on (which results in video with noticeable grain from the ground glass), but this is more a matter of practice and habit.  It&#8217;s pretty obvious when the power is on because of the vibration of the unit.
+<p>When the HF10 is mounted on the riser on the rails system, the camcorder is pretty close to the power button on the adapter.  I thought this might be a problem at first, but in practice it wasn&rsquo;t at all.  The only potential problem here is that you can&rsquo;t immediately see if the power light is on.  I did forget once or twice to power the adapter on (which results in video with noticeable grain from the ground glass), but this is more a matter of practice and habit.  It&rsquo;s pretty obvious when the power is on because of the vibration of the unit.</p>
 
-Vibration is probably the biggest issue to be aware of.  Vibration is used by the adapter to hide the grain of the ground glass.  This works very well in practice.  I noticed a couple of side-effects with this system.  The biggest problem with the vibration is that it confuses the image stabilization system on the HF10.  With IS enabled, the video warbles when the camera is still and tends to overreact to actual shake.  As a result, I don&#8217;t believe I&#8217;ll be able to use the IS setting while using the adapter.  Not the end of the world.  The vibration does emit sound.  I doubt this sound would be picked up when using an external mic, but the on-board mics do pick up the sound as a low frequency buzz or rumble.  As a practical matter, if you are going to spend $1500 on a lens adapter system and not use an external mic, you hard larger problems ahead of you anyway.
+<p>Vibration is probably the biggest issue to be aware of.  Vibration is used by the adapter to hide the grain of the ground glass.  This works very well in practice.  I noticed a couple of side-effects with this system.  The biggest problem with the vibration is that it confuses the image stabilization system on the HF10.  With IS enabled, the video warbles when the camera is still and tends to overreact to actual shake.  As a result, I don&rsquo;t believe I&rsquo;ll be able to use the IS setting while using the adapter.  Not the end of the world.  The vibration does emit sound.  I doubt this sound would be picked up when using an external mic, but the on-board mics do pick up the sound as a low frequency buzz or rumble.  As a practical matter, if you are going to spend $1500 on a lens adapter system and not use an external mic, you hard larger problems ahead of you anyway.</p>
 
-The only other issue I ran into was a result of moving the camera around quite a bit on my camera test expedition with the kids.  Because the camera is mounted via the filter threads, the camera can easily rotate a bit with respect to the adapter during normal handling.  As a result, it&#8217;s important to occasionally verify the alignment when shooting.  It only caused a problem for me when I was zoomed out more than I normally would be to accentuate the natural vignetting of my 24mm lens.  I didn&#8217;t notice the alignment problem on the built in screen because of the vignetting, but I could see an off-kilter box frame in the final video.  This isn&#8217;t a huge problem, but it is something to keep an eye on.
+<p>The only other issue I ran into was a result of moving the camera around quite a bit on my camera test expedition with the kids.  Because the camera is mounted via the filter threads, the camera can easily rotate a bit with respect to the adapter during normal handling.  As a result, it&rsquo;s important to occasionally verify the alignment when shooting.  It only caused a problem for me when I was zoomed out more than I normally would be to accentuate the natural vignetting of my 24mm lens.  I didn&rsquo;t notice the alignment problem on the built in screen because of the vignetting, but I could see an off-kilter box frame in the final video.  This isn&rsquo;t a huge problem, but it is something to keep an eye on.</p>
 
-So aside from the minor issues (and they are truly minor), I&#8217;m really happy with the result.  The video I&#8217;ve captured looks much more filmic than I&#8217;ve ever achieved with pro-sumer cameras that I&#8217;ve had access to.  The look of the video straight off the camera is very pleasant to look at (nice bokeh from those FD lenses).  The focus is very manageable in the field with the built-in camcorder screen (the focus flaws in my camera test are more indicative of my skill than flaws in the adapter).  Certainly having a larger screen from the camcorder would make it easier to be much more precise when focusing.  I will be bringing a small monitor with me on shoots where I won&#8217;t be running all over.
+<p>So aside from the minor issues (and they are truly minor), I&rsquo;m really happy with the result.  The video I&rsquo;ve captured looks much more filmic than I&rsquo;ve ever achieved with pro-sumer cameras that I&rsquo;ve had access to.  The look of the video straight off the camera is very pleasant to look at (nice bokeh from those FD lenses).  The focus is very manageable in the field with the built-in camcorder screen (the focus flaws in my camera test are more indicative of my skill than flaws in the adapter).  Certainly having a larger screen from the camcorder would make it easier to be much more precise when focusing.  I will be bringing a small monitor with me on shoots where I won&rsquo;t be running all over.</p>
 
-My biggest gripe in shooting on video in the past has that I haven&#8217;t had control over the depth of field and now I do.  I&#8217;m a very happy adapter owner.  I&#8217;ll post a followup with the results and lessons I learned on the music video shoot.  
+<p>My biggest gripe in shooting on video in the past has that I haven&rsquo;t had control over the depth of field and now I do.  I&rsquo;m a very happy adapter owner.  I&rsquo;ll post a followup with the results and lessons I learned on the music video shoot.</p>
 ]]></content>
   </entry>
   
@@ -575,9 +605,12 @@ My biggest gripe in shooting on video in the past has that I haven&#8217;t had c
     <link href="http://mmorga.github.io/blog/2008/11/25/camera-test/"/>
     <updated>2008-11-25T00:00:00-06:00</updated>
     <id>http://mmorga.github.io/blog/2008/11/25/camera-test</id>
-    <content type="html"><![CDATA[I shot some video this weekend with my kids in Landa and Hinman Island Parks to try out my camera with my new Letus35mini adapter.  I just cut this together in iMovie - so the editing is minimal.  I did no processing of the video - this is straight off of the camera.
+    <content type="html"><![CDATA[<p>I shot some video this weekend with my kids in Landa and Hinman Island Parks to try out my camera with my new Letus35mini adapter.  I just cut this together in iMovie - so the editing is minimal.  I did no processing of the video - this is straight off of the camera.</p>
 
-<object width="400" height="300"><param name="allowfullscreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id=2342928&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=&amp;fullscreen=1" /><embed src="http://vimeo.com/moogaloop.swf?clip_id=2342928&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=&amp;fullscreen=1" type="application/x-shockwave-flash" allowfullscreen="true" allowscriptaccess="always" width="400" height="300"></embed></object><br /><a href="http://vimeo.com/2342928">Vampire Tag</a> from <a href="http://vimeo.com/markmorga">Mark Morga</a> on <a href="http://vimeo.com">Vimeo</a>.
+<object width="400" height="300"><param name="allowfullscreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id=2342928&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=&amp;fullscreen=1" /><embed src="http://vimeo.com/moogaloop.swf?clip_id=2342928&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=&amp;fullscreen=1" type="application/x-shockwave-flash" allowfullscreen="true" allowscriptaccess="always" width="400" height="300"></embed></object>
+
+
+<p><br /><a href="http://vimeo.com/2342928">Vampire Tag</a> from <a href="http://vimeo.com/markmorga">Mark Morga</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
 ]]></content>
   </entry>
   
@@ -586,7 +619,7 @@ My biggest gripe in shooting on video in the past has that I haven&#8217;t had c
     <link href="http://mmorga.github.io/blog/2008/10/31/happy-halloween/"/>
     <updated>2008-10-31T00:00:00-05:00</updated>
     <id>http://mmorga.github.io/blog/2008/10/31/happy-halloween</id>
-    <content type="html"><![CDATA[Keep in mind the <a href="http://www.cockeyed.com/archive/candy_code/candy_code.html">chalk candy codes</a> to maximize your trick or treating productivity.
+    <content type="html"><![CDATA[<p>Keep in mind the <a href="http://www.cockeyed.com/archive/candy_code/candy_code.html">chalk candy codes</a> to maximize your trick or treating productivity.</p>
 ]]></content>
   </entry>
   
@@ -595,19 +628,22 @@ My biggest gripe in shooting on video in the past has that I haven&#8217;t had c
     <link href="http://mmorga.github.io/blog/2008/10/14/rollerderby-sunday/"/>
     <updated>2008-10-14T00:00:00-05:00</updated>
     <id>http://mmorga.github.io/blog/2008/10/14/rollerderby-sunday</id>
-    <content type="html"><![CDATA[Sunday night I finally made it back to a derby event.  The bout was between San Antonio's <a href="http://profile.myspace.com/index.cfm?fuseaction=user.viewprofile&friendid=365431144">Las Tejanas</a> and Tulsa, Oklahoma&#8217;s <a href="http://www.greencountryrollergirls.com/">Green Country Rollergirls</a>.  
+    <content type="html"><![CDATA[<p>Sunday night I finally made it back to a derby event.  The bout was between San Antonio&rsquo;s <a href="http://profile.myspace.com/index.cfm?fuseaction=user.viewprofile&friendid=365431144">Las Tejanas</a> and Tulsa, Oklahoma&rsquo;s <a href="http://www.greencountryrollergirls.com/">Green Country Rollergirls</a>.</p>
 
-<a href="http://www.flickr.com/photos/markmorga/2941818266/in/set-72157608016236631/"><img src="http://farm4.static.flickr.com/3244/2941818266_a9c08d047a.jpg?v=0"></a>
+<p><a href="http://www.flickr.com/photos/markmorga/2941818266/in/set-72157608016236631/"><img src="http://farm4.static.flickr.com/3244/2941818266_a9c08d047a.jpg?v=0"></a></p>
 
-<a href="http://www.flickr.com/photos/markmorga/2941018412/in/set-72157608016236631/"><img src="http://farm4.static.flickr.com/3057/2941018412_c9d3a0ecaf.jpg?v=0"></a>
+<p><a href="http://www.flickr.com/photos/markmorga/2941018412/in/set-72157608016236631/"><img src="http://farm4.static.flickr.com/3057/2941018412_c9d3a0ecaf.jpg?v=0"></a></p>
 
-<a href="http://www.flickr.com/photos/markmorga/2940928421/in/set-72157608016236631/"><img src="http://farm4.static.flickr.com/3225/2940928421_6e3f3b0bfc.jpg?v=0"></a>
+<p><a href="http://www.flickr.com/photos/markmorga/2940928421/in/set-72157608016236631/"><img src="http://farm4.static.flickr.com/3225/2940928421_6e3f3b0bfc.jpg?v=0"></a></p>
 
-<a href="http://www.flickr.com/photos/markmorga/2940930575/in/set-72157608016236631/"><img src="http://farm4.static.flickr.com/3208/2940930575_11af6ca2ba.jpg?v=0"></a>
+<p><a href="http://www.flickr.com/photos/markmorga/2940930575/in/set-72157608016236631/"><img src="http://farm4.static.flickr.com/3208/2940930575_11af6ca2ba.jpg?v=0"></a></p>
 
-The after-party was the most fun I&#8217;ve had at a derby event in a long time.  I managed to capture the highlight on video.
+<p>The after-party was the most fun I&rsquo;ve had at a derby event in a long time.  I managed to capture the highlight on video.</p>
 
-<object width="400" height="302">	<param name="allowfullscreen" value="true" />	<param name="allowscriptaccess" value="always" />	<param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id=1971082&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=&amp;fullscreen=1" />	<embed src="http://vimeo.com/moogaloop.swf?clip_id=1971082&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=&amp;fullscreen=1" type="application/x-shockwave-flash" allowfullscreen="true" allowscriptaccess="always" width="400" height="302"></embed></object><br /><a href="http://vimeo.com/1971082?pg=embed&amp;sec=1971082">Ultimate Piggyback Battle</a> from <a href="http://vimeo.com/markmorga?pg=embed&amp;sec=1971082">Mark Morga</a> on <a href="http://vimeo.com?pg=embed&amp;sec=1971082">Vimeo</a>.
+<object width="400" height="302">   <param name="allowfullscreen" value="true" />   <param name="allowscriptaccess" value="always" />   <param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id=1971082&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=&amp;fullscreen=1" />   <embed src="http://vimeo.com/moogaloop.swf?clip_id=1971082&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=&amp;fullscreen=1" type="application/x-shockwave-flash" allowfullscreen="true" allowscriptaccess="always" width="400" height="302"></embed></object>
+
+
+<p><br /><a href="http://vimeo.com/1971082?pg=embed&amp;sec=1971082">Ultimate Piggyback Battle</a> from <a href="http://vimeo.com/markmorga?pg=embed&amp;sec=1971082">Mark Morga</a> on <a href="http://vimeo.com?pg=embed&amp;sec=1971082">Vimeo</a>.</p>
 ]]></content>
   </entry>
   
@@ -616,10 +652,9 @@ The after-party was the most fun I&#8217;ve had at a derby event in a long time.
     <link href="http://mmorga.github.io/blog/2008/09/23/convergence/"/>
     <updated>2008-09-23T00:00:00-05:00</updated>
     <id>http://mmorga.github.io/blog/2008/09/23/convergence</id>
-    <content type="html"><![CDATA[I figured this would happen at some point in a year or two, but the most recent Canon and Nikon DSLRs feature HD Video recording.  
+    <content type="html"><![CDATA[<p>I figured this would happen at some point in a year or two, but the most recent Canon and Nikon DSLRs feature HD Video recording.</p>
 
-Geeze, I guess I need to save up for <a href="http://www.usa.canon.com/dlc/controller?act=GetArticleAct&articleID=2086">one of these</a> soon.
-
+<p>Geeze, I guess I need to save up for <a href="http://www.usa.canon.com/dlc/controller?act=GetArticleAct&articleID=2086">one of these</a> soon.</p>
 ]]></content>
   </entry>
   
@@ -628,7 +663,7 @@ Geeze, I guess I need to save up for <a href="http://www.usa.canon.com/dlc/contr
     <link href="http://mmorga.github.io/blog/2008/09/22/on-the-chili-issue/"/>
     <updated>2008-09-22T00:00:00-05:00</updated>
     <id>http://mmorga.github.io/blog/2008/09/22/on-the-chili-issue</id>
-    <content type="html"><![CDATA[Everyone knows you don't put beans in <a href="http://www.recipezaar.com/321236">chili</a>.
+    <content type="html"><![CDATA[<p>Everyone knows you don&rsquo;t put beans in <a href="http://www.recipezaar.com/321236">chili</a>.</p>
 ]]></content>
   </entry>
   
@@ -637,9 +672,9 @@ Geeze, I guess I need to save up for <a href="http://www.usa.canon.com/dlc/contr
     <link href="http://mmorga.github.io/blog/2008/08/04/morga%25e2%2580%2599s-2nd-law-of-computing-machinery-and-intelligence/"/>
     <updated>2008-08-04T00:00:00-05:00</updated>
     <id>http://mmorga.github.io/blog/2008/08/04/morga%e2%80%99s-2nd-law-of-computing-machinery-and-intelligence</id>
-    <content type="html"><![CDATA[If my dog can kill it, it's not a real robot.
+    <content type="html"><![CDATA[<p>If my dog can kill it, it&rsquo;s not a real robot.</p>
 
-<a href="http://pixar.wikia.com/wiki/Scud" alt="Scud the Dog from Toy Story"><img src="http://images.wikia.com/pixar/images//d/df/Scud.jpg"></a>
+<p><a href="http://pixar.wikia.com/wiki/Scud" alt="Scud the Dog from Toy Story"><img src="http://images.wikia.com/pixar/images//d/df/Scud.jpg"></a></p>
 ]]></content>
   </entry>
   
@@ -648,35 +683,37 @@ Geeze, I guess I need to save up for <a href="http://www.usa.canon.com/dlc/contr
     <link href="http://mmorga.github.io/blog/2008/07/16/chicken-broccoli-with-onions/"/>
     <updated>2008-07-16T00:00:00-05:00</updated>
     <id>http://mmorga.github.io/blog/2008/07/16/chicken-broccoli-with-onions</id>
-    <content type="html"><![CDATA[I came home from work tonight hungry for something tasty yet (mostly) healthy and was trying to stick with what I had on hand in the fridge.  I came up with the following (with a little help from my Chinese cook book).  Before I forget how I made it, here's what I did.
+    <content type="html"><![CDATA[<p>I came home from work tonight hungry for something tasty yet (mostly) healthy and was trying to stick with what I had on hand in the fridge.  I came up with the following (with a little help from my Chinese cook book).  Before I forget how I made it, here&rsquo;s what I did.</p>
 
-<strong>Ingredients</strong>
+<p><strong>Ingredients</strong></p>
+
 <ul>
-	<li>2 skinless chicken breasts</li>
-	<li>2 large stems broccoli</li>
-	<li>1 onion</li>
-	<li>4 tbs soy sauce</li>
-	<li>1 tsp brown sugar</li>
-	<li>3 tsp cornstarch</li>
-	<li>2 tsp canola oil</li>
-	<li>1 or 2 tbs brandy</li>
-	<li>pinch sugar</li>
-	<li>pinch kosher salt</li>
-	<li>1/2 tsp ground chili piquin</li>
-	<li>1 serrano chili</li>
+    <li>2 skinless chicken breasts</li>
+    <li>2 large stems broccoli</li>
+    <li>1 onion</li>
+    <li>4 tbs soy sauce</li>
+    <li>1 tsp brown sugar</li>
+    <li>3 tsp cornstarch</li>
+    <li>2 tsp canola oil</li>
+    <li>1 or 2 tbs brandy</li>
+    <li>pinch sugar</li>
+    <li>pinch kosher salt</li>
+    <li>1/2 tsp ground chili piquin</li>
+    <li>1 serrano chili</li>
 </ul>
 
-Cut the chicken breasts into inch long slices more or less bite sized.  Make the marinade for the chicken by mixing the soy sauce, brown sugar, corn starch, and oil (this was from my Chinese cook book).  Combine with the cut up chicken and set aside for at least 30 minutes.
-  
-Cut the broccoli into flowerets.  Cut the onion into bite size slices.  Dice the serrano.
 
-Heat a skillet to medium hot (it&#8217;s supposed to hot enough to make a drop of water evaporate immediately), add about 3 tbs of oil.  When the oil is hot, toss in the broccoli and stir fry for 30 seconds or so.  Sprinkle with a pinch or two of kosher salt and sugar, stir around for another minute then remove it from the skillet and cover it to keep it warn.  
+<p>Cut the chicken breasts into inch long slices more or less bite sized.  Make the marinade for the chicken by mixing the soy sauce, brown sugar, corn starch, and oil (this was from my Chinese cook book).  Combine with the cut up chicken and set aside for at least 30 minutes.</p>
 
-Throw the onions and serrano in the skillet and cook until tender.  Add the brandy and the broccoli to the onions and heat for another minute.  Remove from the skillet and cover to keep warm.
+<p>Cut the broccoli into flowerets.  Cut the onion into bite size slices.  Dice the serrano.</p>
 
-Heat the skillet up to medium hot again, add a little oil and the ground chili piquin, then add the chicken and marinade.  Stir fry until cooked through.
+<p>Heat a skillet to medium hot (it&rsquo;s supposed to hot enough to make a drop of water evaporate immediately), add about 3 tbs of oil.  When the oil is hot, toss in the broccoli and stir fry for 30 seconds or so.  Sprinkle with a pinch or two of kosher salt and sugar, stir around for another minute then remove it from the skillet and cover it to keep it warn.</p>
 
-Serve chicken and broccoli together with steamed rice.
+<p>Throw the onions and serrano in the skillet and cook until tender.  Add the brandy and the broccoli to the onions and heat for another minute.  Remove from the skillet and cover to keep warm.</p>
+
+<p>Heat the skillet up to medium hot again, add a little oil and the ground chili piquin, then add the chicken and marinade.  Stir fry until cooked through.</p>
+
+<p>Serve chicken and broccoli together with steamed rice.</p>
 ]]></content>
   </entry>
   
@@ -685,46 +722,48 @@ Serve chicken and broccoli together with steamed rice.
     <link href="http://mmorga.github.io/blog/2008/06/17/getting-started-with-ruby-on-rails/"/>
     <updated>2008-06-17T00:00:00-05:00</updated>
     <id>http://mmorga.github.io/blog/2008/06/17/getting-started-with-ruby-on-rails</id>
-    <content type="html"><![CDATA[My favorite development language/framework for the last nine months or so has been Ruby on Rails.  At lunch today with my Dad and one of his buddies, the topic came up and I started thinking about how to get people up and running with Ruby on Rails.  Here are my thoughts:
+    <content type="html"><![CDATA[<p>My favorite development language/framework for the last nine months or so has been Ruby on Rails.  At lunch today with my Dad and one of his buddies, the topic came up and I started thinking about how to get people up and running with Ruby on Rails.  Here are my thoughts:</p>
 
-<strong>Getting it Installed</strong>
+<p><strong>Getting it Installed</strong></p>
 
-For OS X and various Linux flavors, I recommend getting Ruby on Rails from the main <a href="http://www.rubyonrails.org/down">Ruby on Rails site</a>.  
+<p>For OS X and various Linux flavors, I recommend getting Ruby on Rails from the main <a href="http://www.rubyonrails.org/down">Ruby on Rails site</a>.</p>
 
-Rails development on Windows is a little more of a challenge, but you can get a reasonable start (at least enough to try things out) with <a href="http://instantrails.rubyforge.org/">InstantRails</a>.  
+<p>Rails development on Windows is a little more of a challenge, but you can get a reasonable start (at least enough to try things out) with <a href="http://instantrails.rubyforge.org/">InstantRails</a>.</p>
 
-<strong>Editors</strong>
+<p><strong>Editors</strong></p>
 
-You can edit Ruby code with any text editor.  I prefer <a href="http://macromates.com/">TextMate</a> on Mac OS X, but <a href="http://www.activestate.com/Products/komodo_ide/index.mhtml">Komodo</a> and <a href="http://www.jedit.org/">JEdit</a> are reasonable and work on Windows and Linux.
+<p>You can edit Ruby code with any text editor.  I prefer <a href="http://macromates.com/">TextMate</a> on Mac OS X, but <a href="http://www.activestate.com/Products/komodo_ide/index.mhtml">Komodo</a> and <a href="http://www.jedit.org/">JEdit</a> are reasonable and work on Windows and Linux.</p>
 
-<strong>Online Tutorials</strong>
+<p><strong>Online Tutorials</strong></p>
 
-This is a little tough at the moment, because Rails 2.1 hasn&#8217;t had as many &#8220;getting started&#8221; tutorials written as the 1.2x versions of Rails had.  
+<p>This is a little tough at the moment, because Rails 2.1 hasn&rsquo;t had as many &ldquo;getting started&rdquo; tutorials written as the 1.2x versions of Rails had.</p>
 
-There is a long tutorial at <a href="http://www.tutorialspoint.com/ruby-on-rails-2.1/index.htm">Tutorials Point</a> which looks like a good start.
+<p>There is a long tutorial at <a href="http://www.tutorialspoint.com/ruby-on-rails-2.1/index.htm">Tutorials Point</a> which looks like a good start.</p>
 
-The main Rails site has a page of <a href="http://www.rubyonrails.org/docs">tutorials and documentation links</a>.
+<p>The main Rails site has a page of <a href="http://www.rubyonrails.org/docs">tutorials and documentation links</a>.</p>
 
-<strong>Screencasts</strong>
+<p><strong>Screencasts</strong></p>
 
-Screencasts are a fantastic way to learn Rails.  There is a huge wealth of information here.
+<p>Screencasts are a fantastic way to learn Rails.  There is a huge wealth of information here.</p>
 
-<a href="http://railscasts.com">Railscasts</a> are a series of over 100 screencasts about Rails.
+<p><a href="http://railscasts.com">Railscasts</a> are a series of over 100 screencasts about Rails.</p>
 
-<a href="http://peepcode.com/">Peepcode</a> has a number of great quality screencasts for $9 each.
+<p><a href="http://peepcode.com/">Peepcode</a> has a number of great quality screencasts for $9 each.</p>
 
-<strong>Books</strong>
+<p><strong>Books</strong></p>
 
-The two books that I recommend most are:
+<p>The two books that I recommend most are:</p>
 
-<a href="http://www.amazon.com/gp/redirect.html?ie=UTF8&location=http%3A%2F%2Fwww.amazon.com%2FProgramming-Ruby-Pragmatic-Programmers-Second%2Fdp%2F0974514055%3Fie%3DUTF8%26s%3Dbooks%26qid%3D1213750192%26sr%3D1-1&tag=comahill-20&linkCode=ur2&camp=1789&creative=9325">Programming Ruby: The Pragmatic Programmers&#8217; Guide</a><img src="http://www.assoc-amazon.com/e/ir?t=comahill-20&amp;l=ur2&amp;o=1" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /> by Dave Thomas, Chad Fowler and Andy Hunt,  and <a href="http://www.amazon.com/gp/redirect.html?ie=UTF8&location=http%3A%2F%2Fwww.amazon.com%2FRails-Way-Addison-Wesley-Professional-Ruby%2Fdp%2F0321445619%3Fie%3DUTF8%26s%3Dbooks%26qid%3D1213750036%26sr%3D8-1&tag=comahill-20&linkCode=ur2&camp=1789&creative=9325">The Rails Way</a><img src="http://www.assoc-amazon.com/e/ir?t=comahill-20&amp;l=ur2&amp;o=1" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /> by Obie Fernandez.
+<p><a href="http://www.amazon.com/gp/redirect.html?ie=UTF8&location=http%3A%2F%2Fwww.amazon.com%2FProgramming-Ruby-Pragmatic-Programmers-Second%2Fdp%2F0974514055%3Fie%3DUTF8%26s%3Dbooks%26qid%3D1213750192%26sr%3D1-1&tag=comahill-20&linkCode=ur2&camp=1789&creative=9325">Programming Ruby: The Pragmatic Programmers&#8217; Guide</a><img src="http://www.assoc-amazon.com/e/ir?t=comahill-20&amp;l=ur2&amp;o=1" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /> by Dave Thomas, Chad Fowler and Andy Hunt,  and <a href="http://www.amazon.com/gp/redirect.html?ie=UTF8&location=http%3A%2F%2Fwww.amazon.com%2FRails-Way-Addison-Wesley-Professional-Ruby%2Fdp%2F0321445619%3Fie%3DUTF8%26s%3Dbooks%26qid%3D1213750036%26sr%3D8-1&tag=comahill-20&linkCode=ur2&camp=1789&creative=9325">The Rails Way</a><img src="http://www.assoc-amazon.com/e/ir?t=comahill-20&amp;l=ur2&amp;o=1" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /> by Obie Fernandez.</p>
 
-These two books are a great learning and reference combination for Ruby on Rails development.
+<p>These two books are a great learning and reference combination for Ruby on Rails development.</p>
 
-What are you waiting for?  Get learning!
+<p>What are you waiting for?  Get learning!</p>
 
-<iframe src="http://rcm.amazon.com/e/cm?t=comahill-20&o=1&p=8&l=as1&asins=0974514055&fc1=000000&IS2=1&lt1=_blank&lc1=0000FF&bc1=000000&bg1=FFFFFF&f=ifr" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe> <iframe src="http://rcm.amazon.com/e/cm?t=comahill-20&o=1&p=8&l=as1&asins=0321445619&fc1=000000&IS2=1&lt1=_blank&lc1=0000FF&bc1=000000&bg1=FFFFFF&f=ifr" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
+<iframe src="http://rcm.amazon.com/e/cm?t=comahill-20&o=1&p=8&l=as1&asins=0974514055&fc1=000000&IS2=1&lt1=_blank&lc1=0000FF&bc1=000000&bg1=FFFFFF&f=ifr" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
 
+
+<p> <iframe src="http://rcm.amazon.com/e/cm?t=comahill-20&o=1&p=8&l=as1&asins=0321445619&fc1=000000&IS2=1&lt1=_blank&lc1=0000FF&bc1=000000&bg1=FFFFFF&f=ifr" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe></p>
 ]]></content>
   </entry>
   
@@ -733,7 +772,7 @@ What are you waiting for?  Get learning!
     <link href="http://mmorga.github.io/blog/2008/05/16/barcamp-sa/"/>
     <updated>2008-05-16T00:00:00-05:00</updated>
     <id>http://mmorga.github.io/blog/2008/05/16/barcamp-sa</id>
-    <content type="html"><![CDATA[Anyone else planning to go to <a href="http://barcamp.pbwiki.com/BarCampSanAntonio">BarCamp San Antonio</a>?
+    <content type="html"><![CDATA[<p>Anyone else planning to go to <a href="http://barcamp.pbwiki.com/BarCampSanAntonio">BarCamp San Antonio</a>?</p>
 ]]></content>
   </entry>
   
@@ -742,9 +781,9 @@ What are you waiting for?  Get learning!
     <link href="http://mmorga.github.io/blog/2008/05/08/the-first-thing-to-do-after-you-get-laid-off/"/>
     <updated>2008-05-08T00:00:00-05:00</updated>
     <id>http://mmorga.github.io/blog/2008/05/08/the-first-thing-to-do-after-you-get-laid-off</id>
-    <content type="html"><![CDATA[<a href="http://www.expatsoftware.com/articles/2008/05/laid-off-one-thing-you-absolutely-need.html">Interesting article here</a> about leaving on a <strong>real</strong> vacation right after getting laid off.  Most of my life, I haven&#8217;t been in the financial position to do this and thankfully I&#8217;ve only been laid off once.  
+    <content type="html"><![CDATA[<p><a href="http://www.expatsoftware.com/articles/2008/05/laid-off-one-thing-you-absolutely-need.html">Interesting article here</a> about leaving on a <strong>real</strong> vacation right after getting laid off.  Most of my life, I haven&rsquo;t been in the financial position to do this and thankfully I&rsquo;ve only been laid off once.</p>
 
-I love the idea - shows how much I need a vacation - but I wonder if I&#8217;d have the guts to do it.  
+<p>I love the idea - shows how much I need a vacation - but I wonder if I&rsquo;d have the guts to do it.</p>
 ]]></content>
   </entry>
   
@@ -753,7 +792,7 @@ I love the idea - shows how much I need a vacation - but I wonder if I&#8217;d h
     <link href="http://mmorga.github.io/blog/2008/05/08/good-to-know/"/>
     <updated>2008-05-08T00:00:00-05:00</updated>
     <id>http://mmorga.github.io/blog/2008/05/08/good-to-know</id>
-    <content type="html"><![CDATA[<a href="http://www.photobasement.com/virginia-puts-kids-first/">Virginia puts kids first</a>.
+    <content type="html"><![CDATA[<p><a href="http://www.photobasement.com/virginia-puts-kids-first/">Virginia puts kids first</a>.</p>
 ]]></content>
   </entry>
   
@@ -763,10 +802,18 @@ I love the idea - shows how much I need a vacation - but I wonder if I&#8217;d h
     <updated>2008-04-25T00:00:00-05:00</updated>
     <id>http://mmorga.github.io/blog/2008/04/25/found-my-pocket-knife</id>
     <content type="html"><![CDATA[<p>To celebrate the release of my latest project at work, I suggested that our team take a trip out to the <a href="http://www.nbtexas.org/index.asp?nid=423">Landa Park Golf Course</a>.  I suggested this despite not having played golf in at least three to four years and I wasn&#8217;t quite sure where my golf clubs actually were.</p>
+
+
 <p>First things first:  the search for the golf clubs.   I looked around my ex&#8217;s garage fruitlessly for a while.  After giving up, my daughter Gabriela said she thought she knew where they were.  She pointed at the bottom of a pile of boxes, paint supplies, trash, bike parts, etc.  Sure enough there they were - out of plain site.</p>
-<p>Playing the game was fun - if by fun you mean laughing at how shockingly badly we were.  I just managed to keep from driving Becky and I into the Comal river on a couple of occasions.  The highlight of the day was watching Nick hurtle towards the front of my cart.  I was racing at top speed towards the cart he was riding in when unexpectedly (to Nick), Jim swerved to avoid a head-on collision with me.  The image of Nick briefly airborne while I ran him down will be with me for a long time.</p>
+
+
+<p>Playing the game was fun - if by fun you mean laughing at how shockingly badly we were.  I just managed to keep from driving into the Comal river on a couple of occasions.  The highlight of the day was watching Nick hurtle towards the front of my cart.  I was racing at top speed towards the cart he was riding in when unexpectedly (to Nick), Jim swerved to avoid a head-on collision with me.  The image of Nick briefly airborne while I ran him down will be with me for a long time.</p>
+
+
 <p>Later, while digging around in my golf bag I found the subject of this post: my first pocket knife.  I thought it had been lost long ago. My parents gave it to me when we lived in Panama sometime in the late 70&#8217;s.  It needs some tender loving care, but I&#8217;m glad to have it back. </p>
-<a href="http://www.flickr.com/photos/markmorga/2440800651/" title="My Pocket Knife by markmorga, on Flickr"><img src="http://farm3.static.flickr.com/2056/2440800651_6feb3b5e63.jpg" width="500" height="281" alt="IMG_8282_1" /></a>
+
+
+<p><a href="http://www.flickr.com/photos/markmorga/2440800651/" title="My Pocket Knife by markmorga, on Flickr"><img src="http://farm3.static.flickr.com/2056/2440800651_6feb3b5e63.jpg" width="500" height="281" alt="IMG_8282_1" /></a></p>
 ]]></content>
   </entry>
   
