@@ -54,6 +54,14 @@ social:
     share_title:
     share_link:
 
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE.md
+  - markmorga.sublime-project
+  - markmorga.sublime-workspace
+  - README.md
+
 defaults:
   -
     values:
