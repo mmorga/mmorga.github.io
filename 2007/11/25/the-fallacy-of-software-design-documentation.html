@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <!-- (1) Optimize for mobile versions: http://goo.gl/EOpFl -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- (1) force latest IE rendering engine: bit.ly/1c8EiC9 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>The False Sense of Security of Software Design Documentation</title>
+  <meta name="description" content="The personal blog of Mark Morga.
+" />
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <link rel="canonical" href="http://markmorga.com/2007/11/25/the-fallacy-of-software-design-documentation.html">
+
+  <link rel="shortcut icon" href="/assets/images/favicon.ico">
+<!--  <link rel="stylesheet" href=""> -->
+  <link rel="stylesheet" href="http://brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />
+</head>
+
+  <body itemscope itemtype="http://schema.org/Article">
+    <!-- header start -->
+
+<a href="http://markmorga.com" class="logo-readium"><span class="logo" style="background-image: url(/assets/images/mm_logo.jpg)"></span></a>
+
+<!-- header end -->
+
+    <main class="content" role="main">
+      <article class="post">
+        
+        <div class="noarticleimage">
+          <div class="post-meta">
+            <h1 class="post-title">The False Sense of Security of Software Design Documentation</h1>
+            <div class="cf post-meta-text">
+              <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
+              <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">Mark Morga</h4>
+              on
+              <time datetime="2007-11-25T00:00:00-06:00">25 Nov 2007</time>
+              <!-- , tagged on <span class="post-tag-">, <a href="/tag/"></a></span> -->
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        
+        <section class="post-content">
+          <div class="post-reading">
+            <span class="post-reading-time"></span> read
+          </div>
+          <a name="topofpage"></a>
+          <p>Recently at work, there has been a push to not only standardize on a software diagramming tool, but to enforce its use for all projects.  I&#39;m naturally opposed to this &quot;one size fits all&quot; approach, but it also made me think about the ways teams use software documentation.  It took a few weeks of background brain processing and refreshing my XP experience (with the team I&#39;ve been working with recently) to get my thoughts together.</p>
+
+<p>I have always observed a tension around documentation in my experience as a developer.  On one hand, everyone accepted that documentation was <em>obviously</em> necessary to a healthy project.  We clearly needed detailed requirements and design documents.  On the other hand, most people would grudgingly acknowledge that documentation:</p>
+
+<ul>
+<li>Requires a lot of time to produce</li>
+<li>Is no fun to work on</li>
+<li>Gets stale quickly as the project progressed</li>
+<li>Misses a lot of vital information</li>
+<li>Is confusing and easy to misinterpret</li>
+</ul>
+
+<p>The split of opinion in our meeting broke down more or less like this:</p>
+
+<p>An architect and people on his team were convinced of the necessity of formal documentation. The more experienced dynamic language developers, were much less convinced.</p>
+
+<p>We talked about what the documentation proponents expected to gain from the documentation and heard the following:</p>
+
+<ul>
+<li>Communication of the structure of the application</li>
+<li>Provide a means to evaluate the design in reviews</li>
+<li>The documents equate to a blueprint of the solution</li>
+</ul>
+
+<p>I tend to favor simplicity, so my gut was telling me that any design that needed more than a few minutes at a white board was likely to be overkill (particularly for the kind of software we develop).  After some thought, I came to the conclusion that the problem was that the fans of documentation are after a worthy goal, but the current state of software engineering lets them down.</p>
+
+<p><em>Why?</em></p>
+
+<p>Simple.  A UML document isn&#39;t anything close to the information repository that an actual blueprint is.</p>
+
+<p>Blueprints (I&#39;m speaking of architectural blueprints here) provide information that can be used to validate the structural integrity of the proposed building.  UML diagrams do no such thing - the reason why is that building construction is composed of specific standard materials (components) which are assembled (composed) in standard known ways.  The net result is that an engineer can look at a blueprint and bill of materials and perform the math necessary to determine if the designed structure will withstand the expected stresses.  Software packages exist which can do this as well for many types of structures.  Likewise, electrical engineers can design a circuit and run it through a circuit simulator to validate that it works.</p>
+
+<p>In software, UML diagrams (or any other documentation) describe high level design patterns and standard frameworks that can be applied, but the devil, as they say, is in the details.  There are no standard components which hook up the internals in predictable or validatable ways.  No one can look at a UML diagram and make any valid predictions about the suitability of a design for any application.</p>
+
+<p><em>Why?</em></p>
+
+<p>Because software is a more widely applicable than construction and is an extremely immature engineering discipline.  We&#39;re still putting together our buildings using hammers whose heads  fall off and land on your foot when you swing them at a nail.  To write a circuit simulator for a software application requires that you write the code for the software.  The code for the software is ultimately the only design that matters.  The best validation that we can currently achieve is to write tests against running code.</p>
+
+<p>Therefore, the inability to prove the suitability of a software design document is one of the reasons why software architects who don&#39;t write code are a bad idea.  A lot of software engineers either intuitively get this or have picked it up after dealing with an &quot;architect&quot; or two.  XP guys get it - the lead software engineer still writes code.</p>
+
+<p>A final analogy:  a music composer can sit down with a sheet of paper and a pencil and write down a piece of music that can be played by a group of musicians with no further input from the composer.  Software can&#39;t be designed this way.  Human beings aren&#39;t capable of comprehending enough depth and lack the tools to communicate the design for a piece of software.</p>
+
+<p><em>So where do we stand?</em></p>
+
+<p>Software is hard to do right.  There isn&#39;t an easy answer and no silver bullets seem ready to present themselves.  The best we can do at present is emphasize simplicity, maximize communication (face to face at a whiteboard beats any document I&#39;ve seen), and use discipline and techniques like pairing, reviews, and testing (and many others) to protect us from ourselves.  It&#39;s the best we can do right now.</p>
+
+        </section>
+        <footer class="post-footer">
+          <section class="share">
+            
+              
+                <a class="icon-twitter" href="http://twitter.com/share?text=The+False+Sense+of+Security+of+Software+Design+Documentation&amp;url=http://markmorga.com/2007/11/25/the-fallacy-of-software-design-documentation"
+                  onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
+                <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
+                </a>
+              
+            
+              
+                <a class="icon-facebook" href="https://www.facebook.com/sharer.php?t=The+False+Sense+of+Security+of+Software+Design+Documentation&amp;u=http://markmorga.com/2007/11/25/the-fallacy-of-software-design-documentation"
+                  onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
+                <i class="fa fa-facebook"></i><span class="hidden">facebook</span>
+                </a>
+              
+            
+              
+            
+              
+            
+          </section>
+        </footer>
+        <div class="bottom-teaser cf">
+          <div class="isLeft">
+            <h5 class="index-headline featured"><span>Written by</span></h5>
+            <section class="author">
+              <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
+              <h4>Mark Morga</h4>
+              <p class="bio"></p>
+              <hr>
+              <p class="published">Published <time datetime="2007-11-25 00:00">25 Nov 2007</time></p>
+            </section>
+          </div>
+          
+          <div class="isRight">
+            <h5 class="index-headline featured"><span>Supported by</span></h5>
+            <footer class="site-footer">
+              <section class="poweredby">Proudly published with <a href="http://jekyllrb.com"> Jekyll</a></section>
+              <a class="subscribe" href="/feed.xml"> <span class="tooltip"> <i class="fa fa-rss"></i> You should subscribe to my feed.</span></a>
+              <div class="inner">
+                <section class="copyright">All content copyright <a href="/">Mark Morga</a> &copy; 2015<br>All rights reserved.</section>
+              </div>
+            </footer>
+          </div>
+        </div>
+      </article>
+    </main>
+    <div class="bottom-closer">
+      <div class="background-closer-image"  style="background-image: url(/assets/images/bear-window-trail-big-bend.jpg)">
+        Image
+      </div>
+      <div class="inner">
+        <h1 class="blog-title">Comanche Hill</h1>
+        <h2 class="blog-description">The personal blog of Mark Morga.
+</h2>
+        <a href="/" class="btn">Back to Overview</a>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="/assets/js/index.js"></script>
+<script type="text/javascript" src="/assets/js/readingTime.min.js"></script>
+<script>
+(function ($) {
+  "use strict";
+  $(document).ready(function(){
+
+    var $window = $(window),
+    $image = $('.post-image-image, .teaserimage-image');
+    
+      $window.on('scroll', function() {
+        var top = $window.scrollTop();
+
+        if (top < 0 || top > 1500) { return; }
+        $image
+          .css('transform', 'translate3d(0px, '+top/3+'px, 0px)')
+          .css('opacity', 1-Math.max(top/700, 0));
+      });
+      $window.trigger('scroll');
+
+      var height = $('.article-image').height();
+      $('.post-content').css('padding-top', height + 'px');
+
+      $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+         && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html,body').animate({ scrollTop: target.offset().top }, 500);
+            return false;
+          }
+        }
+      });
+
+  });
+}(jQuery));
+</script>
+
+
+  </body>
+</html>

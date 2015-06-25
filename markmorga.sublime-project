@@ -1,0 +1,16 @@
+{
+	"folders":
+	[
+		{
+			"folder_exclude_patterns": [
+        "_deploy",
+        ".pygments-cache",
+        ".sass-cache",
+        ".themes",
+        "public"
+      ],
+      "follow_symlinks": true,
+			"path": "."
+		}
+	]
+}

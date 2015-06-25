@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <!-- (1) Optimize for mobile versions: http://goo.gl/EOpFl -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- (1) force latest IE rendering engine: bit.ly/1c8EiC9 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Making the Windows Shell Livable</title>
+  <meta name="description" content="The personal blog of Mark Morga.
+" />
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <link rel="canonical" href="http://markmorga.com/software/2012/07/31/making-the-windows-shell-livable.html">
+
+  <link rel="shortcut icon" href="/assets/images/favicon.ico">
+<!--  <link rel="stylesheet" href=""> -->
+  <link rel="stylesheet" href="http://brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />
+</head>
+
+  <body itemscope itemtype="http://schema.org/Article">
+    <!-- header start -->
+
+<a href="http://markmorga.com" class="logo-readium"><span class="logo" style="background-image: url(/assets/images/mm_logo.jpg)"></span></a>
+
+<!-- header end -->
+
+    <main class="content" role="main">
+      <article class="post">
+        
+        <div class="article-image">
+          <div class="post-image-image" style="background-image: url(/assets/article_images/2012-07-31-making-the-windows-shell-livable/desert-rio-grande-big-bend.jpg)">
+            Article Image
+  </div>
+          <div class="post-meta">
+            <h1 class="post-title">Making the Windows Shell Livable</h1>
+            <div class="cf post-meta-text">
+              <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
+              <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">Mark Morga</h4>
+              on
+              <time datetime="2012-07-31 16:44">31 Jul 2012</time>
+              <!-- , tagged on <span class="post-tag-">, <a href="/tag/"></a></span> -->
+            </div>
+            <div style="text-align:center">
+              <a href="#topofpage" class="topofpage"><i class="fa fa-angle-down"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <section class="post-content">
+          <div class="post-reading">
+            <span class="post-reading-time"></span> read
+          </div>
+          <a name="topofpage"></a>
+          <p>Back when I last &quot;did&quot; Windows development, .Net didn&#39;t exist and the Windows CMD prompt was one of the first things I replaced (with Cygwin). Unfortunately, last time I helped someone with a Windows machine the Cygwin install didn&#39;t go well - it seemed to be mired in the past, was slow, and the
+git version included did not work for some reason with the repos we needed to use.</p>
+
+<p>Fast forward to the last couple of weeks. I&#39;m in the process of learning C# and .Net to help build a new framework with a team and I&#39;m running Windows 7 in a VM. So I&#39;m coming to Windows fresh after a break of almost 8 years. The good news so far has been than C# strikes me much better than Java did (when I last used it) and that the .Net environment is pretty easy to get learning.  Some DLL hell still exists (which I ran into using the ZeroMQ NuGet libraries), but for the most part it has been fairly pleasant. Unfortunately,
+the old Windows CMD prompt is unchanged from all those years ago. Despair sets in.</p>
+
+<p>Then I learned about <a href="http://technet.microsoft.com/en-us/library/bb978526.aspx">PowerShell</a>. After giving it a whirl and learning a thing or two, I&#39;ve finally got a very usable shell configuration for Windows development that doesn&#39;t make me weep every time I have to use it. Here&#39;s how I have it configured.</p>
+
+<p>On my VM, PowerShell comes pre-installed, you may need to download it depending on your version of Windows.</p>
+
+<h2>Console2</h2>
+
+<p>First I installed <a href="http://sourceforge.net/projects/console/">Console2</a>. Console is a Windows GUI which wraps the shell of your choice and adds: multiple tabs, text editor-like text selection, different background types, alpha and color-key transparency, configurable font, different window styles, hot-key mapping, etc.  This step isn&#39;t strictly necessary
+but I like having a more responsive window for my shell and I use tabs often in iTerm on the mac.</p>
+
+<p>I configure Console to use PowerShell by starting Console, selecting the Edit-&gt;Settings menu, then selecting the PowerShell exe in the &quot;Shell&quot; chooser which on my machine is located at: &quot;C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe&quot;.</p>
+
+<h2>Git</h2>
+
+<p>A lot of Windows developers seem GUI bound which is an unfair self-limitation to impose. I install the git version from the primary <a href="http://git-scm.com">Git</a> site. <a href="http://git-scm.com/download/win">Download</a></p>
+
+<p>When installing, Git offers you the choice to install git for Git Bash only or for general use. I chose the general purpose case.</p>
+
+<h2>Configuring Git</h2>
+
+<p>Note to self - you need to configure git to use .ssh keys in order for things to work correctly with remote repos. I&#39;ll post something on this later.</p>
+
+<h2>Installing Posh-Git into PowerShell</h2>
+
+<p>Once you have git installed and configured, to get the most from Powershell, I recommend installing posh-git.</p>
+
+<p>First set the security for your PowerShell instance. Run PowerShell as Administrator and type:</p>
+<div class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="nb">Set-ExecutionPolicy</span> <span class="n">RemoteSigned</span> <span class="n">-Confirm</span>
+</code></pre></div>
+<p>Make sure git can be run from your shell. If not, add it to your user&#39;s PATH.</p>
+
+<p>Type the following commands to install PsGet and Posh-Git:</p>
+<div class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="p">(</span><span class="nb">new-object</span> <span class="n">Net</span><span class="p">.</span><span class="n">WebClient</span><span class="p">).</span><span class="n">DownloadString</span><span class="p">(</span><span class="s2">&quot;http://psget.net/GetPsGet.ps1&quot;</span><span class="p">)</span> <span class="p">|</span> <span class="n">iex</span>
+<span class="n">install-module</span> <span class="n">posh-git</span>
+</code></pre></div>
+<p>To make it available at all times, install it in the PowerShell profile script. On my machine, this is located in my Documents folder: <code>WindowsPowerShell\Microsoft.PowerShell_profile.ps1</code>.</p>
+<div class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="nb">Push-Location</span> <span class="p">(</span><span class="nb">Split-Path</span> <span class="n">-Path</span> <span class="nv">$MyInvocation</span><span class="p">.</span><span class="n">MyCommand</span><span class="p">.</span><span class="n">Definition</span> <span class="n">-Parent</span><span class="p">)</span>
+
+<span class="c"># Load posh-git module from current directory</span>
+<span class="c"># Import-Module .\posh-git</span>
+
+<span class="c"># If module is installed in a default location ($env:PSModulePath),</span>
+<span class="c"># use this instead (see about_Modules for more information):</span>
+<span class="nb">Import-Module</span> <span class="n">posh-git</span>
+
+<span class="c"># Set up a simple prompt, adding the git prompt parts inside git repos</span>
+<span class="k">function</span> <span class="n">prompt</span> <span class="p">{</span>
+    <span class="nv">$realLASTEXITCODE</span> <span class="p">=</span> <span class="nv">$LASTEXITCODE</span>
+
+    <span class="c"># Reset color, which can be messed up by Enable-GitColors</span>
+    <span class="nv">$Host</span><span class="p">.</span><span class="n">UI</span><span class="p">.</span><span class="n">RawUI</span><span class="p">.</span><span class="n">ForegroundColor</span> <span class="p">=</span> <span class="nv">$GitPromptSettings</span><span class="p">.</span><span class="n">DefaultForegroundColor</span>
+
+    <span class="nb">Write-Host</span><span class="p">(</span><span class="nv">$pwd</span><span class="p">)</span> <span class="n">-nonewline</span>
+
+    <span class="nb">Write-VcsStatus</span>
+
+    <span class="nv">$global:LASTEXITCODE</span> <span class="p">=</span> <span class="nv">$realLASTEXITCODE</span>
+    <span class="k">return</span> <span class="s2">&quot;&gt; &quot;</span>
+<span class="p">}</span>
+
+<span class="nb">Enable-GitColors</span>
+
+<span class="nb">Pop-Location</span>
+</code></pre></div>
+<p>Exit out of Console/PowerShell and the next time you start up, you&#39;ll see extra functionality for Git while in directories that are Git repositories.</p>
+
+<p>You can now use tab completion to complete both git commands and to fill in branch or remote names in addition to file names.</p>
+
+<p>When you type &quot;git status&quot;, you will see color highlighting of files that helps understanding what is staged versus what isn&#39;t yet.</p>
+
+<p>Have fun.  Let me know if you have any tips for PowerShell that I should pick up.</p>
+
+        </section>
+        <footer class="post-footer">
+          <section class="share">
+            
+              
+                <a class="icon-twitter" href="http://twitter.com/share?text=Making+the+Windows+Shell+Livable&amp;url=http://markmorga.com/software/2012/07/31/making-the-windows-shell-livable"
+                  onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
+                <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
+                </a>
+              
+            
+              
+                <a class="icon-facebook" href="https://www.facebook.com/sharer.php?t=Making+the+Windows+Shell+Livable&amp;u=http://markmorga.com/software/2012/07/31/making-the-windows-shell-livable"
+                  onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
+                <i class="fa fa-facebook"></i><span class="hidden">facebook</span>
+                </a>
+              
+            
+              
+            
+              
+            
+          </section>
+        </footer>
+        <div class="bottom-teaser cf">
+          <div class="isLeft">
+            <h5 class="index-headline featured"><span>Written by</span></h5>
+            <section class="author">
+              <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
+              <h4>Mark Morga</h4>
+              <p class="bio"></p>
+              <hr>
+              <p class="published">Published <time datetime="2012-07-31 16:44">31 Jul 2012</time></p>
+            </section>
+          </div>
+          
+          <div class="isRight">
+            <h5 class="index-headline featured"><span>Supported by</span></h5>
+            <footer class="site-footer">
+              <section class="poweredby">Proudly published with <a href="http://jekyllrb.com"> Jekyll</a></section>
+              <a class="subscribe" href="/feed.xml"> <span class="tooltip"> <i class="fa fa-rss"></i> You should subscribe to my feed.</span></a>
+              <div class="inner">
+                <section class="copyright">All content copyright <a href="/">Mark Morga</a> &copy; 2015<br>All rights reserved.</section>
+              </div>
+            </footer>
+          </div>
+        </div>
+      </article>
+    </main>
+    <div class="bottom-closer">
+      <div class="background-closer-image"  style="background-image: url(/assets/images/bear-window-trail-big-bend.jpg)">
+        Image
+      </div>
+      <div class="inner">
+        <h1 class="blog-title">Comanche Hill</h1>
+        <h2 class="blog-description">The personal blog of Mark Morga.
+</h2>
+        <a href="/" class="btn">Back to Overview</a>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="/assets/js/index.js"></script>
+<script type="text/javascript" src="/assets/js/readingTime.min.js"></script>
+<script>
+(function ($) {
+  "use strict";
+  $(document).ready(function(){
+
+    var $window = $(window),
+    $image = $('.post-image-image, .teaserimage-image');
+    
+      $window.on('scroll', function() {
+        var top = $window.scrollTop();
+
+        if (top < 0 || top > 1500) { return; }
+        $image
+          .css('transform', 'translate3d(0px, '+top/3+'px, 0px)')
+          .css('opacity', 1-Math.max(top/700, 0));
+      });
+      $window.trigger('scroll');
+
+      var height = $('.article-image').height();
+      $('.post-content').css('padding-top', height + 'px');
+
+      $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+         && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html,body').animate({ scrollTop: target.offset().top }, 500);
+            return false;
+          }
+        }
+      });
+
+  });
+}(jQuery));
+</script>
+
+
+  </body>
+</html>
