@@ -3,6 +3,7 @@ markdown: redcarpet
 highlighter: pygments
 gems:
   - jemoji
+  - jekyll-picture-tag
 
 # Site settings
 title: "Comanche Hill"
@@ -61,8 +62,45 @@ exclude:
   - markmorga.sublime-project
   - markmorga.sublime-workspace
   - README.md
+  - static
+
+keep_files:
+  - apple-touch-icon-114x114.png
+  - apple-touch-icon-120x120.png
+  - apple-touch-icon-144x144.png
+  - apple-touch-icon-152x152.png
+  - apple-touch-icon-180x180.png
+  - apple-touch-icon-57x57.png
+  - apple-touch-icon-60x60.png
+  - apple-touch-icon-72x72.png
+  - apple-touch-icon-76x76.png
+  - apple-touch-icon-precomposed.png
+  - apple-touch-icon.png
+  - browserconfig.xml
+  - CNAME
+  - favicon-160x160.png
+  - favicon-16x16.png
+  - favicon-192x192.png
+  - favicon-32x32.png
+  - favicon-96x96.png
+  - favicon.ico
+  - mstile-144x144.png
+  - mstile-150x150.png
+  - mstile-310x150.png
+  - mstile-310x310.png
+  - mstile-70x70.png
 
 defaults:
   -
     values:
       author: "Mark Morga"
+
+redcarpet:
+  extensions:
+    - no_intra_emphasis
+    - tables
+    - autolink
+    - strikethrough
+    - lax_spacing
+    - superscript
+    - smart
