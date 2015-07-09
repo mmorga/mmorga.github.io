@@ -99,10 +99,26 @@
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
           <div class="article-item">
             <header class="post-header">
+              <h2 class="post-title" itemprop="name"><a href="/2007/05/17/zero-minute-film-school.html" itemprop="url">Zero Minute Film School</a></h2>
+            </header>
+            <section class="post-excerpt" itemprop="description">
+              <p>Take a look at Khavn&rsquo;s Zero Minute Film School - simple and to the point.  Don&rsquo;t think about making a film - make one.
+</p>
+            </section>
+            <div class="post-meta">
+              <time datetime="17 May 2007">17 May 2007</time>
+<!--            <span class="post-tags-set">on <span class="post-tag-">, <a href="/tag/"></a></span></span>-->
+            </div>
+          </div>
+        </article>
+      
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
+          <div class="article-item">
+            <header class="post-header">
               <h2 class="post-title" itemprop="name"><a href="/2007/05/16/chili.html" itemprop="url">Chili</a></h2>
             </header>
             <section class="post-excerpt" itemprop="description">
-              <p>Here&#39;s the chili recipe I made for our chili cook-off at work. It&#39;s based on a recipe from Texas on the Halfshell. 1 3/4 lb chili grind beef 1 lb ground venison 1 c. chopped onion 5 cloves garlic 1 - 12 oz bottle Corona beer 1 - 8 oz...</p>
+              <p>Here&rsquo;s the chili recipe I made for our chili cook-off at work. It&rsquo;s based on a recipe from Texas on the Halfshell. 1 &frac34; lb chili grind beef 1 lb ground venison 1 c. chopped onion 5 cloves garlic 1 - 12 oz bottle Corona beer 1 - 8 oz...</p>
             </section>
             <div class="post-meta">
               <time datetime="16 May 2007">16 May 2007</time>
@@ -117,7 +133,7 @@
               <h2 class="post-title" itemprop="name"><a href="/2007/05/14/pineapple-margaritas.html" itemprop="url">Pineapple Margaritas</a></h2>
             </header>
             <section class="post-excerpt" itemprop="description">
-              <p>I&#39;ve seen a couple of recipes for a pineapple margarita, but they either had ingredients that I didn&#39;t like (sour mix) or looked too sweet. Here&#39;s my take on one: In a blender, add the following: 2 c. chopped fresh pineapple * juice of 2 limes 1 c. white tequila...</p>
+              <p>I&rsquo;ve seen a couple of recipes for a pineapple margarita, but they either had ingredients that I didn&rsquo;t like (sour mix) or looked too sweet. Here&rsquo;s my take on one: In a blender, add the following: 2 c. chopped fresh pineapple * juice of 2 limes 1 c. white tequila...</p>
             </section>
             <div class="post-meta">
               <time datetime="14 May 2007">14 May 2007</time>
@@ -134,7 +150,7 @@
             <section class="post-excerpt" itemprop="description">
               <p>There is nothing I can say that (to imitate the Manolo), the Manolo, he is already all over.
 
-Even funnier, is the Manolo&#39;s survey of great presidential hair throughout history.
+Even funnier, is the Manolo&rsquo;s survey of great presidential hair throughout history.
 </p>
             </section>
             <div class="post-meta">
@@ -150,26 +166,11 @@ Even funnier, is the Manolo&#39;s survey of great presidential hair throughout h
               <h2 class="post-title" itemprop="name"><a href="/2007/04/24/get-well-roger-ebert-we-miss-you.html" itemprop="url">Get Well Roger Ebert, We Miss You!</a></h2>
             </header>
             <section class="post-excerpt" itemprop="description">
-              <p>I came across an article about Roger Ebert and his lengthy recovery from his illness.  I&#39;m glad to hear that he won&#39;t let nasty paparazzi media types keep him away from his Overlooked Film Festival.
+              <p>I came across an article about Roger Ebert and his lengthy recovery from his illness.  I&rsquo;m glad to hear that he won&rsquo;t let nasty paparazzi media types keep him away from his Overlooked Film Festival.
 </p>
             </section>
             <div class="post-meta">
               <time datetime="24 April 2007">24 April 2007</time>
-<!--            <span class="post-tags-set">on <span class="post-tag-">, <a href="/tag/"></a></span></span>-->
-            </div>
-          </div>
-        </article>
-      
-        <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
-          <div class="article-item">
-            <header class="post-header">
-              <h2 class="post-title" itemprop="name"><a href="/2007/04/13/seeing-the-unseen.html" itemprop="url">Seeing the Unseen</a></h2>
-            </header>
-            <section class="post-excerpt" itemprop="description">
-              <p>Over at Eject! Eject! Eject!, Bill Whittle writes in with part 2 of his article Seeing the Unseen. He does a great job debunking a lot of the insane conspiracy theories that people have been circulating regularly - everything from the Loch Ness Monster, Kennedy, Man on the Moon fakery,...</p>
-            </section>
-            <div class="post-meta">
-              <time datetime="13 April 2007">13 April 2007</time>
 <!--            <span class="post-tags-set">on <span class="post-tag-">, <a href="/tag/"></a></span></span>-->
             </div>
           </div>
@@ -216,6 +217,7 @@ Even funnier, is the Manolo&#39;s survey of great presidential hair throughout h
 <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
 <script type="text/javascript" src="/assets/js/index.js"></script>
 <script type="text/javascript" src="/assets/js/readingTime.min.js"></script>
+<script type="text/javascript" src="/assets/js/min/picturefill.min.js"></script>
 <script>
 (function ($) {
   "use strict";
@@ -223,7 +225,7 @@ Even funnier, is the Manolo&#39;s survey of great presidential hair throughout h
 
     var $window = $(window),
     $image = $('.post-image-image, .teaserimage-image');
-    
+
       $window.on('scroll', function() {
         var top = $window.scrollTop();
 

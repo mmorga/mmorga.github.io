@@ -99,10 +99,28 @@
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
           <div class="article-item">
             <header class="post-header">
+              <h2 class="post-title" itemprop="name"><a href="/2007/10/04/personal-unit-tests.html" itemprop="url">Personal Unit Tests</a></h2>
+            </header>
+            <section class="post-excerpt" itemprop="description">
+              <p>Hober has a Backpack page with his personal unit tests an idea he heard from Without an E.
+
+I think they each came up with too many goals to hit daily, but who am I to judge.
+</p>
+            </section>
+            <div class="post-meta">
+              <time datetime="04 October 2007">04 October 2007</time>
+<!--            <span class="post-tags-set">on <span class="post-tag-">, <a href="/tag/"></a></span></span>-->
+            </div>
+          </div>
+        </article>
+      
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
+          <div class="article-item">
+            <header class="post-header">
               <h2 class="post-title" itemprop="name"><a href="/2007/10/02/top-50-dystopian-movies.html" itemprop="url">Top 50 Dystopian Movies</a></h2>
             </header>
             <section class="post-excerpt" itemprop="description">
-              <p>Snarkerati posted a pretty cool list of 50 best films depicting a dystopia.  I&#39;d argue with some of the ranking (good grief - they included the two worst sci-fi films of all time: Starship Troopers and Total Recall), but it definitely has some good stuff on the list.
+              <p>Snarkerati posted a pretty cool list of 50 best films depicting a dystopia.  I&rsquo;d argue with some of the ranking (good grief - they included the two worst sci-fi films of all time: Starship Troopers and Total Recall), but it definitely has some good stuff on the list.
 </p>
             </section>
             <div class="post-meta">
@@ -134,7 +152,7 @@
               <h2 class="post-title" itemprop="name"><a href="/2007/10/01/kung-pao-chicken-yum.html" itemprop="url">Kung Pao Chicken ... yum!</a></h2>
             </header>
             <section class="post-excerpt" itemprop="description">
-              <p>Thanks to the fabulous Edward Mao&#39;s recipe for Kung Pao Chicken, I&#39;m sitting here fat, dumb, and happy.  It was awesomely delicious!
+              <p>Thanks to the fabulous Edward Mao&rsquo;s recipe for Kung Pao Chicken, I&rsquo;m sitting here fat, dumb, and happy.  It was awesomely delicious!
 
 Thanks, Ed!!!
 </p>
@@ -153,21 +171,6 @@ Thanks, Ed!!!
             </header>
             <section class="post-excerpt" itemprop="description">
               <p>This movie is not for everyone. In a lot of respects, it is beyond offensive. However, if you view it as a live-action cartoon, it is highly over-the-top and entertaining. This movie is for the people who enjoy Hong Kong style action and can find humor in the macabre. I...</p>
-            </section>
-            <div class="post-meta">
-              <time datetime="30 September 2007">30 September 2007</time>
-<!--            <span class="post-tags-set">on <span class="post-tag-">, <a href="/tag/"></a></span></span>-->
-            </div>
-          </div>
-        </article>
-      
-        <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
-          <div class="article-item">
-            <header class="post-header">
-              <h2 class="post-title" itemprop="name"><a href="/2007/09/30/making-money.html" itemprop="url">Making Money</a></h2>
-            </header>
-            <section class="post-excerpt" itemprop="description">
-              <p>One of my favorite authors is Terry Pratchett. He is amazingly prolific and his books seem to just keep getting better over time. Pratchett&#39;s latest book is Making Money which is the second book featuring Moist von Lipwig, the criminal who was forced to create the postal system for Ankh-Morpork...</p>
             </section>
             <div class="post-meta">
               <time datetime="30 September 2007">30 September 2007</time>
@@ -217,6 +220,7 @@ Thanks, Ed!!!
 <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
 <script type="text/javascript" src="/assets/js/index.js"></script>
 <script type="text/javascript" src="/assets/js/readingTime.min.js"></script>
+<script type="text/javascript" src="/assets/js/min/picturefill.min.js"></script>
 <script>
 (function ($) {
   "use strict";
@@ -224,7 +228,7 @@ Thanks, Ed!!!
 
     var $window = $(window),
     $image = $('.post-image-image, .teaserimage-image');
-    
+
       $window.on('scroll', function() {
         var top = $window.scrollTop();
 

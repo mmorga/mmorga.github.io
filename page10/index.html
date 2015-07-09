@@ -99,10 +99,25 @@
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
           <div class="article-item">
             <header class="post-header">
+              <h2 class="post-title" itemprop="name"><a href="/2007/09/25/voyage-in-the-agile-memeplex.html" itemprop="url">Voyage in the Agile Memeplex</a></h2>
+            </header>
+            <section class="post-excerpt" itemprop="description">
+              <p>One of the guys at work passed the link to this ACM article by Philippe Kruchten entitled Voyage in the Agile Memeplex (Direct links: HTML, PDF). I found the article so preposterous that I had to reply back with responses to the group at work and thought I might add...</p>
+            </section>
+            <div class="post-meta">
+              <time datetime="25 September 2007">25 September 2007</time>
+<!--            <span class="post-tags-set">on <span class="post-tag-">, <a href="/tag/"></a></span></span>-->
+            </div>
+          </div>
+        </article>
+      
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
+          <div class="article-item">
+            <header class="post-header">
               <h2 class="post-title" itemprop="name"><a href="/2007/09/25/review-310-to-yuma.html" itemprop="url">Review: 3:10 To Yuma</a></h2>
             </header>
             <section class="post-excerpt" itemprop="description">
-              <p>I&#39;ve been meaning to post on this since prior to ACL Fest, but here at last is a brief comment or two. 3:10 to Yuma is an excellent western. It doesn&#39;t play revisionist history with the feeling of bad men or downplay the level of violence. The characters are excellently...</p>
+              <p>I&rsquo;ve been meaning to post on this since prior to ACL Fest, but here at last is a brief comment or two. 3:10 to Yuma is an excellent western. It doesn&rsquo;t play revisionist history with the feeling of bad men or downplay the level of violence. The characters are excellently...</p>
             </section>
             <div class="post-meta">
               <time datetime="25 September 2007">25 September 2007</time>
@@ -117,9 +132,9 @@
               <h2 class="post-title" itemprop="name"><a href="/2007/09/25/pepper-spray-and-cell-phones.html" itemprop="url">Pepper Spray and Cell Phones</a></h2>
             </header>
             <section class="post-excerpt" itemprop="description">
-              <p>This is just too cool.  I&#39;m guessing the manner the girls were &quot;inappropriately dressed&quot; was a bit of ankle showing or perhaps a few stray strands of hair.
+              <p>This is just too cool.  I&rsquo;m guessing the manner the girls were &ldquo;inappropriately dressed&rdquo; was a bit of ankle showing or perhaps a few stray strands of hair.
 
-I&#39;ll go with the linked commentator by saying: YouTube, please!
+I&rsquo;ll go with the linked commentator by saying: YouTube, please!
 </p>
             </section>
             <div class="post-meta">
@@ -150,26 +165,10 @@ I&#39;ll go with the linked commentator by saying: YouTube, please!
               <h2 class="post-title" itemprop="name"><a href="/2007/09/20/review-austin-city-limits-music-festival-2007.html" itemprop="url">Review: Austin City Limits Music Festival 2007</a></h2>
             </header>
             <section class="post-excerpt" itemprop="description">
-              <p>I&#39;m back from ACL Fest this past weekend which I managed to not only survive, but enjoy every minute of. ACL Fest is a yearly music festival thrown by the city of Austin and the Austin City Limits live music show on PBS. The festival attracts 60,000-65,000 people each day...</p>
+              <p>I&rsquo;m back from ACL Fest this past weekend which I managed to not only survive, but enjoy every minute of. ACL Fest is a yearly music festival thrown by the city of Austin and the Austin City Limits live music show on PBS. The festival attracts 60,000-65,000 people each day...</p>
             </section>
             <div class="post-meta">
               <time datetime="20 September 2007">20 September 2007</time>
-<!--            <span class="post-tags-set">on <span class="post-tag-">, <a href="/tag/"></a></span></span>-->
-            </div>
-          </div>
-        </article>
-      
-        <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
-          <div class="article-item">
-            <header class="post-header">
-              <h2 class="post-title" itemprop="name"><a href="/2007/09/19/tis-talk-like-a-pirate-day-ye-scurvy-dogs.html" itemprop="url">Tis International Talk Like a Pirate Day, Ye Scurvy Dogs!</a></h2>
-            </header>
-            <section class="post-excerpt" itemprop="description">
-              <p>Arr.
-</p>
-            </section>
-            <div class="post-meta">
-              <time datetime="19 September 2007">19 September 2007</time>
 <!--            <span class="post-tags-set">on <span class="post-tag-">, <a href="/tag/"></a></span></span>-->
             </div>
           </div>
@@ -216,6 +215,7 @@ I&#39;ll go with the linked commentator by saying: YouTube, please!
 <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
 <script type="text/javascript" src="/assets/js/index.js"></script>
 <script type="text/javascript" src="/assets/js/readingTime.min.js"></script>
+<script type="text/javascript" src="/assets/js/min/picturefill.min.js"></script>
 <script>
 (function ($) {
   "use strict";
@@ -223,7 +223,7 @@ I&#39;ll go with the linked commentator by saying: YouTube, please!
 
     var $window = $(window),
     $image = $('.post-image-image, .teaserimage-image');
-    
+
       $window.on('scroll', function() {
         var top = $window.scrollTop();
 

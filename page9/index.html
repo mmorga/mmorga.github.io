@@ -99,10 +99,25 @@
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
           <div class="article-item">
             <header class="post-header">
+              <h2 class="post-title" itemprop="name"><a href="/2007/09/30/making-money.html" itemprop="url">Making Money</a></h2>
+            </header>
+            <section class="post-excerpt" itemprop="description">
+              <p>One of my favorite authors is Terry Pratchett. He is amazingly prolific and his books seem to just keep getting better over time. Pratchett&rsquo;s latest book is Making Money which is the second book featuring Moist von Lipwig, the criminal who was forced to create the postal system for Ankh-Morpork...</p>
+            </section>
+            <div class="post-meta">
+              <time datetime="30 September 2007">30 September 2007</time>
+<!--            <span class="post-tags-set">on <span class="post-tag-">, <a href="/tag/"></a></span></span>-->
+            </div>
+          </div>
+        </article>
+      
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
+          <div class="article-item">
+            <header class="post-header">
               <h2 class="post-title" itemprop="name"><a href="/2007/09/30/jud-apatow.html" itemprop="url">Jud Apatow</a></h2>
             </header>
             <section class="post-excerpt" itemprop="description">
-              <p>I finally got a chance to see a couple of Judd Apatow movies that I&#39;ve been meaning to see: Knocked Up. I enjoyed both of them very much. Something interesting was that despite being two very vulgar (though hilariously funny!) movies that my more conservative friends and family members wouldn&#39;t...</p>
+              <p>I finally got a chance to see a couple of Judd Apatow movies that I&rsquo;ve been meaning to see: Knocked Up. I enjoyed both of them very much. Something interesting was that despite being two very vulgar (though hilariously funny!) movies that my more conservative friends and family members wouldn&rsquo;t...</p>
             </section>
             <div class="post-meta">
               <time datetime="30 September 2007">30 September 2007</time>
@@ -117,7 +132,7 @@
               <h2 class="post-title" itemprop="name"><a href="/2007/09/30/for-my-iphone-friends.html" itemprop="url">For my iPhone friends...</a></h2>
             </header>
             <section class="post-excerpt" itemprop="description">
-              <p>You don&#39;t get to kill my cow. (via Instapundit)
+              <p>You don&rsquo;t get to kill my cow. (via Instapundit)
 </p>
             </section>
             <div class="post-meta">
@@ -133,7 +148,7 @@
               <h2 class="post-title" itemprop="name"><a href="/2007/09/28/joining-technorati.html" itemprop="url">Joining Technorati</a></h2>
             </header>
             <section class="post-excerpt" itemprop="description">
-              <p>I&#39;m finally getting around to joining Technorati.  Here is my Technorati Profile.
+              <p>I&rsquo;m finally getting around to joining Technorati.  Here is my Technorati Profile.
 </p>
             </section>
             <div class="post-meta">
@@ -154,21 +169,6 @@
             </section>
             <div class="post-meta">
               <time datetime="28 September 2007">28 September 2007</time>
-<!--            <span class="post-tags-set">on <span class="post-tag-">, <a href="/tag/"></a></span></span>-->
-            </div>
-          </div>
-        </article>
-      
-        <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
-          <div class="article-item">
-            <header class="post-header">
-              <h2 class="post-title" itemprop="name"><a href="/2007/09/25/voyage-in-the-agile-memeplex.html" itemprop="url">Voyage in the Agile Memeplex</a></h2>
-            </header>
-            <section class="post-excerpt" itemprop="description">
-              <p>One of the guys at work passed the link to this ACM article by Philippe Kruchten entitled Voyage in the Agile Memeplex (Direct links: HTML, PDF). I found the article so preposterous that I had to reply back with responses to the group at work and thought I might add...</p>
-            </section>
-            <div class="post-meta">
-              <time datetime="25 September 2007">25 September 2007</time>
 <!--            <span class="post-tags-set">on <span class="post-tag-">, <a href="/tag/"></a></span></span>-->
             </div>
           </div>
@@ -215,6 +215,7 @@
 <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
 <script type="text/javascript" src="/assets/js/index.js"></script>
 <script type="text/javascript" src="/assets/js/readingTime.min.js"></script>
+<script type="text/javascript" src="/assets/js/min/picturefill.min.js"></script>
 <script>
 (function ($) {
   "use strict";
@@ -222,7 +223,7 @@
 
     var $window = $(window),
     $image = $('.post-image-image, .teaserimage-image');
-    
+
       $window.on('scroll', function() {
         var top = $window.scrollTop();
 

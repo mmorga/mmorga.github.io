@@ -99,10 +99,25 @@
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
           <div class="article-item">
             <header class="post-header">
+              <h2 class="post-title" itemprop="name"><a href="/2008/03/02/favorite-horrorsuspense-movies.html" itemprop="url">Favorite Horror/Suspense Movies</a></h2>
+            </header>
+            <section class="post-excerpt" itemprop="description">
+              <p>I brought this post over from my dusty old MySpace blog. Here we go&hellip; The Shining Evil Dead 2 Alien/Aliens Silence of the Lambs The Thing (1982) Night of the Living Dead Jaws The Devil&rsquo;s Backbone Pan&rsquo;s Labyrinth The Exorcist Night of the Hunter Invasion of the Body Snatchers (1978)...</p>
+            </section>
+            <div class="post-meta">
+              <time datetime="02 March 2008">02 March 2008</time>
+<!--            <span class="post-tags-set">on <span class="post-tag-">, <a href="/tag/"></a></span></span>-->
+            </div>
+          </div>
+        </article>
+      
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
+          <div class="article-item">
+            <header class="post-header">
               <h2 class="post-title" itemprop="name"><a href="/2008/01/28/morgas-law-of-computing-machinery-and-intelligence.html" itemprop="url">Morga's Law of Computing Machinery And Intelligence</a></h2>
             </header>
             <section class="post-excerpt" itemprop="description">
-              <p>If it can&#39;t make me a sandwich, then it isn&#39;t a real robot.
+              <p>If it can&rsquo;t make me a sandwich, then it isn&rsquo;t a real robot.
 </p>
             </section>
             <div class="post-meta">
@@ -118,7 +133,7 @@
               <h2 class="post-title" itemprop="name"><a href="/2008/01/27/new-digs.html" itemprop="url">New Digs</a></h2>
             </header>
             <section class="post-excerpt" itemprop="description">
-              <p>I moved into my new house this weekend. Whew. I really hate to move, but I&#39;m really going to love living here. I&#39;m two blocks away from downtown New Braunfels. Pictures are coming soon. I&#39;m glad I spent the money on movers this time and I&#39;m extraordinarily grateful for the...</p>
+              <p>I moved into my new house this weekend. Whew. I really hate to move, but I&rsquo;m really going to love living here. I&rsquo;m two blocks away from downtown New Braunfels. Pictures are coming soon. I&rsquo;m glad I spent the money on movers this time and I&rsquo;m extraordinarily grateful for the...</p>
             </section>
             <div class="post-meta">
               <time datetime="27 January 2008">27 January 2008</time>
@@ -135,9 +150,9 @@
             <section class="post-excerpt" itemprop="description">
               <p>Come join me at Tonic Bar on Saturday January 12 from 10pm - 1:30am for the Dog Men Poets show.
 
-Tonic is at Babcock and Eckhert - here&#39;s a map.
+Tonic is at Babcock and Eckhert - here&rsquo;s a map.
 
-At midnight I&#39;ll be celebrating my birthday!  Don&#39;t bring anything but yourself!
+At midnight I&rsquo;ll be celebrating my birthday!  Don&rsquo;t bring anything but yourself!
 </p>
             </section>
             <div class="post-meta">
@@ -157,21 +172,6 @@ At midnight I&#39;ll be celebrating my birthday!  Don&#39;t bring anything but y
             </section>
             <div class="post-meta">
               <time datetime="27 December 2007">27 December 2007</time>
-<!--            <span class="post-tags-set">on <span class="post-tag-">, <a href="/tag/"></a></span></span>-->
-            </div>
-          </div>
-        </article>
-      
-        <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
-          <div class="article-item">
-            <header class="post-header">
-              <h2 class="post-title" itemprop="name"><a href="/2007/12/19/codes-worst-enemy.html" itemprop="url">Code's Worst Enemy</a></h2>
-            </header>
-            <section class="post-excerpt" itemprop="description">
-              <p>Over at Stevey&#39;s Blog Rants is a cool article: Code&#39;s Worst Enemy. Stevey describes being up against getting a 500,000 line web-based game working again after some time off-line. He sees a large code base being the worst problem you can face in software and he makes some good arguments...</p>
-            </section>
-            <div class="post-meta">
-              <time datetime="19 December 2007">19 December 2007</time>
 <!--            <span class="post-tags-set">on <span class="post-tag-">, <a href="/tag/"></a></span></span>-->
             </div>
           </div>
@@ -218,6 +218,7 @@ At midnight I&#39;ll be celebrating my birthday!  Don&#39;t bring anything but y
 <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
 <script type="text/javascript" src="/assets/js/index.js"></script>
 <script type="text/javascript" src="/assets/js/readingTime.min.js"></script>
+<script type="text/javascript" src="/assets/js/min/picturefill.min.js"></script>
 <script>
 (function ($) {
   "use strict";
@@ -225,7 +226,7 @@ At midnight I&#39;ll be celebrating my birthday!  Don&#39;t bring anything but y
 
     var $window = $(window),
     $image = $('.post-image-image, .teaserimage-image');
-    
+
       $window.on('scroll', function() {
         var top = $window.scrollTop();
 

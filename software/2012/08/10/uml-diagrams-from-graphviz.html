@@ -44,7 +44,7 @@
           <div class="post-meta">
             <h1 class="post-title">UML Diagrams from Graphviz</h1>
             <div class="cf post-meta-text">
-              <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
+              <div class="author-image" style="background-image: url(/assets/images/author-bw.jpg)">Blog Logo</div>
               <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">Mark Morga</h4>
               on
               <time datetime="2012-08-10 11:35">10 Aug 2012</time>
@@ -61,9 +61,9 @@
             <span class="post-reading-time"></span> read
           </div>
           <a name="topofpage"></a>
-          <p>I&#39;m not a huge fan of UML. I think it took a simple idea (standard conceptual drawings) and made it much more complex than necessary with the unwise goal of allowing commercial UML tools to flourish and make code-to-diagram round trip conversion something people might want to do. Something like MagicDraw I find horrible from a performance and usability perspective.</p>
+          <p>I&rsquo;m not a huge fan of UML. I think it took a simple idea (standard conceptual drawings) and made it much more complex than necessary with the unwise goal of allowing commercial UML tools to flourish and make code-to-diagram round trip conversion something people might want to do. Something like MagicDraw I find horrible from a performance and usability perspective.</p>
 
-<p>I&#39;m also not a big fan of a lot of drawing software. Visio is great unless you don&#39;t run on Windows, don&#39;t own a copy, or care about usability. Omnigraffle on the Mac is arguably better on the usability front, but you still end up tweaking the drawing a lot more than just entering your relationships and drawing connections. With any drawing software, the saved file is not human readable - and looking at diffs in a source control system tells you nothing</p>
+<p>I&rsquo;m also not a big fan of a lot of drawing software. Visio is great unless you don&rsquo;t run on Windows, don&rsquo;t own a copy, or care about usability. Omnigraffle on the Mac is arguably better on the usability front, but you still end up tweaking the drawing a lot more than just entering your relationships and drawing connections. With any drawing software, the saved file is not human readable - and looking at diffs in a source control system tells you nothing</p>
 
 <p>I like Graphviz for making quick drawings that are minimalistic and take away the tweaking factor of a lot of apps. You describe the nodes and edges and Graphviz figures out how to handle the layout of the drawing. Need to add something later? No problem, just put it in the dot file and regenerate your results.</p>
 
@@ -76,12 +76,12 @@
 <li>Supports a wide variety of output formats: bmp, eps, fig, gd, gd2, gif, gtk, ico, imap, cmapx, jpg, pdf, plain, png, ps, svg, tiff, vml, vrml, wbmp, webp, xlib</li>
 </ol>
 
-<p>Graphviz&#39;s disadvantages:</p>
+<p>Graphviz&rsquo;s disadvantages:</p>
 
 <ol>
 <li>Sometimes the layout is less than perfect</li>
 <li>The output is pretty plain unless you spend a lot of adding style in the dot (which hurts the simplicity of the input format). Or spend time tweaking the output format (which gets you back into the image software trap)</li>
-<li>Doesn&#39;t support UML style graphics</li>
+<li>Doesn&rsquo;t support UML style graphics</li>
 </ol>
 
 <p>For a long time graphviz supported the inclusion of PostScript files to define shapes, but this was only useful if you were outputting PostScript as a final result. I like using SVG as my format of choice since it can be freely scaled and works in most web browsers these days. Looking around the other day, I found a reference to the fact that Graphviz also supports the inclusion of SVG files as an image format.  With a little experimentation, I found that it works pretty well.</p>
@@ -208,7 +208,7 @@
 
 <p><img src="/assets/article_images/2012-08-10-uml-diagrams-from-graphviz/sample.dot.png" alt="Sample Component Diagram"></p>
 
-<p>Which is not too bad of a start. From here, there&#39;s a few things I think I could do to make it even better.</p>
+<p>Which is not too bad of a start. From here, there&rsquo;s a few things I think I could do to make it even better.</p>
 
 <ol>
 <li>Pre-process the dot file. Come up with an annotation to denote the type of image to include for a node without having to reference the image file.</li>
@@ -216,7 +216,7 @@
 <li>Post-process the SVG output to look nicer. Apply a better look to the sub-graphs, round the corners, add add gradients, etc. This sort of thing has been done before with XSLT.</li>
 </ol>
 
-<p>I think this approach is reasonable for some UML types: component, use case, collaboration, activity, and maybe deployment. Sequence diagrams are different in layout and probably aren&#39;t worth the effort to attempt.</p>
+<p>I think this approach is reasonable for some UML types: component, use case, collaboration, activity, and maybe deployment. Sequence diagrams are different in layout and probably aren&rsquo;t worth the effort to attempt.</p>
 
         </section>
         <footer class="post-footer">
@@ -246,7 +246,7 @@
           <div class="isLeft">
             <h5 class="index-headline featured"><span>Written by</span></h5>
             <section class="author">
-              <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
+              <div class="author-image" style="background-image: url(/assets/images/author-bw.jpg)">Blog Logo</div>
               <h4>Mark Morga</h4>
               <p class="bio"></p>
               <hr>
@@ -282,6 +282,7 @@
 <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
 <script type="text/javascript" src="/assets/js/index.js"></script>
 <script type="text/javascript" src="/assets/js/readingTime.min.js"></script>
+<script type="text/javascript" src="/assets/js/min/picturefill.min.js"></script>
 <script>
 (function ($) {
   "use strict";
@@ -289,7 +290,7 @@
 
     var $window = $(window),
     $image = $('.post-image-image, .teaserimage-image');
-    
+
       $window.on('scroll', function() {
         var top = $window.scrollTop();
 

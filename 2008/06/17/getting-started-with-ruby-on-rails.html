@@ -41,7 +41,7 @@
           <div class="post-meta">
             <h1 class="post-title">Getting Started with Ruby on Rails</h1>
             <div class="cf post-meta-text">
-              <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
+              <div class="author-image" style="background-image: url(/assets/images/author-bw.jpg)">Blog Logo</div>
               <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">Mark Morga</h4>
               on
               <time datetime="2008-06-17T00:00:00-05:00">17 Jun 2008</time>
@@ -72,7 +72,7 @@
 
 <h3>Online Tutorials</h3>
 
-<p>This is a little tough at the moment, because Rails 2.1 hasn&#39;t had as many &quot;getting started&quot; tutorials written as the 1.2x versions of Rails had.</p>
+<p>This is a little tough at the moment, because Rails 2.1 hasn&rsquo;t had as many &ldquo;getting started&rdquo; tutorials written as the 1.2x versions of Rails had.</p>
 
 <p>There is a long tutorial at <a href="http://www.tutorialspoint.com/ruby-on-rails-2.1/index.htm">Tutorials Point</a> which looks like a good start.</p>
 
@@ -90,7 +90,7 @@
 
 <p>The two books that I recommend most are:</p>
 
-<p><a href="http://www.amazon.com/gp/redirect.html?ie=UTF8&amp;location=http%3A%2F%2Fwww.amazon.com%2FProgramming-Ruby-Pragmatic-Programmers-Second%2Fdp%2F0974514055%3Fie%3DUTF8%26s%3Dbooks%26qid%3D1213750192%26sr%3D1-1&amp;tag=comahill-20&amp;linkCode=ur2&amp;camp=1789&amp;creative=9325">Programming Ruby: The Pragmatic Programmers&#39; Guide</a><img src="http://www.assoc-amazon.com/e/ir?t=comahill-20&amp;amp;l=ur2&amp;amp;o=1" alt=""> by Dave Thomas, Chad Fowler and Andy Hunt,  and <a href="http://www.amazon.com/gp/redirect.html?ie=UTF8&amp;location=http%3A%2F%2Fwww.amazon.com%2FRails-Way-Addison-Wesley-Professional-Ruby%2Fdp%2F0321445619%3Fie%3DUTF8%26s%3Dbooks%26qid%3D1213750036%26sr%3D8-1&amp;tag=comahill-20&amp;linkCode=ur2&amp;camp=1789&amp;creative=9325">The Rails Way</a><img src="http://www.assoc-amazon.com/e/ir?t=comahill-20&amp;amp;l=ur2&amp;amp;o=1" alt=""> by Obie Fernandez.</p>
+<p><a href="http://www.amazon.com/gp/redirect.html?ie=UTF8&amp;location=http%3A%2F%2Fwww.amazon.com%2FProgramming-Ruby-Pragmatic-Programmers-Second%2Fdp%2F0974514055%3Fie%3DUTF8%26s%3Dbooks%26qid%3D1213750192%26sr%3D1-1&amp;tag=comahill-20&amp;linkCode=ur2&amp;camp=1789&amp;creative=9325">Programming Ruby: The Pragmatic Programmers&rsquo; Guide</a><img src="http://www.assoc-amazon.com/e/ir?t=comahill-20&amp;amp;l=ur2&amp;amp;o=1" alt=""> by Dave Thomas, Chad Fowler and Andy Hunt,  and <a href="http://www.amazon.com/gp/redirect.html?ie=UTF8&amp;location=http%3A%2F%2Fwww.amazon.com%2FRails-Way-Addison-Wesley-Professional-Ruby%2Fdp%2F0321445619%3Fie%3DUTF8%26s%3Dbooks%26qid%3D1213750036%26sr%3D8-1&amp;tag=comahill-20&amp;linkCode=ur2&amp;camp=1789&amp;creative=9325">The Rails Way</a><img src="http://www.assoc-amazon.com/e/ir?t=comahill-20&amp;amp;l=ur2&amp;amp;o=1" alt=""> by Obie Fernandez.</p>
 
 <p>These two books are a great learning and reference combination for Ruby on Rails development.</p>
 
@@ -126,7 +126,7 @@
           <div class="isLeft">
             <h5 class="index-headline featured"><span>Written by</span></h5>
             <section class="author">
-              <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
+              <div class="author-image" style="background-image: url(/assets/images/author-bw.jpg)">Blog Logo</div>
               <h4>Mark Morga</h4>
               <p class="bio"></p>
               <hr>
@@ -162,6 +162,7 @@
 <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
 <script type="text/javascript" src="/assets/js/index.js"></script>
 <script type="text/javascript" src="/assets/js/readingTime.min.js"></script>
+<script type="text/javascript" src="/assets/js/min/picturefill.min.js"></script>
 <script>
 (function ($) {
   "use strict";
@@ -169,7 +170,7 @@
 
     var $window = $(window),
     $image = $('.post-image-image, .teaserimage-image');
-    
+
       $window.on('scroll', function() {
         var top = $window.scrollTop();
 

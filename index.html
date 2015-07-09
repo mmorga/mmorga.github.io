@@ -99,10 +99,25 @@
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
           <div class="article-item">
             <header class="post-header">
+              <h2 class="post-title" itemprop="name"><a href="/software/2015/07/09/environments-to-learn-programming.html" itemprop="url">Environments to Learn Programming</a></h2>
+            </header>
+            <section class="post-excerpt" itemprop="description">
+              <p>I&rsquo;ve come across some environments built to help people (and especially kids) to learn programming. Sonic Pi is perfect for people with an interest in music. It’s a live coding synthesizer that lets you perform music using code (a Ruby DSL). Check out the demos – it’s pretty cool. One...</p>
+            </section>
+            <div class="post-meta">
+              <time datetime="09 July 2015">09 July 2015</time>
+<!--            <span class="post-tags-set">on <span class="post-tag-">, <a href="/tag/"></a></span></span>-->
+            </div>
+          </div>
+        </article>
+      
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
+          <div class="article-item">
+            <header class="post-header">
               <h2 class="post-title" itemprop="name"><a href="/software/2012/08/10/uml-diagrams-from-graphviz.html" itemprop="url">UML Diagrams from Graphviz</a></h2>
             </header>
             <section class="post-excerpt" itemprop="description">
-              <p>I&#39;m not a huge fan of UML. I think it took a simple idea (standard conceptual drawings) and made it much more complex than necessary with the unwise goal of allowing commercial UML tools to flourish and make code-to-diagram round trip conversion something people might want to do. Something like...</p>
+              <p>I&rsquo;m not a huge fan of UML. I think it took a simple idea (standard conceptual drawings) and made it much more complex than necessary with the unwise goal of allowing commercial UML tools to flourish and make code-to-diagram round trip conversion something people might want to do. Something like...</p>
             </section>
             <div class="post-meta">
               <time datetime="10 August 2012">10 August 2012</time>
@@ -117,7 +132,7 @@
               <h2 class="post-title" itemprop="name"><a href="/software/2012/07/31/making-the-windows-shell-livable.html" itemprop="url">Making the Windows Shell Livable</a></h2>
             </header>
             <section class="post-excerpt" itemprop="description">
-              <p>Back when I last &quot;did&quot; Windows development, .Net didn&#39;t exist and the Windows CMD prompt was one of the first things I replaced (with Cygwin). Unfortunately, last time I helped someone with a Windows machine the Cygwin install didn&#39;t go well - it seemed to be mired in the past,...</p>
+              <p>Back when I last &ldquo;did&rdquo; Windows development, .Net didn&rsquo;t exist and the Windows CMD prompt was one of the first things I replaced (with Cygwin). Unfortunately, last time I helped someone with a Windows machine the Cygwin install didn&rsquo;t go well - it seemed to be mired in the past,...</p>
             </section>
             <div class="post-meta">
               <time datetime="31 July 2012">31 July 2012</time>
@@ -147,26 +162,11 @@
               <h2 class="post-title" itemprop="name"><a href="/funny/2008/12/28/the-year-in-review-according-to-dave-barry.html" itemprop="url">The Year In Review According to Dave Barry</a></h2>
             </header>
             <section class="post-excerpt" itemprop="description">
-              <p>There&#39;s too much comedy gold here to cherry pick.  Read the whole thing!
+              <p>There&rsquo;s too much comedy gold here to cherry pick.  Read the whole thing!
 </p>
             </section>
             <div class="post-meta">
               <time datetime="28 December 2008">28 December 2008</time>
-<!--            <span class="post-tags-set">on <span class="post-tag-">, <a href="/tag/"></a></span></span>-->
-            </div>
-          </div>
-        </article>
-      
-        <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
-          <div class="article-item">
-            <header class="post-header">
-              <h2 class="post-title" itemprop="name"><a href="/movies/2008/12/02/film-personality-test.html" itemprop="url">Film personality test</a></h2>
-            </header>
-            <section class="post-excerpt" itemprop="description">
-              <p>via Kottke via Nels Choose your favorite movie per director. 1) Joel Coen, 2) Wes Anderson, 3) Hal Ashby, 4) Kevin Smith, 5) Quentin Tarantino, 6) Stanley Kubrick, 7) P.T. Anderson, 8) Errol Morris Joel Coen: The Big Lebowski Wes Anderson: Rushmore Hal Ashby: Being There (Full disclosure, I barely...</p>
-            </section>
-            <div class="post-meta">
-              <time datetime="02 December 2008">02 December 2008</time>
 <!--            <span class="post-tags-set">on <span class="post-tag-">, <a href="/tag/"></a></span></span>-->
             </div>
           </div>
@@ -209,6 +209,7 @@
 <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
 <script type="text/javascript" src="/assets/js/index.js"></script>
 <script type="text/javascript" src="/assets/js/readingTime.min.js"></script>
+<script type="text/javascript" src="/assets/js/min/picturefill.min.js"></script>
 <script>
 (function ($) {
   "use strict";
@@ -216,7 +217,7 @@
 
     var $window = $(window),
     $image = $('.post-image-image, .teaserimage-image');
-    
+
       $window.on('scroll', function() {
         var top = $window.scrollTop();
 

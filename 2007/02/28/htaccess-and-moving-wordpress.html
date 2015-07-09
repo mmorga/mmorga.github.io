@@ -41,7 +41,7 @@
           <div class="post-meta">
             <h1 class="post-title">.htaccess and moving Wordpress</h1>
             <div class="cf post-meta-text">
-              <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
+              <div class="author-image" style="background-image: url(/assets/images/author-bw.jpg)">Blog Logo</div>
               <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">Mark Morga</h4>
               on
               <time datetime="2007-02-28T00:00:00-06:00">28 Feb 2007</time>
@@ -58,9 +58,9 @@
             <span class="post-reading-time"></span> read
           </div>
           <a name="topofpage"></a>
-          <p>Initially, I installed Wordpress to the /blog directory of my website.  After using it a while I decided that I really wanted nothing else at the top level of my website and moved my blog to the top level following the <a href="http://codex.wordpress.org/Giving_WordPress_Its_Own_Directory">directions here</a>.  Things worked just fine after the move except that anyone going to the old blog location http://www.markmorga.com/blog would get the Wordpress header and footer with a 404 error message and no blog.</p>
+          <p>Initially, I installed Wordpress to the /blog directory of my website.  After using it a while I decided that I really wanted nothing else at the top level of my website and moved my blog to the top level following the <a href="http://codex.wordpress.org/Giving_WordPress_Its_Own_Directory">directions here</a>.  Things worked just fine after the move except that anyone going to the old blog location <a href="http://www.markmorga.com/blog">http://www.markmorga.com/blog</a> would get the Wordpress header and footer with a 404 error message and no blog.</p>
 
-<p>I played with the .htaccess a bit myself with no luck.  What I wanted to do was to have any reference to /blog to be redirected to / but any /blog/... references still go to their destinations.  Eventually, I threw the problem over to <a href="http://anton.lr2.com/">Anton</a> to have a look at. He poked at it long enough to get angry at Apache and ultimately came up with the following solution:</p>
+<p>I played with the .htaccess a bit myself with no luck.  What I wanted to do was to have any reference to /blog to be redirected to / but any /blog/&hellip; references still go to their destinations.  Eventually, I threw the problem over to <a href="http://anton.lr2.com/">Anton</a> to have a look at. He poked at it long enough to get angry at Apache and ultimately came up with the following solution:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">&lt;IfModule mod_rewrite.c&gt;
         RewriteEngine On
         RewriteBase /
@@ -70,7 +70,7 @@
         RewriteRule blog/feed/ /feed/ [R=301,L]
 &lt;/IfModule&gt;
 </code></pre></div>
-<p>Here the first two lines turn on the rewrite engine for the base directory /.  The RewriteCond line indicates that these rules won&#39;t apply to URIs that match to /blog/* (where the * is one or more characters), The first RewriteRule rewrites the /blog URI to / and the second RewriteRule redirects the old feed URI to the new /feed location.</p>
+<p>Here the first two lines turn on the rewrite engine for the base directory /.  The RewriteCond line indicates that these rules won&rsquo;t apply to URIs that match to /blog/* (where the * is one or more characters), The first RewriteRule rewrites the /blog URI to / and the second RewriteRule redirects the old feed URI to the new /feed location.</p>
 
 <p>Thanks, Anton!</p>
 
@@ -102,7 +102,7 @@
           <div class="isLeft">
             <h5 class="index-headline featured"><span>Written by</span></h5>
             <section class="author">
-              <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
+              <div class="author-image" style="background-image: url(/assets/images/author-bw.jpg)">Blog Logo</div>
               <h4>Mark Morga</h4>
               <p class="bio"></p>
               <hr>
@@ -138,6 +138,7 @@
 <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
 <script type="text/javascript" src="/assets/js/index.js"></script>
 <script type="text/javascript" src="/assets/js/readingTime.min.js"></script>
+<script type="text/javascript" src="/assets/js/min/picturefill.min.js"></script>
 <script>
 (function ($) {
   "use strict";
@@ -145,7 +146,7 @@
 
     var $window = $(window),
     $image = $('.post-image-image, .teaserimage-image');
-    
+
       $window.on('scroll', function() {
         var top = $window.scrollTop();
 

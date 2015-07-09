@@ -99,6 +99,26 @@
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
           <div class="article-item">
             <header class="post-header">
+              <h2 class="post-title" itemprop="name"><a href="/2007/02/03/skate-park-photo-safar.html" itemprop="url">Skate Park Photo Safari</a></h2>
+            </header>
+            <section class="post-excerpt" itemprop="description">
+              <p>
+
+IMG_9434 Originally uploaded by markmorga.
+
+One of my shots from our latest Photo Safari.  These were taken on January 31 at the Lady Bird Johnson skate park on Nacogdoches road.  You can view the other photos on Flickr.
+</p>
+            </section>
+            <div class="post-meta">
+              <time datetime="03 February 2007">03 February 2007</time>
+<!--            <span class="post-tags-set">on <span class="post-tag-">, <a href="/tag/"></a></span></span>-->
+            </div>
+          </div>
+        </article>
+      
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
+          <div class="article-item">
+            <header class="post-header">
               <h2 class="post-title" itemprop="name"><a href="/2007/01/30/pans-labyrinth.html" itemprop="url">Pan's Labyrinth</a></h2>
             </header>
             <section class="post-excerpt" itemprop="description">
@@ -153,25 +173,10 @@ Which science fiction writer are you?
               <h2 class="post-title" itemprop="name"><a href="/2007/01/22/which-superhero-are-you.html" itemprop="url">Which Superhero Are You?</a></h2>
             </header>
             <section class="post-excerpt" itemprop="description">
-              <p>Ok - I haven&#39;t posted anything lately. So this ... is something. Your results: You are intelligent, witty, a bit geeky and have great power and responsibility. You are Spider-Man Spider-Man 90%Green Lantern 75%Superman 70%Iron Man 65%Robin 65%Hulk 65%Supergirl 50%The Flash 50%Catwoman 45%Batman 40%Wonder Woman 35% Click here to take...</p>
+              <p>Ok - I haven&rsquo;t posted anything lately. So this &hellip; is something. Your results: You are intelligent, witty, a bit geeky and have great power and responsibility. You are Spider-Man Spider-Man 90%Green Lantern 75%Superman 70%Iron Man 65%Robin 65%Hulk 65%Supergirl 50%The Flash 50%Catwoman 45%Batman 40%Wonder Woman 35% Click here to take...</p>
             </section>
             <div class="post-meta">
               <time datetime="22 January 2007">22 January 2007</time>
-<!--            <span class="post-tags-set">on <span class="post-tag-">, <a href="/tag/"></a></span></span>-->
-            </div>
-          </div>
-        </article>
-      
-        <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
-          <div class="article-item">
-            <header class="post-header">
-              <h2 class="post-title" itemprop="name"><a href="/2007/01/17/braving-the-ice-storm-with-food-day-two.html" itemprop="url">Braving the Ice Storm with food, day two</a></h2>
-            </header>
-            <section class="post-excerpt" itemprop="description">
-              <p>In the interests of keeping spirits up during this trying ordeal, I&#39;ve been cooking (and eating) meals fit for a king. Last nights meal: Baked Salmon with Lemon &amp; Caper Vinaigrette, Fresh Green Beans, and Pan Grilled Red Potatoes with Lemon-Garlic A&iuml;oli. Was it yummy? Yes it was. Bobby Flay&#39;s...</p>
-            </section>
-            <div class="post-meta">
-              <time datetime="17 January 2007">17 January 2007</time>
 <!--            <span class="post-tags-set">on <span class="post-tag-">, <a href="/tag/"></a></span></span>-->
             </div>
           </div>
@@ -218,6 +223,7 @@ Which science fiction writer are you?
 <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
 <script type="text/javascript" src="/assets/js/index.js"></script>
 <script type="text/javascript" src="/assets/js/readingTime.min.js"></script>
+<script type="text/javascript" src="/assets/js/min/picturefill.min.js"></script>
 <script>
 (function ($) {
   "use strict";
@@ -225,7 +231,7 @@ Which science fiction writer are you?
 
     var $window = $(window),
     $image = $('.post-image-image, .teaserimage-image');
-    
+
       $window.on('scroll', function() {
         var top = $window.scrollTop();
 

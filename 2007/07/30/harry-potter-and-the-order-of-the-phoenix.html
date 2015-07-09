@@ -41,7 +41,7 @@
           <div class="post-meta">
             <h1 class="post-title">Harry Potter and the Order of the Phoenix</h1>
             <div class="cf post-meta-text">
-              <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
+              <div class="author-image" style="background-image: url(/assets/images/author-bw.jpg)">Blog Logo</div>
               <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">Mark Morga</h4>
               on
               <time datetime="2007-07-30T00:00:00-05:00">30 Jul 2007</time>
@@ -58,11 +58,11 @@
             <span class="post-reading-time"></span> read
           </div>
           <a name="topofpage"></a>
-          <p>I&#39;m apparently a little (a lot) behind in the review party.  I&#39;ve only read the first three books in the series, so at this point, I can only review the movie and a movie.  <a href="http://imdb.com/title/tt0373889/">Order of the Phoenix</a> is one of the best films in the series so far.  The story moves along at a good clip, the story is accessible to those who haven&#39;t read the books or even those who haven&#39;t seen previous movies.  </p>
+          <p>I&rsquo;m apparently a little (a lot) behind in the review party.  I&rsquo;ve only read the first three books in the series, so at this point, I can only review the movie and a movie.  <a href="http://imdb.com/title/tt0373889/">Order of the Phoenix</a> is one of the best films in the series so far.  The story moves along at a good clip, the story is accessible to those who haven&rsquo;t read the books or even those who haven&rsquo;t seen previous movies.  </p>
 
 <p>The story has gotten progressively darker as the series works to a close, and the film reflects this change in mood well.  The actors are growing well as actors and the performances here are very good.  In particular, Imelda Staunton plays Dolores Umbridge as the sort of person who uses a pleasant exterior to cover a ruthless and viciously conformist interior.  I love the way the film uses the Umbridge character to make comments on standardized testing, teacher evaluation, and using traditional values as a cover for villainy.  I also love how the film points out how authorities (in this case the Ministry of Magic) can be in such systematic denial about threats that it turns on those who would point out those threats.  Very interesting.</p>
 
-<p>In other Harry Potter news, I&#39;m only half-way through <a href="http://www.amazon.com/Harry-Potter-Deathly-Hallows-Book/dp/0545010225/ref=pd_bbs_sr_1/103-1575083-6645427?ie=UTF8&amp;s=books&amp;qid=1185819762&amp;sr=8-1">Harry Potter and the Deathly Hallows</a> as compared to most people I know who finished the book within hours of the Saturday release.  Too much life going on to dedicate that much time to reading at the moment - which isn&#39;t really a bad thing.</p>
+<p>In other Harry Potter news, I&rsquo;m only half-way through <a href="http://www.amazon.com/Harry-Potter-Deathly-Hallows-Book/dp/0545010225/ref=pd_bbs_sr_1/103-1575083-6645427?ie=UTF8&amp;s=books&amp;qid=1185819762&amp;sr=8-1">Harry Potter and the Deathly Hallows</a> as compared to most people I know who finished the book within hours of the Saturday release.  Too much life going on to dedicate that much time to reading at the moment - which isn&rsquo;t really a bad thing.</p>
 
         </section>
         <footer class="post-footer">
@@ -92,7 +92,7 @@
           <div class="isLeft">
             <h5 class="index-headline featured"><span>Written by</span></h5>
             <section class="author">
-              <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
+              <div class="author-image" style="background-image: url(/assets/images/author-bw.jpg)">Blog Logo</div>
               <h4>Mark Morga</h4>
               <p class="bio"></p>
               <hr>
@@ -128,6 +128,7 @@
 <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
 <script type="text/javascript" src="/assets/js/index.js"></script>
 <script type="text/javascript" src="/assets/js/readingTime.min.js"></script>
+<script type="text/javascript" src="/assets/js/min/picturefill.min.js"></script>
 <script>
 (function ($) {
   "use strict";
@@ -135,7 +136,7 @@
 
     var $window = $(window),
     $image = $('.post-image-image, .teaserimage-image');
-    
+
       $window.on('scroll', function() {
         var top = $window.scrollTop();
 

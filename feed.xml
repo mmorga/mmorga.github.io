@@ -6,15 +6,75 @@
 </description>
     <link>http://markmorga.com/</link>
     <atom:link href="http://markmorga.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 25 Jun 2015 18:46:29 -0500</pubDate>
-    <lastBuildDate>Thu, 25 Jun 2015 18:46:29 -0500</lastBuildDate>
+    <pubDate>Thu, 09 Jul 2015 17:43:37 -0500</pubDate>
+    <lastBuildDate>Thu, 09 Jul 2015 17:43:37 -0500</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
-        <title>UML Diagrams from Graphviz</title>
-        <description>&lt;p&gt;I&amp;#39;m not a huge fan of UML. I think it took a simple idea (standard conceptual drawings) and made it much more complex than necessary with the unwise goal of allowing commercial UML tools to flourish and make code-to-diagram round trip conversion something people might want to do. Something like MagicDraw I find horrible from a performance and usability perspective.&lt;/p&gt;
+        <title>Environments to Learn Programming</title>
+        <description>&lt;p&gt;I&amp;rsquo;ve come across some environments built to help people (and especially kids) to learn programming.&lt;/p&gt;
 
-&lt;p&gt;I&amp;#39;m also not a big fan of a lot of drawing software. Visio is great unless you don&amp;#39;t run on Windows, don&amp;#39;t own a copy, or care about usability. Omnigraffle on the Mac is arguably better on the usability front, but you still end up tweaking the drawing a lot more than just entering your relationships and drawing connections. With any drawing software, the saved file is not human readable - and looking at diffs in a source control system tells you nothing&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;
+    &lt;source srcset=&quot;/generated/article_images/2015-07-09-environments-to-learn-programming/sonic-pi-logo-900by877-ba8668.png&quot; media=&quot;(min-width: 40em) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 40em) and (min-resolution: 144dpi)&quot;&gt;
+    &lt;source srcset=&quot;/generated/article_images/2015-07-09-environments-to-learn-programming/sonic-pi-logo-600by585-ba8668.png&quot; media=&quot;(min-width: 40em)&quot;&gt;
+    &lt;source srcset=&quot;/generated/article_images/2015-07-09-environments-to-learn-programming/sonic-pi-logo-315by307-ba8668.png&quot; media=&quot;(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)&quot;&gt;
+    &lt;source srcset=&quot;/generated/article_images/2015-07-09-environments-to-learn-programming/sonic-pi-logo-210by205-ba8668.png&quot;&gt;
+    &lt;img srcset=&quot;/generated/article_images/2015-07-09-environments-to-learn-programming/sonic-pi-logo-210by205-ba8668.png&quot; itemprop=&quot;image&quot; class=&quot;img-float-right&quot; &gt;
+  &lt;/picture&gt;
+ &lt;a href=&quot;http://sonic-pi.net/&quot;&gt;Sonic Pi&lt;/a&gt; is perfect for people with an interest in music. It’s a live coding synthesizer that lets you perform music using code (a &lt;a href=&quot;https://www.ruby-lang.org/en/&quot;&gt;Ruby&lt;/a&gt; &lt;a href=&quot;https://en.wikipedia.org/wiki/Domain-specific_language&quot;&gt;DSL&lt;/a&gt;). Check out the demos – it’s pretty cool. One of the authors actually uses it for live gigs in nightclubs.&lt;/p&gt;
+
+&lt;p&gt;&lt;picture&gt;
+    &lt;source srcset=&quot;/generated/article_images/2015-07-09-environments-to-learn-programming/pharo-logo-471by155-f18864.png&quot; media=&quot;(min-width: 40em) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 40em) and (min-resolution: 144dpi)&quot;&gt;
+    &lt;source srcset=&quot;/generated/article_images/2015-07-09-environments-to-learn-programming/pharo-logo-471by155-f18864.png&quot; media=&quot;(min-width: 40em)&quot;&gt;
+    &lt;source srcset=&quot;/generated/article_images/2015-07-09-environments-to-learn-programming/pharo-logo-315by104-f18864.png&quot; media=&quot;(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)&quot;&gt;
+    &lt;source srcset=&quot;/generated/article_images/2015-07-09-environments-to-learn-programming/pharo-logo-210by69-f18864.png&quot;&gt;
+    &lt;img srcset=&quot;/generated/article_images/2015-07-09-environments-to-learn-programming/pharo-logo-210by69-f18864.png&quot; itemprop=&quot;image&quot; class=&quot;img-float-left&quot; &gt;
+  &lt;/picture&gt;
+ &lt;a href=&quot;http://pharo.org/&quot;&gt;Pharo&lt;/a&gt; is a &lt;a href=&quot;http://www.smalltalk.org/main/&quot;&gt;Smalltalk&lt;/a&gt; implementation designed for learning. Very cool features and live code browser. When you run it, it starts a tutorial to learn Smalltalk.&lt;/p&gt;
+
+&lt;p&gt;Finally &lt;a href=&quot;http://ipython.org/&quot;&gt;iPython&lt;/a&gt; started off as an improved &lt;a href=&quot;https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop&quot;&gt;REPL&lt;/a&gt; for &lt;a href=&quot;https://www.python.org/&quot;&gt;Python&lt;/a&gt;. The notebook module added the ability for a web browser to display an interactive environment that supports the display of cells with Markdown rendering, editable code blocks that you can edit and run in the browser and graphics libraries to draw dynamic graphics. Notebooks are JSON files, so you can download lots of pre-made ones including a couple that teach Python programming. There are some &lt;a href=&quot;http://ipython.org/videos.html#videos&quot;&gt;videos&lt;/a&gt; which show off the features available.&lt;/p&gt;
+
+&lt;p&gt;&lt;picture&gt;
+    &lt;source srcset=&quot;/generated/article_images/2015-07-09-environments-to-learn-programming/jupyter-sq-text-440by440-0638b7.png&quot; media=&quot;(min-width: 40em) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 40em) and (min-resolution: 144dpi)&quot;&gt;
+    &lt;source srcset=&quot;/generated/article_images/2015-07-09-environments-to-learn-programming/jupyter-sq-text-440by440-0638b7.png&quot; media=&quot;(min-width: 40em)&quot;&gt;
+    &lt;source srcset=&quot;/generated/article_images/2015-07-09-environments-to-learn-programming/jupyter-sq-text-315by315-0638b7.png&quot; media=&quot;(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)&quot;&gt;
+    &lt;source srcset=&quot;/generated/article_images/2015-07-09-environments-to-learn-programming/jupyter-sq-text-210by210-0638b7.png&quot;&gt;
+    &lt;img srcset=&quot;/generated/article_images/2015-07-09-environments-to-learn-programming/jupyter-sq-text-210by210-0638b7.png&quot; itemprop=&quot;image&quot; class=&quot;img-float-right&quot; &gt;
+  &lt;/picture&gt;
+The &lt;a href=&quot;https://jupyter.org/&quot;&gt;Jupyter&lt;/a&gt; project is forking from iPython to provide the same feature set but allowing code engines that support other languages like R, Ruby, Go, etc. &lt;a href=&quot;http://ipython.org/install.html&quot;&gt;Installing and getting it all working&lt;/a&gt; is more involved than the above options so I can’t recommend it as highly, but it’s worth looking at. I can see it being a useful tool when you are exploring some techniques or munging some data.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 09 Jul 2015 00:00:00 -0500</pubDate>
+        <link>http://markmorga.com/software/2015/07/09/environments-to-learn-programming.html</link>
+        <guid isPermaLink="true">http://markmorga.com/software/2015/07/09/environments-to-learn-programming.html</guid>
+        
+        <category>education</category>
+        
+        <category>learning</category>
+        
+        <category>programming</category>
+        
+        <category>smalltalk</category>
+        
+        <category>ruby</category>
+        
+        <category>python</category>
+        
+        <category>squeak</category>
+        
+        <category>pharo</category>
+        
+        <category>sonic pi</category>
+        
+        
+        <category>software</category>
+        
+      </item>
+    
+      <item>
+        <title>UML Diagrams from Graphviz</title>
+        <description>&lt;p&gt;I&amp;rsquo;m not a huge fan of UML. I think it took a simple idea (standard conceptual drawings) and made it much more complex than necessary with the unwise goal of allowing commercial UML tools to flourish and make code-to-diagram round trip conversion something people might want to do. Something like MagicDraw I find horrible from a performance and usability perspective.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m also not a big fan of a lot of drawing software. Visio is great unless you don&amp;rsquo;t run on Windows, don&amp;rsquo;t own a copy, or care about usability. Omnigraffle on the Mac is arguably better on the usability front, but you still end up tweaking the drawing a lot more than just entering your relationships and drawing connections. With any drawing software, the saved file is not human readable - and looking at diffs in a source control system tells you nothing&lt;/p&gt;
 
 &lt;p&gt;I like Graphviz for making quick drawings that are minimalistic and take away the tweaking factor of a lot of apps. You describe the nodes and edges and Graphviz figures out how to handle the layout of the drawing. Need to add something later? No problem, just put it in the dot file and regenerate your results.&lt;/p&gt;
 
@@ -27,12 +87,12 @@
 &lt;li&gt;Supports a wide variety of output formats: bmp, eps, fig, gd, gd2, gif, gtk, ico, imap, cmapx, jpg, pdf, plain, png, ps, svg, tiff, vml, vrml, wbmp, webp, xlib&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;Graphviz&amp;#39;s disadvantages:&lt;/p&gt;
+&lt;p&gt;Graphviz&amp;rsquo;s disadvantages:&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Sometimes the layout is less than perfect&lt;/li&gt;
 &lt;li&gt;The output is pretty plain unless you spend a lot of adding style in the dot (which hurts the simplicity of the input format). Or spend time tweaking the output format (which gets you back into the image software trap)&lt;/li&gt;
-&lt;li&gt;Doesn&amp;#39;t support UML style graphics&lt;/li&gt;
+&lt;li&gt;Doesn&amp;rsquo;t support UML style graphics&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;For a long time graphviz supported the inclusion of PostScript files to define shapes, but this was only useful if you were outputting PostScript as a final result. I like using SVG as my format of choice since it can be freely scaled and works in most web browsers these days. Looking around the other day, I found a reference to the fact that Graphviz also supports the inclusion of SVG files as an image format.  With a little experimentation, I found that it works pretty well.&lt;/p&gt;
@@ -159,7 +219,7 @@
 
 &lt;p&gt;&lt;img src=&quot;/assets/article_images/2012-08-10-uml-diagrams-from-graphviz/sample.dot.png&quot; alt=&quot;Sample Component Diagram&quot;&gt;&lt;/p&gt;
 
-&lt;p&gt;Which is not too bad of a start. From here, there&amp;#39;s a few things I think I could do to make it even better.&lt;/p&gt;
+&lt;p&gt;Which is not too bad of a start. From here, there&amp;rsquo;s a few things I think I could do to make it even better.&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Pre-process the dot file. Come up with an annotation to denote the type of image to include for a node without having to reference the image file.&lt;/li&gt;
@@ -167,7 +227,7 @@
 &lt;li&gt;Post-process the SVG output to look nicer. Apply a better look to the sub-graphs, round the corners, add add gradients, etc. This sort of thing has been done before with XSLT.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;I think this approach is reasonable for some UML types: component, use case, collaboration, activity, and maybe deployment. Sequence diagrams are different in layout and probably aren&amp;#39;t worth the effort to attempt.&lt;/p&gt;
+&lt;p&gt;I think this approach is reasonable for some UML types: component, use case, collaboration, activity, and maybe deployment. Sequence diagrams are different in layout and probably aren&amp;rsquo;t worth the effort to attempt.&lt;/p&gt;
 </description>
         <pubDate>Fri, 10 Aug 2012 11:35:00 -0500</pubDate>
         <link>http://markmorga.com/software/2012/08/10/uml-diagrams-from-graphviz.html</link>
@@ -188,22 +248,22 @@
     
       <item>
         <title>Making the Windows Shell Livable</title>
-        <description>&lt;p&gt;Back when I last &amp;quot;did&amp;quot; Windows development, .Net didn&amp;#39;t exist and the Windows CMD prompt was one of the first things I replaced (with Cygwin). Unfortunately, last time I helped someone with a Windows machine the Cygwin install didn&amp;#39;t go well - it seemed to be mired in the past, was slow, and the
+        <description>&lt;p&gt;Back when I last &amp;ldquo;did&amp;rdquo; Windows development, .Net didn&amp;rsquo;t exist and the Windows CMD prompt was one of the first things I replaced (with Cygwin). Unfortunately, last time I helped someone with a Windows machine the Cygwin install didn&amp;rsquo;t go well - it seemed to be mired in the past, was slow, and the
 git version included did not work for some reason with the repos we needed to use.&lt;/p&gt;
 
-&lt;p&gt;Fast forward to the last couple of weeks. I&amp;#39;m in the process of learning C# and .Net to help build a new framework with a team and I&amp;#39;m running Windows 7 in a VM. So I&amp;#39;m coming to Windows fresh after a break of almost 8 years. The good news so far has been than C# strikes me much better than Java did (when I last used it) and that the .Net environment is pretty easy to get learning.  Some DLL hell still exists (which I ran into using the ZeroMQ NuGet libraries), but for the most part it has been fairly pleasant. Unfortunately,
+&lt;p&gt;Fast forward to the last couple of weeks. I&amp;rsquo;m in the process of learning C# and .Net to help build a new framework with a team and I&amp;rsquo;m running Windows 7 in a VM. So I&amp;rsquo;m coming to Windows fresh after a break of almost 8 years. The good news so far has been than C# strikes me much better than Java did (when I last used it) and that the .Net environment is pretty easy to get learning.  Some DLL hell still exists (which I ran into using the ZeroMQ NuGet libraries), but for the most part it has been fairly pleasant. Unfortunately,
 the old Windows CMD prompt is unchanged from all those years ago. Despair sets in.&lt;/p&gt;
 
-&lt;p&gt;Then I learned about &lt;a href=&quot;http://technet.microsoft.com/en-us/library/bb978526.aspx&quot;&gt;PowerShell&lt;/a&gt;. After giving it a whirl and learning a thing or two, I&amp;#39;ve finally got a very usable shell configuration for Windows development that doesn&amp;#39;t make me weep every time I have to use it. Here&amp;#39;s how I have it configured.&lt;/p&gt;
+&lt;p&gt;Then I learned about &lt;a href=&quot;http://technet.microsoft.com/en-us/library/bb978526.aspx&quot;&gt;PowerShell&lt;/a&gt;. After giving it a whirl and learning a thing or two, I&amp;rsquo;ve finally got a very usable shell configuration for Windows development that doesn&amp;rsquo;t make me weep every time I have to use it. Here&amp;rsquo;s how I have it configured.&lt;/p&gt;
 
 &lt;p&gt;On my VM, PowerShell comes pre-installed, you may need to download it depending on your version of Windows.&lt;/p&gt;
 
 &lt;h2&gt;Console2&lt;/h2&gt;
 
-&lt;p&gt;First I installed &lt;a href=&quot;http://sourceforge.net/projects/console/&quot;&gt;Console2&lt;/a&gt;. Console is a Windows GUI which wraps the shell of your choice and adds: multiple tabs, text editor-like text selection, different background types, alpha and color-key transparency, configurable font, different window styles, hot-key mapping, etc.  This step isn&amp;#39;t strictly necessary
+&lt;p&gt;First I installed &lt;a href=&quot;http://sourceforge.net/projects/console/&quot;&gt;Console2&lt;/a&gt;. Console is a Windows GUI which wraps the shell of your choice and adds: multiple tabs, text editor-like text selection, different background types, alpha and color-key transparency, configurable font, different window styles, hot-key mapping, etc.  This step isn&amp;rsquo;t strictly necessary
 but I like having a more responsive window for my shell and I use tabs often in iTerm on the mac.&lt;/p&gt;
 
-&lt;p&gt;I configure Console to use PowerShell by starting Console, selecting the Edit-&amp;gt;Settings menu, then selecting the PowerShell exe in the &amp;quot;Shell&amp;quot; chooser which on my machine is located at: &amp;quot;C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe&amp;quot;.&lt;/p&gt;
+&lt;p&gt;I configure Console to use PowerShell by starting Console, selecting the Edit-&amp;gt;Settings menu, then selecting the PowerShell exe in the &amp;ldquo;Shell&amp;rdquo; chooser which on my machine is located at: &amp;ldquo;C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe&amp;rdquo;.&lt;/p&gt;
 
 &lt;h2&gt;Git&lt;/h2&gt;
 
@@ -213,7 +273,7 @@ but I like having a more responsive window for my shell and I use tabs often in 
 
 &lt;h2&gt;Configuring Git&lt;/h2&gt;
 
-&lt;p&gt;Note to self - you need to configure git to use .ssh keys in order for things to work correctly with remote repos. I&amp;#39;ll post something on this later.&lt;/p&gt;
+&lt;p&gt;Note to self - you need to configure git to use .ssh keys in order for things to work correctly with remote repos. I&amp;rsquo;ll post something on this later.&lt;/p&gt;
 
 &lt;h2&gt;Installing Posh-Git into PowerShell&lt;/h2&gt;
 
@@ -222,7 +282,7 @@ but I like having a more responsive window for my shell and I use tabs often in 
 &lt;p&gt;First set the security for your PowerShell instance. Run PowerShell as Administrator and type:&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;&lt;span class=&quot;nb&quot;&gt;Set-ExecutionPolicy&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;RemoteSigned&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;-Confirm&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Make sure git can be run from your shell. If not, add it to your user&amp;#39;s PATH.&lt;/p&gt;
+&lt;p&gt;Make sure git can be run from your shell. If not, add it to your user&amp;rsquo;s PATH.&lt;/p&gt;
 
 &lt;p&gt;Type the following commands to install PsGet and Posh-Git:&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;new-object&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Net&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;WebClient&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DownloadString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;http://psget.net/GetPsGet.ps1&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;iex&lt;/span&gt;
@@ -257,11 +317,11 @@ but I like having a more responsive window for my shell and I use tabs often in 
 
 &lt;span class=&quot;nb&quot;&gt;Pop-Location&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Exit out of Console/PowerShell and the next time you start up, you&amp;#39;ll see extra functionality for Git while in directories that are Git repositories.&lt;/p&gt;
+&lt;p&gt;Exit out of Console/PowerShell and the next time you start up, you&amp;rsquo;ll see extra functionality for Git while in directories that are Git repositories.&lt;/p&gt;
 
 &lt;p&gt;You can now use tab completion to complete both git commands and to fill in branch or remote names in addition to file names.&lt;/p&gt;
 
-&lt;p&gt;When you type &amp;quot;git status&amp;quot;, you will see color highlighting of files that helps understanding what is staged versus what isn&amp;#39;t yet.&lt;/p&gt;
+&lt;p&gt;When you type &amp;ldquo;git status&amp;rdquo;, you will see color highlighting of files that helps understanding what is staged versus what isn&amp;rsquo;t yet.&lt;/p&gt;
 
 &lt;p&gt;Have fun.  Let me know if you have any tips for PowerShell that I should pick up.&lt;/p&gt;
 </description>
@@ -348,7 +408,7 @@ but I like having a more responsive window for my shell and I use tabs often in 
     
       <item>
         <title>The Year In Review According to Dave Barry</title>
-        <description>&lt;p&gt;There&amp;#39;s too much comedy gold here to cherry pick.  &lt;a href=&quot;http://www.washingtonpost.com/wp-dyn/content/article/2008/12/19/AR2008121901343.html&quot;&gt;Read the whole thing!&lt;/a&gt;&lt;/p&gt;
+        <description>&lt;p&gt;There&amp;rsquo;s too much comedy gold here to cherry pick.  &lt;a href=&quot;http://www.washingtonpost.com/wp-dyn/content/article/2008/12/19/AR2008121901343.html&quot;&gt;Read the whole thing!&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 28 Dec 2008 00:00:00 -0600</pubDate>
         <link>http://markmorga.com/funny/2008/12/28/the-year-in-review-according-to-dave-barry.html</link>
@@ -374,7 +434,7 @@ but I like having a more responsive window for my shell and I use tabs often in 
 &lt;ol&gt;
 &lt;li&gt;Joel Coen: The Big Lebowski&lt;/li&gt;
 &lt;li&gt;Wes Anderson: Rushmore&lt;/li&gt;
-&lt;li&gt;Hal Ashby: Being There (Full disclosure, I barely remember Shampoo and haven&amp;#39;t seen Harold and Maude)&lt;/li&gt;
+&lt;li&gt;Hal Ashby: Being There (Full disclosure, I barely remember Shampoo and haven&amp;rsquo;t seen Harold and Maude)&lt;/li&gt;
 &lt;li&gt;Kevin Smith: Dogma&lt;/li&gt;
 &lt;li&gt;Quentin Tarantino: Kill Bill&lt;/li&gt;
 &lt;li&gt;Stanley Kubrick: The Shining&lt;/li&gt;
@@ -393,27 +453,27 @@ but I like having a more responsive window for my shell and I use tabs often in 
     
       <item>
         <title>Letus35 Mini Review</title>
-        <description>&lt;p&gt;I&amp;#39;ve been wanting to get back into filmmaking.  I&amp;#39;ve been working periodically on a feature length script but in the meantime, I was asked to work on a music video (more on this soon).  The &lt;a href=&quot;http://www.adapterplace.com/component/page,shop.product_details/flypage,shop.garden_flypage/product_id,43/category_id,11/manufacturer_id,0/option,com_virtuemart/Itemid,56/vmcchk,1/&quot;&gt;Letus35 mini&lt;/a&gt; has had me interested for quite a while.  I had made a deal with myself that I would purchase one if I made enough progress on the script, but the opportunity to shake it out on a music video was too tempting.&lt;/p&gt;
+        <description>&lt;p&gt;I&amp;rsquo;ve been wanting to get back into filmmaking.  I&amp;rsquo;ve been working periodically on a feature length script but in the meantime, I was asked to work on a music video (more on this soon).  The &lt;a href=&quot;http://www.adapterplace.com/component/page,shop.product_details/flypage,shop.garden_flypage/product_id,43/category_id,11/manufacturer_id,0/option,com_virtuemart/Itemid,56/vmcchk,1/&quot;&gt;Letus35 mini&lt;/a&gt; has had me interested for quite a while.  I had made a deal with myself that I would purchase one if I made enough progress on the script, but the opportunity to shake it out on a music video was too tempting.&lt;/p&gt;
 
-&lt;p&gt;This summer, I purchased a &lt;a href=&quot;http://www.usa.canon.com/consumer/controller?act=ModelInfoAct&amp;amp;fcategoryid=177&amp;amp;modelid=16186&quot;&gt;Canon HF10 HDV camcorder&lt;/a&gt;.  I had been looking at the HV20 and HV30, but the reviews indicated that the sensor quality on the HF10 was similar and I couldn&amp;#39;t pass up the opportunity to leave tape behind.  So this post is more of a collection of my experiences with the combination of the HF10 and the Letus35 mini rather than a comprehensive review.&lt;/p&gt;
+&lt;p&gt;This summer, I purchased a &lt;a href=&quot;http://www.usa.canon.com/consumer/controller?act=ModelInfoAct&amp;amp;fcategoryid=177&amp;amp;modelid=16186&quot;&gt;Canon HF10 HDV camcorder&lt;/a&gt;.  I had been looking at the HV20 and HV30, but the reviews indicated that the sensor quality on the HF10 was similar and I couldn&amp;rsquo;t pass up the opportunity to leave tape behind.  So this post is more of a collection of my experiences with the combination of the HF10 and the Letus35 mini rather than a comprehensive review.&lt;/p&gt;
 
 &lt;p&gt;I chose to go with the Canon FD lens mount because I already had a few FD lenses and FD lenses are plentiful and inexpensive on eBay.  The Canon EF mount is also available, but due to the lack of aperture ring on EF lenses, you need to set the aperture via a fairly hacky process involving an EOS body, not the best way to work.  In practice, this may not be as bad as it sounds, because you have a tendency to want to use the lenses close to wide open anyway to get the shallow depth of field that is one of the prime features of this sort of adapter.&lt;/p&gt;
 
-&lt;p&gt;I ordered the kit which included the FD mount, the rails system to mount the camcorder and lens securely and a nice case.  After working with the adapter for a few days, I&amp;#39;m convinced the rails kit is a requirement.  The rails from Letus are high quality and I wouldn&amp;#39;t feel comfortable using the adapter without the extra support that the rails provide.  The weak link in this system is definitely the filter threads that are used to join the camcorder to the adapter - you don&amp;#39;t want to risk damaging them.&lt;/p&gt;
+&lt;p&gt;I ordered the kit which included the FD mount, the rails system to mount the camcorder and lens securely and a nice case.  After working with the adapter for a few days, I&amp;rsquo;m convinced the rails kit is a requirement.  The rails from Letus are high quality and I wouldn&amp;rsquo;t feel comfortable using the adapter without the extra support that the rails provide.  The weak link in this system is definitely the filter threads that are used to join the camcorder to the adapter - you don&amp;rsquo;t want to risk damaging them.&lt;/p&gt;
 
-&lt;p&gt;The setup of the system is a little involved, but with practice I believe I&amp;#39;ll be able to assemble, align, and focus the system in about 15 minutes.  The focus process is pretty easy to accomplish, but the HF10&amp;#39;s screen is too small to be used to focus on the ground glass.  Using the A/V out to my old standard-def TV was sufficient to focus correctly.  Since you will need to accomplish focus each time you re-assemble the system, you will probably want to bring a portable monitor with you on location.&lt;/p&gt;
+&lt;p&gt;The setup of the system is a little involved, but with practice I believe I&amp;rsquo;ll be able to assemble, align, and focus the system in about 15 minutes.  The focus process is pretty easy to accomplish, but the HF10&amp;rsquo;s screen is too small to be used to focus on the ground glass.  Using the A/V out to my old standard-def TV was sufficient to focus correctly.  Since you will need to accomplish focus each time you re-assemble the system, you will probably want to bring a portable monitor with you on location.&lt;/p&gt;
 
-&lt;p&gt;My first feature request is for transport of the system.  It would be nice to have a case in which you could securely store the assembled system.  I will likely purchase one in the near future.  As an alternative, it would be nice to be able to leave the 37mm threaded ring on the camcorder when storing the adapter, but there isn&amp;#39;t a cover to protect the adapter if you do this, so you end up having to fully disassemble the adapter when putting any part of it back in the case.&lt;/p&gt;
+&lt;p&gt;My first feature request is for transport of the system.  It would be nice to have a case in which you could securely store the assembled system.  I will likely purchase one in the near future.  As an alternative, it would be nice to be able to leave the 37mm threaded ring on the camcorder when storing the adapter, but there isn&amp;rsquo;t a cover to protect the adapter if you do this, so you end up having to fully disassemble the adapter when putting any part of it back in the case.&lt;/p&gt;
 
-&lt;p&gt;When the HF10 is mounted on the riser on the rails system, the camcorder is pretty close to the power button on the adapter.  I thought this might be a problem at first, but in practice it wasn&amp;#39;t at all.  The only potential problem here is that you can&amp;#39;t immediately see if the power light is on.  I did forget once or twice to power the adapter on (which results in video with noticeable grain from the ground glass), but this is more a matter of practice and habit.  It&amp;#39;s pretty obvious when the power is on because of the vibration of the unit.&lt;/p&gt;
+&lt;p&gt;When the HF10 is mounted on the riser on the rails system, the camcorder is pretty close to the power button on the adapter.  I thought this might be a problem at first, but in practice it wasn&amp;rsquo;t at all.  The only potential problem here is that you can&amp;rsquo;t immediately see if the power light is on.  I did forget once or twice to power the adapter on (which results in video with noticeable grain from the ground glass), but this is more a matter of practice and habit.  It&amp;rsquo;s pretty obvious when the power is on because of the vibration of the unit.&lt;/p&gt;
 
-&lt;p&gt;Vibration is probably the biggest issue to be aware of.  Vibration is used by the adapter to hide the grain of the ground glass.  This works very well in practice.  I noticed a couple of side-effects with this system.  The biggest problem with the vibration is that it confuses the image stabilization system on the HF10.  With IS enabled, the video warbles when the camera is still and tends to overreact to actual shake.  As a result, I don&amp;#39;t believe I&amp;#39;ll be able to use the IS setting while using the adapter.  Not the end of the world.  The vibration does emit sound.  I doubt this sound would be picked up when using an external mic, but the on-board mics do pick up the sound as a low frequency buzz or rumble.  As a practical matter, if you are going to spend $1500 on a lens adapter system and not use an external mic, you hard larger problems ahead of you anyway.&lt;/p&gt;
+&lt;p&gt;Vibration is probably the biggest issue to be aware of.  Vibration is used by the adapter to hide the grain of the ground glass.  This works very well in practice.  I noticed a couple of side-effects with this system.  The biggest problem with the vibration is that it confuses the image stabilization system on the HF10.  With IS enabled, the video warbles when the camera is still and tends to overreact to actual shake.  As a result, I don&amp;rsquo;t believe I&amp;rsquo;ll be able to use the IS setting while using the adapter.  Not the end of the world.  The vibration does emit sound.  I doubt this sound would be picked up when using an external mic, but the on-board mics do pick up the sound as a low frequency buzz or rumble.  As a practical matter, if you are going to spend $1500 on a lens adapter system and not use an external mic, you hard larger problems ahead of you anyway.&lt;/p&gt;
 
-&lt;p&gt;The only other issue I ran into was a result of moving the camera around quite a bit on my camera test expedition with the kids.  Because the camera is mounted via the filter threads, the camera can easily rotate a bit with respect to the adapter during normal handling.  As a result, it&amp;#39;s important to occasionally verify the alignment when shooting.  It only caused a problem for me when I was zoomed out more than I normally would be to accentuate the natural vignetting of my 24mm lens.  I didn&amp;#39;t notice the alignment problem on the built in screen because of the vignetting, but I could see an off-kilter box frame in the final video.  This isn&amp;#39;t a huge problem, but it is something to keep an eye on.&lt;/p&gt;
+&lt;p&gt;The only other issue I ran into was a result of moving the camera around quite a bit on my camera test expedition with the kids.  Because the camera is mounted via the filter threads, the camera can easily rotate a bit with respect to the adapter during normal handling.  As a result, it&amp;rsquo;s important to occasionally verify the alignment when shooting.  It only caused a problem for me when I was zoomed out more than I normally would be to accentuate the natural vignetting of my 24mm lens.  I didn&amp;rsquo;t notice the alignment problem on the built in screen because of the vignetting, but I could see an off-kilter box frame in the final video.  This isn&amp;rsquo;t a huge problem, but it is something to keep an eye on.&lt;/p&gt;
 
-&lt;p&gt;So aside from the minor issues (and they are truly minor), I&amp;#39;m really happy with the result.  The video I&amp;#39;ve captured looks much more filmic than I&amp;#39;ve ever achieved with pro-sumer cameras that I&amp;#39;ve had access to.  The look of the video straight off the camera is very pleasant to look at (nice bokeh from those FD lenses).  The focus is very manageable in the field with the built-in camcorder screen (the focus flaws in my camera test are more indicative of my skill than flaws in the adapter).  Certainly having a larger screen from the camcorder would make it easier to be much more precise when focusing.  I will be bringing a small monitor with me on shoots where I won&amp;#39;t be running all over.&lt;/p&gt;
+&lt;p&gt;So aside from the minor issues (and they are truly minor), I&amp;rsquo;m really happy with the result.  The video I&amp;rsquo;ve captured looks much more filmic than I&amp;rsquo;ve ever achieved with pro-sumer cameras that I&amp;rsquo;ve had access to.  The look of the video straight off the camera is very pleasant to look at (nice bokeh from those FD lenses).  The focus is very manageable in the field with the built-in camcorder screen (the focus flaws in my camera test are more indicative of my skill than flaws in the adapter).  Certainly having a larger screen from the camcorder would make it easier to be much more precise when focusing.  I will be bringing a small monitor with me on shoots where I won&amp;rsquo;t be running all over.&lt;/p&gt;
 
-&lt;p&gt;My biggest gripe in shooting on video in the past has that I haven&amp;#39;t had control over the depth of field and now I do.  I&amp;#39;m a very happy adapter owner.  I&amp;#39;ll post a followup with the results and lessons I learned on the music video shoot.&lt;/p&gt;
+&lt;p&gt;My biggest gripe in shooting on video in the past has that I haven&amp;rsquo;t had control over the depth of field and now I do.  I&amp;rsquo;m a very happy adapter owner.  I&amp;rsquo;ll post a followup with the results and lessons I learned on the music video shoot.&lt;/p&gt;
 </description>
         <pubDate>Tue, 25 Nov 2008 00:00:00 -0600</pubDate>
         <link>http://markmorga.com/2008/11/25/letus35-mini-review.html</link>
@@ -455,7 +515,7 @@ but I like having a more responsive window for my shell and I use tabs often in 
     
       <item>
         <title>Rollerderby Sunday</title>
-        <description>&lt;p&gt;Sunday night I finally made it back to a derby event.  The bout was between San Antonio&amp;#39;s &lt;a href=&quot;http://profile.myspace.com/index.cfm?fuseaction=user.viewprofile&amp;amp;friendid=365431144&quot;&gt;Las Tejanas&lt;/a&gt; and Tulsa, Oklahoma&amp;#39;s &lt;a href=&quot;http://www.greencountryrollergirls.com/&quot;&gt;Green Country Rollergirls&lt;/a&gt;.&lt;/p&gt;
+        <description>&lt;p&gt;Sunday night I finally made it back to a derby event.  The bout was between San Antonio&amp;rsquo;s &lt;a href=&quot;http://profile.myspace.com/index.cfm?fuseaction=user.viewprofile&amp;amp;friendid=365431144&quot;&gt;Las Tejanas&lt;/a&gt; and Tulsa, Oklahoma&amp;rsquo;s &lt;a href=&quot;http://www.greencountryrollergirls.com/&quot;&gt;Green Country Rollergirls&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://www.flickr.com/photos/markmorga/2941818266/in/set-72157608016236631/&quot;&gt;&lt;img src=&quot;http://farm4.static.flickr.com/3244/2941818266_a9c08d047a.jpg?v=0&quot; alt=&quot;&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 
@@ -465,7 +525,7 @@ but I like having a more responsive window for my shell and I use tabs often in 
 
 &lt;p&gt;&lt;a href=&quot;http://www.flickr.com/photos/markmorga/2940930575/in/set-72157608016236631/&quot;&gt;&lt;img src=&quot;http://farm4.static.flickr.com/3208/2940930575_11af6ca2ba.jpg?v=0&quot; alt=&quot;&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;The after-party was the most fun I&amp;#39;ve had at a derby event in a long time.  I managed to capture the highlight on video.&lt;/p&gt;
+&lt;p&gt;The after-party was the most fun I&amp;rsquo;ve had at a derby event in a long time.  I managed to capture the highlight on video.&lt;/p&gt;
 
 &lt;p&gt;&lt;object width=&quot;400&quot; height=&quot;302&quot;&gt;
     &lt;param name=&quot;allowfullscreen&quot; value=&quot;true&quot; /&gt;
@@ -479,19 +539,6 @@ but I like having a more responsive window for my shell and I use tabs often in 
         <pubDate>Tue, 14 Oct 2008 00:00:00 -0500</pubDate>
         <link>http://markmorga.com/2008/10/14/rollerderby-sunday.html</link>
         <guid isPermaLink="true">http://markmorga.com/2008/10/14/rollerderby-sunday.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Convergence</title>
-        <description>&lt;p&gt;I figured this would happen at some point in a year or two, but the most recent Canon and Nikon DSLRs feature HD Video recording.&lt;/p&gt;
-
-&lt;p&gt;Geeze, I guess I need to save up for &lt;a href=&quot;http://www.usa.canon.com/dlc/controller?act=GetArticleAct&amp;amp;articleID=2086&quot;&gt;one of these&lt;/a&gt; soon.&lt;/p&gt;
-</description>
-        <pubDate>Tue, 23 Sep 2008 00:00:00 -0500</pubDate>
-        <link>http://markmorga.com/2008/09/23/convergence.html</link>
-        <guid isPermaLink="true">http://markmorga.com/2008/09/23/convergence.html</guid>
         
         
       </item>

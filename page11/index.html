@@ -99,10 +99,26 @@
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
           <div class="article-item">
             <header class="post-header">
+              <h2 class="post-title" itemprop="name"><a href="/2007/09/19/tis-talk-like-a-pirate-day-ye-scurvy-dogs.html" itemprop="url">Tis International Talk Like a Pirate Day, Ye Scurvy Dogs!</a></h2>
+            </header>
+            <section class="post-excerpt" itemprop="description">
+              <p>Arr.
+</p>
+            </section>
+            <div class="post-meta">
+              <time datetime="19 September 2007">19 September 2007</time>
+<!--            <span class="post-tags-set">on <span class="post-tag-">, <a href="/tag/"></a></span></span>-->
+            </div>
+          </div>
+        </article>
+      
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
+          <div class="article-item">
+            <header class="post-header">
               <h2 class="post-title" itemprop="name"><a href="/2007/09/19/halloween-blog.html" itemprop="url">Halloween Blog</a></h2>
             </header>
             <section class="post-excerpt" itemprop="description">
-              <p>My buddy Anton has started a Halloween blog.  I&#39;ll be contributing a few articles beginning this weekend with an article on making a few different kinds of blood.  In the mean time, make sure to link to his blog for a chance to win $50. 
+              <p>My buddy Anton has started a Halloween blog.  I&rsquo;ll be contributing a few articles beginning this weekend with an article on making a few different kinds of blood.  In the mean time, make sure to link to his blog for a chance to win $50. 
 </p>
             </section>
             <div class="post-meta">
@@ -118,7 +134,7 @@
               <h2 class="post-title" itemprop="name"><a href="/2007/09/13/career-cruising.html" itemprop="url">Career Cruising</a></h2>
             </header>
             <section class="post-excerpt" itemprop="description">
-              <p>Thanks to Heather, I came across this career matching quiz. Boy have I ever been in the wrong line of work. My results with commentary in parenthesis: 1. Makeup Artist (heh - for horror films maybe) 2. Costume Designer (also heh - ditto) 3. Set Designer (hmm) 4. Baker (Sure)...</p>
+              <p>Thanks to Heather, I came across this career matching quiz. Boy have I ever been in the wrong line of work. My results with commentary in parenthesis: 1. Makeup Artist (heh - for horror films maybe) 2. Costume Designer (also heh - ditto) Set Designer (hmm) Baker (Sure) Butcher (Nah)...</p>
             </section>
             <div class="post-meta">
               <time datetime="13 September 2007">13 September 2007</time>
@@ -155,21 +171,6 @@ Looks like a reasonable way to defend the home in Britain.  In Texas, we have ot
             </section>
             <div class="post-meta">
               <time datetime="23 August 2007">23 August 2007</time>
-<!--            <span class="post-tags-set">on <span class="post-tag-">, <a href="/tag/"></a></span></span>-->
-            </div>
-          </div>
-        </article>
-      
-        <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
-          <div class="article-item">
-            <header class="post-header">
-              <h2 class="post-title" itemprop="name"><a href="/2007/08/13/stardust.html" itemprop="url">Stardust</a></h2>
-            </header>
-            <section class="post-excerpt" itemprop="description">
-              <p>I saw Stardust this weekend and enjoyed it very much. It is the sort of sweet natured fairy tale that The Princess Bride was, but isn&#39;t very similar other than being in a fantasy setting. The movie is changed quite a bit from the book, but not in any ways...</p>
-            </section>
-            <div class="post-meta">
-              <time datetime="13 August 2007">13 August 2007</time>
 <!--            <span class="post-tags-set">on <span class="post-tag-">, <a href="/tag/"></a></span></span>-->
             </div>
           </div>
@@ -216,6 +217,7 @@ Looks like a reasonable way to defend the home in Britain.  In Texas, we have ot
 <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
 <script type="text/javascript" src="/assets/js/index.js"></script>
 <script type="text/javascript" src="/assets/js/readingTime.min.js"></script>
+<script type="text/javascript" src="/assets/js/min/picturefill.min.js"></script>
 <script>
 (function ($) {
   "use strict";
@@ -223,7 +225,7 @@ Looks like a reasonable way to defend the home in Britain.  In Texas, we have ot
 
     var $window = $(window),
     $image = $('.post-image-image, .teaserimage-image');
-    
+
       $window.on('scroll', function() {
         var top = $window.scrollTop();
 

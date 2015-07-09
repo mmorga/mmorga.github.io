@@ -41,7 +41,7 @@
           <div class="post-meta">
             <h1 class="post-title">SXSW Day 1: Your Video Blog Can Save the World</h1>
             <div class="cf post-meta-text">
-              <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
+              <div class="author-image" style="background-image: url(/assets/images/author-bw.jpg)">Blog Logo</div>
               <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">Mark Morga</h4>
               on
               <time datetime="2007-03-19T00:00:00-05:00">19 Mar 2007</time>
@@ -69,7 +69,7 @@
 <li>swajana.com</li>
 <li>momentshowing.net</li>
 <li>ryanedit.blogspot.com</li>
-<li>www.freevlog.org</li>
+<li><a href="http://www.freevlog.org">www.freevlog.org</a></li>
 <li>ryanishungry.com</li>
 <li>poor video quality driven by download and video start speed</li>
 </ul>
@@ -102,7 +102,7 @@
           <div class="isLeft">
             <h5 class="index-headline featured"><span>Written by</span></h5>
             <section class="author">
-              <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
+              <div class="author-image" style="background-image: url(/assets/images/author-bw.jpg)">Blog Logo</div>
               <h4>Mark Morga</h4>
               <p class="bio"></p>
               <hr>
@@ -138,6 +138,7 @@
 <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
 <script type="text/javascript" src="/assets/js/index.js"></script>
 <script type="text/javascript" src="/assets/js/readingTime.min.js"></script>
+<script type="text/javascript" src="/assets/js/min/picturefill.min.js"></script>
 <script>
 (function ($) {
   "use strict";
@@ -145,7 +146,7 @@
 
     var $window = $(window),
     $image = $('.post-image-image, .teaserimage-image');
-    
+
       $window.on('scroll', function() {
         var top = $window.scrollTop();
 

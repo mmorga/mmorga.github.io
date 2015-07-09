@@ -41,7 +41,7 @@
           <div class="post-meta">
             <h1 class="post-title">Code's Worst Enemy</h1>
             <div class="cf post-meta-text">
-              <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
+              <div class="author-image" style="background-image: url(/assets/images/author-bw.jpg)">Blog Logo</div>
               <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">Mark Morga</h4>
               on
               <time datetime="2007-12-19T00:00:00-06:00">19 Dec 2007</time>
@@ -58,9 +58,9 @@
             <span class="post-reading-time"></span> read
           </div>
           <a name="topofpage"></a>
-          <p>Over at <a href="http://steve-yegge.blogspot.com">Stevey&#39;s Blog Rants</a> is a cool article: <a href="http://steve-yegge.blogspot.com/2007/12/codes-worst-enemy.html">Code&#39;s Worst Enemy</a>.  Stevey describes being up against getting a 500,000 line web-based game working again after some time off-line.  He sees a large code base being the worst problem you can face in software and he makes some good arguments to that point.</p>
+          <p>Over at <a href="http://steve-yegge.blogspot.com">Stevey&rsquo;s Blog Rants</a> is a cool article: <a href="http://steve-yegge.blogspot.com/2007/12/codes-worst-enemy.html">Code&rsquo;s Worst Enemy</a>.  Stevey describes being up against getting a 500,000 line web-based game working again after some time off-line.  He sees a large code base being the worst problem you can face in software and he makes some good arguments to that point.</p>
 
-<p>He also comes to the conclusion that <a href="http://thinkrelevance.com/about">Justin Gehtland</a> (Name dropper! --Imaginary Ed.) talked about in Ruby on Rails training that I went to last week (I&#39;m paraphrasing both here):  The JVM is great - the Java language is the problem.  He makes an interesting choice in the end (I&#39;ll let you read the article for yourself).</p>
+<p>He also comes to the conclusion that <a href="http://thinkrelevance.com/about">Justin Gehtland</a> (Name dropper! &ndash;Imaginary Ed.) talked about in Ruby on Rails training that I went to last week (I&rsquo;m paraphrasing both here):  The JVM is great - the Java language is the problem.  He makes an interesting choice in the end (I&rsquo;ll let you read the article for yourself).</p>
 
         </section>
         <footer class="post-footer">
@@ -90,7 +90,7 @@
           <div class="isLeft">
             <h5 class="index-headline featured"><span>Written by</span></h5>
             <section class="author">
-              <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
+              <div class="author-image" style="background-image: url(/assets/images/author-bw.jpg)">Blog Logo</div>
               <h4>Mark Morga</h4>
               <p class="bio"></p>
               <hr>
@@ -126,6 +126,7 @@
 <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
 <script type="text/javascript" src="/assets/js/index.js"></script>
 <script type="text/javascript" src="/assets/js/readingTime.min.js"></script>
+<script type="text/javascript" src="/assets/js/min/picturefill.min.js"></script>
 <script>
 (function ($) {
   "use strict";
@@ -133,7 +134,7 @@
 
     var $window = $(window),
     $image = $('.post-image-image, .teaserimage-image');
-    
+
       $window.on('scroll', function() {
         var top = $window.scrollTop();
 

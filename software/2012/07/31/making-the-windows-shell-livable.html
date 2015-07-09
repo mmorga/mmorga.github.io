@@ -44,7 +44,7 @@
           <div class="post-meta">
             <h1 class="post-title">Making the Windows Shell Livable</h1>
             <div class="cf post-meta-text">
-              <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
+              <div class="author-image" style="background-image: url(/assets/images/author-bw.jpg)">Blog Logo</div>
               <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">Mark Morga</h4>
               on
               <time datetime="2012-07-31 16:44">31 Jul 2012</time>
@@ -61,22 +61,22 @@
             <span class="post-reading-time"></span> read
           </div>
           <a name="topofpage"></a>
-          <p>Back when I last &quot;did&quot; Windows development, .Net didn&#39;t exist and the Windows CMD prompt was one of the first things I replaced (with Cygwin). Unfortunately, last time I helped someone with a Windows machine the Cygwin install didn&#39;t go well - it seemed to be mired in the past, was slow, and the
+          <p>Back when I last &ldquo;did&rdquo; Windows development, .Net didn&rsquo;t exist and the Windows CMD prompt was one of the first things I replaced (with Cygwin). Unfortunately, last time I helped someone with a Windows machine the Cygwin install didn&rsquo;t go well - it seemed to be mired in the past, was slow, and the
 git version included did not work for some reason with the repos we needed to use.</p>
 
-<p>Fast forward to the last couple of weeks. I&#39;m in the process of learning C# and .Net to help build a new framework with a team and I&#39;m running Windows 7 in a VM. So I&#39;m coming to Windows fresh after a break of almost 8 years. The good news so far has been than C# strikes me much better than Java did (when I last used it) and that the .Net environment is pretty easy to get learning.  Some DLL hell still exists (which I ran into using the ZeroMQ NuGet libraries), but for the most part it has been fairly pleasant. Unfortunately,
+<p>Fast forward to the last couple of weeks. I&rsquo;m in the process of learning C# and .Net to help build a new framework with a team and I&rsquo;m running Windows 7 in a VM. So I&rsquo;m coming to Windows fresh after a break of almost 8 years. The good news so far has been than C# strikes me much better than Java did (when I last used it) and that the .Net environment is pretty easy to get learning.  Some DLL hell still exists (which I ran into using the ZeroMQ NuGet libraries), but for the most part it has been fairly pleasant. Unfortunately,
 the old Windows CMD prompt is unchanged from all those years ago. Despair sets in.</p>
 
-<p>Then I learned about <a href="http://technet.microsoft.com/en-us/library/bb978526.aspx">PowerShell</a>. After giving it a whirl and learning a thing or two, I&#39;ve finally got a very usable shell configuration for Windows development that doesn&#39;t make me weep every time I have to use it. Here&#39;s how I have it configured.</p>
+<p>Then I learned about <a href="http://technet.microsoft.com/en-us/library/bb978526.aspx">PowerShell</a>. After giving it a whirl and learning a thing or two, I&rsquo;ve finally got a very usable shell configuration for Windows development that doesn&rsquo;t make me weep every time I have to use it. Here&rsquo;s how I have it configured.</p>
 
 <p>On my VM, PowerShell comes pre-installed, you may need to download it depending on your version of Windows.</p>
 
 <h2>Console2</h2>
 
-<p>First I installed <a href="http://sourceforge.net/projects/console/">Console2</a>. Console is a Windows GUI which wraps the shell of your choice and adds: multiple tabs, text editor-like text selection, different background types, alpha and color-key transparency, configurable font, different window styles, hot-key mapping, etc.  This step isn&#39;t strictly necessary
+<p>First I installed <a href="http://sourceforge.net/projects/console/">Console2</a>. Console is a Windows GUI which wraps the shell of your choice and adds: multiple tabs, text editor-like text selection, different background types, alpha and color-key transparency, configurable font, different window styles, hot-key mapping, etc.  This step isn&rsquo;t strictly necessary
 but I like having a more responsive window for my shell and I use tabs often in iTerm on the mac.</p>
 
-<p>I configure Console to use PowerShell by starting Console, selecting the Edit-&gt;Settings menu, then selecting the PowerShell exe in the &quot;Shell&quot; chooser which on my machine is located at: &quot;C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe&quot;.</p>
+<p>I configure Console to use PowerShell by starting Console, selecting the Edit-&gt;Settings menu, then selecting the PowerShell exe in the &ldquo;Shell&rdquo; chooser which on my machine is located at: &ldquo;C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe&rdquo;.</p>
 
 <h2>Git</h2>
 
@@ -86,7 +86,7 @@ but I like having a more responsive window for my shell and I use tabs often in 
 
 <h2>Configuring Git</h2>
 
-<p>Note to self - you need to configure git to use .ssh keys in order for things to work correctly with remote repos. I&#39;ll post something on this later.</p>
+<p>Note to self - you need to configure git to use .ssh keys in order for things to work correctly with remote repos. I&rsquo;ll post something on this later.</p>
 
 <h2>Installing Posh-Git into PowerShell</h2>
 
@@ -95,7 +95,7 @@ but I like having a more responsive window for my shell and I use tabs often in 
 <p>First set the security for your PowerShell instance. Run PowerShell as Administrator and type:</p>
 <div class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="nb">Set-ExecutionPolicy</span> <span class="n">RemoteSigned</span> <span class="n">-Confirm</span>
 </code></pre></div>
-<p>Make sure git can be run from your shell. If not, add it to your user&#39;s PATH.</p>
+<p>Make sure git can be run from your shell. If not, add it to your user&rsquo;s PATH.</p>
 
 <p>Type the following commands to install PsGet and Posh-Git:</p>
 <div class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="p">(</span><span class="nb">new-object</span> <span class="n">Net</span><span class="p">.</span><span class="n">WebClient</span><span class="p">).</span><span class="n">DownloadString</span><span class="p">(</span><span class="s2">&quot;http://psget.net/GetPsGet.ps1&quot;</span><span class="p">)</span> <span class="p">|</span> <span class="n">iex</span>
@@ -130,11 +130,11 @@ but I like having a more responsive window for my shell and I use tabs often in 
 
 <span class="nb">Pop-Location</span>
 </code></pre></div>
-<p>Exit out of Console/PowerShell and the next time you start up, you&#39;ll see extra functionality for Git while in directories that are Git repositories.</p>
+<p>Exit out of Console/PowerShell and the next time you start up, you&rsquo;ll see extra functionality for Git while in directories that are Git repositories.</p>
 
 <p>You can now use tab completion to complete both git commands and to fill in branch or remote names in addition to file names.</p>
 
-<p>When you type &quot;git status&quot;, you will see color highlighting of files that helps understanding what is staged versus what isn&#39;t yet.</p>
+<p>When you type &ldquo;git status&rdquo;, you will see color highlighting of files that helps understanding what is staged versus what isn&rsquo;t yet.</p>
 
 <p>Have fun.  Let me know if you have any tips for PowerShell that I should pick up.</p>
 
@@ -166,7 +166,7 @@ but I like having a more responsive window for my shell and I use tabs often in 
           <div class="isLeft">
             <h5 class="index-headline featured"><span>Written by</span></h5>
             <section class="author">
-              <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
+              <div class="author-image" style="background-image: url(/assets/images/author-bw.jpg)">Blog Logo</div>
               <h4>Mark Morga</h4>
               <p class="bio"></p>
               <hr>
@@ -202,6 +202,7 @@ but I like having a more responsive window for my shell and I use tabs often in 
 <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
 <script type="text/javascript" src="/assets/js/index.js"></script>
 <script type="text/javascript" src="/assets/js/readingTime.min.js"></script>
+<script type="text/javascript" src="/assets/js/min/picturefill.min.js"></script>
 <script>
 (function ($) {
   "use strict";
@@ -209,7 +210,7 @@ but I like having a more responsive window for my shell and I use tabs often in 
 
     var $window = $(window),
     $image = $('.post-image-image, .teaserimage-image');
-    
+
       $window.on('scroll', function() {
         var top = $window.scrollTop();
 

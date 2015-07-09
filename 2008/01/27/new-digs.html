@@ -41,7 +41,7 @@
           <div class="post-meta">
             <h1 class="post-title">New Digs</h1>
             <div class="cf post-meta-text">
-              <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
+              <div class="author-image" style="background-image: url(/assets/images/author-bw.jpg)">Blog Logo</div>
               <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">Mark Morga</h4>
               on
               <time datetime="2008-01-27T00:00:00-06:00">27 Jan 2008</time>
@@ -58,13 +58,13 @@
             <span class="post-reading-time"></span> read
           </div>
           <a name="topofpage"></a>
-          <p>I moved into my new house this weekend.  Whew.  I really hate to move, but I&#39;m really going to love living here.  I&#39;m two blocks away from downtown New Braunfels.  Pictures are coming soon.</p>
+          <p>I moved into my new house this weekend.  Whew.  I really hate to move, but I&rsquo;m really going to love living here.  I&rsquo;m two blocks away from downtown New Braunfels.  Pictures are coming soon.</p>
 
-<p>I&#39;m glad I spent the money on movers this time and I&#39;m extraordinarily grateful for the help of my friends <a href="http://antonolsen.com">Anton</a> and <a href="http://edspace.com/blog/">Edmo</a>.</p>
+<p>I&rsquo;m glad I spent the money on movers this time and I&rsquo;m extraordinarily grateful for the help of my friends <a href="http://antonolsen.com">Anton</a> and <a href="http://edspace.com/blog/">Edmo</a>.</p>
 
-<p>I&#39;m renting this house from my parents.  It&#39;s actually the first house I lived in.  The only challenge is finding places to put all of my stuff.  For now, I&#39;ve gotten a storage unit, but I&#39;m going to try and go the <a href="http://lifehacker.com/">Lifehacker</a> and <a href="http://unclutterer.com/">Unclutterer</a> route and try to reduce the amount of stuff that I&#39;ve accumulated.  It&#39;s a bit of a tough decision on what stays and what goes because of a couple of reasons.  First, I&#39;m by nature a bit of a pack rat (and come from a family of pack rats) and second, as a practical matter, occasionally &quot;junk&quot; that I&#39;ve kept has been handy when making short films, photography, or other art projects.</p>
+<p>I&rsquo;m renting this house from my parents.  It&rsquo;s actually the first house I lived in.  The only challenge is finding places to put all of my stuff.  For now, I&rsquo;ve gotten a storage unit, but I&rsquo;m going to try and go the <a href="http://lifehacker.com/">Lifehacker</a> and <a href="http://unclutterer.com/">Unclutterer</a> route and try to reduce the amount of stuff that I&rsquo;ve accumulated.  It&rsquo;s a bit of a tough decision on what stays and what goes because of a couple of reasons.  First, I&rsquo;m by nature a bit of a pack rat (and come from a family of pack rats) and second, as a practical matter, occasionally &ldquo;junk&rdquo; that I&rsquo;ve kept has been handy when making short films, photography, or other art projects.</p>
 
-<p>I&#39;m also going to be visiting the Container Store, Ikea (in Round Rock) and actually the Lowes here in town is MUCH nicer than the one close to my old apartment.  Lowes had a few options that would work for a pantry.</p>
+<p>I&rsquo;m also going to be visiting the Container Store, Ikea (in Round Rock) and actually the Lowes here in town is MUCH nicer than the one close to my old apartment.  Lowes had a few options that would work for a pantry.</p>
 
         </section>
         <footer class="post-footer">
@@ -94,7 +94,7 @@
           <div class="isLeft">
             <h5 class="index-headline featured"><span>Written by</span></h5>
             <section class="author">
-              <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
+              <div class="author-image" style="background-image: url(/assets/images/author-bw.jpg)">Blog Logo</div>
               <h4>Mark Morga</h4>
               <p class="bio"></p>
               <hr>
@@ -130,6 +130,7 @@
 <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
 <script type="text/javascript" src="/assets/js/index.js"></script>
 <script type="text/javascript" src="/assets/js/readingTime.min.js"></script>
+<script type="text/javascript" src="/assets/js/min/picturefill.min.js"></script>
 <script>
 (function ($) {
   "use strict";
@@ -137,7 +138,7 @@
 
     var $window = $(window),
     $image = $('.post-image-image, .teaserimage-image');
-    
+
       $window.on('scroll', function() {
         var top = $window.scrollTop();
 

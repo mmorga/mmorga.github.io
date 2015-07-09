@@ -41,7 +41,7 @@
           <div class="post-meta">
             <h1 class="post-title">Photos ... Finally</h1>
             <div class="cf post-meta-text">
-              <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
+              <div class="author-image" style="background-image: url(/assets/images/author-bw.jpg)">Blog Logo</div>
               <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">Mark Morga</h4>
               on
               <time datetime="2007-12-27T00:00:00-06:00">27 Dec 2007</time>
@@ -66,15 +66,15 @@
 
 <p><a href="http://www.flickr.com/photos/markmorga/2143311668/"><img src="http://farm3.static.flickr.com/2198/2143311668_876d19dd60.jpg" alt="IMG_6536 copy"></a></p>
 
-<p>I also took a few snapshots at Christmas.  First one from an early Christmas with the kids at my parent&#39;s house:</p>
+<p>I also took a few snapshots at Christmas.  First one from an early Christmas with the kids at my parent&rsquo;s house:</p>
 
 <p><a href="http://www.flickr.com/photos/markmorga/2142136607/"><img src="http://farm3.static.flickr.com/2030/2142136607_56a9ff8549.jpg" alt="IMG_6556.jpg"></a></p>
 
-<p>Then over at my grandmother&#39;s house for Christmas Eve:</p>
+<p>Then over at my grandmother&rsquo;s house for Christmas Eve:</p>
 
 <p><a href="http://www.flickr.com/photos/markmorga/2142202951/"><img src="http://farm3.static.flickr.com/2093/2142202951_06c3bda630.jpg" alt="IMG_6601.jpg"></a></p>
 
-<p>Christmas day, I was up at my parent&#39;s house near the Guadalupe River, so we decided to goof around with the cameras outside:</p>
+<p>Christmas day, I was up at my parent&rsquo;s house near the Guadalupe River, so we decided to goof around with the cameras outside:</p>
 
 <p><a href="http://www.flickr.com/photos/markmorga/2142192083/"><img src="http://farm3.static.flickr.com/2079/2142192083_00ff754162.jpg" alt="IMG_6618.jpg"></a></p>
 
@@ -112,7 +112,7 @@
           <div class="isLeft">
             <h5 class="index-headline featured"><span>Written by</span></h5>
             <section class="author">
-              <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
+              <div class="author-image" style="background-image: url(/assets/images/author-bw.jpg)">Blog Logo</div>
               <h4>Mark Morga</h4>
               <p class="bio"></p>
               <hr>
@@ -148,6 +148,7 @@
 <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
 <script type="text/javascript" src="/assets/js/index.js"></script>
 <script type="text/javascript" src="/assets/js/readingTime.min.js"></script>
+<script type="text/javascript" src="/assets/js/min/picturefill.min.js"></script>
 <script>
 (function ($) {
   "use strict";
@@ -155,7 +156,7 @@
 
     var $window = $(window),
     $image = $('.post-image-image, .teaserimage-image');
-    
+
       $window.on('scroll', function() {
         var top = $window.scrollTop();
 

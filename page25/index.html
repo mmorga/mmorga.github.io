@@ -99,6 +99,24 @@
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
           <div class="article-item">
             <header class="post-header">
+              <h2 class="post-title" itemprop="name"><a href="/2006/12/30/busy-busy-busy.html" itemprop="url">Busy, busy, busy</a></h2>
+            </header>
+            <section class="post-excerpt" itemprop="description">
+              <p>Got a big day coming up today.
+
+I&rsquo;m getting my hair &ldquo;fixed&rdquo; today at 1, shooting a wedding at 3, and being the godfather for my shiny new niece at 6.  Whew.
+</p>
+            </section>
+            <div class="post-meta">
+              <time datetime="30 December 2006">30 December 2006</time>
+<!--            <span class="post-tags-set">on <span class="post-tag-">, <a href="/tag/"></a></span></span>-->
+            </div>
+          </div>
+        </article>
+      
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
+          <div class="article-item">
+            <header class="post-header">
               <h2 class="post-title" itemprop="name"><a href="/2006/12/29/cinematicals-best-short-films-of-2006.html" itemprop="url">Cinematical's Best Short Films of 2006</a></h2>
             </header>
             <section class="post-excerpt" itemprop="description">
@@ -168,6 +186,7 @@ Fantasic video of Ian playing Room 229 live.
 <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
 <script type="text/javascript" src="/assets/js/index.js"></script>
 <script type="text/javascript" src="/assets/js/readingTime.min.js"></script>
+<script type="text/javascript" src="/assets/js/min/picturefill.min.js"></script>
 <script>
 (function ($) {
   "use strict";
@@ -175,7 +194,7 @@ Fantasic video of Ian playing Room 229 live.
 
     var $window = $(window),
     $image = $('.post-image-image, .teaserimage-image');
-    
+
       $window.on('scroll', function() {
         var top = $window.scrollTop();
 

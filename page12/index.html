@@ -99,10 +99,25 @@
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
           <div class="article-item">
             <header class="post-header">
+              <h2 class="post-title" itemprop="name"><a href="/2007/08/13/stardust.html" itemprop="url">Stardust</a></h2>
+            </header>
+            <section class="post-excerpt" itemprop="description">
+              <p>I saw Stardust this weekend and enjoyed it very much. It is the sort of sweet natured fairy tale that The Princess Bride was, but isn&rsquo;t very similar other than being in a fantasy setting. The movie is changed quite a bit from the book, but not in any ways...</p>
+            </section>
+            <div class="post-meta">
+              <time datetime="13 August 2007">13 August 2007</time>
+<!--            <span class="post-tags-set">on <span class="post-tag-">, <a href="/tag/"></a></span></span>-->
+            </div>
+          </div>
+        </article>
+      
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
+          <div class="article-item">
+            <header class="post-header">
               <h2 class="post-title" itemprop="name"><a href="/2007/08/07/update-some-kilt-wearing-men-might-be-heterosexual-after-all.html" itemprop="url">Update: Some kilt-wearing men might be heterosexual after all</a></h2>
             </header>
             <section class="post-excerpt" itemprop="description">
-              <p>There&#39;s a little bit of a trail to follow here, but I came across the web site Baptists for Brownback via a post on Bible Versus linked to by the Real Live Preacher. Oh the paths that the Internet leads you on. This site reads like something you might find...</p>
+              <p>There&rsquo;s a little bit of a trail to follow here, but I came across the web site Baptists for Brownback via a post on Bible Versus linked to by the Real Live Preacher. Oh the paths that the Internet leads you on. This site reads like something you might find...</p>
             </section>
             <div class="post-meta">
               <time datetime="07 August 2007">07 August 2007</time>
@@ -132,7 +147,7 @@
               <h2 class="post-title" itemprop="name"><a href="/2007/07/30/where-has-all-of-my-filmmaking-gone.html" itemprop="url">Where has all of my filmmaking gone?</a></h2>
             </header>
             <section class="post-excerpt" itemprop="description">
-              <p>I&#39;ve been so busy for the last year, that I haven&#39;t made a new film of my own. I have a couple of shorts lately, one of which I may post up here if I get a chance to finish a couple of polish issues. The other short, a variation...</p>
+              <p>I&rsquo;ve been so busy for the last year, that I haven&rsquo;t made a new film of my own. I have a couple of shorts lately, one of which I may post up here if I get a chance to finish a couple of polish issues. The other short, a variation...</p>
             </section>
             <div class="post-meta">
               <time datetime="30 July 2007">30 July 2007</time>
@@ -147,25 +162,7 @@
               <h2 class="post-title" itemprop="name"><a href="/2007/07/30/sunshine.html" itemprop="url">Sunshine</a></h2>
             </header>
             <section class="post-excerpt" itemprop="description">
-              <p>Go see this movie. Right now. I think it&#39;s the best Sci-Fi movie since Blade Runner. It does a great job with believable technology and balances that with realistic characterizations. Definitely see it on a big screen! I have no idea why the film distributors have been so quiet about...</p>
-            </section>
-            <div class="post-meta">
-              <time datetime="30 July 2007">30 July 2007</time>
-<!--            <span class="post-tags-set">on <span class="post-tag-">, <a href="/tag/"></a></span></span>-->
-            </div>
-          </div>
-        </article>
-      
-        <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
-          <div class="article-item">
-            <header class="post-header">
-              <h2 class="post-title" itemprop="name"><a href="/2007/07/30/im-living-in-a-former-movie-set.html" itemprop="url">I'm living in a (former) movie set</a></h2>
-            </header>
-            <section class="post-excerpt" itemprop="description">
-              <p>My buddy Travis used my apartment this weekend to shoot a short for the San Antonio Local Film Festival (SAL).  
-
-Another home in which my neighbors wonder why zombies are roaming the neighborhood or why guys are carrying a girl wrapped in a tarp down the stairs.  Oh well.
-</p>
+              <p>Go see this movie. Right now. I think it&rsquo;s the best Sci-Fi movie since Blade Runner. It does a great job with believable technology and balances that with realistic characterizations. Definitely see it on a big screen! I have no idea why the film distributors have been so quiet about...</p>
             </section>
             <div class="post-meta">
               <time datetime="30 July 2007">30 July 2007</time>
@@ -215,6 +212,7 @@ Another home in which my neighbors wonder why zombies are roaming the neighborho
 <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
 <script type="text/javascript" src="/assets/js/index.js"></script>
 <script type="text/javascript" src="/assets/js/readingTime.min.js"></script>
+<script type="text/javascript" src="/assets/js/min/picturefill.min.js"></script>
 <script>
 (function ($) {
   "use strict";
@@ -222,7 +220,7 @@ Another home in which my neighbors wonder why zombies are roaming the neighborho
 
     var $window = $(window),
     $image = $('.post-image-image, .teaserimage-image');
-    
+
       $window.on('scroll', function() {
         var top = $window.scrollTop();
 

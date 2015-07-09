@@ -41,7 +41,7 @@
           <div class="post-meta">
             <h1 class="post-title">Signs You're a Crappy Programmer</h1>
             <div class="cf post-meta-text">
-              <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
+              <div class="author-image" style="background-image: url(/assets/images/author-bw.jpg)">Blog Logo</div>
               <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">Mark Morga</h4>
               on
               <time datetime="2007-11-24T00:00:00-06:00">24 Nov 2007</time>
@@ -58,7 +58,7 @@
             <span class="post-reading-time"></span> read
           </div>
           <a name="topofpage"></a>
-          <p><a href="http://antonolsen.com/">Anton</a> sent me a link to Damien Katz&#39;s &quot;funny because it&#39;s true&quot; article about the symptoms of <a href="http://damienkatz.net/2006/05/signs_youre_a_c.html?repeat">being a crappy programmer</a>.  I wish everyone at work would read and think about this.</p>
+          <p><a href="http://antonolsen.com/">Anton</a> sent me a link to Damien Katz&rsquo;s &ldquo;funny because it&rsquo;s true&rdquo; article about the symptoms of <a href="http://damienkatz.net/2006/05/signs_youre_a_c.html?repeat">being a crappy programmer</a>.  I wish everyone at work would read and think about this.</p>
 
 <p>The fact of the matter is that everyone is guilty of something on this list from time to time.  It reminds me that I really need to refactor the copy/paste coding that I did on Thursday night when adding a new feature to <a href="http://cruisecontrolrb.thoughtworks.com/">Cruise Control Rb</a>.</p>
 
@@ -90,7 +90,7 @@
           <div class="isLeft">
             <h5 class="index-headline featured"><span>Written by</span></h5>
             <section class="author">
-              <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
+              <div class="author-image" style="background-image: url(/assets/images/author-bw.jpg)">Blog Logo</div>
               <h4>Mark Morga</h4>
               <p class="bio"></p>
               <hr>
@@ -126,6 +126,7 @@
 <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
 <script type="text/javascript" src="/assets/js/index.js"></script>
 <script type="text/javascript" src="/assets/js/readingTime.min.js"></script>
+<script type="text/javascript" src="/assets/js/min/picturefill.min.js"></script>
 <script>
 (function ($) {
   "use strict";
@@ -133,7 +134,7 @@
 
     var $window = $(window),
     $image = $('.post-image-image, .teaserimage-image');
-    
+
       $window.on('scroll', function() {
         var top = $window.scrollTop();
 

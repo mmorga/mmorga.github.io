@@ -41,7 +41,7 @@
           <div class="post-meta">
             <h1 class="post-title">Vintage Vandals</h1>
             <div class="cf post-meta-text">
-              <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
+              <div class="author-image" style="background-image: url(/assets/images/author-bw.jpg)">Blog Logo</div>
               <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">Mark Morga</h4>
               on
               <time datetime="2007-02-19T00:00:00-06:00">19 Feb 2007</time>
@@ -58,7 +58,7 @@
             <span class="post-reading-time"></span> read
           </div>
           <a name="topofpage"></a>
-          <p>I ran across <a href="http://thewurstgallery.com">the wurst gallery</a> today on the <a href="http://www.finkbuilt.com/blog/">Finkbuilt blog</a>.  I got a kick out of the gallery entitled &quot;<a href="http://thewurstgallery.com/vintage_vandals.html">Vintage Vandals</a>&quot; in which...</p>
+          <p>I ran across <a href="http://thewurstgallery.com">the wurst gallery</a> today on the <a href="http://www.finkbuilt.com/blog/">Finkbuilt blog</a>.  I got a kick out of the gallery entitled &ldquo;<a href="http://thewurstgallery.com/vintage_vandals.html">Vintage Vandals</a>&rdquo; in which&hellip;</p>
 
 <blockquote>
 <p>each artist was asked to find a framed piece of artwork at their local thrift store and manipulate it into a piece of their own.</p>
@@ -94,7 +94,7 @@
           <div class="isLeft">
             <h5 class="index-headline featured"><span>Written by</span></h5>
             <section class="author">
-              <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
+              <div class="author-image" style="background-image: url(/assets/images/author-bw.jpg)">Blog Logo</div>
               <h4>Mark Morga</h4>
               <p class="bio"></p>
               <hr>
@@ -130,6 +130,7 @@
 <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
 <script type="text/javascript" src="/assets/js/index.js"></script>
 <script type="text/javascript" src="/assets/js/readingTime.min.js"></script>
+<script type="text/javascript" src="/assets/js/min/picturefill.min.js"></script>
 <script>
 (function ($) {
   "use strict";
@@ -137,7 +138,7 @@
 
     var $window = $(window),
     $image = $('.post-image-image, .teaserimage-image');
-    
+
       $window.on('scroll', function() {
         var top = $window.scrollTop();
 

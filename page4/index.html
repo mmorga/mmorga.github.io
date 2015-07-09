@@ -99,10 +99,26 @@
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
           <div class="article-item">
             <header class="post-header">
+              <h2 class="post-title" itemprop="name"><a href="/2008/05/16/barcamp-sa.html" itemprop="url">BarCamp SA</a></h2>
+            </header>
+            <section class="post-excerpt" itemprop="description">
+              <p>Anyone else planning to go to BarCamp San Antonio?
+</p>
+            </section>
+            <div class="post-meta">
+              <time datetime="16 May 2008">16 May 2008</time>
+<!--            <span class="post-tags-set">on <span class="post-tag-">, <a href="/tag/"></a></span></span>-->
+            </div>
+          </div>
+        </article>
+      
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
+          <div class="article-item">
+            <header class="post-header">
               <h2 class="post-title" itemprop="name"><a href="/2008/05/08/the-first-thing-to-do-after-you-get-laid-off.html" itemprop="url">The first thing to do after you get laid off...</a></h2>
             </header>
             <section class="post-excerpt" itemprop="description">
-              <p>Interesting article here about leaving on a real vacation right after getting laid off. Most of my life, I haven&#39;t been in the financial position to do this and thankfully I&#39;ve only been laid off once. I love the idea - shows how much I need a vacation - but...</p>
+              <p>Interesting article here about leaving on a real vacation right after getting laid off. Most of my life, I haven&rsquo;t been in the financial position to do this and thankfully I&rsquo;ve only been laid off once. I love the idea - shows how much I need a vacation - but...</p>
             </section>
             <div class="post-meta">
               <time datetime="08 May 2008">08 May 2008</time>
@@ -133,7 +149,7 @@
               <h2 class="post-title" itemprop="name"><a href="/2008/04/25/found-my-pocket-knife.html" itemprop="url">Found My Pocket Knife</a></h2>
             </header>
             <section class="post-excerpt" itemprop="description">
-              <p>To celebrate the release of my latest project at work, I suggested that our team take a trip out to the Landa Park Golf Course. I suggested this despite not having played golf in at least three to four years and I wasn&#39;t quite sure where my golf clubs actually...</p>
+              <p>To celebrate the release of my latest project at work, I suggested that our team take a trip out to the Landa Park Golf Course. I suggested this despite not having played golf in at least three to four years and I wasn&rsquo;t quite sure where my golf clubs actually...</p>
             </section>
             <div class="post-meta">
               <time datetime="25 April 2008">25 April 2008</time>
@@ -148,25 +164,10 @@
               <h2 class="post-title" itemprop="name"><a href="/2008/04/23/getting-back-into-writing.html" itemprop="url">Getting Back into Writing</a></h2>
             </header>
             <section class="post-excerpt" itemprop="description">
-              <p>For a number of work and personal life reasons, I haven&#39;t worked on a new short film of my own for over a year. I&#39;ve been playing with a few ideas in my head and I have a couple of partial scripts in various states of incompletion. I have the...</p>
+              <p>For a number of work and personal life reasons, I haven&rsquo;t worked on a new short film of my own for over a year. I&rsquo;ve been playing with a few ideas in my head and I have a couple of partial scripts in various states of incompletion. I have the...</p>
             </section>
             <div class="post-meta">
               <time datetime="23 April 2008">23 April 2008</time>
-<!--            <span class="post-tags-set">on <span class="post-tag-">, <a href="/tag/"></a></span></span>-->
-            </div>
-          </div>
-        </article>
-      
-        <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
-          <div class="article-item">
-            <header class="post-header">
-              <h2 class="post-title" itemprop="name"><a href="/2008/03/02/favorite-horrorsuspense-movies.html" itemprop="url">Favorite Horror/Suspense Movies</a></h2>
-            </header>
-            <section class="post-excerpt" itemprop="description">
-              <p>I brought this post over from my dusty old MySpace blog. Here we go... The Shining Evil Dead 2 Alien/Aliens Silence of the Lambs The Thing (1982) Night of the Living Dead Jaws The Devil&#39;s Backbone Pan&#39;s Labyrinth The Exorcist Night of the Hunter Invasion of the Body Snatchers (1978)...</p>
-            </section>
-            <div class="post-meta">
-              <time datetime="02 March 2008">02 March 2008</time>
 <!--            <span class="post-tags-set">on <span class="post-tag-">, <a href="/tag/"></a></span></span>-->
             </div>
           </div>
@@ -213,6 +214,7 @@
 <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
 <script type="text/javascript" src="/assets/js/index.js"></script>
 <script type="text/javascript" src="/assets/js/readingTime.min.js"></script>
+<script type="text/javascript" src="/assets/js/min/picturefill.min.js"></script>
 <script>
 (function ($) {
   "use strict";
@@ -220,7 +222,7 @@
 
     var $window = $(window),
     $image = $('.post-image-image, .teaserimage-image');
-    
+
       $window.on('scroll', function() {
         var top = $window.scrollTop();
 

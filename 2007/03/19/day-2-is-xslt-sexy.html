@@ -41,7 +41,7 @@
           <div class="post-meta">
             <h1 class="post-title">SXSW Day 2: Is XSLT Sexy?</h1>
             <div class="cf post-meta-text">
-              <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
+              <div class="author-image" style="background-image: url(/assets/images/author-bw.jpg)">Blog Logo</div>
               <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">Mark Morga</h4>
               on
               <time datetime="2007-03-19T00:00:00-05:00">19 Mar 2007</time>
@@ -64,7 +64,7 @@
 
 <p>Saturday morning came awfully early after being out so late Friday night, but I managed to meet Anton on time.</p>
 
-<p>The first session of the day was &quot;Why XSLT is sexy&quot;.  I was curios about this since I had mostly written off the suitability of XSLT as a means of making good presentation of XML.  It just always seemed like there were easier ways to solve the problem.  My notes were:</p>
+<p>The first session of the day was &ldquo;Why XSLT is sexy&rdquo;.  I was curios about this since I had mostly written off the suitability of XSLT as a means of making good presentation of XML.  It just always seemed like there were easier ways to solve the problem.  My notes were:</p>
 
 <p>Notes:</p>
 
@@ -86,7 +86,7 @@
 <li>detects browser w/ XSL engine and transfers only the appropriate XSL file - easier to keep browser specific XSL separate)</li>
 <li>GRDDL: part of the semantec web project</li>
 <li>simile.mit.edu/welkin</li>
-<li>The functional programming aspect of XSL is the big deal - productivity wise - don&#39;t write the code as though procedural.</li>
+<li>The functional programming aspect of XSL is the big deal - productivity wise - don&rsquo;t write the code as though procedural.</li>
 <li>Screenbook maker</li>
 <li>IE crashed on the presenter (oops)</li>
 <li>Uses Xalan, XSLT, XPath</li>
@@ -126,7 +126,7 @@
           <div class="isLeft">
             <h5 class="index-headline featured"><span>Written by</span></h5>
             <section class="author">
-              <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
+              <div class="author-image" style="background-image: url(/assets/images/author-bw.jpg)">Blog Logo</div>
               <h4>Mark Morga</h4>
               <p class="bio"></p>
               <hr>
@@ -162,6 +162,7 @@
 <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
 <script type="text/javascript" src="/assets/js/index.js"></script>
 <script type="text/javascript" src="/assets/js/readingTime.min.js"></script>
+<script type="text/javascript" src="/assets/js/min/picturefill.min.js"></script>
 <script>
 (function ($) {
   "use strict";
@@ -169,7 +170,7 @@
 
     var $window = $(window),
     $image = $('.post-image-image, .teaserimage-image');
-    
+
       $window.on('scroll', function() {
         var top = $window.scrollTop();
 
