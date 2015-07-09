@@ -63,6 +63,7 @@ exclude:
   - markmorga.sublime-workspace
   - README.md
   - static
+  - Rakefile
 
 keep_files:
   - apple-touch-icon-114x114.png
@@ -89,6 +90,7 @@ keep_files:
   - mstile-310x150.png
   - mstile-310x310.png
   - mstile-70x70.png
+  - .git
 
 defaults:
   -
