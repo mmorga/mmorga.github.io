@@ -18,7 +18,7 @@ cover: "/assets/images/bear-window-trail-big-bend.jpg"
 
 name: 'Mark Morga'
 author: 'Mark Morga'
-author_image: "/assets/images/author.jpg"
+author_image: "/assets/images/author-bw.jpg"
 
 paginate: 5
 
@@ -92,8 +92,12 @@ keep_files:
 
 defaults:
   -
+    scope:
+      path: ""
     values:
       author: "Mark Morga"
+      layout: "post"
+      comments: true
 
 redcarpet:
   extensions:
@@ -104,3 +108,38 @@ redcarpet:
     - lax_spacing
     - superscript
     - smart
+
+picture:
+  source: "assets"
+  output: "generated"
+  markup: "picture"
+  presets:
+    default:
+      ppi: [1, 1.5]
+      attr:
+        itemprop: "image"
+      source_medium:
+        media: "(min-width: 40em)"
+        width: "600"
+      source_default:
+        width: "210"
+    right:
+      ppi: [1, 1.5]
+      attr:
+        itemprop: "image"
+        class: "img-float-right"
+      source_medium:
+        media: "(min-width: 40em)"
+        width: "600"
+      source_default:
+        width: "210"
+    left:
+      ppi: [1, 1.5]
+      attr:
+        itemprop: "image"
+        class: "img-float-left"
+      source_medium:
+        media: "(min-width: 40em)"
+        width: "600"
+      source_default:
+        width: "210"

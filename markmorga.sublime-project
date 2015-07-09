@@ -6,8 +6,7 @@
         "_deploy",
         ".pygments-cache",
         ".sass-cache",
-        ".themes",
-        "_site"
+        ".themes"
       ],
       "follow_symlinks": true,
 			"path": "."
