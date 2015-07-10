@@ -214,3 +214,4 @@ Do you resist adding a new class because it means:
 3. adding the boilerplate code necessary (imports, module decls, etc)
 
 
+http://butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod
