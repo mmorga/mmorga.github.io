@@ -96,7 +96,7 @@ Bob and Doug started off on the wrong foot. The first thing they could have done
 
 Once you know what the impact and your needs are, you are armed to determine if there is a product available that truly meets your needs.
 
-## Evaluating a enterprise applications
+## Evaluating enterprise applications
 
 ### 1. Beware of buying the wrong solution.
 
