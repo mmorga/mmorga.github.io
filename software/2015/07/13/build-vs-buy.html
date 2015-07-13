@@ -209,7 +209,7 @@
 
 <ul>
 <li>Competitors may have a solution that fits your needs better</li>
-<li>Integration between a company&rsquo;s components are often not as seamless as you&rsquo;d expect</li>
+<li><span class="pullquote">Integration between a company&rsquo;s components are often not as seamless as you&rsquo;d expect</span></li>
 </ul></li>
 </ul>
 
@@ -427,11 +427,13 @@
 <script type="text/javascript" src="/assets/js/index.js"></script>
 <script type="text/javascript" src="/assets/js/readingTime.min.js"></script>
 <script type="text/javascript" src="/assets/js/min/picturefill.min.js"></script>
+<script type="text/javascript" src="/assets/js/pully.jquery.js"></script>
 <script>
 (function ($) {
   "use strict";
   $(document).ready(function(){
 
+    $('.pullquote').pully();
     var $window = $(window),
     $image = $('.post-image-image, .teaserimage-image');
 

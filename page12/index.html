@@ -216,11 +216,13 @@ Looks like a reasonable way to defend the home in Britain.  In Texas, we have ot
 <script type="text/javascript" src="/assets/js/index.js"></script>
 <script type="text/javascript" src="/assets/js/readingTime.min.js"></script>
 <script type="text/javascript" src="/assets/js/min/picturefill.min.js"></script>
+<script type="text/javascript" src="/assets/js/pully.jquery.js"></script>
 <script>
 (function ($) {
   "use strict";
   $(document).ready(function(){
 
+    $('.pullquote').pully();
     var $window = $(window),
     $image = $('.post-image-image, .teaserimage-image');
 
