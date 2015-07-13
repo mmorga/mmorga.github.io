@@ -9,13 +9,13 @@ tags:
 image: /assets/images/mouth-of-santa-elena-canyon.jpg
 wiki: https://en.wikipedia.org/wiki/False_premise
 ---
+*Note:* this is still a work in progress. I'll be improving it over time.
+
 Several times a year, I get involved in a "build vs. buy" conversation. The conversation starts with a business segment leader coming to the CIO and saying "We need a _C-MESA_\* system".  The CIO then asks his team: "Should we build it or buy it?" In many companies, it can be a source of friction between business leaders and architects/developers.
 
 The short answer is often: "If you can buy it, buy it. Build it only if you have to." The *correct* answer is usually more nuanced and, as usual, the devil is in the details.
 
 To keep this fun, I'm going to tell a story about a company named _AppSmithy_, its fictional CIO named _Bob_ and his IT department's senior architect named _Doug_.
-
-TODO: Insert pix of Bob & Doug
 
 \* C-MESA: Completely Meaningless Enterprise Solution Acronym
 
@@ -23,10 +23,7 @@ TODO: Insert pix of Bob & Doug
 
 One of AppSmithy's departments has come to Bob demanding a solution for _C-MESA_. Bob's thinks back to CIO school and remembers that you should always buy solutions. Not only that, but Bob knows _exactly_ what to buy. A vendor named _OrcaForceSoft_ has a _C-MESA_ product named _Executron_ which is perfect for AppSmithy! Bob knows this for one (or more) of the following reasons:
 
-TODO: Logo for _OrcaForceSoft_
-
 * _OrcaForceSoft_ solved the same problem at a previous company
-* _OrcaForceSoft_ has a really convincing and/or attractive sales-person armed with free steak lunch and country-club membership
 * we don't have the people and development skill to build _C-MESA_
 * no one was ever being fired for buying _OrcaForceSoft_
 
@@ -42,14 +39,13 @@ Doug meets with Bob and hears about the need for _C-MESA_ and _Executron_. He ha
 * _OrcaForceSoft_ uses a drug-dealer pricing scheme that will bleed us dry long after the leader has moved on from the company
 * how do we know _Executron_ is the best solution for _C-MESA_
 * we could build a better _C-MESA_ in less time than _OrcaForceSoft_
+* _OrcaForceSoft_ must have a really convincing and/or attractive sales-person armed with free steak lunch and country-club membership
 
 ## After the meeting
 
 Both Bob and Doug are a little deflated from the talk. Bob dismisses Doug's concerns by telling himself that developers always want to build everything. Doug leaves thinking: "here we go again - prepare for another integration death-march".
 
 Bob would like Doug to be able to see that the buy decision is clear:
-
-TODO: turn this into a 4 panel comic
 
 Build                             | Buy
 ----------------------------------|-------------------------------------
@@ -76,7 +72,16 @@ Depending on the real-life product and need, both Bob and Doug could be correct.
 
 Bob and Doug started off on the wrong foot. The first thing they could have done was to start asking questions of the business:
 
-### 1. What is the impact to your business?
+### 1. What does your business _really_ need?
+
+* There is no such thing as an Agile build vs buy decision. You will need to perform a deep evaluation of requirements.
+* Trying to pick a "best of breed" solution assuming that it will work for your specific needs is risky.
+* Are your requirements something that are core to your business? Is the business process part of your "secret sauce" that makes your business unique?
+    - If so, this could make you prefer an in-house implementation (unless you can find a product that allows you to maintain or improve this business process with minimal development/integration).
+    - If not, you should lean to buying a solution - unless no suitable solution can be found.
+* Beware of talking about implementations (build) or solutions (buy) before deeply understanding the problem is a mistake and can cause you to make the wrong decision.
+
+### 2. What is the impact to your business?
 
 * Is the new application going to be used to create a new business process? Duplicating an existing business process (presumably introducing efficiencies)? Replacing an existing Business Process?
     - Are there simpler short-cuts (glue-code) that could facilitate this improvement?
@@ -85,15 +90,6 @@ Bob and Doug started off on the wrong foot. The first thing they could have done
     - Unexpected change is disruptive. Is the potential disruption worth other value gained?
     - Are there additional processes that will be impacted by the process changes?
 * Is the business ready to invest in the project by dedicating end-users and subject matter experts to consult with the development or implementation team? Taking on a project before the business is ready to fully engage with the process will make you build the wrong thing or even fail.
-
-### 2. What does your business _really_ need?
-
-* There is no such thing as an Agile build vs buy decision. You will need to perform a deep evaluation of requirements.
-* Trying to pick a "best of breed" solution assuming that it will work for your specific needs is risky.
-* Are your requirements something that are core to your business? Is the business process part of your "secret sauce" that makes your business unique?
-    - If so, this could make you prefer an in-house implementation (unless you can find a product that allows you to maintain or improve this business process with minimal development/integration).
-    - If not, you should lean to buying a solution - unless no suitable solution can be found.
-* Beware of talking about implementations (build) or solutions (buy) before deeply understanding the problem is a mistake and can cause you to make the wrong decision.
 
 Once you know what the impact and your needs are, you are armed to determine if there is a product available that truly meets your needs.
 
