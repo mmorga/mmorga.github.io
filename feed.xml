@@ -6,9 +6,309 @@
 </description>
     <link>http://markmorga.com/</link>
     <atom:link href="http://markmorga.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 10 Jul 2015 16:03:07 -0500</pubDate>
-    <lastBuildDate>Fri, 10 Jul 2015 16:03:07 -0500</lastBuildDate>
+    <pubDate>Mon, 13 Jul 2015 11:23:29 -0500</pubDate>
+    <lastBuildDate>Mon, 13 Jul 2015 11:23:29 -0500</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>The False Premises of Build vs Buy</title>
+        <description>&lt;p&gt;&lt;em&gt;Note:&lt;/em&gt; this is still a work in progress. I&amp;rsquo;ll be improving it over time.&lt;/p&gt;
+
+&lt;p&gt;Several times a year, I get involved in a &amp;ldquo;build vs. buy&amp;rdquo; conversation. The conversation starts with a business segment leader coming to the CIO and saying &amp;ldquo;We need a &lt;em&gt;C-MESA&lt;/em&gt;* system&amp;rdquo;.  The CIO then asks his team: &amp;ldquo;Should we build it or buy it?&amp;rdquo; In many companies, it can be a source of friction between business leaders and architects/developers.&lt;/p&gt;
+
+&lt;p&gt;The short answer is often: &amp;ldquo;If you can buy it, buy it. Build it only if you have to.&amp;rdquo; The &lt;em&gt;correct&lt;/em&gt; answer is usually more nuanced and, as usual, the devil is in the details.&lt;/p&gt;
+
+&lt;p&gt;To keep this fun, I&amp;rsquo;m going to tell a story about a company named &lt;em&gt;AppSmithy&lt;/em&gt;, its fictional CIO named &lt;em&gt;Bob&lt;/em&gt; and his IT department&amp;rsquo;s senior architect named &lt;em&gt;Doug&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;* C-MESA: Completely Meaningless Enterprise Solution Acronym&lt;/p&gt;
+
+&lt;h2&gt;Bob&amp;rsquo;s perspective&lt;/h2&gt;
+
+&lt;p&gt;One of AppSmithy&amp;rsquo;s departments has come to Bob demanding a solution for &lt;em&gt;C-MESA&lt;/em&gt;. Bob&amp;rsquo;s thinks back to CIO school and remembers that you should always buy solutions. Not only that, but Bob knows &lt;em&gt;exactly&lt;/em&gt; what to buy. A vendor named &lt;em&gt;OrcaForceSoft&lt;/em&gt; has a &lt;em&gt;C-MESA&lt;/em&gt; product named &lt;em&gt;Executron&lt;/em&gt; which is perfect for AppSmithy! Bob knows this for one (or more) of the following reasons:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;OrcaForceSoft&lt;/em&gt; solved the same problem at a previous company&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;OrcaForceSoft&lt;/em&gt; has a really convincing and/or attractive sales-person armed with free steak lunch and country-club membership&lt;/li&gt;
+&lt;li&gt;we don&amp;rsquo;t have the people and development skill to build &lt;em&gt;C-MESA&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;no one was ever being fired for buying &lt;em&gt;OrcaForceSoft&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;It&amp;rsquo;s only 10:00 am and the problem is already solved &amp;hellip; except that he&amp;rsquo;s going to have to get Doug to integrate &lt;em&gt;Executron&lt;/em&gt; with the rest of &lt;em&gt;AppSmithy&lt;/em&gt;&amp;rsquo;s architecture. And that means talking to Doug about it.&lt;/p&gt;
+
+&lt;h2&gt;Doug&amp;rsquo;s perspective&lt;/h2&gt;
+
+&lt;p&gt;Doug&amp;rsquo;s title at &lt;em&gt;AppSmithy&lt;/em&gt; is &amp;ldquo;Architect&amp;rdquo;, but he still thinks of himself as a developer at heart. Doug has been at &lt;em&gt;AppSmithy&lt;/em&gt; through a few different leadership changes. Doug thinks that Bob seems to be a pretty good guy, but he&amp;rsquo;s been burned in the past by CIO decisions.&lt;/p&gt;
+
+&lt;p&gt;Doug meets with Bob and hears about the need for &lt;em&gt;C-MESA&lt;/em&gt; and &lt;em&gt;Executron&lt;/em&gt;. He has an immediate negative reaction for a few reasons:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;OrcaForceSoft&lt;/em&gt; is really terrible to develop on, he doesn&amp;rsquo;t want to work on it&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;OrcaForceSoft&lt;/em&gt; uses a drug-dealer pricing scheme that will bleed us dry long after the leader has moved on from the company&lt;/li&gt;
+&lt;li&gt;how do we know &lt;em&gt;Executron&lt;/em&gt; is the best solution for &lt;em&gt;C-MESA&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;we could build a better &lt;em&gt;C-MESA&lt;/em&gt; in less time than &lt;em&gt;OrcaForceSoft&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;After the meeting&lt;/h2&gt;
+
+&lt;p&gt;Both Bob and Doug are a little deflated from the talk. Bob dismisses Doug&amp;rsquo;s concerns by telling himself that developers always want to build everything. Doug leaves thinking: &amp;ldquo;here we go again - prepare for another integration death-march&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;Bob would like Doug to be able to see that the buy decision is clear:&lt;/p&gt;
+
+&lt;table&gt;&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Build&lt;/th&gt;
+&lt;th&gt;Buy&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Find an available dev team&lt;/td&gt;
+&lt;td&gt;Select commercial software&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Reschedule planned work&lt;/td&gt;
+&lt;td&gt;Hire expert contractors to install&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Deal with slipping schedule&lt;/td&gt;
+&lt;td&gt;Accept performance bonus&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Accept less than hoped for results&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Bugs, bugs, bugs&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Maintain forever&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+
+&lt;p&gt;Doug would like Bob to see that:&lt;/p&gt;
+
+&lt;table&gt;&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Build&lt;/th&gt;
+&lt;th&gt;Buy&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Keep domain knowledge in-house&lt;/td&gt;
+&lt;td&gt;Rent commercial software - there is no buy&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Build software that works with our business process&lt;/td&gt;
+&lt;td&gt;Hire expensive contractors who will build the functionality we need that is missing&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Integration is difficult due to inferior APIs&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+
+&lt;h2&gt;The moral of the story&lt;/h2&gt;
+
+&lt;p&gt;Depending on the real-life product and need, both Bob and Doug could be correct. So the question is: how do you know what the right decision is?&lt;/p&gt;
+
+&lt;h2&gt;Initial questions to ask yourself&lt;/h2&gt;
+
+&lt;p&gt;Bob and Doug started off on the wrong foot. The first thing they could have done was to start asking questions of the business:&lt;/p&gt;
+
+&lt;h3&gt;1. What is the impact to your business?&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Is the new application going to be used to create a new business process? Duplicating an existing business process (presumably introducing efficiencies)? Replacing an existing Business Process?
+
+&lt;ul&gt;
+&lt;li&gt;Are there simpler short-cuts (glue-code) that could facilitate this improvement?&lt;/li&gt;
+&lt;li&gt;Are there existing systems in your enterprise that could fulfill the need?&lt;/li&gt;
+&lt;li&gt;Has the new business process been vetted with all concerned parties?&lt;/li&gt;
+&lt;li&gt;Unexpected change is disruptive. Is the potential disruption worth other value gained?&lt;/li&gt;
+&lt;li&gt;Are there additional processes that will be impacted by the process changes?&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Is the business ready to invest in the project by dedicating end-users and subject matter experts to consult with the development or implementation team? Taking on a project before the business is ready to fully engage with the process will make you build the wrong thing or even fail.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;2. What does your business &lt;em&gt;really&lt;/em&gt; need?&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;There is no such thing as an Agile build vs buy decision. You will need to perform a deep evaluation of requirements.&lt;/li&gt;
+&lt;li&gt;Trying to pick a &amp;ldquo;best of breed&amp;rdquo; solution assuming that it will work for your specific needs is risky.&lt;/li&gt;
+&lt;li&gt;Are your requirements something that are core to your business? Is the business process part of your &amp;ldquo;secret sauce&amp;rdquo; that makes your business unique?
+
+&lt;ul&gt;
+&lt;li&gt;If so, this could make you prefer an in-house implementation (unless you can find a product that allows you to maintain or improve this business process with minimal development/integration).&lt;/li&gt;
+&lt;li&gt;If not, you should lean to buying a solution - unless no suitable solution can be found.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Beware of talking about implementations (build) or solutions (buy) before deeply understanding the problem is a mistake and can cause you to make the wrong decision.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Once you know what the impact and your needs are, you are armed to determine if there is a product available that truly meets your needs.&lt;/p&gt;
+
+&lt;h2&gt;Evaluating a enterprise applications&lt;/h2&gt;
+
+&lt;h3&gt;1. Beware of buying the wrong solution.&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Make sure to do a full survey of the market&lt;/li&gt;
+&lt;li&gt;Just because you already an &lt;em&gt;OrkaForceSoft&lt;/em&gt; install-base does not mean that &lt;em&gt;OrkaForceSoft: Executron&lt;/em&gt; is what YOU need
+
+&lt;ul&gt;
+&lt;li&gt;Competitors may have a solution that fits your needs better&lt;/li&gt;
+&lt;li&gt;Integration between a company&amp;rsquo;s components are often not as seamless as you&amp;rsquo;d expect&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;2. Get references for similar companies that have implemented this application.&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Prefer companies that aren&amp;rsquo;t provided by the vendor (if you can find them)&lt;/li&gt;
+&lt;li&gt;Get independent opinions you can trust&lt;/li&gt;
+&lt;li&gt;When exploring solutions, include independent opinions, i.e.:
+
+&lt;ul&gt;
+&lt;li&gt;Not the contracting company that you would hire to implement the solution&lt;/li&gt;
+&lt;li&gt;Not the team in charge of your existing &lt;em&gt;OrcaForceSoft&lt;/em&gt; products
+
+&lt;ul&gt;
+&lt;li&gt;If you ask the man with the hammer, he will tell you that the problem is a nail&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;3. What percentage of the software do you intend to use?&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Does it make sense to purchase an expensive product and use only 10% of its functionality?&lt;/li&gt;
+&lt;li&gt;What if you have to implement/customize another 80% of the functionality?&lt;/li&gt;
+&lt;li&gt;Buying a solution that requires extensive changes to meet requirements can be more expensive than building what you need instead&lt;/li&gt;
+&lt;li&gt;It&amp;rsquo;s a mistake to place a higher value on breadth of features instead of support for features you actually will be using&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;4. Evaluate the development cycle of the application&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Even if your developers aren&amp;rsquo;t doing the development on the product, it will be a good indicator of how difficult your installation and maintenance will be&lt;/li&gt;
+&lt;li&gt;How open is the documentation?
+
+&lt;ul&gt;
+&lt;li&gt;Documentation should be publicly available&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Examine the APIs that permit customization
+
+&lt;ul&gt;
+&lt;li&gt;Do these APIs permit the kinds of customizations that you&amp;rsquo;ll need to make?&lt;/li&gt;
+&lt;li&gt;Will you have to rely on one-off changes in the code that will be difficult to support in the future?&lt;/li&gt;
+&lt;li&gt;Can your extensions/customizations be subjected to good code practices (e.g., Version Control, Automated Testing)?&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;How difficult (or possible) is integration with other applications?
+
+&lt;ul&gt;
+&lt;li&gt;How well does it fit into your company standards for integration (i.e., SOA, REST)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Examine the community and culture around customization of the tool.
+
+&lt;ul&gt;
+&lt;li&gt;Is the community open, welcoming and lively?&lt;/li&gt;
+&lt;li&gt;Will finding answers to questions be easy?
+
+&lt;ul&gt;
+&lt;li&gt;Is there an on-line forum where questions are answered quickly?&lt;/li&gt;
+&lt;li&gt;Are there independent communities of developers who respond to questions in places like &lt;a href=&quot;http://stackoverflow.com/&quot;&gt;Stack Overflow&lt;/a&gt;?&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Examine the upgrade process
+
+&lt;ul&gt;
+&lt;li&gt;What is the release schedule frequency?&lt;/li&gt;
+&lt;li&gt;How are your local customizations re-applied after a new release?
+
+&lt;ul&gt;
+&lt;li&gt;In a poorly structured product, the customizations you make to the software may make upgrades and bug fixes difficult to virtually impossible&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;How much down-time is required for upgrades?
+
+&lt;ul&gt;
+&lt;li&gt;Does it work for your future needs for up-time?&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;5. Does the software support the work-flow that your end-users expect?&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Enterprise software is usually opinionated on how things should be done and implementing significantly different business process can be time-consuming.&lt;/li&gt;
+&lt;li&gt;Can your business process change to match the process inherent in the new software? Will the change be accepted?&lt;/li&gt;
+&lt;li&gt;Are you willing to make the changes to the software to make it match your current business process?&lt;/li&gt;
+&lt;li&gt;Beware of buying a solution that requires process changes that haven&amp;rsquo;t been agreed to by the users&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;6. Real enterprise software costs&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Yearly license &amp;amp; support fees
+
+&lt;ul&gt;
+&lt;li&gt;What happens when you scale your deployment?&lt;/li&gt;
+&lt;li&gt;Licensing fees will need to be negotiated periodically.&lt;/li&gt;
+&lt;li&gt;Are you buying your software from the enterprise equivalent of the corner drug dealer?
+
+&lt;ul&gt;
+&lt;li&gt;Is it &amp;ldquo;free&amp;rdquo; for the first year?&lt;/li&gt;
+&lt;li&gt;After that?&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;A team of DevOps and developers with experience in this tool.
+
+&lt;ul&gt;
+&lt;li&gt;Typically these will be specialist contractors and can be expensive.&lt;/li&gt;
+&lt;li&gt;This team won&amp;rsquo;t usually go away once the software is deployed.&lt;/li&gt;
+&lt;li&gt;Custom work will continually be demanded by your users.&lt;/li&gt;
+&lt;li&gt;The software will require maintenance releases and DevOps monitoring.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Building gotchas&lt;/h3&gt;
+
+&lt;p&gt;Building the software yourself comes with its own set of difficulties (well beyond the scope of this already lengthy piece). Here are a few items to watch for.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Building with the wrong technology.&lt;/em&gt; It&amp;rsquo;s a common fault to use the technology stack of an available development team instead of using the stack that best addresses the problem.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Building with the wrong team.&lt;/em&gt; A development team that works well in one domain may struggle in another.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Over-building the solution (gold-plating).&lt;/em&gt; You have the opportunity to build something that is just good enough &amp;ndash; don&amp;rsquo;t waste it.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;You need good engagement&lt;/em&gt; with the end-users in order to quickly and successfully build software.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Building software is expensive.&lt;/em&gt; Consider both apparent costs and opportunity costs.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Secret Sauce:&lt;/em&gt; if you aren&amp;rsquo;t adding to your &amp;ldquo;secret sauce&amp;rdquo; you probably shouldn&amp;rsquo;t be building it.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;The ugly truth about enterprise software: it&amp;rsquo;s not COTS&lt;/h2&gt;
+
+&lt;p&gt;The ugly truth is that Enterprise Software isn&amp;rsquo;t bought, installed and used. Enterprise Software is bought and installed, then modified, extended, folded, spindled and mutilated by expensive contractors. This leads to unexpected costs, maintenance, and wailing and gnashing of teeth.&lt;/p&gt;
+
+&lt;p&gt;When you buy a product like Microsoft Exchange, you will have a certain amount of work involved in configuring it for your Enterprise. Setting up rules, defining domains, adding your employees to the directory (or integrating with an existing directory), etc. However, it&amp;rsquo;s largely a discrete project &amp;ndash; plan-able and relatively predictable.&lt;/p&gt;
+
+&lt;p&gt;When you buy something like a billing suite or a sales tool, it&amp;rsquo;s a &lt;em&gt;completely&lt;/em&gt; different story.&lt;/p&gt;
+
+&lt;p&gt;If your requirements are between building a system or buying (and customizing) a commercial solution, you are really deciding between: building with your developers and tool-set and building in a framework that requires external developers and yearly license fees.&lt;/p&gt;
+
+&lt;p&gt;This isn&amp;rsquo;t to say that you should build everything. But you should definitely go into the decision with open eyes about the real costs and benefits with each approach.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 13 Jul 2015 00:00:00 -0500</pubDate>
+        <link>http://markmorga.com/software/2015/07/13/build-vs-buy.html</link>
+        <guid isPermaLink="true">http://markmorga.com/software/2015/07/13/build-vs-buy.html</guid>
+        
+        <category>enterprise-architecture</category>
+        
+        <category>cots</category>
+        
+        <category>build-vs-buy</category>
+        
+        
+        <category>software</category>
+        
+      </item>
     
       <item>
         <title>Environments to Learn Programming</title>
@@ -509,36 +809,6 @@ but I like having a more responsive window for my shell and I use tabs often in 
         <pubDate>Fri, 31 Oct 2008 00:00:00 -0500</pubDate>
         <link>http://markmorga.com/2008/10/31/happy-halloween.html</link>
         <guid isPermaLink="true">http://markmorga.com/2008/10/31/happy-halloween.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Rollerderby Sunday</title>
-        <description>&lt;p&gt;Sunday night I finally made it back to a derby event.  The bout was between San Antonio&amp;rsquo;s &lt;a href=&quot;http://profile.myspace.com/index.cfm?fuseaction=user.viewprofile&amp;amp;friendid=365431144&quot;&gt;Las Tejanas&lt;/a&gt; and Tulsa, Oklahoma&amp;rsquo;s &lt;a href=&quot;http://www.greencountryrollergirls.com/&quot;&gt;Green Country Rollergirls&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.flickr.com/photos/markmorga/2941818266/in/set-72157608016236631/&quot;&gt;&lt;img src=&quot;http://farm4.static.flickr.com/3244/2941818266_a9c08d047a.jpg?v=0&quot; alt=&quot;&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.flickr.com/photos/markmorga/2941018412/in/set-72157608016236631/&quot;&gt;&lt;img src=&quot;http://farm4.static.flickr.com/3057/2941018412_c9d3a0ecaf.jpg?v=0&quot; alt=&quot;&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.flickr.com/photos/markmorga/2940928421/in/set-72157608016236631/&quot;&gt;&lt;img src=&quot;http://farm4.static.flickr.com/3225/2940928421_6e3f3b0bfc.jpg?v=0&quot; alt=&quot;&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.flickr.com/photos/markmorga/2940930575/in/set-72157608016236631/&quot;&gt;&lt;img src=&quot;http://farm4.static.flickr.com/3208/2940930575_11af6ca2ba.jpg?v=0&quot; alt=&quot;&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;The after-party was the most fun I&amp;rsquo;ve had at a derby event in a long time.  I managed to capture the highlight on video.&lt;/p&gt;
-
-&lt;p&gt;&lt;object width=&quot;400&quot; height=&quot;302&quot;&gt;
-    &lt;param name=&quot;allowfullscreen&quot; value=&quot;true&quot; /&gt;
-    &lt;param name=&quot;allowscriptaccess&quot; value=&quot;always&quot; /&gt;
-    &lt;param name=&quot;movie&quot; value=&quot;http://vimeo.com/moogaloop.swf?clip_id=1971082&amp;amp;server=vimeo.com&amp;amp;show_title=1&amp;amp;show_byline=1&amp;amp;show_portrait=0&amp;amp;color=&amp;amp;fullscreen=1&quot; /&gt;
-    &lt;embed src=&quot;http://vimeo.com/moogaloop.swf?clip_id=1971082&amp;amp;server=vimeo.com&amp;amp;show_title=1&amp;amp;show_byline=1&amp;amp;show_portrait=0&amp;amp;color=&amp;amp;fullscreen=1&quot; type=&quot;application/x-shockwave-flash&quot; allowfullscreen=&quot;true&quot; allowscriptaccess=&quot;always&quot; width=&quot;400&quot; height=&quot;302&quot;&gt;&lt;/embed&gt;
-&lt;/object&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://vimeo.com/1971082?pg=embed&amp;amp;amp;sec=1971082&quot;&gt;Ultimate Piggyback Battle&lt;/a&gt; from &lt;a href=&quot;http://vimeo.com/markmorga?pg=embed&amp;amp;amp;sec=1971082&quot;&gt;Mark Morga&lt;/a&gt; on &lt;a href=&quot;http://vimeo.com?pg=embed&amp;amp;amp;sec=1971082&quot;&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;
-</description>
-        <pubDate>Tue, 14 Oct 2008 00:00:00 -0500</pubDate>
-        <link>http://markmorga.com/2008/10/14/rollerderby-sunday.html</link>
-        <guid isPermaLink="true">http://markmorga.com/2008/10/14/rollerderby-sunday.html</guid>
         
         
       </item>

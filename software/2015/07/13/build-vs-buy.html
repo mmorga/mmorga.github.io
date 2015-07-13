@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <!-- (1) Optimize for mobile versions: http://goo.gl/EOpFl -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- (1) force latest IE rendering engine: bit.ly/1c8EiC9 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>The False Premises of Build vs Buy</title>
+  <meta name="description" content="The personal blog of Mark Morga.
+" />
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <link rel="canonical" href="http://markmorga.com/software/2015/07/13/build-vs-buy.html">
+
+  <link rel="shortcut icon" href="/assets/images/favicon.ico">
+<!--  <link rel="stylesheet" href=""> -->
+  <link rel="stylesheet" href="http://brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />
+</head>
+
+  <body itemscope itemtype="http://schema.org/Article">
+    <!-- header start -->
+
+<a href="http://markmorga.com" class="logo-readium"><span class="logo" style="background-image: url(/assets/images/mm_logo.jpg)"></span></a>
+
+<!-- header end -->
+
+    <main class="content" role="main">
+      <article class="post">
+        
+        <div class="article-image">
+          <div class="post-image-image" style="background-image: url(/assets/images/mouth-of-santa-elena-canyon.jpg)">
+            Article Image
+  </div>
+          <div class="post-meta">
+            <h1 class="post-title">The False Premises of Build vs Buy</h1>
+            <div class="cf post-meta-text">
+              <div class="author-image" style="background-image: url(/assets/images/author-bw.jpg)">Blog Logo</div>
+              <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">Mark Morga</h4>
+              on
+              <time datetime="2015-07-13 00:00">13 Jul 2015</time>
+              <!-- , tagged on <span class="post-tag-">, <a href="/tag/"></a></span> -->
+            </div>
+            <div style="text-align:center">
+              <a href="#topofpage" class="topofpage"><i class="fa fa-angle-down"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <section class="post-content">
+          <div class="post-reading">
+            <span class="post-reading-time"></span> read
+          </div>
+          <a name="topofpage"></a>
+          <p><em>Note:</em> this is still a work in progress. I&rsquo;ll be improving it over time.</p>
+
+<p>Several times a year, I get involved in a &ldquo;build vs. buy&rdquo; conversation. The conversation starts with a business segment leader coming to the CIO and saying &ldquo;We need a <em>C-MESA</em>* system&rdquo;.  The CIO then asks his team: &ldquo;Should we build it or buy it?&rdquo; In many companies, it can be a source of friction between business leaders and architects/developers.</p>
+
+<p>The short answer is often: &ldquo;If you can buy it, buy it. Build it only if you have to.&rdquo; The <em>correct</em> answer is usually more nuanced and, as usual, the devil is in the details.</p>
+
+<p>To keep this fun, I&rsquo;m going to tell a story about a company named <em>AppSmithy</em>, its fictional CIO named <em>Bob</em> and his IT department&rsquo;s senior architect named <em>Doug</em>.</p>
+
+<p>* C-MESA: Completely Meaningless Enterprise Solution Acronym</p>
+
+<h2>Bob&rsquo;s perspective</h2>
+
+<p>One of AppSmithy&rsquo;s departments has come to Bob demanding a solution for <em>C-MESA</em>. Bob&rsquo;s thinks back to CIO school and remembers that you should always buy solutions. Not only that, but Bob knows <em>exactly</em> what to buy. A vendor named <em>OrcaForceSoft</em> has a <em>C-MESA</em> product named <em>Executron</em> which is perfect for AppSmithy! Bob knows this for one (or more) of the following reasons:</p>
+
+<ul>
+<li><em>OrcaForceSoft</em> solved the same problem at a previous company</li>
+<li><em>OrcaForceSoft</em> has a really convincing and/or attractive sales-person armed with free steak lunch and country-club membership</li>
+<li>we don&rsquo;t have the people and development skill to build <em>C-MESA</em></li>
+<li>no one was ever being fired for buying <em>OrcaForceSoft</em></li>
+</ul>
+
+<p>It&rsquo;s only 10:00 am and the problem is already solved &hellip; except that he&rsquo;s going to have to get Doug to integrate <em>Executron</em> with the rest of <em>AppSmithy</em>&rsquo;s architecture. And that means talking to Doug about it.</p>
+
+<h2>Doug&rsquo;s perspective</h2>
+
+<p>Doug&rsquo;s title at <em>AppSmithy</em> is &ldquo;Architect&rdquo;, but he still thinks of himself as a developer at heart. Doug has been at <em>AppSmithy</em> through a few different leadership changes. Doug thinks that Bob seems to be a pretty good guy, but he&rsquo;s been burned in the past by CIO decisions.</p>
+
+<p>Doug meets with Bob and hears about the need for <em>C-MESA</em> and <em>Executron</em>. He has an immediate negative reaction for a few reasons:</p>
+
+<ul>
+<li><em>OrcaForceSoft</em> is really terrible to develop on, he doesn&rsquo;t want to work on it</li>
+<li><em>OrcaForceSoft</em> uses a drug-dealer pricing scheme that will bleed us dry long after the leader has moved on from the company</li>
+<li>how do we know <em>Executron</em> is the best solution for <em>C-MESA</em></li>
+<li>we could build a better <em>C-MESA</em> in less time than <em>OrcaForceSoft</em></li>
+</ul>
+
+<h2>After the meeting</h2>
+
+<p>Both Bob and Doug are a little deflated from the talk. Bob dismisses Doug&rsquo;s concerns by telling himself that developers always want to build everything. Doug leaves thinking: &ldquo;here we go again - prepare for another integration death-march&rdquo;.</p>
+
+<p>Bob would like Doug to be able to see that the buy decision is clear:</p>
+
+<table><thead>
+<tr>
+<th>Build</th>
+<th>Buy</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Find an available dev team</td>
+<td>Select commercial software</td>
+</tr>
+<tr>
+<td>Reschedule planned work</td>
+<td>Hire expert contractors to install</td>
+</tr>
+<tr>
+<td>Deal with slipping schedule</td>
+<td>Accept performance bonus</td>
+</tr>
+<tr>
+<td>Accept less than hoped for results</td>
+<td></td>
+</tr>
+<tr>
+<td>Bugs, bugs, bugs</td>
+<td></td>
+</tr>
+<tr>
+<td>Maintain forever</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<p>Doug would like Bob to see that:</p>
+
+<table><thead>
+<tr>
+<th>Build</th>
+<th>Buy</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Keep domain knowledge in-house</td>
+<td>Rent commercial software - there is no buy</td>
+</tr>
+<tr>
+<td>Build software that works with our business process</td>
+<td>Hire expensive contractors who will build the functionality we need that is missing</td>
+</tr>
+<tr>
+<td></td>
+<td>Integration is difficult due to inferior APIs</td>
+</tr>
+</tbody></table>
+
+<h2>The moral of the story</h2>
+
+<p>Depending on the real-life product and need, both Bob and Doug could be correct. So the question is: how do you know what the right decision is?</p>
+
+<h2>Initial questions to ask yourself</h2>
+
+<p>Bob and Doug started off on the wrong foot. The first thing they could have done was to start asking questions of the business:</p>
+
+<h3>1. What is the impact to your business?</h3>
+
+<ul>
+<li>Is the new application going to be used to create a new business process? Duplicating an existing business process (presumably introducing efficiencies)? Replacing an existing Business Process?
+
+<ul>
+<li>Are there simpler short-cuts (glue-code) that could facilitate this improvement?</li>
+<li>Are there existing systems in your enterprise that could fulfill the need?</li>
+<li>Has the new business process been vetted with all concerned parties?</li>
+<li>Unexpected change is disruptive. Is the potential disruption worth other value gained?</li>
+<li>Are there additional processes that will be impacted by the process changes?</li>
+</ul></li>
+<li>Is the business ready to invest in the project by dedicating end-users and subject matter experts to consult with the development or implementation team? Taking on a project before the business is ready to fully engage with the process will make you build the wrong thing or even fail.</li>
+</ul>
+
+<h3>2. What does your business <em>really</em> need?</h3>
+
+<ul>
+<li>There is no such thing as an Agile build vs buy decision. You will need to perform a deep evaluation of requirements.</li>
+<li>Trying to pick a &ldquo;best of breed&rdquo; solution assuming that it will work for your specific needs is risky.</li>
+<li>Are your requirements something that are core to your business? Is the business process part of your &ldquo;secret sauce&rdquo; that makes your business unique?
+
+<ul>
+<li>If so, this could make you prefer an in-house implementation (unless you can find a product that allows you to maintain or improve this business process with minimal development/integration).</li>
+<li>If not, you should lean to buying a solution - unless no suitable solution can be found.</li>
+</ul></li>
+<li>Beware of talking about implementations (build) or solutions (buy) before deeply understanding the problem is a mistake and can cause you to make the wrong decision.</li>
+</ul>
+
+<p>Once you know what the impact and your needs are, you are armed to determine if there is a product available that truly meets your needs.</p>
+
+<h2>Evaluating a enterprise applications</h2>
+
+<h3>1. Beware of buying the wrong solution.</h3>
+
+<ul>
+<li>Make sure to do a full survey of the market</li>
+<li>Just because you already an <em>OrkaForceSoft</em> install-base does not mean that <em>OrkaForceSoft: Executron</em> is what YOU need
+
+<ul>
+<li>Competitors may have a solution that fits your needs better</li>
+<li>Integration between a company&rsquo;s components are often not as seamless as you&rsquo;d expect</li>
+</ul></li>
+</ul>
+
+<h3>2. Get references for similar companies that have implemented this application.</h3>
+
+<ul>
+<li>Prefer companies that aren&rsquo;t provided by the vendor (if you can find them)</li>
+<li>Get independent opinions you can trust</li>
+<li>When exploring solutions, include independent opinions, i.e.:
+
+<ul>
+<li>Not the contracting company that you would hire to implement the solution</li>
+<li>Not the team in charge of your existing <em>OrcaForceSoft</em> products
+
+<ul>
+<li>If you ask the man with the hammer, he will tell you that the problem is a nail</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h3>3. What percentage of the software do you intend to use?</h3>
+
+<ul>
+<li>Does it make sense to purchase an expensive product and use only 10% of its functionality?</li>
+<li>What if you have to implement/customize another 80% of the functionality?</li>
+<li>Buying a solution that requires extensive changes to meet requirements can be more expensive than building what you need instead</li>
+<li>It&rsquo;s a mistake to place a higher value on breadth of features instead of support for features you actually will be using</li>
+</ul>
+
+<h3>4. Evaluate the development cycle of the application</h3>
+
+<ul>
+<li>Even if your developers aren&rsquo;t doing the development on the product, it will be a good indicator of how difficult your installation and maintenance will be</li>
+<li>How open is the documentation?
+
+<ul>
+<li>Documentation should be publicly available</li>
+</ul></li>
+<li>Examine the APIs that permit customization
+
+<ul>
+<li>Do these APIs permit the kinds of customizations that you&rsquo;ll need to make?</li>
+<li>Will you have to rely on one-off changes in the code that will be difficult to support in the future?</li>
+<li>Can your extensions/customizations be subjected to good code practices (e.g., Version Control, Automated Testing)?</li>
+</ul></li>
+<li>How difficult (or possible) is integration with other applications?
+
+<ul>
+<li>How well does it fit into your company standards for integration (i.e., SOA, REST)</li>
+</ul></li>
+<li>Examine the community and culture around customization of the tool.
+
+<ul>
+<li>Is the community open, welcoming and lively?</li>
+<li>Will finding answers to questions be easy?
+
+<ul>
+<li>Is there an on-line forum where questions are answered quickly?</li>
+<li>Are there independent communities of developers who respond to questions in places like <a href="http://stackoverflow.com/">Stack Overflow</a>?</li>
+</ul></li>
+</ul></li>
+<li>Examine the upgrade process
+
+<ul>
+<li>What is the release schedule frequency?</li>
+<li>How are your local customizations re-applied after a new release?
+
+<ul>
+<li>In a poorly structured product, the customizations you make to the software may make upgrades and bug fixes difficult to virtually impossible</li>
+</ul></li>
+<li>How much down-time is required for upgrades?
+
+<ul>
+<li>Does it work for your future needs for up-time?</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h3>5. Does the software support the work-flow that your end-users expect?</h3>
+
+<ul>
+<li>Enterprise software is usually opinionated on how things should be done and implementing significantly different business process can be time-consuming.</li>
+<li>Can your business process change to match the process inherent in the new software? Will the change be accepted?</li>
+<li>Are you willing to make the changes to the software to make it match your current business process?</li>
+<li>Beware of buying a solution that requires process changes that haven&rsquo;t been agreed to by the users</li>
+</ul>
+
+<h3>6. Real enterprise software costs</h3>
+
+<ul>
+<li>Yearly license &amp; support fees
+
+<ul>
+<li>What happens when you scale your deployment?</li>
+<li>Licensing fees will need to be negotiated periodically.</li>
+<li>Are you buying your software from the enterprise equivalent of the corner drug dealer?
+
+<ul>
+<li>Is it &ldquo;free&rdquo; for the first year?</li>
+<li>After that?</li>
+</ul></li>
+</ul></li>
+<li>A team of DevOps and developers with experience in this tool.
+
+<ul>
+<li>Typically these will be specialist contractors and can be expensive.</li>
+<li>This team won&rsquo;t usually go away once the software is deployed.</li>
+<li>Custom work will continually be demanded by your users.</li>
+<li>The software will require maintenance releases and DevOps monitoring.</li>
+</ul></li>
+</ul>
+
+<h3>Building gotchas</h3>
+
+<p>Building the software yourself comes with its own set of difficulties (well beyond the scope of this already lengthy piece). Here are a few items to watch for.</p>
+
+<ul>
+<li><em>Building with the wrong technology.</em> It&rsquo;s a common fault to use the technology stack of an available development team instead of using the stack that best addresses the problem.</li>
+<li><em>Building with the wrong team.</em> A development team that works well in one domain may struggle in another.</li>
+<li><em>Over-building the solution (gold-plating).</em> You have the opportunity to build something that is just good enough &ndash; don&rsquo;t waste it.</li>
+<li><em>You need good engagement</em> with the end-users in order to quickly and successfully build software.</li>
+<li><em>Building software is expensive.</em> Consider both apparent costs and opportunity costs.</li>
+<li><em>Secret Sauce:</em> if you aren&rsquo;t adding to your &ldquo;secret sauce&rdquo; you probably shouldn&rsquo;t be building it.</li>
+</ul>
+
+<h2>The ugly truth about enterprise software: it&rsquo;s not COTS</h2>
+
+<p>The ugly truth is that Enterprise Software isn&rsquo;t bought, installed and used. Enterprise Software is bought and installed, then modified, extended, folded, spindled and mutilated by expensive contractors. This leads to unexpected costs, maintenance, and wailing and gnashing of teeth.</p>
+
+<p>When you buy a product like Microsoft Exchange, you will have a certain amount of work involved in configuring it for your Enterprise. Setting up rules, defining domains, adding your employees to the directory (or integrating with an existing directory), etc. However, it&rsquo;s largely a discrete project &ndash; plan-able and relatively predictable.</p>
+
+<p>When you buy something like a billing suite or a sales tool, it&rsquo;s a <em>completely</em> different story.</p>
+
+<p>If your requirements are between building a system or buying (and customizing) a commercial solution, you are really deciding between: building with your developers and tool-set and building in a framework that requires external developers and yearly license fees.</p>
+
+<p>This isn&rsquo;t to say that you should build everything. But you should definitely go into the decision with open eyes about the real costs and benefits with each approach.</p>
+
+        </section>
+        <footer class="post-footer">
+          <section class="share">
+            
+              
+                <a class="icon-twitter" href="http://twitter.com/share?text=The+False+Premises+of+Build+vs+Buy&amp;url=http://markmorga.com/software/2015/07/13/build-vs-buy"
+                  onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
+                <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
+                </a>
+              
+            
+              
+                <a class="icon-facebook" href="https://www.facebook.com/sharer.php?t=The+False+Premises+of+Build+vs+Buy&amp;u=http://markmorga.com/software/2015/07/13/build-vs-buy"
+                  onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
+                <i class="fa fa-facebook"></i><span class="hidden">facebook</span>
+                </a>
+              
+            
+              
+            
+              
+            
+          </section>
+          <div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'markmorga';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </footer>
+        <div class="bottom-teaser cf">
+          <div class="isLeft">
+            <h5 class="index-headline featured"><span>Written by</span></h5>
+            <section class="author">
+              <div class="author-image" style="background-image: url(/assets/images/author-bw.jpg)">Blog Logo</div>
+              <h4>Mark Morga</h4>
+              <p class="bio"></p>
+              <hr>
+              <p class="published">Published <time datetime="2015-07-13 00:00">13 Jul 2015</time></p>
+            </section>
+          </div>
+          
+          <div class="isRight">
+            <h5 class="index-headline featured"><span>Supported by</span></h5>
+            <footer class="site-footer">
+              <section class="poweredby">Proudly published with <a href="http://jekyllrb.com"> Jekyll</a></section>
+              <a class="subscribe" href="/feed.xml"> <span class="tooltip"> <i class="fa fa-rss"></i> You should subscribe to my feed.</span></a>
+              <div class="inner">
+                <section class="copyright">All content copyright <a href="/">Mark Morga</a> &copy; 2015<br>All rights reserved.</section>
+              </div>
+            </footer>
+          </div>
+        </div>
+      </article>
+    </main>
+    <div class="bottom-closer">
+      <div class="background-closer-image"  style="background-image: url(/assets/images/bear-window-trail-big-bend.jpg)">
+        Image
+      </div>
+      <div class="inner">
+        <h1 class="blog-title">Comanche Hill</h1>
+        <h2 class="blog-description">The personal blog of Mark Morga.
+</h2>
+        <a href="/" class="btn">Back to Overview</a>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="/assets/js/index.js"></script>
+<script type="text/javascript" src="/assets/js/readingTime.min.js"></script>
+<script type="text/javascript" src="/assets/js/min/picturefill.min.js"></script>
+<script>
+(function ($) {
+  "use strict";
+  $(document).ready(function(){
+
+    var $window = $(window),
+    $image = $('.post-image-image, .teaserimage-image');
+
+      $window.on('scroll', function() {
+        var top = $window.scrollTop();
+
+        if (top < 0 || top > 1500) { return; }
+        $image
+          .css('transform', 'translate3d(0px, '+top/3+'px, 0px)')
+          .css('opacity', 1-Math.max(top/700, 0));
+      });
+      $window.trigger('scroll');
+
+      var height = $('.article-image').height();
+      $('.post-content').css('padding-top', height + 'px');
+
+      $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+         && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html,body').animate({ scrollTop: target.offset().top }, 500);
+            return false;
+          }
+        }
+      });
+
+  });
+}(jQuery));
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-12992468-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+  </body>
+</html>
