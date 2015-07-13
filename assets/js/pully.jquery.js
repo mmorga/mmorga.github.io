@@ -1,4 +1,5 @@
 (function( $ ){
+  // http://brettterpstra.com/2010/11/04/pully-jquery-plugin-for-automatic-pull-quotes/
   $.fn.pully = function(options) {
     var settings = {
       'newclass'  : 'pullyquote', // class to apply to inserted span

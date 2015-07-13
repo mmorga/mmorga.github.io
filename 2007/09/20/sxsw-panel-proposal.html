@@ -151,12 +151,26 @@
 <script type="text/javascript" src="/assets/js/readingTime.min.js"></script>
 <script type="text/javascript" src="/assets/js/min/picturefill.min.js"></script>
 <script type="text/javascript" src="/assets/js/pully.jquery.js"></script>
+<script type="text/javascript">
+  WebFontConfig = {
+    google: { families: [ 'Noto+Sans::latin', 'Cabin:600:latin' ] }
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })(); </script>
 <script>
 (function ($) {
   "use strict";
   $(document).ready(function(){
 
-    $('.pullquote').pully();
+    $('.pullquote').pully({'prependtoparent': 'p,.post-content>ul,.post-content>ol,.post-content>div,.post-content>article'});
+
     var $window = $(window),
     $image = $('.post-image-image, .teaserimage-image');
 

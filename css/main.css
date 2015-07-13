@@ -149,8 +149,18 @@
 main {
   display: block; }
 
+.pullyquote {
+  float: right;
+  margin: 0 0 10px 10px;
+  width: 33%;
+  font-size: 24px;
+  line-height: 32px;
+  border-left: 3px solid #57ad68;
+  font-family: "Cabin", sans-serif;
+  padding-left: 0.5em; }
+
 body {
-  font-family: Open Sans, MundoSans, "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-family: "Noto Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
   text-rendering: optimizeLegibility;
@@ -339,7 +349,7 @@ body {
   letter-spacing: -0.02em;
   font-weight: 400;
   font-style: normal;
-  font-family: Open Sans, MundoSans, "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-family: "Noto Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
   z-index: 999; }
 
 .tag-articleimage .post-reading {
@@ -385,7 +395,7 @@ body {
     left: 30%;
     right: 30%;
     z-index: 9;
-    font-family: Open Sans, MundoSans, "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-family: "Noto Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
@@ -423,7 +433,7 @@ body {
     text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25), 0px 0px 1px rgba(0, 0, 0, 0.5);
     font-size: 14px;
     overflow: hidden;
-    font-family: Open Sans, MundoSans, "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-family: "Noto Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
     white-space: nowrap;
     text-overflow: ellipsis; }
     .post .article-image .post-meta-text a {
@@ -439,7 +449,7 @@ body {
   .post .article-image .topofpage {
     text-decoration: underline; }
 .post .noarticleimage .post-meta {
-  font-family: Open Sans, MundoSans, "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-family: "Noto Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
   padding-top: 60px; }
 .post .noarticleimage .post-title {
   font-weight: 700;
@@ -469,15 +479,15 @@ body {
   font-style: normal;
   font-size: 14px;
   overflow: hidden;
-  font-family: Open Sans, MundoSans, "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-family: "Noto Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
   white-space: nowrap;
   text-overflow: ellipsis; }
 .post .post-content {
   width: 100%;
-  font-family: Linux Libertine;
+  font-family: "Noto Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
   color: #333; }
   .post .post-content h1, .post .post-content h2, .post .post-content h3 {
-    font-family: Open Sans, MundoSans, "Helvetica Neue", Arial, Helvetica, sans-serif; }
+    font-family: "Cabin", sans-serif; }
   .post .post-content h3, .post .post-content h4, .post .post-content h5, .post .post-content h6 {
     letter-spacing: -0.02em;
     font-weight: 700;
@@ -485,7 +495,7 @@ body {
     font-size: 24px;
     line-height: 1.3;
     margin: 0;
-    font-family: Open Sans, MundoSans, "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-family: "Cabin", sans-serif;
     margin-bottom: 1rem; }
   .post .post-content h2, .post .post-content h1 {
     letter-spacing: -0.02em;
@@ -506,6 +516,10 @@ body {
     -webkit-hyphens: auto;
     -moz-hyphens: auto;
     hyphens: auto; }
+  .post .post-content .pullyquote p {
+    color: #336E3B;
+    font-size: 28px;
+    padding-bottom: 8px; }
   .post .post-content a {
     color: #333;
     text-decoration: underline; }
@@ -570,13 +584,35 @@ body {
     padding: 0;
     font-weight: 400;
     font-style: normal;
-    font-size: 23px;
+    font-size: 22px;
     line-height: 30px;
     margin-left: 30px;
     margin-bottom: 12px;
     padding-top: 2px; }
     .post .post-content li p {
       padding: 0 0 1.618rem; }
+  .post .post-content ul {
+    list-style: none; }
+    .post .post-content ul li {
+      position: relative; }
+    .post .post-content ul li:before {
+      content: "";
+      background: #4675C4;
+      height: 0.5em;
+      width: 0.5em;
+      position: absolute;
+      left: -1em;
+      top: 0.5em; }
+    .post .post-content ul ul li:before {
+      background: #7188B8;
+      height: 0.25em;
+      top: 0.63em; }
+    .post .post-content ul ul ul li:before {
+      background: #6C6C6C;
+      height: 0.25em;
+      width: 0.25em;
+      top: 0.63em;
+      left: -0.75em; }
   .post .post-content ol li {
     list-style-type: decimal; }
   .post .post-content table {
@@ -606,7 +642,7 @@ body {
       padding: 2px 5px; }
 .post .bottom-teaser {
   padding: 50px 0;
-  font-family: Open Sans, MundoSans, "Helvetica Neue", Arial, Helvetica, sans-serif; }
+  font-family: "Noto Sans", "Helvetica Neue", Arial, Helvetica, sans-serif; }
   .post .bottom-teaser hr {
     border: 0;
     padding: 0;
@@ -813,13 +849,5 @@ aside.tldr {
     font-size: 3em;
     color: #578BCE;
     padding: 0.75rem 1rem 0.5rem 0.5rem;
-    float: left; }
-
-.pullyquote {
-  float: right;
-  margin: 0 0 10px 10px;
-  width: 33%;
-  font-size: 1.1em;
-  text-align: right;
-  color: #336E3B;
-  border-left: 3px solid #57ad68; }
+    float: left;
+    font-family: "Cabin", sans-serif; }

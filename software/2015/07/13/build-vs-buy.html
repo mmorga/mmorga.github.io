@@ -199,7 +199,7 @@
 
 <p>Once you know what the impact and your needs are, you are armed to determine if there is a product available that truly meets your needs.</p>
 
-<h2>Evaluating a enterprise applications</h2>
+<h2>Evaluating enterprise applications</h2>
 
 <h3>1. Beware of buying the wrong solution.</h3>
 
@@ -209,7 +209,8 @@
 
 <ul>
 <li>Competitors may have a solution that fits your needs better</li>
-<li><span class="pullquote">Integration between a company&rsquo;s components are often not as seamless as you&rsquo;d expect</span></li>
+<li><span class="pullquote"><p>Integration between a company&rsquo;s components are often not as seamless as you&rsquo;d expect</p>
+</span></li>
 </ul></li>
 </ul>
 
@@ -428,12 +429,26 @@
 <script type="text/javascript" src="/assets/js/readingTime.min.js"></script>
 <script type="text/javascript" src="/assets/js/min/picturefill.min.js"></script>
 <script type="text/javascript" src="/assets/js/pully.jquery.js"></script>
+<script type="text/javascript">
+  WebFontConfig = {
+    google: { families: [ 'Noto+Sans::latin', 'Cabin:600:latin' ] }
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })(); </script>
 <script>
 (function ($) {
   "use strict";
   $(document).ready(function(){
 
-    $('.pullquote').pully();
+    $('.pullquote').pully({'prependtoparent': 'p,.post-content>ul,.post-content>ol,.post-content>div,.post-content>article'});
+
     var $window = $(window),
     $image = $('.post-image-image, .teaserimage-image');
 
