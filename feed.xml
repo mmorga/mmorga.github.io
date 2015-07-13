@@ -6,8 +6,8 @@
 </description>
     <link>http://markmorga.com/</link>
     <atom:link href="http://markmorga.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 13 Jul 2015 11:23:29 -0500</pubDate>
-    <lastBuildDate>Mon, 13 Jul 2015 11:23:29 -0500</lastBuildDate>
+    <pubDate>Mon, 13 Jul 2015 11:52:06 -0500</pubDate>
+    <lastBuildDate>Mon, 13 Jul 2015 11:52:06 -0500</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -28,7 +28,6 @@
 
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;OrcaForceSoft&lt;/em&gt; solved the same problem at a previous company&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;OrcaForceSoft&lt;/em&gt; has a really convincing and/or attractive sales-person armed with free steak lunch and country-club membership&lt;/li&gt;
 &lt;li&gt;we don&amp;rsquo;t have the people and development skill to build &lt;em&gt;C-MESA&lt;/em&gt;&lt;/li&gt;
 &lt;li&gt;no one was ever being fired for buying &lt;em&gt;OrcaForceSoft&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -46,6 +45,7 @@
 &lt;li&gt;&lt;em&gt;OrcaForceSoft&lt;/em&gt; uses a drug-dealer pricing scheme that will bleed us dry long after the leader has moved on from the company&lt;/li&gt;
 &lt;li&gt;how do we know &lt;em&gt;Executron&lt;/em&gt; is the best solution for &lt;em&gt;C-MESA&lt;/em&gt;&lt;/li&gt;
 &lt;li&gt;we could build a better &lt;em&gt;C-MESA&lt;/em&gt; in less time than &lt;em&gt;OrcaForceSoft&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;OrcaForceSoft&lt;/em&gt; must have a really convincing and/or attractive sales-person armed with free steak lunch and country-club membership&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2&gt;After the meeting&lt;/h2&gt;
@@ -116,7 +116,21 @@
 
 &lt;p&gt;Bob and Doug started off on the wrong foot. The first thing they could have done was to start asking questions of the business:&lt;/p&gt;
 
-&lt;h3&gt;1. What is the impact to your business?&lt;/h3&gt;
+&lt;h3&gt;1. What does your business &lt;em&gt;really&lt;/em&gt; need?&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;There is no such thing as an Agile build vs buy decision. You will need to perform a deep evaluation of requirements.&lt;/li&gt;
+&lt;li&gt;Trying to pick a &amp;ldquo;best of breed&amp;rdquo; solution assuming that it will work for your specific needs is risky.&lt;/li&gt;
+&lt;li&gt;Are your requirements something that are core to your business? Is the business process part of your &amp;ldquo;secret sauce&amp;rdquo; that makes your business unique?
+
+&lt;ul&gt;
+&lt;li&gt;If so, this could make you prefer an in-house implementation (unless you can find a product that allows you to maintain or improve this business process with minimal development/integration).&lt;/li&gt;
+&lt;li&gt;If not, you should lean to buying a solution - unless no suitable solution can be found.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Beware of talking about implementations (build) or solutions (buy) before deeply understanding the problem is a mistake and can cause you to make the wrong decision.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;2. What is the impact to your business?&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Is the new application going to be used to create a new business process? Duplicating an existing business process (presumably introducing efficiencies)? Replacing an existing Business Process?
@@ -129,20 +143,6 @@
 &lt;li&gt;Are there additional processes that will be impacted by the process changes?&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;Is the business ready to invest in the project by dedicating end-users and subject matter experts to consult with the development or implementation team? Taking on a project before the business is ready to fully engage with the process will make you build the wrong thing or even fail.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3&gt;2. What does your business &lt;em&gt;really&lt;/em&gt; need?&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;There is no such thing as an Agile build vs buy decision. You will need to perform a deep evaluation of requirements.&lt;/li&gt;
-&lt;li&gt;Trying to pick a &amp;ldquo;best of breed&amp;rdquo; solution assuming that it will work for your specific needs is risky.&lt;/li&gt;
-&lt;li&gt;Are your requirements something that are core to your business? Is the business process part of your &amp;ldquo;secret sauce&amp;rdquo; that makes your business unique?
-
-&lt;ul&gt;
-&lt;li&gt;If so, this could make you prefer an in-house implementation (unless you can find a product that allows you to maintain or improve this business process with minimal development/integration).&lt;/li&gt;
-&lt;li&gt;If not, you should lean to buying a solution - unless no suitable solution can be found.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Beware of talking about implementations (build) or solutions (buy) before deeply understanding the problem is a mistake and can cause you to make the wrong decision.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Once you know what the impact and your needs are, you are armed to determine if there is a product available that truly meets your needs.&lt;/p&gt;
