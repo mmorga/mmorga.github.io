@@ -9,6 +9,9 @@ tags:
 image: /assets/images/mouth-of-santa-elena-canyon.jpg
 wiki: https://en.wikipedia.org/wiki/False_premise
 ---
+
+{% tldr %}In this article, I write about build vs buy and what that really means in an enterprise setting. My goal is to inform decision makers about what they are getting into (from a technical perspective) when buying enterprise applications. You have to approach the "buy" decision as though it was a "build" with a different framework.{% endtldr %}
+
 *Note:* this is still a work in progress. I'll be improving it over time.
 
 Several times a year, I get involved in a "build vs. buy" conversation. The conversation starts with a business segment leader coming to the CIO and saying "We need a _C-MESA_\* system".  The CIO then asks his team: "Should we build it or buy it?" In many companies, it can be a source of friction between business leaders and architects/developers.
@@ -100,7 +103,7 @@ Once you know what the impact and your needs are, you are armed to determine if 
 - Make sure to do a full survey of the market
 - Just because you already an _OrkaForceSoft_ install-base does not mean that _OrkaForceSoft: Executron_ is what YOU need
     + Competitors may have a solution that fits your needs better
-    + Integration between a company's components are often not as seamless as you'd expect
+    + {% pullquote %}Integration between a company's components are often not as seamless as you'd expect{% endpullquote %}
 
 ### 2. Get references for similar companies that have implemented this application.
 
@@ -120,6 +123,7 @@ Once you know what the impact and your needs are, you are armed to determine if 
 
 ### 4. Evaluate the development cycle of the application
 
+- Most vendors are willing to do a *Proof of Concept* installation if you define the success criteria up-front
 - Even if your developers aren't doing the development on the product, it will be a good indicator of how difficult your installation and maintenance will be
 - How open is the documentation?
     + Documentation should be publicly available
@@ -172,6 +176,7 @@ Building the software yourself comes with its own set of difficulties (well beyo
 * *You need good engagement* with the end-users in order to quickly and successfully build software.
 * *Building software is expensive.* Consider both apparent costs and opportunity costs.
 * *Secret Sauce:* if you aren't adding to your "secret sauce" you probably shouldn't be building it.
+* *New Technology Learning Curve:* be sure to allow for the time it will take for developers to learn a new language/framework/tool-set.
 
 ## The ugly truth about enterprise software: it's not COTS
 

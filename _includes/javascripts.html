@@ -3,11 +3,13 @@
 <script type="text/javascript" src="{{ "/assets/js/index.js" | prepend: site.baseurl  }}"></script>
 <script type="text/javascript" src="{{ "/assets/js/readingTime.min.js" | prepend: site.baseurl  }}"></script>
 <script type="text/javascript" src="{{ "/assets/js/min/picturefill.min.js" | prepend: site.baseurl  }}"></script>
+<script type="text/javascript" src="{{ "/assets/js/pully.jquery.js" | prepend: site.baseurl  }}"></script>
 <script>
 (function ($) {
   "use strict";
   $(document).ready(function(){
 
+    $('.pullquote').pully();
     var $window = $(window),
     $image = $('.post-image-image, .teaserimage-image');
 
