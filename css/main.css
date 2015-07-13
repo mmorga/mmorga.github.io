@@ -788,3 +788,22 @@ pre {
   max-width: 33% !important;
   float: left;
   margin: 0.5em !important; }
+
+aside.tldr {
+  display: block;
+  margin: 0 2em 1em 2em;
+  padding: 0.5em 1em;
+  background-color: #DAECFF;
+  border: 1px solid #578BCE;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px; }
+  aside.tldr p:last-child {
+    padding-bottom: 0px !important; }
+  aside.tldr p:first-child:before {
+    content: "TL;DR";
+    font-size: 3em;
+    color: #578BCE;
+    padding: 0.75rem 1rem 0.5rem 0.5rem;
+    float: left; }
