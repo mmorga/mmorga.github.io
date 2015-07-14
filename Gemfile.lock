@@ -142,6 +142,7 @@ PLATFORMS
 DEPENDENCIES
   bourbon
   github-pages
+  jekyll
   jekyll-picture-tag
   rake
 

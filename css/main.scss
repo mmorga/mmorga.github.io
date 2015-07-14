@@ -12,29 +12,33 @@ $rs: 16px;
 
 $font-header: 'Cabin', sans-serif;
 $font-body: 'Noto Sans', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-$aside-color: #578bce;
-$aside-background: #daecff;
-$accent-color: #57ad68;
-$text-accent-color: #336e3b;
-$black: #000;
-$white: #fff;
-$dark-gray: #333;
-$med-gray: #666;
-$light-gray: #999;
-$ex-light-gray: #ccc;
-$ex-ex-light-gray: #ddd;
-$ex-ex-ex-light-gray: #eee;
+
+$aside-color: #578bce;        // Blue
+$aside-background: #daecff;   // Light Blue
+$accent-color: #57ad68;       // Green
+$text-accent-color: #336e3b;  // Dark Green
+
+// Gray scale
+$black:               #000;
+$dark-gray:           #333;
+$med-gray:            #666;
+$light-gray:          #999;
+$share-link-color:    #bbb;
+$code-border:         #e8e8e8;
+$white:               #fff;
+
+// Near grays
+$link-color: #333332;               // Warm Charcoal
+$notation-color: #666665;           // Pewter
+$meta-color: #b3b3b1;               // Alluminum
+$headline-border: #dededc;          // Bright Alluminum
+$code-background: #eef;             // Eggshell Blue - kinda like $aside-background
 $article-bottom-border: #f2f2f0;
-$link-color: #333332;
-$notation-color: #666665;
-$meta-color: #b3b3b1;
-$headline-border: #dededc;
-$bullet-1-color: #4675c4;
-$bullet-2-color: #7188b8;
-$bullet-3-color: #6c6c6c;
-$share-link-color: #bbb;
-$code-background: #eef;
-$code-border: #e8e8e8;
+
+$bullet-1-color: #4675c4;  // Blue
+$bullet-2-color: #7188b8;  // Gray Blue
+$bullet-3-color: #6c6c6c;  // Gray pretty close to #666
+
 
 @mixin respond-to($breakpoint) {
   @media only screen and (max-width: $breakpoint + px) {
@@ -164,7 +168,7 @@ body {
   }
 
   .custom-links {
-    color: $ex-light-gray;
+    color: $share-link-color;
     margin: 0 0 50px;
     text-align: center;
 
@@ -554,7 +558,7 @@ body {
 
     hr {
       border: 0;
-      border-top: 1px solid $ex-ex-light-gray;
+      border-top: 1px solid $share-link-color;
       display: block;
       margin: 30px auto;
       padding: 0;
@@ -690,7 +694,7 @@ body {
       }
 
       td {
-        border-bottom: 1px solid $ex-ex-ex-light-gray;
+        border-bottom: 1px solid $code-border;
         font-size: 1.1em;
         padding: 2px 5px;
       }
@@ -703,7 +707,7 @@ body {
 
     hr {
       border: 0;
-      border-top: 1px solid $ex-ex-light-gray;
+      border-top: 1px solid $share-link-color;
       display: block;
       margin: 16px 0 16px 100px;
       padding: 0;
