@@ -6,9 +6,9 @@
 </description>
     <link>http://markmorga.com/</link>
     <atom:link href="http://markmorga.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 13 Jul 2015 18:57:57 -0500</pubDate>
-    <lastBuildDate>Mon, 13 Jul 2015 18:57:57 -0500</lastBuildDate>
-    <generator>Jekyll v2.4.0</generator>
+    <pubDate>Tue, 14 Jul 2015 13:04:32 -0500</pubDate>
+    <lastBuildDate>Tue, 14 Jul 2015 13:04:32 -0500</lastBuildDate>
+    <generator>Jekyll v2.5.3</generator>
     
       <item>
         <title>The False Premises of Build vs Buy</title>
@@ -156,7 +156,7 @@
 
 &lt;ul&gt;
 &lt;li&gt;Make sure to do a full survey of the market&lt;/li&gt;
-&lt;li&gt;Just because you already an &lt;em&gt;OrkaForceSoft&lt;/em&gt; install-base does not mean that &lt;em&gt;OrkaForceSoft: Executron&lt;/em&gt; is what YOU need
+&lt;li&gt;Just because you already have an &lt;em&gt;OrkaForceSoft&lt;/em&gt; install-base does not mean that &lt;em&gt;OrkaForceSoft: Executron&lt;/em&gt; is what YOU need
 
 &lt;ul&gt;
 &lt;li&gt;Competitors may have a solution that fits your needs better&lt;/li&gt;
@@ -535,7 +535,7 @@ The &lt;a href=&quot;https://jupyter.org/&quot;&gt;Jupyter&lt;/a&gt; project is 
 
 &lt;p&gt;I think this approach is reasonable for some UML types: component, use case, collaboration, activity, and maybe deployment. Sequence diagrams are different in layout and probably aren&amp;rsquo;t worth the effort to attempt.&lt;/p&gt;
 </description>
-        <pubDate>Fri, 10 Aug 2012 11:35:00 -0500</pubDate>
+        <pubDate>Fri, 10 Aug 2012 00:00:00 -0500</pubDate>
         <link>http://markmorga.com/software/2012/08/10/uml-diagrams-from-graphviz.html</link>
         <guid isPermaLink="true">http://markmorga.com/software/2012/08/10/uml-diagrams-from-graphviz.html</guid>
         
@@ -631,7 +631,7 @@ but I like having a more responsive window for my shell and I use tabs often in 
 
 &lt;p&gt;Have fun.  Let me know if you have any tips for PowerShell that I should pick up.&lt;/p&gt;
 </description>
-        <pubDate>Tue, 31 Jul 2012 16:44:00 -0500</pubDate>
+        <pubDate>Tue, 31 Jul 2012 00:00:00 -0500</pubDate>
         <link>http://markmorga.com/software/2012/07/31/making-the-windows-shell-livable.html</link>
         <guid isPermaLink="true">http://markmorga.com/software/2012/07/31/making-the-windows-shell-livable.html</guid>
         
