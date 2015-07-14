@@ -166,19 +166,19 @@ body {
     padding: 0 ($rs * 2);
     text-align: center;
   }
+}
 
-  .custom-links {
-    color: $share-link-color;
-    margin: 0 0 50px;
-    text-align: center;
+.custom-links {
+  color: $share-link-color;
+  margin: 0 0 50px;
+  text-align: center;
 
-    a {
-      color: $light-gray;
-      text-decoration: none;
+  a {
+    color: $light-gray;
+    text-decoration: none;
 
-      &:hover {
-        color: $dark-gray;
-      }
+    &:hover {
+      color: $dark-gray;
     }
   }
 }

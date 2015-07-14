@@ -2,7 +2,6 @@
 layout: post
 title: "UML Diagrams from Graphviz"
 image: /assets/article_images/2012-08-10-uml-diagrams-from-graphviz/chittenango-falls-ny-2.jpg
-date: 2012-08-10 11:35
 comments: true
 category: software
 tags:

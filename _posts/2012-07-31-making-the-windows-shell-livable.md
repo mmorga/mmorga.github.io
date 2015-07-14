@@ -2,7 +2,6 @@
 layout: post
 title: "Making the Windows Shell Livable"
 image: /assets/article_images/2012-07-31-making-the-windows-shell-livable/desert-rio-grande-big-bend.jpg
-date: 2012-07-31 16:44
 comments: true
 category: software
 tags:

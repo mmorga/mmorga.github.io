@@ -1,8 +1,9 @@
 # A sample Gemfile
 source "https://rubygems.org"
 
-gem "github-pages"
 gem "bourbon"
 gem "rake"
 gem "jekyll-picture-tag"
-gem "jekyll"
+gem "jekyll", "=2.5.3"
+gem "jemoji"
+gem "scss_lint"

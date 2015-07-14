@@ -5,3 +5,4 @@ _site
 .gist-cache
 .pygments-cache
 markmorga.sublime-workspace
+node_modules

@@ -64,6 +64,9 @@ exclude:
   - README.md
   - static
   - Rakefile
+  - Gruntfile.js
+  - package.json
+  - node_modules
 
 keep_files:
   - apple-touch-icon-114x114.png

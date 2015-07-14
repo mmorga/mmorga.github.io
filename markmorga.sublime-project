@@ -5,6 +5,7 @@
 			"folder_exclude_patterns": [
         "_deploy",
         "_site",
+        "node_modules",
         ".pygments-cache",
         ".sass-cache",
         ".themes"

@@ -101,7 +101,7 @@ Once you know what the impact and your needs are, you are armed to determine if 
 ### 1. Beware of buying the wrong solution.
 
 - Make sure to do a full survey of the market
-- Just because you already an _OrkaForceSoft_ install-base does not mean that _OrkaForceSoft: Executron_ is what YOU need
+- Just because you already have an _OrkaForceSoft_ install-base does not mean that _OrkaForceSoft: Executron_ is what YOU need
     + Competitors may have a solution that fits your needs better
     + {% pullquote %}Integration between a company's components are often not as seamless as you'd expect{% endpullquote %}
 
