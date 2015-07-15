@@ -1,5 +1,5 @@
 ---
-title: "The False Premises of Build vs Buy"
+title: "The False Premise of Build vs Buy"
 categories:
     - software
 tags:

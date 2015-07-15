@@ -67,6 +67,7 @@ exclude:
   - Gruntfile.js
   - package.json
   - node_modules
+  - TODO.md
 
 keep_files:
   - apple-touch-icon-114x114.png
