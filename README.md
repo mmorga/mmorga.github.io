@@ -2,7 +2,6 @@
 
 * Full text search: https://github.com/PascalW/jekyll_indextank
 * Sitemap.xml generator: https://github.com/kinnetica/jekyll-plugins
-* Category page generator: https://github.com/shigeya/jekyll-category-archive-plugin
 * Auto image: https://github.com/merlos/jekyll-auto-image
 * https://github.com/samrayner/jekyll-asset-path-plugin
 * https://github.com/tsmango/jekyll_flickr_set_tag
