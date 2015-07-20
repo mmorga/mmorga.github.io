@@ -7,3 +7,6 @@ gem "jekyll-picture-tag"
 gem "jekyll", "=2.5.3"
 gem "jemoji"
 gem "scss_lint"
+gem 'guard'
+gem 'guard-jekyll-plus'
+gem 'guard-livereload'

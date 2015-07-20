@@ -1,49 +1,71 @@
 ---
-title: "OOP: More Than Inheritance"
-categories:
-    - software
-tags:
-    - oop
-    - inheritance
-    - delegation
 image: /assets/images/chittenango-falls-ny.jpg
+categories:
+  - software
+tags:
+  - oop
+  - inheritance
+  - delegation
+title: "OOP: More Than Inheritance"
 ---
-> Everything you think you know about OOP is wrong
 
-* Define OOP
-* It all started going wrong with C++
-    - or maybe even earlier: Alan Kay quote on Smalltalk-80 going wrong
-    - http://queue.acm.org/detail.cfm?id=1039523
-* Class oriented programming
-* Language support for Inheritance instead of Delegation
-* Inheritance
-    - is-a vs has-a
-    - pros:
-        + is pretty easy to implement in most languages
-    - cons:
-        + locks the implementation of a method to a particular place in the class hierarchy
-# Inheritance Examples
+>   Everything you think you know about OOP is wrong
+
+-   Define OOP
+
+-   It all started going wrong with C++
+
+    -   or maybe even earlier: Alan Kay quote on Smalltalk-80 going wrong
+
+    -   http://queue.acm.org/detail.cfm?id=1039523
+
+-   Class oriented programming
+
+-   Language support for Inheritance instead of Delegation
+
+-   Inheritance
+
+    -   is-a vs has-a
+
+    -   pros:
+
+        -   is pretty easy to implement in most languages
+
+    -   cons:
+
+        -   locks the implementation of a method to a particular place in the
+            class hierarchy \# Inheritance Examples
 
 Think about Legos
 
-## Animal
+Animal
+------
 
-* Animal
-    - Bird
-        + .fly()
-        + Penguin
-            * .fly() --fail
-        + Sparrow
+-   Animal
 
-## Stream
+    -   Bird
 
-* NetworkStream
-* MemoryStream
-* FileStream
+        -   .fly()
 
-## AutoParts
+        -   Penguin
 
-``` java
+            -   .fly() --fail
+
+        -   Sparrow
+
+Stream
+------
+
+-   NetworkStream
+
+-   MemoryStream
+
+-   FileStream
+
+AutoParts
+---------
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 class part
 {
     OEM
@@ -58,13 +80,14 @@ class Tire extends Part
    Rating
 
 }
-```
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Beware of hierarchy to maintain http://en.wikipedia.org/wiki/Liskov_substitution_principle
+Beware of hierarchy to maintain
+http://en.wikipedia.org/wiki/Liskov\_substitution\_principle
 
 Inheritance is to substitute behavior instead of data
 
-``` java
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 public interface Expression {
     int evaluate();
 
@@ -186,9 +209,10 @@ public static void main(String[] args) {
     System.out.println(res + " = " + res.evaluate());
 
 }
-```
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-## Language Topics
+Language Topics
+---------------
 
 ### Python
 
@@ -198,20 +222,24 @@ Traits in Python: http://code.enthought.com/projects/traits/
 
 Traits in Ruby: http://ruby-naseby.blogspot.co.at/2008/11/traits-in-ruby.html
 
-## References
+References
+----------
 
-* http://blog.berniesumption.com/software/inheritance-is-evil-and-must-be-destroyed/
+-   http://blog.berniesumption.com/software/inheritance-is-evil-and-must-be-destroyed/
 
-
-## Cognitive Load
+Cognitive Load
+--------------
 
 Do our tools make us resistant to writing good code?
 
 Do you resist adding a new class because it means:
 
-1. creating a new class file
-2. creating a matching unit test file
-3. adding the boilerplate code necessary (imports, module decls, etc)
+1.  creating a new class file
 
+2.  creating a matching unit test file
+
+3.  adding the boilerplate code necessary (imports, module decls, etc)
 
 http://butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod
+
+ 
