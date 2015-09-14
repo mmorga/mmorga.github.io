@@ -6,9 +6,73 @@
 </description>
     <link>http://markmorga.com/</link>
     <atom:link href="http://markmorga.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 14 Sep 2015 11:39:23 -0500</pubDate>
-    <lastBuildDate>Mon, 14 Sep 2015 11:39:23 -0500</lastBuildDate>
+    <pubDate>Mon, 14 Sep 2015 12:20:06 -0500</pubDate>
+    <lastBuildDate>Mon, 14 Sep 2015 12:20:06 -0500</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Some thoughts on Node.js</title>
+        <description>&lt;p&gt;Over the last month or so, I&amp;rsquo;ve been working with &lt;a href=&quot;https://nodejs.org/en/&quot;&gt;Node.js&lt;/a&gt; to build a tool chain, &lt;a href=&quot;https://github.com/rackerlabs/generator-ramlapi&quot;&gt;Generator RAML API&lt;/a&gt; for myself and my team as we work on building &lt;a href=&quot;http://raml.org/&quot;&gt;RAML&lt;/a&gt; API docs.&lt;/p&gt;
+
+&lt;p&gt;Given that the final HTML documentation tool that we use was based on &lt;a href=&quot;https://github.com/kevinrenskers/raml2html&quot;&gt;raml2html&lt;/a&gt; with was a Node.js tool and that our schemas are usually JSON, I thought it would be good to keep the tool chain in Node.js to make it easier to install and use.&lt;/p&gt;
+
+&lt;p&gt;The plan was to use a Node-based build tool to chain together several existing Node libraries to validate the RAML, validate the JSON schema referenced in the RAML and then build the HTML docs from the contract.&lt;/p&gt;
+
+&lt;p&gt;Initially, I used &lt;a href=&quot;http://gruntjs.com/&quot;&gt;Grunt&lt;/a&gt; to build the tool chain. I built a few Grunt plugins for some of the libraries that I was using. The tooling worked some of the time, but when it failed, the nature of Grunt&amp;rsquo;s approach to configuration instead of code made it difficult for me to determine where the problems were.&lt;/p&gt;
+
+&lt;p&gt;I switched to &lt;a href=&quot;http://gulpjs.com/&quot;&gt;Gulp&lt;/a&gt; because I liked the fact that Gulp was code-based instead of configuration object based. I was also was interesting to play with the Gulp stream concept. That had no real value for this in generator-ramlapi*, but I can see it really being valuable in prepping a web site for deploy.&lt;/p&gt;
+
+&lt;p&gt;* it does speed things up by a few seconds by preventing the same RAML files being loaded over and over.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;I learned a lot (and I&amp;rsquo;m still learning). JavaScript in my opinion is &lt;a href=&quot;http://www.ecma-international.org/publications/standards/Ecma-262.htm&quot;&gt;getting better&lt;/a&gt;, but the following things make it hard to really embrace:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Quality of &lt;a href=&quot;https://www.npmjs.com/&quot;&gt;npm&lt;/a&gt; packages. My experience is anecdotal, but compared to my experiences in other languages, the quality of shared packages is not very good.&lt;/li&gt;
+&lt;li&gt;The &lt;a href=&quot;https://nodejs.org/en/about/&quot;&gt;asynchronous NodeJs model&lt;/a&gt; is inherently hard for developers to use correctly.
+
+&lt;ul&gt;
+&lt;li&gt;It pushes a problem that the language should solve onto the developer&amp;rsquo;s shoulders. The same asynchronous coding pattern in other languages like &lt;a href=&quot;http://twistedmatrix.com/&quot;&gt;Python&lt;/a&gt; have the same problem.&lt;/li&gt;
+&lt;li&gt;Promises vs callbacks. The &lt;a href=&quot;https://www.npmjs.com/package/async&quot;&gt;async&lt;/a&gt; npm package does provide some nice patterns that make it better but doesn&amp;rsquo;t solve the problem. An easy mistake that I made more than once is passing a callback function to an asynchronous function when it returned a &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise&quot;&gt;promise&lt;/a&gt; (or vice versa). The result is a silent failure where your callback is never called.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Error handling defaults (exceptions, error returns, error events) are bad and hard to implement correctly.
+
+&lt;ul&gt;
+&lt;li&gt;Bad:
+
+&lt;ul&gt;
+&lt;li&gt;because errors tended to get silently swallowed&lt;/li&gt;
+&lt;li&gt;unless you&amp;rsquo;ve written all of the code yourself, you need to use a patchwork version of all styles&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Hard to implement correctly because due to the dynamic nature of Node.js, it&amp;rsquo;s easy to handle an error of the wrong sort and miss errors.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;That being said, there are a few things that I like a lot in JavaScript.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The prototype system is really powerful and makes some things easier to do than they are in Python or Ruby.&lt;/li&gt;
+&lt;li&gt;There&amp;rsquo;s the capability in the language to build Object Oriented software in a way that isn&amp;rsquo;t actually Class Oriented software.&lt;/li&gt;
+&lt;li&gt;Performance is really good for such a dynamic language.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For now though, Node.js isn&amp;rsquo;t likely to become one of the top tools in my toolbox.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 14 Sep 2015 00:00:00 -0500</pubDate>
+        <link>http://markmorga.com/software/2015/09/14/thoughts-on-nodejs.html</link>
+        <guid isPermaLink="true">http://markmorga.com/software/2015/09/14/thoughts-on-nodejs.html</guid>
+        
+        <category>programming-languages</category>
+        
+        <category>programming</category>
+        
+        <category>node.js</category>
+        
+        
+        <category>software</category>
+        
+      </item>
     
       <item>
         <title>A couple of new interesting languages</title>
@@ -824,26 +888,6 @@ but I like having a more responsive window for my shell and I use tabs often in 
         <pubDate>Tue, 25 Nov 2008 00:00:00 -0600</pubDate>
         <link>http://markmorga.com/2008/11/25/letus35-mini-review.html</link>
         <guid isPermaLink="true">http://markmorga.com/2008/11/25/letus35-mini-review.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Camera Test</title>
-        <description>&lt;p&gt;I shot some video this weekend with my kids in Landa and Hinman Island Parks to try out my camera with my new Letus35mini adapter.  I just cut this together in iMovie - so the editing is minimal.  I did no processing of the video - this is straight off of the camera.&lt;/p&gt;
-
-&lt;p&gt;&lt;object width=&quot;400&quot; height=&quot;300&quot;&gt;
-    &lt;param name=&quot;allowfullscreen&quot; value=&quot;true&quot; /&gt;
-    &lt;param name=&quot;allowscriptaccess&quot; value=&quot;always&quot; /&gt;
-    &lt;param name=&quot;movie&quot; value=&quot;http://vimeo.com/moogaloop.swf?clip_id=2342928&amp;amp;server=vimeo.com&amp;amp;show_title=1&amp;amp;show_byline=1&amp;amp;show_portrait=0&amp;amp;color=&amp;amp;fullscreen=1&quot; /&gt;
-    &lt;embed src=&quot;http://vimeo.com/moogaloop.swf?clip_id=2342928&amp;amp;server=vimeo.com&amp;amp;show_title=1&amp;amp;show_byline=1&amp;amp;show_portrait=0&amp;amp;color=&amp;amp;fullscreen=1&quot; type=&quot;application/x-shockwave-flash&quot; allowfullscreen=&quot;true&quot; allowscriptaccess=&quot;always&quot; width=&quot;400&quot; height=&quot;300&quot;&gt;&lt;/embed&gt;
-&lt;/object&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://vimeo.com/2342928&quot;&gt;Vampire Tag&lt;/a&gt; from &lt;a href=&quot;http://vimeo.com/markmorga&quot;&gt;Mark Morga&lt;/a&gt; on &lt;a href=&quot;http://vimeo.com&quot;&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;
-</description>
-        <pubDate>Tue, 25 Nov 2008 00:00:00 -0600</pubDate>
-        <link>http://markmorga.com/2008/11/25/camera-test.html</link>
-        <guid isPermaLink="true">http://markmorga.com/2008/11/25/camera-test.html</guid>
         
         
       </item>
