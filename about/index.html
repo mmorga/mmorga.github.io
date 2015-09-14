@@ -33,23 +33,30 @@
 
 <!-- header end -->
 
+
+    <!-- content start -->
+
     <main class="content" role="main">
       <article class="post">
-        
         <div class="noarticleimage">
+          <div class="post-image-image" style="background-image: url()"></div>
           <div class="post-meta">
-    <h1 class="post-title">About</h1>
+            <h1 class="post-title">About</h1>
             <div class="cf post-meta-text">
-              <div class="author-image" style="background-image: url()">Blog Logo</div>
+              <div class="author-image" style="background-image: url(/assets/images/author-bw.jpg)">Blog Logo</div>
               <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">Mark Morga</h4>
+              
+            </div>
+            <div style="text-align:center">
+              <a href="#topofpage" class="topofpage"><i class="fa fa-angle-down"></i></a>
             </div>
           </div>
         </div>
-        <br>
-        <br>
-        <br>
-        
         <section class="post-content">
+          <div class="post-reading">
+            <i class="fa fa-clock-o"></i>
+             <span class="post-reading-time"></span> read
+          </div>
           <a name="topofpage"></a>
           <h3>About Me</h3>
 
@@ -61,20 +68,38 @@
 
 <p>This site is published using <a href="jekyllrb.com">Jekyll</a> with the <a href="https://github.com/dirkfabisch/mediator">Mediator Jekyll theme</a> on <a href="https://github.com/">GitHub</a>.</p>
 
+
         </section>
+        
       </article>
     </main>
-    <div class="bottom-closer">
-      <div class="background-closer-image"  style="background-image: url(/assets/images/bear-window-trail-big-bend.jpg)">
-        Image
-      </div>
-      <div class="inner">
-        <h1 class="blog-title">Comanche Hill</h1>
-        <h2 class="blog-description">The personal blog of Mark Morga.
-</h2>
-        <a href="/" class="btn">Back to Overview</a>
-      </div>
+
+    <!-- content end -->
+
+    <!-- footer start -->
+
+<footer class="site-footer">
+  <section class="poweredby">Proudly published with <a href="http://jekyllrb.com"> Jekyll</a></section>
+  <a class="subscribe" href="/feed.xml"> <span class="tooltip"> <i class="fa fa-rss"></i> You should subscribe to my feed.</span></a>
+  <div class="inner">
+    <section class="copyright">All content copyright <a href="/">Mark Morga</a> &copy; 2015<br>All rights reserved.</section>
   </div>
+</footer>
+
+<!-- footer end -->
+
+    <div class="bottom-closer">
+  <div class="background-closer-image"  style="background-image: url(/assets/images/bear-window-trail-big-bend.jpg)">
+    Image
+  </div>
+  <div class="inner">
+    <h1 class="blog-title">Comanche Hill</h1>
+    <h2 class="blog-description">The personal blog of Mark Morga.
+</h2>
+    <a href="/" class="btn">Back to Overview</a>
+  </div>
+</div>
+
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
 <script type="text/javascript" src="/assets/js/index.js"></script>
@@ -142,6 +167,18 @@
   ga('send', 'pageview');
 
 </script>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'markmorga';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+
 
   </body>
 </html>
