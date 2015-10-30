@@ -6,3 +6,4 @@ _site
 .pygments-cache
 markmorga.sublime-workspace
 node_modules
+.jekyll-metadata
