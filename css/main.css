@@ -152,7 +152,7 @@ main {
 .pullyquote {
   border-left: 3px solid #57ad68;
   float: right;
-  font-family: "Cabin", sans-serif;
+  font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
   font-size: 24px;
   line-height: 32px;
   margin: 0 0 10px 10px;
@@ -168,7 +168,7 @@ body {
   -moz-font-feature-settings: "liga", "dlig";
   -ms-font-feature-settings: "liga", "dlig";
   font-feature-settings: "liga", "dlig";
-  font-family: "Noto Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
   -webkit-font-smoothing: antialiased;
   margin: 0;
   padding: 0;
@@ -316,7 +316,7 @@ article {
   background-color: #000;
   color: #fff;
   display: inline-block;
-  font-family: "Noto Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -401,7 +401,7 @@ article {
   display: inline; }
 
 .post-meta-text {
-  font-family: "Noto Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -423,7 +423,7 @@ article {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     bottom: 80px;
-    font-family: "Noto Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
     left: 30%;
     position: absolute;
     right: 30%;
@@ -468,7 +468,7 @@ article {
   z-index: 1; }
 
 .noarticleimage .post-meta {
-  font-family: "Noto Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
   padding-top: 60px; }
 .noarticleimage .post-title {
   color: #333332;
@@ -480,19 +480,19 @@ article {
 
 .post-content {
   color: #333332;
-  font-family: "Noto Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
   width: 100%; }
 
 h1,
 h2,
 h3 {
-  font-family: "Cabin", sans-serif; }
+  font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif; }
 
 h3,
 h4,
 h5,
 h6 {
-  font-family: "Cabin", sans-serif;
+  font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
@@ -658,7 +658,7 @@ table {
     padding: 2px 5px; }
 
 .bottom-teaser {
-  font-family: "Noto Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
   padding: 50px 0; }
   .bottom-teaser hr {
     margin: 16px 0 16px 100px; }
@@ -824,6 +824,6 @@ pre {
     color: #578bce;
     content: 'TL;DR';
     float: left;
-    font-family: "Cabin", sans-serif;
+    font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
     font-size: 3em;
     padding: .75rem 1rem .5rem .5rem; }
