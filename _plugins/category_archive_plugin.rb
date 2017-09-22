@@ -28,15 +28,9 @@ module Jekyll
   # Generator class invoked from Jekyll
   class CategoryArchiveGenerator < Generator
     def generate(site)
-      posts_group_by_category(site).each do |category, list|
+      site.categories.each do |category, list|
         site.pages << CategoryArchivePage.new(site, CategoryArchiveUtil.archive_base(site), category, list)
       end
-    end
-
-    def posts_group_by_category(site)
-      category_map = {}
-      site.posts.each {|p| p.categories.each {|c| (category_map[c] ||= []) << p } }
-      category_map
     end
   end
 
@@ -81,7 +75,7 @@ module Jekyll
 
       if site.config['category_archive'] && site.config['category_archive']['slugify']
         @category_dir_name = Utils.slugify(@category) # require sanitize here
-      else 
+      else
         @category_dir_name = @category
       end
 

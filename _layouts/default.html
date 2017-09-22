@@ -70,7 +70,7 @@
                 <p class="published">Published <time datetime="{{ page.date | date: "%F %R" }}">{{ page.date | date_to_string }}</time></p>
               </section>
             </div>
-            {{/post}}
+            {{ post }}
             <div class="is-right">
               <h5 class="index-headline featured"><span>Supported by</span></h5>
               {% include footer.html %}

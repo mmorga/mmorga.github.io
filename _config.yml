@@ -1,9 +1,9 @@
 # Build settings
 markdown: redcarpet
-highlighter: pygments
-gems:
+plugins:
   - jemoji
   - jekyll-picture-tag
+  - jekyll-paginate
 
 # Site settings
 title: "Comanche Hill"
