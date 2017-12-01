@@ -59,6 +59,7 @@ social:
     share_link:
 
 exclude:
+  - bin
   - Gemfile
   - Gemfile.lock
   - Guardfile
@@ -164,3 +165,7 @@ sitemap:
     - "/index.html"
   change_frequency_name: "change_frequency"
   priority_name: "priority"
+
+# Server Config options
+livereload: true     # You no longer need to include --livereload
+# reload_port: 5678    # If you don't want to use the default port

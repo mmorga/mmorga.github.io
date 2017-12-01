@@ -7,3 +7,4 @@ _site
 markmorga.sublime-workspace
 node_modules
 .jekyll-metadata
+bin/
