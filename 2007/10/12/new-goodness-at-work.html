@@ -19,14 +19,13 @@
   <link rel="canonical" href="http://markmorga.com/2007/10/12/new-goodness-at-work.html">
 
   <link rel="shortcut icon" href="/favicon.ico">
-<!--  <link rel="stylesheet" href=""> -->
   <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
   <link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
   <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />
 </head>
 
-  <body itemscope itemtype="http://schema.org/Article">
+  <body>
     <!-- header start -->
 
 <a href="http://markmorga.com" class="logo-readium"><span class="logo" style="background-image: url(/assets/images/mm_logo.jpg)"></span></a>
@@ -38,19 +37,13 @@
 
     <main class="content" role="main">
       <article class="post">
-        <div class="noarticleimage">
-          <div class="post-image-image" style="background-image: url()"></div>
+                <div class="noarticleimage">
+          
           <div class="post-meta">
             <h1 class="post-title">New Goodness at Work</h1>
             <div class="cf post-meta-text">
               <div class="author-image" style="background-image: url(/assets/images/author-bw.jpg)">Blog Logo</div>
               <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">Mark Morga</h4>
-              
-                on
-                <time datetime="2007-10-12 00:00">12 Oct 2007</time>
-                <!--, tagged on
-                
-                -->
               
             </div>
             <div style="text-align:center">
@@ -58,7 +51,8 @@
             </div>
           </div>
         </div>
-        <section class="post-content">
+
+                <section class="post-content">
           <div class="post-reading">
             <i class="fa fa-clock-o"></i>
              <span class="post-reading-time"></span> read
@@ -68,7 +62,7 @@
 
 <p>The team practices <a href="http://www.extremeprogramming.org">Extreme Programming</a> which is the software development methodology which I&rsquo;ve been interested in for the last six or seven years.  It was the reason that I sought out the job with Symantec a few years ago and nothing that I&rsquo;ve done in the time since has compared in regard to my productivity and my enjoyment at work.</p>
 
-<p>First of all, the quality of the team is immediately evident.  They are a group of very committed and focussed individuals.  They spend more time than most teams ensuring that the object models and code are as clean, simple, and organized as possible.  When they find a way of improving some aspect of their work, they take the time to build a tool to make that task simpler, then make sure everyone on the team has access to the tool.  For instance, in the past week, one of the development pairs (XP involves pair programming) began working on an <a href="http://www.ubuntu.com/">Ubuntu Linux</a> dev box instead of the standard <a href="http://www.apple.com/macmini/">Mac Mini</a> stations.  They had identified the <a href="http://www.jedit.org/">JEdit</a> editor as a suitable candidate to replace <a href="http://macromates.com/">TextMate</a> on the Linux platform.  TextMate provides several features that JEdit doesn&rsquo;t have out of the box and they (or other members of their organization) have developed several Bundles for TextMate that improve their efficiency in coding.  The leader of the Linux effort took the time to identify identical plugins for JEdit and wrote one or more plugins to provide identical (or similar) functionality for the most used TextMate features.  Too often, I&rsquo;ve seen programmers either suffering silently with inadequate tools, or building small tools for themselves without sharing them with others.  One other thing about editors - this team really knows its editing tools - I&rsquo;m constantly asking what the key combo was that my partner used to do some cool operation in the text that otherwise I might have done manually.  This was a thought from <a href="http://www.amazon.com/Pragmatic-Programmer-Journeyman-Master/dp/020161622X/ref=pd_bbs_sr_2/103-1315520-0115803?ie=UTF8&amp;s=books&amp;qid=1192231071&amp;sr=8-2">The Pragmatic Programmer</a> that these guys have really taken to heart.</p>
+<p>First of all, the quality of the team is immediately evident.  They are a group of very committed and focussed individuals.  They spend more time than most teams ensuring that the object models and code are as clean, simple, and organized as possible.  When they find a way of improving some aspect of their work, they take the time to build a tool to make that task simpler, then make sure everyone on the team has access to the tool.  For instance, in the past week, one of the development pairs (XP involves pair programming) began working on an <a href="http://www.ubuntu.com/">Ubuntu Linux</a> dev box instead of the standard <a href="http://www.apple.com/macmini/">Mac Mini</a> stations.  They had identified the <a href="http://www.jedit.org/">JEdit</a> editor as a suitable candidate to replace <a href="http://macromates.com/">TextMate</a> on the Linux platform.  TextMate provides several features that JEdit doesn&rsquo;t have out of the box and they (or other members of their organization) have developed several Bundles for TextMate that improve their efficiency in coding.  The leader of the Linux effort took the time to identify identical plugins for JEdit and wrote one or more plugins to provide identical (or similar) functionality for the most used TextMate features.  Too often, I&rsquo;ve seen programmers either suffering silently with inadequate tools, or building small tools for themselves without sharing them with others.  One other thing about editors - this team really knows its editing tools - I&rsquo;m constantly asking what the key combo was that my partner used to do some cool operation in the text that otherwise I might have done manually.  This was a thought from <a href="http://www.amazon.com/Pragmatic-Programmer-Journeyman-Master/dp/020161622X/ref=pd_bbs_sr_2/103-1315520-0115803?ie=UTF8&s=books&qid=1192231071&sr=8-2">The Pragmatic Programmer</a> that these guys have really taken to heart.</p>
 
 <p>They are obsessed by testing.  They test every conceivable aspect of the code (always with automated tests) and use <a href="http://en.wikipedia.org/wiki/Test-driven_development">Test Driven Design (TDD)</a> exclusively.  This provides many code quality benefits, but most developers don&rsquo;t have the self-discipline to accomplish this.  The pair programming that they practice is also helpful in this regard (more on this below).  They go beyond the standard Ruby on Rails ways of doing automated testing in the following ways.  They use the <a href="http://unit-test-ar.rubyforge.org/">UnitRecord</a>, <a href="http://mocha.rubyforge.org/">Mocha</a>, and <a href="http://dust.rubyforge.org/">Dust</a> testing extension libraries.</p>
 
@@ -76,10 +70,10 @@
 
 <p>Dust is a tool which permits you to write test cases like this:</p>
 <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">functional_tests</span> <span class="k">do</span>
-  <span class="nb">test</span> <span class="s2">&quot;given no name, when validated, then error is in the objects error collection&quot;</span> <span class="k">do</span>
-    <span class="n">instance</span> <span class="o">=</span> <span class="no">Klass</span><span class="o">.</span><span class="n">new</span>
-    <span class="n">instance</span><span class="o">.</span><span class="n">valid?</span>
-    <span class="n">assert_equal</span> <span class="s2">&quot;can&#39;t be empty&quot;</span><span class="p">,</span> <span class="n">instance</span><span class="o">.</span><span class="n">errors</span><span class="o">.</span><span class="n">on</span><span class="p">(</span><span class="ss">:name</span><span class="p">)</span>
+  <span class="nb">test</span> <span class="s2">"given no name, when validated, then error is in the objects error collection"</span> <span class="k">do</span>
+    <span class="n">instance</span> <span class="o">=</span> <span class="no">Klass</span><span class="p">.</span><span class="nf">new</span>
+    <span class="n">instance</span><span class="p">.</span><span class="nf">valid?</span>
+    <span class="n">assert_equal</span> <span class="s2">"can't be empty"</span><span class="p">,</span> <span class="n">instance</span><span class="p">.</span><span class="nf">errors</span><span class="p">.</span><span class="nf">on</span><span class="p">(</span><span class="ss">:name</span><span class="p">)</span>
   <span class="k">end</span>
 <span class="k">end</span>
 </code></pre></div>
@@ -97,8 +91,17 @@
 
 
         </section>
-        
-          <footer class="post-footer">
+
+                  <footer class="post-footer">
+            <section class="author">
+              <div class="author-image" style="background-image: url(/assets/images/author-bw.jpg)">Blog Logo</div>
+              <h4>Mark Morga</h4>
+              <p class="bio"></p>
+              <hr>
+              
+              <p class="published">Published <time datetime="2007-10-12 00:00">12 Oct 2007</time></p>
+              
+            </section>
             <section class="share">
               
                 
@@ -120,38 +123,25 @@
                 
               
             </section>
-            <section id="disqus_thread" class="share"></section>
-            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-          </footer>
-          <div class="bottom-teaser cf">
-            <div class="is-left">
-              <h5 class="index-headline featured"><span>Written by</span></h5>
-              <section class="author">
-                <div class="author-image" style="background-image: url(/assets/images/author-bw.jpg)">Blog Logo</div>
-                <h4>Mark Morga</h4>
-                <p class="bio"></p>
-                <hr>
-                <p class="published">Published <time datetime="2007-10-12 00:00">12 Oct 2007</time></p>
-              </section>
-            </div>
             
-            <div class="is-right">
-              <h5 class="index-headline featured"><span>Supported by</span></h5>
-              <!-- footer start -->
+<div id="disqus_thread"></div>
+<script>
+var disqus_config = function () {
+	this.page.url = 'http://markmorga.com/2007/10/12/new-goodness-at-work.html';
+	this.page.identifier = '/2007/10/12/new-goodness-at-work';
+};
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://markmorga.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-<footer class="site-footer">
-  <section class="poweredby">Proudly published with <a href="http://jekyllrb.com"> Jekyll</a></section>
-  <a class="subscribe" href="/feed.xml"> <span class="tooltip"> <i class="fa fa-rss"></i> You should subscribe to my feed.</span></a>
-  <div class="inner">
-    <section class="copyright">All content copyright <a href="/">Mark Morga</a> &copy; 2015<br>All rights reserved.</section>
-  </div>
-</footer>
 
-<!-- footer end -->
+          </footer>
 
-            </div>
-          </div>
-        
       </article>
     </main>
 
@@ -163,7 +153,7 @@
   <section class="poweredby">Proudly published with <a href="http://jekyllrb.com"> Jekyll</a></section>
   <a class="subscribe" href="/feed.xml"> <span class="tooltip"> <i class="fa fa-rss"></i> You should subscribe to my feed.</span></a>
   <div class="inner">
-    <section class="copyright">All content copyright <a href="/">Mark Morga</a> &copy; 2015<br>All rights reserved.</section>
+    <section class="copyright">All content copyright <a href="/">Mark Morga</a> &copy; 2017<br>All rights reserved.</section>
   </div>
 </footer>
 
@@ -234,17 +224,6 @@
   ga('create', 'UA-12992468-1', 'auto');
   ga('send', 'pageview');
 
-</script>
-<script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES * * */
-    var disqus_shortname = 'markmorga';
-
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
 </script>
 
 

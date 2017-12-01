@@ -19,14 +19,13 @@
   <link rel="canonical" href="http://markmorga.com/software/2012/08/10/uml-diagrams-from-graphviz.html">
 
   <link rel="shortcut icon" href="/favicon.ico">
-<!--  <link rel="stylesheet" href=""> -->
   <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
   <link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
   <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />
 </head>
 
-  <body itemscope itemtype="http://schema.org/Article">
+  <body>
     <!-- header start -->
 
 <a href="http://markmorga.com" class="logo-readium"><span class="logo" style="background-image: url(/assets/images/mm_logo.jpg)"></span></a>
@@ -38,46 +37,15 @@
 
     <main class="content" role="main">
       <article class="post">
-        <div class="article-image">
+                <div class="article-image">
+          
           <div class="post-image-image" style="background-image: url(/assets/article_images/2012-08-10-uml-diagrams-from-graphviz/chittenango-falls-ny-2.jpg)"></div>
+          
           <div class="post-meta">
             <h1 class="post-title">UML Diagrams from Graphviz</h1>
             <div class="cf post-meta-text">
               <div class="author-image" style="background-image: url(/assets/images/author-bw.jpg)">Blog Logo</div>
               <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">Mark Morga</h4>
-              
-                on
-                <time datetime="2012-08-10 00:00">10 Aug 2012</time>
-                <!--, tagged on
-                
-                  <span class="post-tag-dot">
-                    
-                    
-                    <a href="/tag/dot">dot</a>
-                  </span>
-                
-                  <span class="post-tag-graphviz">
-                    
-                      ,
-                    
-                    <a href="/tag/graphviz">graphviz</a>
-                  </span>
-                
-                  <span class="post-tag-uml">
-                    
-                      ,
-                    
-                    <a href="/tag/uml">uml</a>
-                  </span>
-                
-                  <span class="post-tag-architecture">
-                    
-                      ,
-                    
-                    <a href="/tag/architecture">architecture</a>
-                  </span>
-                
-                -->
               
             </div>
             <div style="text-align:center">
@@ -85,7 +53,8 @@
             </div>
           </div>
         </div>
-        <section class="post-content">
+
+                <section class="post-content">
           <div class="post-reading">
             <i class="fa fa-clock-o"></i>
              <span class="post-reading-time"></span> read
@@ -117,88 +86,88 @@
 <p>For a long time graphviz supported the inclusion of PostScript files to define shapes, but this was only useful if you were outputting PostScript as a final result. I like using SVG as my format of choice since it can be freely scaled and works in most web browsers these days. Looking around the other day, I found a reference to the fact that Graphviz also supports the inclusion of SVG files as an image format.  With a little experimentation, I found that it works pretty well.</p>
 
 <p>First, I created a series of UML images in SVG format for inclusion. The full set is in the GitHub project referenced below, but an example for a Component icon looks like this:</p>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;</span>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version="1.0" encoding="UTF-8" standalone="no"?&gt;</span>
 <span class="nt">&lt;svg</span>
-   <span class="na">xmlns:svg=</span><span class="s">&quot;http://www.w3.org/2000/svg&quot;</span>
-   <span class="na">xmlns=</span><span class="s">&quot;http://www.w3.org/2000/svg&quot;</span>
-   <span class="na">xmlns:xlink=</span><span class="s">&quot;http://www.w3.org/1999/xlink&quot;</span>
-   <span class="na">version=</span><span class="s">&quot;1.1&quot;</span>
-   <span class="na">width=</span><span class="s">&quot;91&quot;</span>
-   <span class="na">height=</span><span class="s">&quot;36&quot;</span>
-   <span class="na">id=</span><span class="s">&quot;component-svg&quot;</span><span class="nt">&gt;</span>
+   <span class="na">xmlns:svg=</span><span class="s">"http://www.w3.org/2000/svg"</span>
+   <span class="na">xmlns=</span><span class="s">"http://www.w3.org/2000/svg"</span>
+   <span class="na">xmlns:xlink=</span><span class="s">"http://www.w3.org/1999/xlink"</span>
+   <span class="na">version=</span><span class="s">"1.1"</span>
+   <span class="na">width=</span><span class="s">"91"</span>
+   <span class="na">height=</span><span class="s">"36"</span>
+   <span class="na">id=</span><span class="s">"component-svg"</span><span class="nt">&gt;</span>
    <span class="nt">&lt;defs&gt;</span>
-     <span class="nt">&lt;symbol</span> <span class="na">id=</span><span class="s">&quot;component-badge&quot;</span> <span class="na">class=</span><span class="s">&quot;badge&quot;</span> <span class="na">preserveAspectRatio=</span><span class="s">&quot;xMaxYMin&quot;</span> <span class="na">viewBox=</span><span class="s">&quot;-1 -1 14 12&quot;</span> <span class="na">style=</span><span class="s">&quot;fill:#ffffff;stroke:#000000;stroke-width:0.75&quot;</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;rect</span> <span class="na">height=</span><span class="s">&quot;10&quot;</span> <span class="na">width=</span><span class="s">&quot;10&quot;</span> <span class="na">x=</span><span class="s">&quot;3&quot;</span> <span class="na">y=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
-        <span class="nt">&lt;rect</span> <span class="na">height=</span><span class="s">&quot;2&quot;</span> <span class="na">width=</span><span class="s">&quot;6&quot;</span> <span class="na">x=</span><span class="s">&quot;0&quot;</span> <span class="na">y=</span><span class="s">&quot;2&quot;</span><span class="nt">/&gt;</span>
-        <span class="nt">&lt;rect</span> <span class="na">height=</span><span class="s">&quot;2&quot;</span> <span class="na">width=</span><span class="s">&quot;6&quot;</span> <span class="na">x=</span><span class="s">&quot;0&quot;</span> <span class="na">y=</span><span class="s">&quot;6&quot;</span><span class="nt">/&gt;</span>
+     <span class="nt">&lt;symbol</span> <span class="na">id=</span><span class="s">"component-badge"</span> <span class="na">class=</span><span class="s">"badge"</span> <span class="na">preserveAspectRatio=</span><span class="s">"xMaxYMin"</span> <span class="na">viewBox=</span><span class="s">"-1 -1 14 12"</span> <span class="na">style=</span><span class="s">"fill:#ffffff;stroke:#000000;stroke-width:0.75"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;rect</span> <span class="na">height=</span><span class="s">"10"</span> <span class="na">width=</span><span class="s">"10"</span> <span class="na">x=</span><span class="s">"3"</span> <span class="na">y=</span><span class="s">"0"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;rect</span> <span class="na">height=</span><span class="s">"2"</span> <span class="na">width=</span><span class="s">"6"</span> <span class="na">x=</span><span class="s">"0"</span> <span class="na">y=</span><span class="s">"2"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;rect</span> <span class="na">height=</span><span class="s">"2"</span> <span class="na">width=</span><span class="s">"6"</span> <span class="na">x=</span><span class="s">"0"</span> <span class="na">y=</span><span class="s">"6"</span><span class="nt">/&gt;</span>
       <span class="nt">&lt;/symbol&gt;</span>
     <span class="nt">&lt;/defs&gt;</span>
     <span class="nt">&lt;g&gt;</span>
       <span class="nt">&lt;rect</span>
-           <span class="na">height=</span><span class="s">&quot;35&quot;</span>
-           <span class="na">width=</span><span class="s">&quot;90&quot;</span>
-           <span class="na">y=</span><span class="s">&quot;0&quot;</span>
-           <span class="na">x=</span><span class="s">&quot;0&quot;</span>
-           <span class="na">class=</span><span class="s">&quot;umlbox&quot;</span>
-           <span class="na">style=</span><span class="s">&quot;fill:#ffffff;stroke:#000000;stroke-width:1;&quot;</span><span class="nt">/&gt;</span>
-        <span class="nt">&lt;use</span> <span class="na">x=</span><span class="s">&quot;72&quot;</span> <span class="na">y=</span><span class="s">&quot;4&quot;</span> <span class="na">xlink:href=</span><span class="s">&quot;#component-badge&quot;</span> <span class="na">width=</span><span class="s">&quot;15&quot;</span> <span class="na">height=</span><span class="s">&quot;11&quot;</span><span class="nt">/&gt;</span>
+           <span class="na">height=</span><span class="s">"35"</span>
+           <span class="na">width=</span><span class="s">"90"</span>
+           <span class="na">y=</span><span class="s">"0"</span>
+           <span class="na">x=</span><span class="s">"0"</span>
+           <span class="na">class=</span><span class="s">"umlbox"</span>
+           <span class="na">style=</span><span class="s">"fill:#ffffff;stroke:#000000;stroke-width:1;"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;use</span> <span class="na">x=</span><span class="s">"72"</span> <span class="na">y=</span><span class="s">"4"</span> <span class="na">xlink:href=</span><span class="s">"#component-badge"</span> <span class="na">width=</span><span class="s">"15"</span> <span class="na">height=</span><span class="s">"11"</span><span class="nt">/&gt;</span>
    <span class="nt">&lt;/g&gt;</span>
 <span class="nt">&lt;/svg&gt;</span>
 </code></pre></div>
 <p>Then you can create a file describing your Component Diagram which looks like this:</p>
 <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">digraph</span> <span class="no">SampleComponentDiagram</span> <span class="p">{</span>
-  <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Sample Component Diagram&quot;</span><span class="p">;</span>
-  <span class="n">fontname</span><span class="o">=</span><span class="s2">&quot;Helvetica&quot;</span><span class="p">;</span>
-  <span class="n">fontsize</span><span class="o">=</span><span class="s2">&quot;10&quot;</span><span class="p">;</span>
-  <span class="n">node</span> <span class="o">[</span><span class="n">fontname</span><span class="o">=</span><span class="s2">&quot;Helvetica&quot;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="s2">&quot;10&quot;</span><span class="p">,</span><span class="n">shape</span><span class="o">=</span><span class="n">none</span><span class="o">]</span><span class="p">;</span>
-  <span class="n">edge</span> <span class="o">[</span><span class="n">arrowhead</span><span class="o">=</span><span class="s2">&quot;vee&quot;</span><span class="p">,</span><span class="n">style</span><span class="o">=</span><span class="s2">&quot;dashed&quot;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;#003388&quot;</span><span class="p">,</span><span class="n">fontname</span><span class="o">=</span><span class="s2">&quot;Helvetica&quot;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="s2">&quot;8&quot;</span><span class="o">]</span><span class="p">;</span>
+  <span class="n">label</span><span class="o">=</span><span class="s2">"Sample Component Diagram"</span><span class="p">;</span>
+  <span class="n">fontname</span><span class="o">=</span><span class="s2">"Helvetica"</span><span class="p">;</span>
+  <span class="n">fontsize</span><span class="o">=</span><span class="s2">"10"</span><span class="p">;</span>
+  <span class="n">node</span> <span class="p">[</span><span class="n">fontname</span><span class="o">=</span><span class="s2">"Helvetica"</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="s2">"10"</span><span class="p">,</span><span class="n">shape</span><span class="o">=</span><span class="n">none</span><span class="p">];</span>
+  <span class="n">edge</span> <span class="p">[</span><span class="n">arrowhead</span><span class="o">=</span><span class="s2">"vee"</span><span class="p">,</span><span class="n">style</span><span class="o">=</span><span class="s2">"dashed"</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s2">"#003388"</span><span class="p">,</span><span class="n">fontname</span><span class="o">=</span><span class="s2">"Helvetica"</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="s2">"8"</span><span class="p">];</span>
 
   <span class="n">rankdir</span><span class="o">=</span><span class="no">LR</span><span class="p">;</span>
 
   <span class="n">subgraph</span> <span class="n">cluster0</span> <span class="p">{</span>
     <span class="n">style</span><span class="o">=</span><span class="n">filled</span><span class="p">;</span>
-    <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#2b6f6f&quot;</span><span class="p">;</span>
-    <span class="n">fillcolor</span><span class="o">=</span><span class="s2">&quot;#fc93cb&quot;</span><span class="p">;</span>
-    <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Web Application&quot;</span><span class="p">;</span>
+    <span class="n">color</span><span class="o">=</span><span class="s2">"#2b6f6f"</span><span class="p">;</span>
+    <span class="n">fillcolor</span><span class="o">=</span><span class="s2">"#fc93cb"</span><span class="p">;</span>
+    <span class="n">label</span> <span class="o">=</span> <span class="s2">"Web Application"</span><span class="p">;</span>
 
-    <span class="n">portal</span> <span class="o">[</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Customer</span><span class="se">\n</span><span class="s2">Portal&quot;</span><span class="p">,</span> <span class="n">image</span><span class="o">=</span><span class="s2">&quot;portal.svg&quot;</span><span class="o">]</span><span class="p">;</span>
+    <span class="n">portal</span> <span class="p">[</span><span class="n">label</span><span class="o">=</span><span class="s2">"Customer</span><span class="se">\n</span><span class="s2">Portal"</span><span class="p">,</span> <span class="n">image</span><span class="o">=</span><span class="s2">"portal.svg"</span><span class="p">];</span>
 
     <span class="sr">//</span> <span class="no">Services</span>
-    <span class="n">payment</span> <span class="o">[</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;payment&quot;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Payment&quot;</span><span class="p">,</span><span class="n">image</span><span class="o">=</span><span class="s2">&quot;service.svg&quot;</span><span class="o">]</span><span class="p">;</span>
-    <span class="n">user</span> <span class="o">[</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;user&quot;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;User&quot;</span><span class="p">,</span><span class="n">image</span><span class="o">=</span><span class="s2">&quot;service.svg&quot;</span><span class="o">]</span><span class="p">;</span>
-    <span class="n">product</span> <span class="o">[</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;product&quot;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Product&quot;</span><span class="p">,</span><span class="n">image</span><span class="o">=</span><span class="s2">&quot;service.svg&quot;</span><span class="o">]</span><span class="p">;</span>
+    <span class="n">payment</span> <span class="p">[</span><span class="nb">id</span><span class="o">=</span><span class="s2">"payment"</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s2">"Payment"</span><span class="p">,</span><span class="n">image</span><span class="o">=</span><span class="s2">"service.svg"</span><span class="p">];</span>
+    <span class="n">user</span> <span class="p">[</span><span class="nb">id</span><span class="o">=</span><span class="s2">"user"</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s2">"User"</span><span class="p">,</span><span class="n">image</span><span class="o">=</span><span class="s2">"service.svg"</span><span class="p">];</span>
+    <span class="n">product</span> <span class="p">[</span><span class="nb">id</span><span class="o">=</span><span class="s2">"product"</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s2">"Product"</span><span class="p">,</span><span class="n">image</span><span class="o">=</span><span class="s2">"service.svg"</span><span class="p">];</span>
   <span class="p">}</span>
 
   <span class="n">subgraph</span> <span class="n">cluster1</span> <span class="p">{</span>
     <span class="n">style</span><span class="o">=</span><span class="n">filled</span><span class="p">;</span>
-    <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#2b6f6f&quot;</span><span class="p">;</span>
-    <span class="n">fillcolor</span><span class="o">=</span><span class="s2">&quot;#96f4eb&quot;</span><span class="p">;</span>
-    <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Backend&quot;</span><span class="p">;</span>
+    <span class="n">color</span><span class="o">=</span><span class="s2">"#2b6f6f"</span><span class="p">;</span>
+    <span class="n">fillcolor</span><span class="o">=</span><span class="s2">"#96f4eb"</span><span class="p">;</span>
+    <span class="n">label</span> <span class="o">=</span> <span class="s2">"Backend"</span><span class="p">;</span>
 
-    <span class="n">billing</span> <span class="o">[</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;billing&quot;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Billing API&quot;</span><span class="p">,</span><span class="n">image</span><span class="o">=</span><span class="s2">&quot;service.svg&quot;</span><span class="o">]</span><span class="p">;</span>
+    <span class="n">billing</span> <span class="p">[</span><span class="nb">id</span><span class="o">=</span><span class="s2">"billing"</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s2">"Billing API"</span><span class="p">,</span><span class="n">image</span><span class="o">=</span><span class="s2">"service.svg"</span><span class="p">];</span>
 
     <span class="sr">//</span> <span class="no">Databases</span>
-    <span class="n">sqlServer</span> <span class="o">[</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;SQL</span><span class="se">\n</span><span class="s2">Server&quot;</span><span class="p">,</span><span class="n">image</span><span class="o">=</span><span class="s2">&quot;database.svg&quot;</span><span class="o">]</span><span class="p">;</span>
-    <span class="n">riak</span> <span class="o">[</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Riak&quot;</span><span class="p">,</span><span class="n">image</span><span class="o">=</span><span class="s2">&quot;cloud.svg&quot;</span><span class="o">]</span><span class="p">;</span>
+    <span class="n">sqlServer</span> <span class="p">[</span><span class="n">label</span><span class="o">=</span><span class="s2">"SQL</span><span class="se">\n</span><span class="s2">Server"</span><span class="p">,</span><span class="n">image</span><span class="o">=</span><span class="s2">"database.svg"</span><span class="p">];</span>
+    <span class="n">riak</span> <span class="p">[</span><span class="n">label</span><span class="o">=</span><span class="s2">"Riak"</span><span class="p">,</span><span class="n">image</span><span class="o">=</span><span class="s2">"cloud.svg"</span><span class="p">];</span>
 
     <span class="sr">//</span> <span class="no">Components</span>
-    <span class="n">loggingJournal</span> <span class="o">[</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Logging</span><span class="se">\n</span><span class="s2">Journal&quot;</span><span class="p">,</span><span class="n">image</span><span class="o">=</span><span class="s2">&quot;component.svg&quot;</span><span class="o">]</span><span class="p">;</span>
-    <span class="n">watchdog</span> <span class="o">[</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Watchdog&quot;</span><span class="p">,</span><span class="n">image</span><span class="o">=</span><span class="s2">&quot;component.svg&quot;</span><span class="o">]</span><span class="p">;</span>
-    <span class="n">eventQueue</span> <span class="o">[</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Event ActiveMQ&quot;</span><span class="p">,</span><span class="n">image</span><span class="o">=</span><span class="s2">&quot;queue.svg&quot;</span><span class="o">]</span><span class="p">;</span>
+    <span class="n">loggingJournal</span> <span class="p">[</span><span class="n">label</span><span class="o">=</span><span class="s2">"Logging</span><span class="se">\n</span><span class="s2">Journal"</span><span class="p">,</span><span class="n">image</span><span class="o">=</span><span class="s2">"component.svg"</span><span class="p">];</span>
+    <span class="n">watchdog</span> <span class="p">[</span><span class="n">label</span><span class="o">=</span><span class="s2">"Watchdog"</span><span class="p">,</span><span class="n">image</span><span class="o">=</span><span class="s2">"component.svg"</span><span class="p">];</span>
+    <span class="n">eventQueue</span> <span class="p">[</span><span class="n">label</span><span class="o">=</span><span class="s2">"Event ActiveMQ"</span><span class="p">,</span><span class="n">image</span><span class="o">=</span><span class="s2">"queue.svg"</span><span class="p">];</span>
 
     <span class="sr">//</span> <span class="no">Portals</span>
-    <span class="n">supportPortal</span> <span class="o">[</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Support</span><span class="se">\n</span><span class="s2">Portal&quot;</span><span class="p">,</span> <span class="n">image</span><span class="o">=</span><span class="s2">&quot;portal.svg&quot;</span><span class="o">]</span><span class="p">;</span>
-    <span class="n">riakAdmin</span> <span class="o">[</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Riak</span><span class="se">\n</span><span class="s2">Admin</span><span class="se">\n</span><span class="s2">Web</span><span class="se">\n</span><span class="s2">Portal&quot;</span><span class="p">,</span><span class="n">image</span><span class="o">=</span><span class="s2">&quot;portal.svg&quot;</span><span class="o">]</span><span class="p">;</span>
+    <span class="n">supportPortal</span> <span class="p">[</span><span class="n">label</span><span class="o">=</span><span class="s2">"Support</span><span class="se">\n</span><span class="s2">Portal"</span><span class="p">,</span> <span class="n">image</span><span class="o">=</span><span class="s2">"portal.svg"</span><span class="p">];</span>
+    <span class="n">riakAdmin</span> <span class="p">[</span><span class="n">label</span><span class="o">=</span><span class="s2">"Riak</span><span class="se">\n</span><span class="s2">Admin</span><span class="se">\n</span><span class="s2">Web</span><span class="se">\n</span><span class="s2">Portal"</span><span class="p">,</span><span class="n">image</span><span class="o">=</span><span class="s2">"portal.svg"</span><span class="p">];</span>
   <span class="p">}</span>
 
   <span class="n">subgraph</span> <span class="n">cluster3</span> <span class="p">{</span>
-    <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
-    <span class="n">color</span><span class="o">=</span><span class="s2">&quot;none&quot;</span><span class="p">;</span>
-    <span class="n">customer</span> <span class="o">[</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Customer&quot;</span><span class="p">,</span><span class="n">image</span><span class="o">=</span><span class="s2">&quot;user.svg&quot;</span><span class="o">]</span><span class="p">;</span>
-    <span class="n">apiClient</span> <span class="o">[</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;API Client&quot;</span><span class="p">,</span><span class="n">image</span><span class="o">=</span><span class="s2">&quot;user.svg&quot;</span><span class="o">]</span><span class="p">;</span>
+    <span class="n">label</span> <span class="o">=</span> <span class="s2">""</span>
+    <span class="n">color</span><span class="o">=</span><span class="s2">"none"</span><span class="p">;</span>
+    <span class="n">customer</span> <span class="p">[</span><span class="n">label</span><span class="o">=</span><span class="s2">"Customer"</span><span class="p">,</span><span class="n">image</span><span class="o">=</span><span class="s2">"user.svg"</span><span class="p">];</span>
+    <span class="n">apiClient</span> <span class="p">[</span><span class="n">label</span><span class="o">=</span><span class="s2">"API Client"</span><span class="p">,</span><span class="n">image</span><span class="o">=</span><span class="s2">"user.svg"</span><span class="p">];</span>
   <span class="p">}</span>
 
-  <span class="n">devOps</span> <span class="o">[</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;DevOps&quot;</span><span class="p">,</span> <span class="n">image</span><span class="o">=</span><span class="s2">&quot;user.svg&quot;</span><span class="o">]</span><span class="p">;</span>
+  <span class="n">devOps</span> <span class="p">[</span><span class="n">label</span><span class="o">=</span><span class="s2">"DevOps"</span><span class="p">,</span> <span class="n">image</span><span class="o">=</span><span class="s2">"user.svg"</span><span class="p">];</span>
 
   <span class="sr">//</span> <span class="no">Connections</span>
   <span class="n">customer</span><span class="o">-&gt;</span><span class="n">portal</span><span class="p">;</span>
@@ -232,7 +201,7 @@
 <span class="p">}</span>
 </code></pre></div>
 <p>Running the file through graphviz like this:</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">dot -Tsvg -O sample.dot
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">dot <span class="nt">-Tsvg</span> <span class="nt">-O</span> sample.dot
 </code></pre></div>
 <p>Results in an image that looks like this:</p>
 
@@ -250,8 +219,17 @@
 
 
         </section>
-        
-          <footer class="post-footer">
+
+                  <footer class="post-footer">
+            <section class="author">
+              <div class="author-image" style="background-image: url(/assets/images/author-bw.jpg)">Blog Logo</div>
+              <h4>Mark Morga</h4>
+              <p class="bio"></p>
+              <hr>
+              
+              <p class="published">Published <time datetime="2012-08-10 00:00">10 Aug 2012</time></p>
+              
+            </section>
             <section class="share">
               
                 
@@ -273,38 +251,25 @@
                 
               
             </section>
-            <section id="disqus_thread" class="share"></section>
-            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-          </footer>
-          <div class="bottom-teaser cf">
-            <div class="is-left">
-              <h5 class="index-headline featured"><span>Written by</span></h5>
-              <section class="author">
-                <div class="author-image" style="background-image: url(/assets/images/author-bw.jpg)">Blog Logo</div>
-                <h4>Mark Morga</h4>
-                <p class="bio"></p>
-                <hr>
-                <p class="published">Published <time datetime="2012-08-10 00:00">10 Aug 2012</time></p>
-              </section>
-            </div>
             
-            <div class="is-right">
-              <h5 class="index-headline featured"><span>Supported by</span></h5>
-              <!-- footer start -->
+<div id="disqus_thread"></div>
+<script>
+var disqus_config = function () {
+	this.page.url = 'http://markmorga.com/software/2012/08/10/uml-diagrams-from-graphviz.html';
+	this.page.identifier = '/software/2012/08/10/uml-diagrams-from-graphviz';
+};
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://markmorga.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-<footer class="site-footer">
-  <section class="poweredby">Proudly published with <a href="http://jekyllrb.com"> Jekyll</a></section>
-  <a class="subscribe" href="/feed.xml"> <span class="tooltip"> <i class="fa fa-rss"></i> You should subscribe to my feed.</span></a>
-  <div class="inner">
-    <section class="copyright">All content copyright <a href="/">Mark Morga</a> &copy; 2015<br>All rights reserved.</section>
-  </div>
-</footer>
 
-<!-- footer end -->
+          </footer>
 
-            </div>
-          </div>
-        
       </article>
     </main>
 
@@ -316,7 +281,7 @@
   <section class="poweredby">Proudly published with <a href="http://jekyllrb.com"> Jekyll</a></section>
   <a class="subscribe" href="/feed.xml"> <span class="tooltip"> <i class="fa fa-rss"></i> You should subscribe to my feed.</span></a>
   <div class="inner">
-    <section class="copyright">All content copyright <a href="/">Mark Morga</a> &copy; 2015<br>All rights reserved.</section>
+    <section class="copyright">All content copyright <a href="/">Mark Morga</a> &copy; 2017<br>All rights reserved.</section>
   </div>
 </footer>
 
@@ -387,17 +352,6 @@
   ga('create', 'UA-12992468-1', 'auto');
   ga('send', 'pageview');
 
-</script>
-<script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES * * */
-    var disqus_shortname = 'markmorga';
-
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
 </script>
 
 

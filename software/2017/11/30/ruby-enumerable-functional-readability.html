@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <!-- (1) Optimize for mobile versions: http://goo.gl/EOpFl -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- (1) force latest IE rendering engine: bit.ly/1c8EiC9 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Ruby Enumerable Functional Readability</title>
+  <meta name="description" content="The personal blog of Mark Morga.
+" />
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <link rel="canonical" href="http://markmorga.com/software/2017/11/30/ruby-enumerable-functional-readability.html">
+
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />
+</head>
+
+  <body>
+    <!-- header start -->
+
+<a href="http://markmorga.com" class="logo-readium"><span class="logo" style="background-image: url(/assets/images/mm_logo.jpg)"></span></a>
+
+<!-- header end -->
+
+
+    <!-- content start -->
+
+    <main class="content" role="main">
+      <article class="post">
+                <div class="noarticleimage">
+          
+          <div class="post-meta">
+            <h1 class="post-title">Ruby Enumerable Functional Readability</h1>
+            <div class="cf post-meta-text">
+              <div class="author-image" style="background-image: url(/assets/images/author-bw.jpg)">Blog Logo</div>
+              <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">Mark Morga</h4>
+              
+            </div>
+            <div style="text-align:center">
+              <a href="#topofpage" class="topofpage"><i class="fa fa-angle-down"></i></a>
+            </div>
+          </div>
+        </div>
+
+                <section class="post-content">
+          <div class="post-reading">
+            <i class="fa fa-clock-o"></i>
+             <span class="post-reading-time"></span> read
+          </div>
+          <a name="topofpage"></a>
+          <p>One of the functional techniques that I really enjoy using in Ruby is the subset of methods in the <a href="http://ruby-doc.org/core-2.4.2/Enumerable.html"><code>Enumerable</code> module</a> that give you the power to filter, transform, and otherwise boil down the contents in an enumeration in a concise and powerful way.</p>
+
+<p>The concepts I&rsquo;m talking about refer to any of the methods in <code>Enumerable</code> that take a <a href="http://ruby-doc.com/docs/ProgrammingRuby/html/intro.html#S6">block</a> and use the result of the block to do something useful. Most commonly, I&rsquo;m talking about:</p>
+
+<table><thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><a href="http://ruby-doc.org/core-2.4.2/Enumerable.html#method-i-map"><code>map</code></a></td>
+<td>Returns a new array with the results of running block once for every element in enum.</td>
+</tr>
+<tr>
+<td><a href="http://ruby-doc.org/core-2.4.2/Enumerable.html#method-i-select"><code>select</code></a></td>
+<td>Returns an array containing all elements of enum for which the given block returns a true value.</td>
+</tr>
+<tr>
+<td><a href="http://ruby-doc.org/core-2.4.2/Enumerable.html#method-i-reject"><code>reject</code></a></td>
+<td>Returns an array for all elements of enum for which the given block returns false.</td>
+</tr>
+<tr>
+<td><a href="http://ruby-doc.org/core-2.4.2/Enumerable.html#method-i-reduce"><code>reduce</code></a> (aka <a href="http://ruby-doc.org/core-2.4.2/Enumerable.html#method-i-inject"><code>inject</code></a>)</td>
+<td>Combines all elements of enum by applying a binary operation, specified by a block or a symbol that names a method or operator.</td>
+</tr>
+</tbody></table>
+
+<p>The basic use-case that most programmers are familiar with is something like this:</p>
+
+<p>Given an array of strings, convert it into an array of the length of each string.</p>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">ary</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"apple"</span><span class="p">,</span> <span class="s2">"banana"</span><span class="p">,</span> <span class="s2">"orange"</span><span class="p">,</span> <span class="s2">"pink"</span><span class="p">]</span>
+
+<span class="n">ary</span><span class="p">.</span><span class="nf">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">str</span><span class="o">|</span> <span class="n">str</span><span class="p">.</span><span class="nf">size</span> <span class="p">}</span>
+
+<span class="o">=&gt;</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+</code></pre></div>
+<p>These methods also take a nifty shortcut that permits you to call a method on each item in the enumeration as a substitution for the explicit block. The same result above can be returned with this shortcut method instead:</p>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">ary</span><span class="p">.</span><span class="nf">map</span><span class="p">(</span><span class="o">&amp;</span><span class="ss">:size</span><span class="p">)</span>
+
+<span class="o">=&gt;</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+</code></pre></div>
+<p>The result here is still pretty readable and recommended for these cases.</p>
+
+<p>Another nifty feature of these methods is, of course, the ability to chain the method calls to achieve a more complex result.</p>
+
+<p>For example, should you only care about the lengths of strings greater than five, you could write this:</p>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">ary</span><span class="p">.</span><span class="nf">map</span><span class="p">(</span><span class="o">&amp;</span><span class="ss">:size</span><span class="p">).</span><span class="nf">select</span> <span class="p">{</span> <span class="o">|</span><span class="n">len</span><span class="o">|</span> <span class="n">len</span> <span class="o">&gt;</span> <span class="mi">5</span> <span class="p">}</span>
+
+<span class="o">=&gt;</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+</code></pre></div>
+<p>Armed with this level of power, you can go a little mad sometimes and end up with a long chain of method calls that even you won&rsquo;t remember what it is doing after a long weekend. </p>
+
+<p><img src="http://markmorga.com/assets/article_images/2017-11-27-ruby-enumerable-functional-readability/psycho.jpg" alt="We all go a little mad sometimes"></p>
+
+<p>This is sometimes natures way of telling you to split the method (containing the chain) into several methods. Other times, the algorithm expressed in the chain is of intrinsic value when kept together. In this case, do you need to give up the syntactic sugar of the Enumerable chain? No.</p>
+
+<p>Since these methods take a block, it follows that you can pass a block, or a <a href="http://ruby-doc.org/core-2.4.2/Proc.html"><code>Proc</code></a>, or a <a href="http://ruby-doc.org/core-2.4.2/Kernel.html#method-i-lambda"><code>lambda</code></a> to the same effect. The following examples explain the refactoring path you could take.</p>
+
+<p>As a toy example, given an Array of objects, return a list of the name attributes of the objects that are less than $10 and are in the categories of &ldquo;tools&rdquo; or &ldquo;toys&rdquo;.</p>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">Item</span> <span class="o">=</span> <span class="no">Struct</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="ss">:name</span><span class="p">,</span> <span class="ss">:price</span><span class="p">,</span> <span class="ss">:categories</span><span class="p">)</span>
+<span class="n">items</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="no">Item</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="s2">"Pliers"</span><span class="p">,</span> <span class="mf">8.00</span><span class="p">,</span> <span class="sx">%w[tools handtools]</span><span class="p">),</span>
+    <span class="no">Item</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="s2">"Dremel"</span><span class="p">,</span> <span class="mf">30.00</span><span class="p">,</span> <span class="sx">%w[tools powertools]</span><span class="p">),</span>
+    <span class="no">Item</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="s2">"Legos"</span><span class="p">,</span> <span class="mf">15.00</span><span class="p">,</span> <span class="sx">%w[toys building]</span><span class="p">),</span>
+    <span class="no">Item</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="s2">"Spatula"</span><span class="p">,</span> <span class="mf">3.00</span><span class="p">,</span> <span class="sx">%w[cooking kitchen]</span><span class="p">),</span>
+    <span class="no">Item</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="s2">"Yoyo"</span><span class="p">,</span> <span class="mf">6.00</span><span class="p">,</span> <span class="sx">%w[toys]</span><span class="p">)</span>
+<span class="p">]</span>
+<span class="n">items</span>
+    <span class="p">.</span><span class="nf">reject</span> <span class="p">{</span> <span class="o">|</span><span class="n">item</span><span class="o">|</span> <span class="n">item</span><span class="p">.</span><span class="nf">price</span> <span class="o">&gt;=</span> <span class="mf">10.0</span> <span class="p">}</span>
+    <span class="p">.</span><span class="nf">select</span> <span class="p">{</span> <span class="o">|</span><span class="n">item</span><span class="o">|</span> <span class="sx">%w[toys tools]</span><span class="p">.</span><span class="nf">any?</span> <span class="p">{</span> <span class="o">|</span><span class="n">category</span><span class="o">|</span> <span class="n">item</span><span class="p">.</span><span class="nf">categories</span><span class="p">.</span><span class="nf">include?</span><span class="p">(</span><span class="n">category</span><span class="p">)</span> <span class="p">}</span> <span class="p">}</span>
+    <span class="p">.</span><span class="nf">map</span> <span class="p">{</span><span class="o">|</span><span class="n">item</span><span class="o">|</span> <span class="n">item</span><span class="p">.</span><span class="nf">name</span> <span class="p">}</span>
+
+<span class="o">=&gt;</span> <span class="p">[</span><span class="s2">"Pliers"</span><span class="p">,</span> <span class="s2">"Yoyo"</span><span class="p">]</span>
+</code></pre></div>
+<p>You can start by changing the traditional block syntax with the equivalent lambda syntax:</p>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">higher_prices</span> <span class="o">=</span> <span class="o">-&gt;</span><span class="p">(</span><span class="n">item</span><span class="p">)</span> <span class="p">{</span> <span class="n">item</span><span class="p">.</span><span class="nf">price</span> <span class="o">&gt;=</span> <span class="mf">10.0</span> <span class="p">}</span>
+<span class="n">includes_category</span> <span class="o">=</span> <span class="o">-&gt;</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">category</span><span class="p">)</span> <span class="p">{</span> <span class="n">item</span><span class="p">.</span><span class="nf">categories</span><span class="p">.</span><span class="nf">include?</span><span class="p">(</span><span class="n">category</span><span class="p">)</span> <span class="p">}</span>
+<span class="n">favorite_categories</span> <span class="o">=</span> <span class="o">-&gt;</span><span class="p">(</span><span class="n">item</span><span class="p">)</span> <span class="p">{</span> <span class="sx">%w[toys tools]</span><span class="p">.</span><span class="nf">any?</span><span class="p">(</span><span class="o">&amp;</span><span class="n">includes_category</span><span class="p">.</span><span class="nf">curry</span><span class="p">[</span><span class="n">item</span><span class="p">])</span> <span class="p">}</span>
+
+<span class="n">items</span>
+  <span class="p">.</span><span class="nf">reject</span><span class="p">(</span><span class="o">&amp;</span><span class="n">higher_prices</span><span class="p">)</span>
+  <span class="p">.</span><span class="nf">select</span><span class="p">(</span><span class="o">&amp;</span><span class="n">favorite_categories</span><span class="p">)</span>
+  <span class="p">.</span><span class="nf">map</span><span class="p">(</span><span class="o">&amp;</span><span class="ss">:name</span><span class="p">)</span>
+
+<span class="c1"># =&gt; ["Pliers", "Yoyo"]</span>
+</code></pre></div>
+<p>This, to me, reads better than the first example. Reading aloud:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">items reject higher prices,
+select favorite categories,
+map name. 
+</code></pre></div>
+<p>The lambda declarations above are fairly clear on their own above (assuming you are used to the <a href="http://ruby-doc.org/core-2.4.2/Proc.html#method-i-curry"><code>curry</code></a> method - if not, check it out!)</p>
+
+<p><img src="http://markmorga.com/assets/article_images/2017-11-27-ruby-enumerable-functional-readability/lamb-curry.jpg" alt="Because Curry is Delicious"></p>
+
+<p>So the final issue to deal with is where to define your cool new lambdas. There are a number of ways to do this and it depends on your use case. </p>
+
+<p>If the lambda isn&rsquo;t going to be used in other places, you can define it within the method in which is it used. This is how I used illustrated the examples. If the lambda begins to get more complex than a one or two liner, you will want to consider moving it elsewhere. </p>
+
+<p>Either to its own method:</p>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">higher_prices</span>
+  <span class="o">-&gt;</span><span class="p">(</span><span class="n">item</span><span class="p">)</span> <span class="p">{</span> <span class="n">item</span><span class="p">.</span><span class="nf">price</span> <span class="o">&gt;=</span> <span class="mf">10.0</span> <span class="p">}</span>
+<span class="k">end</span>
+</code></pre></div>
+<p>Or possibly to it&rsquo;s own module or move related lambdas to a shared module. </p>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">module</span> <span class="nn">BusinessLogic</span>
+  <span class="kp">module_function</span>
+
+  <span class="k">def</span> <span class="nf">higher_prices</span>
+    <span class="o">-&gt;</span><span class="p">(</span><span class="n">item</span><span class="p">)</span> <span class="p">{</span> <span class="n">item</span><span class="p">.</span><span class="nf">price</span> <span class="o">&gt;=</span> <span class="mf">10.0</span> <span class="p">}</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">favorite_categories</span>
+    <span class="n">includes_category</span> <span class="o">=</span> <span class="o">-&gt;</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">category</span><span class="p">)</span> <span class="p">{</span> <span class="n">item</span><span class="p">.</span><span class="nf">categories</span><span class="p">.</span><span class="nf">include?</span><span class="p">(</span><span class="n">category</span><span class="p">)</span> <span class="p">}</span>
+
+    <span class="o">-&gt;</span><span class="p">(</span><span class="n">item</span><span class="p">)</span> <span class="p">{</span> <span class="sx">%w[toys tools]</span><span class="p">.</span><span class="nf">any?</span><span class="p">(</span><span class="o">&amp;</span><span class="n">includes_category</span><span class="p">.</span><span class="nf">curry</span><span class="p">[</span><span class="n">item</span><span class="p">])</span> <span class="p">}</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+
+<span class="k">class</span> <span class="nc">SalesBrochure</span>
+  <span class="kp">include</span> <span class="no">BusinessLogic</span>
+
+  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">items</span><span class="p">)</span>
+    <span class="vi">@items</span> <span class="o">=</span> <span class="n">items</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">sales_items</span>
+    <span class="vi">@items</span>
+      <span class="p">.</span><span class="nf">reject</span><span class="p">(</span><span class="o">&amp;</span><span class="n">higher_prices</span><span class="p">)</span>
+      <span class="p">.</span><span class="nf">select</span><span class="p">(</span><span class="o">&amp;</span><span class="n">favorite_categories</span><span class="p">)</span>
+      <span class="p">.</span><span class="nf">map</span><span class="p">(</span><span class="o">&amp;</span><span class="ss">:name</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="no">SalesBrochure</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">items</span><span class="p">).</span><span class="nf">sales_items</span>
+
+<span class="c1"># =&gt; ["Pliers", "Yoyo"]</span>
+</code></pre></div>
+<p>This refactoring has the value of isolating the <strong>business logic</strong> functionality of our example from the algorithm of putting together the list of items in the sale.</p>
+
+<p>Aside: the <code>module_function</code> method is kind of nice to use for this use-case because it makes the methods available where they are included, the methods are isolated from the namespace of the including class, and the instance methods are private so they don&rsquo;t pollute your class&rsquo; public instance methods.</p>
+
+<p>While we are at it, another direction we could go is to pass the lambdas into the <code>SalesBrochure</code> which decouples the concrete implementation of the <code>BusinessLogic</code> methods and this would permit reuse of the <code>SalesBrochure</code> class for a number of different contexts. That factoring would look something like this:</p>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Brochure</span>
+  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">items</span><span class="p">,</span> <span class="n">price_rejector</span><span class="p">,</span> <span class="n">included_categories</span><span class="p">)</span>
+    <span class="vi">@items</span> <span class="o">=</span> <span class="n">items</span>
+    <span class="vi">@price_rejector</span> <span class="o">=</span> <span class="n">price_rejector</span>
+    <span class="vi">@included_categories</span> <span class="o">=</span> <span class="n">included_categories</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">items</span>
+    <span class="vi">@items</span>
+      <span class="p">.</span><span class="nf">reject</span><span class="p">(</span><span class="o">&amp;</span><span class="vi">@price_rejector</span><span class="p">)</span>
+      <span class="p">.</span><span class="nf">select</span><span class="p">(</span><span class="o">&amp;</span><span class="vi">@included_categories</span><span class="p">)</span>
+      <span class="p">.</span><span class="nf">map</span><span class="p">(</span><span class="o">&amp;</span><span class="ss">:name</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="no">Brochure</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">items</span><span class="p">,</span> <span class="no">BusinessLogic</span><span class="p">.</span><span class="nf">higher_prices</span><span class="p">,</span> <span class="no">BusinessLogic</span><span class="p">.</span><span class="nf">favorite_categories</span><span class="p">).</span><span class="nf">items</span>
+
+<span class="c1"># =&gt; ["Pliers", "Yoyo"]</span>
+</code></pre></div>
+
+        </section>
+
+                  <footer class="post-footer">
+            <section class="author">
+              <div class="author-image" style="background-image: url(/assets/images/author-bw.jpg)">Blog Logo</div>
+              <h4>Mark Morga</h4>
+              <p class="bio"></p>
+              <hr>
+              
+              <p class="published">Published <time datetime="2017-11-30 00:00">30 Nov 2017</time></p>
+              
+            </section>
+            <section class="share">
+              
+                
+                  <a class="icon-twitter" href="http://twitter.com/share?text=Ruby+Enumerable+Functional+Readability&amp;url=http://markmorga.com/software/2017/11/30/ruby-enumerable-functional-readability"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
+                  <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
+                  </a>
+                
+              
+                
+                  <a class="icon-facebook" href="https://www.facebook.com/sharer.php?t=Ruby+Enumerable+Functional+Readability&amp;u=http://markmorga.com/software/2017/11/30/ruby-enumerable-functional-readability"
+                    onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
+                  <i class="fa fa-facebook"></i><span class="hidden">facebook</span>
+                  </a>
+                
+              
+                
+              
+                
+              
+            </section>
+            
+<div id="disqus_thread"></div>
+<script>
+var disqus_config = function () {
+	this.page.url = 'http://markmorga.com/software/2017/11/30/ruby-enumerable-functional-readability.html';
+	this.page.identifier = '/software/2017/11/30/ruby-enumerable-functional-readability';
+};
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://markmorga.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+          </footer>
+
+      </article>
+    </main>
+
+    <!-- content end -->
+
+    <!-- footer start -->
+
+<footer class="site-footer">
+  <section class="poweredby">Proudly published with <a href="http://jekyllrb.com"> Jekyll</a></section>
+  <a class="subscribe" href="/feed.xml"> <span class="tooltip"> <i class="fa fa-rss"></i> You should subscribe to my feed.</span></a>
+  <div class="inner">
+    <section class="copyright">All content copyright <a href="/">Mark Morga</a> &copy; 2017<br>All rights reserved.</section>
+  </div>
+</footer>
+
+<!-- footer end -->
+
+    <div class="bottom-closer">
+  <div class="background-closer-image"  style="background-image: url(/assets/images/bear-window-trail-big-bend.jpg)">
+    Image
+  </div>
+  <div class="inner">
+    <h1 class="blog-title">Comanche Hill</h1>
+    <h2 class="blog-description">The personal blog of Mark Morga.
+</h2>
+    <a href="/" class="btn">Back to Overview</a>
+  </div>
+</div>
+
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="/assets/js/index.js"></script>
+<script type="text/javascript" src="/assets/js/readingTime.min.js"></script>
+<script type="text/javascript" src="/assets/js/min/picturefill.min.js"></script>
+<script type="text/javascript" src="/assets/js/pully.jquery.js"></script>
+<script>
+(function ($) {
+  "use strict";
+  $(document).ready(function(){
+
+    $('.pullquote').pully({'prependtoparent': 'p,.post-content>ul,.post-content>ol,.post-content>div,.post-content>article'});
+
+    var $window = $(window),
+    $image = $('.post-image-image, .teaserimage-image');
+
+      $window.on('scroll', function() {
+        var top = $window.scrollTop();
+
+        if (top < 0 || top > 1500) { return; }
+        $image
+          .css('transform', 'translate3d(0px, '+top/3+'px, 0px)')
+          .css('opacity', 1-Math.max(top/700, 0));
+      });
+      $window.trigger('scroll');
+
+      var height = $('.article-image').height();
+      $('.post-content').css('padding-top', height + 'px');
+
+      $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+         && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html,body').animate({ scrollTop: target.offset().top }, 500);
+            return false;
+          }
+        }
+      });
+
+  });
+}(jQuery));
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-12992468-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+  </body>
+</html>

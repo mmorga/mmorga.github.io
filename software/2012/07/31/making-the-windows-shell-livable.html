@@ -19,14 +19,13 @@
   <link rel="canonical" href="http://markmorga.com/software/2012/07/31/making-the-windows-shell-livable.html">
 
   <link rel="shortcut icon" href="/favicon.ico">
-<!--  <link rel="stylesheet" href=""> -->
   <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
   <link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
   <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />
 </head>
 
-  <body itemscope itemtype="http://schema.org/Article">
+  <body>
     <!-- header start -->
 
 <a href="http://markmorga.com" class="logo-readium"><span class="logo" style="background-image: url(/assets/images/mm_logo.jpg)"></span></a>
@@ -38,46 +37,15 @@
 
     <main class="content" role="main">
       <article class="post">
-        <div class="article-image">
+                <div class="article-image">
+          
           <div class="post-image-image" style="background-image: url(/assets/article_images/2012-07-31-making-the-windows-shell-livable/desert-rio-grande-big-bend.jpg)"></div>
+          
           <div class="post-meta">
             <h1 class="post-title">Making the Windows Shell Livable</h1>
             <div class="cf post-meta-text">
               <div class="author-image" style="background-image: url(/assets/images/author-bw.jpg)">Blog Logo</div>
               <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">Mark Morga</h4>
-              
-                on
-                <time datetime="2012-07-31 00:00">31 Jul 2012</time>
-                <!--, tagged on
-                
-                  <span class="post-tag-windows">
-                    
-                    
-                    <a href="/tag/windows">windows</a>
-                  </span>
-                
-                  <span class="post-tag-powershell">
-                    
-                      ,
-                    
-                    <a href="/tag/powershell">powershell</a>
-                  </span>
-                
-                  <span class="post-tag-git">
-                    
-                      ,
-                    
-                    <a href="/tag/git">git</a>
-                  </span>
-                
-                  <span class="post-tag-console2">
-                    
-                      ,
-                    
-                    <a href="/tag/console2">console2</a>
-                  </span>
-                
-                -->
               
             </div>
             <div style="text-align:center">
@@ -85,7 +53,8 @@
             </div>
           </div>
         </div>
-        <section class="post-content">
+
+                <section class="post-content">
           <div class="post-reading">
             <i class="fa fa-clock-o"></i>
              <span class="post-reading-time"></span> read
@@ -123,40 +92,40 @@ but I like having a more responsive window for my shell and I use tabs often in 
 <p>Once you have git installed and configured, to get the most from Powershell, I recommend installing posh-git.</p>
 
 <p>First set the security for your PowerShell instance. Run PowerShell as Administrator and type:</p>
-<div class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="nb">Set-ExecutionPolicy</span> <span class="n">RemoteSigned</span> <span class="n">-Confirm</span>
+<div class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="nb">Set-ExecutionPolicy </span>RemoteSigned -Confirm
 </code></pre></div>
 <p>Make sure git can be run from your shell. If not, add it to your user&rsquo;s PATH.</p>
 
 <p>Type the following commands to install PsGet and Posh-Git:</p>
-<div class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="p">(</span><span class="nb">new-object</span> <span class="n">Net</span><span class="p">.</span><span class="n">WebClient</span><span class="p">).</span><span class="n">DownloadString</span><span class="p">(</span><span class="s2">&quot;http://psget.net/GetPsGet.ps1&quot;</span><span class="p">)</span> <span class="p">|</span> <span class="n">iex</span>
-<span class="n">install-module</span> <span class="n">posh-git</span>
+<div class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="o">(</span><span class="nb">new-object </span>Net.WebClient<span class="o">)</span>.DownloadString<span class="o">(</span><span class="s2">"http://psget.net/GetPsGet.ps1"</span><span class="o">)</span> | <span class="nb">iex
+</span>install-module posh-git
 </code></pre></div>
 <p>To make it available at all times, install it in the PowerShell profile script. On my machine, this is located in my Documents folder: <code>WindowsPowerShell\Microsoft.PowerShell_profile.ps1</code>.</p>
-<div class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="nb">Push-Location</span> <span class="p">(</span><span class="nb">Split-Path</span> <span class="n">-Path</span> <span class="nv">$MyInvocation</span><span class="p">.</span><span class="n">MyCommand</span><span class="p">.</span><span class="n">Definition</span> <span class="n">-Parent</span><span class="p">)</span>
+<div class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="nb">Push-Location</span> <span class="o">(</span><span class="nb">Split-Path</span> -Path <span class="nv">$MyInvocation</span>.MyCommand.Definition -Parent<span class="o">)</span>
 
-<span class="c"># Load posh-git module from current directory</span>
-<span class="c"># Import-Module .\posh-git</span>
+<span class="c1"># Load posh-git module from current directory</span>
+<span class="c1"># Import-Module .\posh-git</span>
 
-<span class="c"># If module is installed in a default location ($env:PSModulePath),</span>
-<span class="c"># use this instead (see about_Modules for more information):</span>
-<span class="nb">Import-Module</span> <span class="n">posh-git</span>
+<span class="c1"># If module is installed in a default location ($env:PSModulePath),</span>
+<span class="c1"># use this instead (see about_Modules for more information):</span>
+Import-Module posh-git
 
-<span class="c"># Set up a simple prompt, adding the git prompt parts inside git repos</span>
-<span class="k">function</span> <span class="n">prompt</span> <span class="p">{</span>
-    <span class="nv">$realLASTEXITCODE</span> <span class="p">=</span> <span class="nv">$LASTEXITCODE</span>
+<span class="c1"># Set up a simple prompt, adding the git prompt parts inside git repos</span>
+<span class="k">function </span>prompt <span class="o">{</span>
+    <span class="nv">$realLASTEXITCODE</span> <span class="o">=</span> <span class="nv">$LASTEXITCODE</span>
 
-    <span class="c"># Reset color, which can be messed up by Enable-GitColors</span>
-    <span class="nv">$Host</span><span class="p">.</span><span class="n">UI</span><span class="p">.</span><span class="n">RawUI</span><span class="p">.</span><span class="n">ForegroundColor</span> <span class="p">=</span> <span class="nv">$GitPromptSettings</span><span class="p">.</span><span class="n">DefaultForegroundColor</span>
+    <span class="c1"># Reset color, which can be messed up by Enable-GitColors</span>
+    <span class="nv">$Host</span>.UI.RawUI.ForegroundColor <span class="o">=</span> <span class="nv">$GitPromptSettings</span>.DefaultForegroundColor
 
-    <span class="nb">Write-Host</span><span class="p">(</span><span class="nv">$pwd</span><span class="p">)</span> <span class="n">-nonewline</span>
+    <span class="nb">Write-Host</span><span class="o">(</span><span class="nv">$pwd</span><span class="o">)</span> -nonewline
 
-    <span class="nb">Write-VcsStatus</span>
+    <span class="nb">Write</span>-VcsStatus
 
-    <span class="nv">$global:LASTEXITCODE</span> <span class="p">=</span> <span class="nv">$realLASTEXITCODE</span>
-    <span class="k">return</span> <span class="s2">&quot;&gt; &quot;</span>
-<span class="p">}</span>
+    <span class="nv">$global</span>:LASTEXITCODE <span class="o">=</span> <span class="nv">$realLASTEXITCODE</span>
+    <span class="k">return</span> <span class="s2">"&gt; "</span>
+<span class="o">}</span>
 
-<span class="nb">Enable-GitColors</span>
+Enable-GitColors
 
 <span class="nb">Pop-Location</span>
 </code></pre></div>
@@ -170,8 +139,17 @@ but I like having a more responsive window for my shell and I use tabs often in 
 
 
         </section>
-        
-          <footer class="post-footer">
+
+                  <footer class="post-footer">
+            <section class="author">
+              <div class="author-image" style="background-image: url(/assets/images/author-bw.jpg)">Blog Logo</div>
+              <h4>Mark Morga</h4>
+              <p class="bio"></p>
+              <hr>
+              
+              <p class="published">Published <time datetime="2012-07-31 00:00">31 Jul 2012</time></p>
+              
+            </section>
             <section class="share">
               
                 
@@ -193,38 +171,25 @@ but I like having a more responsive window for my shell and I use tabs often in 
                 
               
             </section>
-            <section id="disqus_thread" class="share"></section>
-            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-          </footer>
-          <div class="bottom-teaser cf">
-            <div class="is-left">
-              <h5 class="index-headline featured"><span>Written by</span></h5>
-              <section class="author">
-                <div class="author-image" style="background-image: url(/assets/images/author-bw.jpg)">Blog Logo</div>
-                <h4>Mark Morga</h4>
-                <p class="bio"></p>
-                <hr>
-                <p class="published">Published <time datetime="2012-07-31 00:00">31 Jul 2012</time></p>
-              </section>
-            </div>
             
-            <div class="is-right">
-              <h5 class="index-headline featured"><span>Supported by</span></h5>
-              <!-- footer start -->
+<div id="disqus_thread"></div>
+<script>
+var disqus_config = function () {
+	this.page.url = 'http://markmorga.com/software/2012/07/31/making-the-windows-shell-livable.html';
+	this.page.identifier = '/software/2012/07/31/making-the-windows-shell-livable';
+};
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://markmorga.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-<footer class="site-footer">
-  <section class="poweredby">Proudly published with <a href="http://jekyllrb.com"> Jekyll</a></section>
-  <a class="subscribe" href="/feed.xml"> <span class="tooltip"> <i class="fa fa-rss"></i> You should subscribe to my feed.</span></a>
-  <div class="inner">
-    <section class="copyright">All content copyright <a href="/">Mark Morga</a> &copy; 2015<br>All rights reserved.</section>
-  </div>
-</footer>
 
-<!-- footer end -->
+          </footer>
 
-            </div>
-          </div>
-        
       </article>
     </main>
 
@@ -236,7 +201,7 @@ but I like having a more responsive window for my shell and I use tabs often in 
   <section class="poweredby">Proudly published with <a href="http://jekyllrb.com"> Jekyll</a></section>
   <a class="subscribe" href="/feed.xml"> <span class="tooltip"> <i class="fa fa-rss"></i> You should subscribe to my feed.</span></a>
   <div class="inner">
-    <section class="copyright">All content copyright <a href="/">Mark Morga</a> &copy; 2015<br>All rights reserved.</section>
+    <section class="copyright">All content copyright <a href="/">Mark Morga</a> &copy; 2017<br>All rights reserved.</section>
   </div>
 </footer>
 
@@ -307,17 +272,6 @@ but I like having a more responsive window for my shell and I use tabs often in 
   ga('create', 'UA-12992468-1', 'auto');
   ga('send', 'pageview');
 
-</script>
-<script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES * * */
-    var disqus_shortname = 'markmorga';
-
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
 </script>
 
 
