@@ -6,8 +6,8 @@
 </description>
     <link>http://markmorga.com/</link>
     <atom:link href="http://markmorga.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 30 Nov 2017 20:19:00 -0600</pubDate>
-    <lastBuildDate>Thu, 30 Nov 2017 20:19:00 -0600</lastBuildDate>
+    <pubDate>Thu, 30 Nov 2017 20:43:02 -0600</pubDate>
+    <lastBuildDate>Thu, 30 Nov 2017 20:43:02 -0600</lastBuildDate>
     <generator>Jekyll v3.6.2</generator>
     
       <item>
@@ -291,8 +291,7 @@ map name.
     
       <item>
         <title>The False Premise of Build vs Buy</title>
-        <description>&lt;aside class=&quot;tldr&quot;&gt;&lt;p&gt;In this article, I write about build vs buy and what that really means in an enterprise setting. My goal is to inform decision makers about what they are getting into (from a technical perspective) when buying enterprise applications. You have to approach the &amp;ldquo;buy&amp;rdquo; decision as though it was a &amp;ldquo;build&amp;rdquo; with a different framework.&lt;/p&gt;
-&lt;/aside&gt;
+        <description>&lt;aside class=&quot;tldr&quot;&gt;In this article, I write about build vs buy and what that really means in an enterprise setting. My goal is to inform decision makers about what they are getting into (from a technical perspective) when buying enterprise applications. You have to approach the &amp;ldquo;buy&amp;rdquo; decision as though it was a &amp;ldquo;build&amp;rdquo; with a different framework.&lt;/aside&gt;
 
 &lt;p&gt;&lt;em&gt;Note:&lt;/em&gt; this is still a work in progress. I&amp;rsquo;ll be improving it over time.&lt;/p&gt;
 
@@ -439,8 +438,7 @@ map name.
 
 &lt;ul&gt;
 &lt;li&gt;Competitors may have a solution that fits your needs better&lt;/li&gt;
-&lt;li&gt;&lt;span class=&quot;pullquote&quot;&gt;&lt;p&gt;Integration between a company&amp;rsquo;s components are often not as seamless as you&amp;rsquo;d expect&lt;/p&gt;
-&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&quot;pullquote&quot;&gt;Integration between a company&amp;rsquo;s components are often not as seamless as you&amp;rsquo;d expect&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
