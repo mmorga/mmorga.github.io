@@ -57,6 +57,7 @@ social:
     share_link:
 
 exclude:
+  - bin
   - Gemfile
   - Gemfile.lock
   - Guardfile
