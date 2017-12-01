@@ -4,6 +4,9 @@ plugins:
   - jemoji
   - jekyll-picture-tag
   - jekyll-paginate
+  - jekyll-livereload
+  - jekyll-plantuml
+  - jekyll_figure
 
 # Site settings
 title: "Comanche Hill"
