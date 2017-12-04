@@ -176,23 +176,17 @@ body {
 
 .logo-readium {
   background-color: #000;
-  height: 48px;
-  left: 10px;
-  overflow: hidden;
-  position: fixed;
-  top: 10px;
-  width: 48px;
-  z-index: 99; }
-
-.logo {
-  background-repeat: no-repeat;
   background-size: cover;
-  display: block;
-  height: 32px;
-  left: 8px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+  height: 120px;
+  left: 0px;
+  overflow: hidden;
   position: absolute;
-  top: 8px;
-  width: 32px; }
+  top: 0px;
+  width: 120px;
+  z-index: 99; }
 
 .teaserimage {
   background-color: #000;
@@ -246,21 +240,6 @@ body {
   .blog-header .blog-description {
     color: #666665;
     margin: 0 0 20px; }
-
-.blog-logo {
-  background-color: #fff;
-  background-size: cover;
-  border: 3px solid #fff;
-  border-radius: 50%;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
-  height: 120px;
-  margin-right: -60px;
-  position: absolute;
-  right: 50%;
-  text-indent: -9999px;
-  top: -60px;
-  width: 120px;
-  z-index: 99; }
 
 .custom-links {
   color: #b3b3b1;
