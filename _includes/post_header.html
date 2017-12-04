@@ -7,23 +7,22 @@
             <div class="cf post-meta-text">
               <div class="author-image" style="background-image: url({{ site.author_image }})">Blog Logo</div>
               <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">{{ site.author }}</h4>
-              {% if page.date %}
-                on
-                <time datetime="{{ page.date | date: "%F %R" }}">{{ page.date | date_to_string }}</time>
-              {% endif %}
-              {% if page.tags.size > 0 %}
+              {%- if page.date -%}
+                on <time datetime="{{ page.date | date: "%F %R" }}">{{ page.date | date_to_string }}</time>
+              {%- endif -%}
+              {%- if page.tags.size > 0 -%}
               <div class="tags">
-                {% for tag in page.tags %}
+                {%- for tag in page.tags -%}
                   <span class="post-tag-{{tag}}">
-                    {% if forloop.first %}
-                    {% else %}
+                    {%- if forloop.first -%}
+                    {%- else -%}
                       ,
-                    {% endif %}
+                    {%- endif -%}
                     <a href="/tag/{{tag}}">{{tag}}</a>
                   </span>
-                {% endfor %}
+                {%- endfor -%}
               </div>
-              {% endif %}
+              {%- endif -%}
             </div>
             <div style="text-align:center">
               <a href="#topofpage" class="topofpage"><i class="fa fa-angle-down"></i></a>
