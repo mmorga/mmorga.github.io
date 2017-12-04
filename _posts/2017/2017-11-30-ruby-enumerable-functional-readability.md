@@ -2,6 +2,10 @@
 title: Ruby Enumerable Functional Readability
 layout: post
 category: software
+tags:
+  - ruby
+  - enumerable
+  - functional programming
 ---
 One of the functional techniques that I really enjoy using in Ruby is the subset of methods in the [`Enumerable` module](http://ruby-doc.org/core-2.4.2/Enumerable.html) that give you the power to filter, transform, and otherwise boil down the contents in an enumeration in a concise and powerful way.
 

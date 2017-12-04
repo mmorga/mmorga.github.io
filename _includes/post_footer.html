@@ -1,14 +1,6 @@
           <footer class="post-footer">
-            <section class="author">
-              <div class="author-image" style="background-image: url({{site.author_image}})">Blog Logo</div>
-              <h4>{{ site.author }}</h4>
-              <p class="bio">{{author.bio}}</p>
-              <hr>
-              {% if page.date %}
-              <p class="published">Published <time datetime="{{ page.date | date: "%F %R" }}">{{ page.date | date_to_string }}</time></p>
-              {% endif %}
-            </section>
             <section class="share">
+              <span style="font-size: 125%;font-weight:bold;">Share this post</span>
               {% for social in site.social %}
                 {% if social.share_url != null %}
                   <a class="icon-{{ social.icon }}" href="{{ social.share_url }}{{ social.share_title }}{{page.title | cgi_escape}}{{ social.share_link }}{{site.url}}{{page.id}}"
@@ -17,6 +9,7 @@
                   </a>
                 {% endif %}
               {% endfor %}
+              <hr>
             </section>
             {% include disqus.html %}
           </footer>
