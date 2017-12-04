@@ -79,24 +79,17 @@ body {
 
 .logo-readium {
   background-color: $black;
-  height: $rs * 3;
-  left: 10px;
-  overflow: hidden;
-  position: relative;
-  top: 10px;
-  width: $rs * 3;
-  z-index: 99;
-}
-
-.logo {
-  background-repeat: no-repeat;
   background-size: cover;
-  display: block;
-  height: $rs * 2;
-  left: $rs / 2;
+  border-radius: 50%;
+  border: 3px solid $white;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+  height: $rs * 7.5;
+  left: 0px;
+  overflow: hidden;
   position: absolute;
-  top: $rs / 2;
-  width: $rs * 2;
+  top: 0px;
+  width: $rs * 7.5;
+  z-index: 99;
 }
 
 .teaserimage {
@@ -158,22 +151,6 @@ body {
     color: $med-gray;
     margin: 0 0 20px;
   }
-}
-
-.blog-logo {
-  background-color: $white;
-  background-size: cover;
-  border: 3px solid $white;
-  border-radius: 50%;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, .3);
-  height: $rs * 7.5;
-  margin-right: -$rs * 3.75;
-  position: absolute;
-  right: 50%;
-  text-indent: -9999px;
-  top: -$rs * 3.75;
-  width: $rs * 7.5;
-  z-index: 99;
 }
 
 .custom-links {
