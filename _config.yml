@@ -4,7 +4,6 @@ plugins:
   - jemoji
   - jekyll-picture-tag
   - jekyll-paginate
-  - jekyll-livereload
   - jekyll-plantuml
   - jekyll_figure
 
