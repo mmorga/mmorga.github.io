@@ -6,9 +6,9 @@
 </description>
     <link>http://markmorga.com/</link>
     <atom:link href="http://markmorga.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 04 Dec 2017 11:50:49 -0600</pubDate>
-    <lastBuildDate>Mon, 04 Dec 2017 11:50:49 -0600</lastBuildDate>
-    <generator>Jekyll v3.6.2</generator>
+    <pubDate>Wed, 14 Aug 2019 13:42:45 -0500</pubDate>
+    <lastBuildDate>Wed, 14 Aug 2019 13:42:45 -0500</lastBuildDate>
+    <generator>Jekyll v3.8.6</generator>
     
       <item>
         <title>Ruby Enumerable Functional Readability</title>
@@ -871,43 +871,43 @@ but I like having a more responsive window for my shell and I use tabs often in 
 &lt;p&gt;Once you have git installed and configured, to get the most from Powershell, I recommend installing posh-git.&lt;/p&gt;
 
 &lt;p&gt;First set the security for your PowerShell instance. Run PowerShell as Administrator and type:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;&lt;span class=&quot;nb&quot;&gt;Set-ExecutionPolicy &lt;/span&gt;RemoteSigned -Confirm
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;&lt;span class=&quot;nf&quot;&gt;Set-ExecutionPolicy&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;RemoteSigned&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Confirm&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Make sure git can be run from your shell. If not, add it to your user&amp;rsquo;s PATH.&lt;/p&gt;
 
 &lt;p&gt;Type the following commands to install PsGet and Posh-Git:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;new-object &lt;/span&gt;Net.WebClient&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;.DownloadString&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;http://psget.net/GetPsGet.ps1&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;iex
-&lt;/span&gt;install-module posh-git
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new-object&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Net.WebClient&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;DownloadString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;http://psget.net/GetPsGet.ps1&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;iex&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;install-module&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;posh-git&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;To make it available at all times, install it in the PowerShell profile script. On my machine, this is located in my Documents folder: &lt;code&gt;WindowsPowerShell\Microsoft.PowerShell_profile.ps1&lt;/code&gt;.&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;&lt;span class=&quot;nb&quot;&gt;Push-Location&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;Split-Path&lt;/span&gt; -Path &lt;span class=&quot;nv&quot;&gt;$MyInvocation&lt;/span&gt;.MyCommand.Definition -Parent&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;&lt;span class=&quot;nf&quot;&gt;Push-Location&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Split-Path&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Path&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;$MyInvocation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;MyCommand&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Definition&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Parent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 
-&lt;span class=&quot;c1&quot;&gt;# Load posh-git module from current directory&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;# Import-Module .\posh-git&lt;/span&gt;
+&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# Load posh-git module from current directory&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# Import-Module .\posh-git&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 
-&lt;span class=&quot;c1&quot;&gt;# If module is installed in a default location ($env:PSModulePath),&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;# use this instead (see about_Modules for more information):&lt;/span&gt;
-Import-Module posh-git
+&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# If module is installed in a default location ($env:PSModulePath),&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# use this instead (see about_Modules for more information):&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Import-Module&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;posh-git&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 
-&lt;span class=&quot;c1&quot;&gt;# Set up a simple prompt, adding the git prompt parts inside git repos&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;function &lt;/span&gt;prompt &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nv&quot;&gt;$realLASTEXITCODE&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$LASTEXITCODE&lt;/span&gt;
+&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# Set up a simple prompt, adding the git prompt parts inside git repos&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;prompt&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$realLASTEXITCODE&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$LASTEXITCODE&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 
-    &lt;span class=&quot;c1&quot;&gt;# Reset color, which can be messed up by Enable-GitColors&lt;/span&gt;
-    &lt;span class=&quot;nv&quot;&gt;$Host&lt;/span&gt;.UI.RawUI.ForegroundColor &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$GitPromptSettings&lt;/span&gt;.DefaultForegroundColor
+    &lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# Reset color, which can be messed up by Enable-GitColors&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;$Host&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;UI&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;RawUI&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;ForegroundColor&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$GitPromptSettings&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;DefaultForegroundColor&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 
-    &lt;span class=&quot;nb&quot;&gt;Write-Host&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$pwd&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; -nonewline
+    &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Write-Host&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$pwd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-nonewline&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 
-    &lt;span class=&quot;nb&quot;&gt;Write&lt;/span&gt;-VcsStatus
+    &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Write-VcsStatus&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 
-    &lt;span class=&quot;nv&quot;&gt;$global&lt;/span&gt;:LASTEXITCODE &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$realLASTEXITCODE&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&amp;gt; &quot;&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;nn&quot;&gt;global&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;LASTEXITCODE&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$realLASTEXITCODE&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&amp;gt; &quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 
-Enable-GitColors
+&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Enable-GitColors&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 
-&lt;span class=&quot;nb&quot;&gt;Pop-Location&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Pop-Location&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Exit out of Console/PowerShell and the next time you start up, you&amp;rsquo;ll see extra functionality for Git while in directories that are Git repositories.&lt;/p&gt;
 
 &lt;p&gt;You can now use tab completion to complete both git commands and to fill in branch or remote names in addition to file names.&lt;/p&gt;
