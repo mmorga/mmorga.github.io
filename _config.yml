@@ -6,10 +6,10 @@ plugins:
   - jekyll-paginate
   - jekyll-plantuml
   - jekyll_figure
-
+theme: comanche-hill-jekyll-theme
 # Site settings
 title: "Comanche Hill"
-description: > # this means to ignore newlines until "baseurl:"
+description: >
   The personal blog of Mark Morga.
 
 email: markmorga@gmail.com
