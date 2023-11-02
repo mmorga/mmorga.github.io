@@ -1,8 +1,8 @@
 # Build settings
-markdown: redcarpet
+markdown: kramdown
 plugins:
   - jemoji
-  - jekyll-picture-tag
+  - jekyll_picture_tag
   - jekyll-paginate
   - jekyll-plantuml
   - jekyll_figure
@@ -109,50 +109,21 @@ defaults:
       layout: "post"
       comments: true
 
-redcarpet:
-  extensions:
-    - no_intra_emphasis
-    - tables
-    - autolink
-    - strikethrough
-    - lax_spacing
-    - superscript
-    - smart
+# redcarpet:
+#   extensions:
+#     - no_intra_emphasis
+#     - tables
+#     - autolink
+#     - strikethrough
+#     - lax_spacing
+#     - superscript
+#     - smart
+
 
 picture:
   source: "assets"
   output: "generated"
   markup: "picture"
-  presets:
-    default:
-      ppi: [1, 1.5]
-      attr:
-        itemprop: "image"
-      source_medium:
-        media: "(min-width: 40em)"
-        width: "600"
-      source_default:
-        width: "210"
-    right:
-      ppi: [1, 1.5]
-      attr:
-        itemprop: "image"
-        class: "img-float-right"
-      source_medium:
-        media: "(min-width: 40em)"
-        width: "600"
-      source_default:
-        width: "210"
-    left:
-      ppi: [1, 1.5]
-      attr:
-        itemprop: "image"
-        class: "img-float-left"
-      source_medium:
-        media: "(min-width: 40em)"
-        width: "600"
-      source_default:
-        width: "210"
 
 sitemap:
   file: "/sitemap.xml"
