@@ -1,0 +1,935 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Morga's South Padre Island</title>
+    <style>
+      table {
+        /* override Bootstrap's width */
+        width: inherit !important;
+      }
+      tr {}
+      td, th {
+        width: auto;
+        /* border: 1px solid #eee; */
+      }
+      td.min, th.min {
+        width: 1% !important;
+        white-space: nowrap !important;
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- iphone width=428, height=926 -->
+    <iframe
+      width="428"
+      height="450"
+      style="border:0"
+      loading="lazy"
+      name="map"
+      allowfullscreen
+      referrerpolicy="no-referrer-when-downgrade"
+      src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDTEkMr0ljIOCS8w7WiQwm60-RTLH9MIO0
+        &q=South+Padre+Island+TX">
+    </iframe>
+
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="restaurants-tab" data-bs-toggle="tab" data-bs-target="#restaurants-tab-pane" type="button" role="tab" aria-controls="restaurants-tab-pane" aria-selected="true">Restaurants</button>
+        </li>
+      
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="bars-tab" data-bs-toggle="tab" data-bs-target="#bars-tab-pane" type="button" role="tab" aria-controls="bars-tab-pane" aria-selected="false">Bars</button>
+        </li>
+      
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="sights-tab" data-bs-toggle="tab" data-bs-target="#sights-tab-pane" type="button" role="tab" aria-controls="sights-tab-pane" aria-selected="false">Sights</button>
+        </li>
+      
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="gas-tab" data-bs-toggle="tab" data-bs-target="#gas-tab-pane" type="button" role="tab" aria-controls="gas-tab-pane" aria-selected="false">Gas</button>
+        </li>
+      
+    </ul>
+
+    <div class="tab-content" id="myTabContent">
+      
+        <div class="tab-pane fade show active" id="restaurants-tab-pane" role="tabpanel" aria-labelledby="restaurants-tab" tabindex="0">
+          <div class="accordion accordion-flush" id="accordionrestaurants">
+            
+              <div class="accordion-item card">
+                <div class="accordion-header card-header">
+                  <h5 class="card-title d-grid gap-2" onclick="showMap('Yummies Bistro South Padre Island, Texas')">
+                    <a href="#" class="accordion-button btn btn-primary" data-bs-toggle="collapse" data-bs-target="#collapserestaurants0" aria-expanded="true" aria-controls="collapserestaurants0" role="button">
+                      Yummies Bistro <div class="place" style="display:none">Yummies Bistro South Padre Island, Texas</div>
+                    </a>
+                  </h5>
+                </div>
+                <div id="collapserestaurants0" class="accordion-collapse accordion-body collapse show" data-bs-parent="#accordionrestaurants">
+                  <div class="card-body">
+                    <div class="row" style="margin-bottom: 0.5rem">
+  <div class="col-3">
+    <small class="text-secondary">Links</small>
+  </div>
+  <div class="col">
+    <a href="https://www.facebook.com/yummies.bistro" class="card-link">Homepage</a>
+ <a href="https://www.zmenu.com/yummies-bistro-south-padre-island-online-menu/" class="card-link">Menu</a>
+
+
+  </div>
+</div>
+
+<div class="row" style="margin-bottom: 0.5rem">
+  <div class="col-3">
+    <small class="text-secondary">Address</small>
+  </div>
+  <div class="col">
+    <address class="card-text" id="addressText" style="margin-bottom: 0.5rem; line-height: 18px">
+  <small>
+  700 Padre Blvd<br/>Ste J<br/>South Padre Island<br/>TX 78597-6653
+  </small>
+</address>
+<button type="button" class="btn btn-primary" onclick="mapsSelector('Yummies+Bistro+South+Padre+Island%2C+Texas');">Get Directions</button>
+
+  </div>
+</div>
+
+<div class="row" style="margin-bottom: 0.5rem">
+  <div class="col-3">
+    <small class="text-secondary">Phone</small>
+  </div>
+  <div class="col">
+    <p class="card-text"><a href="tel:+1 956 761 2526" id="phone">+1 956 761 2526</a></p>
+
+  </div>
+</div>
+
+<div class="row" style="margin-bottom: 0.5rem">
+  <div class="col-3">
+    <small class="text-secondary">Hours</small>
+  </div>
+  <div class="col">
+    <div class="row">
+
+  <div class="col-4">
+    <table class="table table-sm">
+      <tbody>
+        
+          <tr><td>8:00am</td><td>-</td><td>2:00pm</td></tr>
+        
+      </tbody>
+    </table>
+  </div>
+</div>
+
+  </div>
+</div>
+
+<div class="row" style="margin-bottom: 0.5rem">
+  <div class="col-3">
+    <small class="text-secondary">Notes</small>
+  </div>
+  <div class="col">
+    <p class="card-text">breakfast & lunch</p>
+
+  </div>
+</div>
+
+                  </div>
+                  <img src="https://www.southpadre.com/wp-content/uploads/2021/07/1264711_1402696036628068_2146803603_o-1024x768.jpg" class="card-img-bottom" width="428"/>
+
+                </div>
+              </div>
+            
+              <div class="accordion-item card">
+                <div class="accordion-header card-header">
+                  <h5 class="card-title d-grid gap-2" onclick="showMap('Gabriella's South Padre Island, Texas')">
+                    <a href="#" class="accordion-button collapsed btn btn-primary" data-bs-toggle="collapse" data-bs-target="#collapserestaurants1" aria-expanded="false" aria-controls="collapserestaurants1" role="button">
+                      Gabriella's <div class="place" style="display:none">Gabriella's South Padre Island, Texas</div>
+                    </a>
+                  </h5>
+                </div>
+                <div id="collapserestaurants1" class="accordion-collapse accordion-body collapse" data-bs-parent="#accordionrestaurants">
+                  <div class="card-body">
+                    <div class="row" style="margin-bottom: 0.5rem">
+  <div class="col-3">
+    <small class="text-secondary">Links</small>
+  </div>
+  <div class="col">
+    <a href="https://www.gabriellasspi.com/" class="card-link">Homepage</a>
+ 
+
+  </div>
+</div>
+
+<div class="row" style="margin-bottom: 0.5rem">
+  <div class="col-3">
+    <small class="text-secondary">Address</small>
+  </div>
+  <div class="col">
+    <address class="card-text" id="addressText" style="margin-bottom: 0.5rem; line-height: 18px">
+  <small>
+  700 Padre Blvd<br/>South Padre Island<br/>TX 78597
+  </small>
+</address>
+<button type="button" class="btn btn-primary" onclick="mapsSelector('Gabriella%27s+South+Padre+Island%2C+Texas');">Get Directions</button>
+
+  </div>
+</div>
+
+<div class="row" style="margin-bottom: 0.5rem">
+  <div class="col-3">
+    <small class="text-secondary">Phone</small>
+  </div>
+  <div class="col">
+    <p class="card-text"><a href="tel:19567616111" id="phone">19567616111</a></p>
+
+  </div>
+</div>
+
+<div class="row" style="margin-bottom: 0.5rem">
+  <div class="col-3">
+    <small class="text-secondary">Hours</small>
+  </div>
+  <div class="col">
+    <div class="row">
+
+  <div class="col-4">
+    <table class="table table-sm">
+      <tbody>
+        
+          <tr><td>Sun</td><td>-</td><td>Thu</td><td>3:00pm</td><td>-</td><td>10:00pm</td></tr>
+        
+          <tr><td>Fri</td><td>-</td><td>Sat</td><td>3:00pm</td><td>-</td><td>11:00pm</td></tr>
+        
+      </tbody>
+    </table>
+  </div>
+</div>
+
+  </div>
+</div>
+
+<div class="row" style="margin-bottom: 0.5rem">
+  <div class="col-3">
+    <small class="text-secondary">Notes</small>
+  </div>
+  <div class="col">
+    <p class="card-text">Italian</p>
+
+  </div>
+</div>
+
+                  </div>
+                  <img src="https://www.laughwithusblog.com/wp-content/uploads/2018/07/Gabriellas-Italian-South-Padre.jpg" class="card-img-bottom" width="428"/>
+
+                </div>
+              </div>
+            
+              <div class="accordion-item card">
+                <div class="accordion-header card-header">
+                  <h5 class="card-title d-grid gap-2" onclick="showMap('joe's+oyster+bar+Port+Isabel,Texas')">
+                    <a href="#" class="accordion-button collapsed btn btn-primary" data-bs-toggle="collapse" data-bs-target="#collapserestaurants2" aria-expanded="false" aria-controls="collapserestaurants2" role="button">
+                      Joe's Oyster bar <div class="place" style="display:none">joe's+oyster+bar+Port+Isabel,Texas</div>
+                    </a>
+                  </h5>
+                </div>
+                <div id="collapserestaurants2" class="accordion-collapse accordion-body collapse" data-bs-parent="#accordionrestaurants">
+                  <div class="card-body">
+                    <div class="row" style="margin-bottom: 0.5rem">
+  <div class="col-3">
+    <small class="text-secondary">Links</small>
+  </div>
+  <div class="col">
+    <a href="https://www.gulfseafoodmarket.com" class="card-link">Homepage</a>
+ <a href="https://www.gulfseafoodmarket.com/menu/" class="card-link">Menu</a>
+
+
+  </div>
+</div>
+
+<div class="row" style="margin-bottom: 0.5rem">
+  <div class="col-3">
+    <small class="text-secondary">Address</small>
+  </div>
+  <div class="col">
+    <address class="card-text" id="addressText" style="margin-bottom: 0.5rem; line-height: 18px">
+  <small>
+  207 E Maxan St<br/>Port Isabel<br/>TX 78578
+  </small>
+</address>
+<button type="button" class="btn btn-primary" onclick="mapsSelector('joe%27s%2Boyster%2Bbar%2BPort%2BIsabel%2CTexas');">Get Directions</button>
+
+  </div>
+</div>
+
+<div class="row" style="margin-bottom: 0.5rem">
+  <div class="col-3">
+    <small class="text-secondary">Phone</small>
+  </div>
+  <div class="col">
+    <p class="card-text"><a href="tel:19569434501" id="phone">19569434501</a></p>
+
+  </div>
+</div>
+
+<div class="row" style="margin-bottom: 0.5rem">
+  <div class="col-3">
+    <small class="text-secondary">Hours</small>
+  </div>
+  <div class="col">
+    <div class="row">
+
+  <div class="col-4">
+    <table class="table table-sm">
+      <tbody>
+        
+          <tr><td>11:00am</td><td>-</td><td>7:00pm</td></tr>
+        
+      </tbody>
+    </table>
+  </div>
+</div>
+
+  </div>
+</div>
+
+<div class="row" style="margin-bottom: 0.5rem">
+  <div class="col-3">
+    <small class="text-secondary">Notes</small>
+  </div>
+  <div class="col">
+    <p class="card-text">Best Sea Food</p>
+
+  </div>
+</div>
+
+                  </div>
+                  <img src="https://s3-media0.fl.yelpcdn.com/bphoto/Wusq2OUPaezOSQe7YtzxNQ/l.jpg" class="card-img-bottom" width="428"/>
+
+                </div>
+              </div>
+            
+              <div class="accordion-item card">
+                <div class="accordion-header card-header">
+                  <h5 class="card-title d-grid gap-2" onclick="showMap('Liam's Steakhouse South Padre Island, Texas')">
+                    <a href="#" class="accordion-button collapsed btn btn-primary" data-bs-toggle="collapse" data-bs-target="#collapserestaurants3" aria-expanded="false" aria-controls="collapserestaurants3" role="button">
+                      Liam's steakhouse and oyster bar <div class="place" style="display:none">Liam's Steakhouse South Padre Island, Texas</div>
+                    </a>
+                  </h5>
+                </div>
+                <div id="collapserestaurants3" class="accordion-collapse accordion-body collapse" data-bs-parent="#accordionrestaurants">
+                  <div class="card-body">
+                    <div class="row" style="margin-bottom: 0.5rem">
+  <div class="col-3">
+    <small class="text-secondary">Links</small>
+  </div>
+  <div class="col">
+    <a href="http://liamssteakhouse.com" class="card-link">Homepage</a>
+ <a href="http://liamssteakhouse.com/menu/" class="card-link">Menu</a>
+
+
+  </div>
+</div>
+
+<div class="row" style="margin-bottom: 0.5rem">
+  <div class="col-3">
+    <small class="text-secondary">Address</small>
+  </div>
+  <div class="col">
+    <address class="card-text" id="addressText" style="margin-bottom: 0.5rem; line-height: 18px">
+  <small>
+  202 W Tarpon St<br/>South Padre Island<br/>TX 78597
+  </small>
+</address>
+<button type="button" class="btn btn-primary" onclick="mapsSelector('Liam%27s+Steakhouse+South+Padre+Island%2C+Texas');">Get Directions</button>
+
+  </div>
+</div>
+
+<div class="row" style="margin-bottom: 0.5rem">
+  <div class="col-3">
+    <small class="text-secondary">Phone</small>
+  </div>
+  <div class="col">
+    <p class="card-text"><a href="tel:19567724700" id="phone">19567724700</a></p>
+
+  </div>
+</div>
+
+<div class="row" style="margin-bottom: 0.5rem">
+  <div class="col-3">
+    <small class="text-secondary">Hours</small>
+  </div>
+  <div class="col">
+    <div class="row">
+
+  <div class="col-4">
+    <table class="table table-sm">
+      <tbody>
+        
+          <tr><td>Sun</td><td>-</td><td>Thu</td><td>5:00pm</td><td>-</td><td>10:00pm</td></tr>
+        
+          <tr><td>Fri</td><td>-</td><td>Sat</td><td>3:00pm</td><td>-</td><td>11:00pm</td></tr>
+        
+      </tbody>
+    </table>
+  </div>
+</div>
+
+  </div>
+</div>
+
+                  </div>
+                  <img src="https://s3-media0.fl.yelpcdn.com/bphoto/0sPi7crJ_8IrONspDq9Ang/l.jpg" class="card-img-bottom" width="428"/>
+
+                </div>
+              </div>
+            
+              <div class="accordion-item card">
+                <div class="accordion-header card-header">
+                  <h5 class="card-title d-grid gap-2" onclick="showMap('Daddy's South Padre Island, Texas')">
+                    <a href="#" class="accordion-button collapsed btn btn-primary" data-bs-toggle="collapse" data-bs-target="#collapserestaurants4" aria-expanded="false" aria-controls="collapserestaurants4" role="button">
+                      Daddy's Cajun Seafood <div class="place" style="display:none">Daddy's South Padre Island, Texas</div>
+                    </a>
+                  </h5>
+                </div>
+                <div id="collapserestaurants4" class="accordion-collapse accordion-body collapse" data-bs-parent="#accordionrestaurants">
+                  <div class="card-body">
+                    <div class="row" style="margin-bottom: 0.5rem">
+  <div class="col-3">
+    <small class="text-secondary">Links</small>
+  </div>
+  <div class="col">
+    <a href="http://daddysrestaurant.com/" class="card-link">Homepage</a>
+ <a href="https://daddysrestaurant.com/menu/" class="card-link">Menu</a>
+
+
+  </div>
+</div>
+
+<div class="row" style="margin-bottom: 0.5rem">
+  <div class="col-3">
+    <small class="text-secondary">Address</small>
+  </div>
+  <div class="col">
+    <address class="card-text" id="addressText" style="margin-bottom: 0.5rem; line-height: 18px">
+  <small>
+  1800 Padre Blvd<br/>South Padre Island<br/>TX 78597
+  </small>
+</address>
+<button type="button" class="btn btn-primary" onclick="mapsSelector('Daddy%27s+South+Padre+Island%2C+Texas');">Get Directions</button>
+
+  </div>
+</div>
+
+<div class="row" style="margin-bottom: 0.5rem">
+  <div class="col-3">
+    <small class="text-secondary">Phone</small>
+  </div>
+  <div class="col">
+    <p class="card-text"><a href="tel:19567611975" id="phone">19567611975</a></p>
+
+  </div>
+</div>
+
+<div class="row" style="margin-bottom: 0.5rem">
+  <div class="col-3">
+    <small class="text-secondary">Hours</small>
+  </div>
+  <div class="col">
+    <div class="row">
+
+  <div class="col-4">
+    <table class="table table-sm">
+      <tbody>
+        
+          <tr><td>Sun</td><td>-</td><td>Thu</td><td>11:00am</td><td>-</td><td>9:00pm</td></tr>
+        
+          <tr><td>Fri</td><td>-</td><td>Sat</td><td>11:00am</td><td>-</td><td>10:00pm</td></tr>
+        
+      </tbody>
+    </table>
+  </div>
+</div>
+
+  </div>
+</div>
+
+                  </div>
+                  <img src="https://media-cdn.tripadvisor.com/media/photo-s/06/c5/5f/1e/taken-on-may-15th-2014.jpg" class="card-img-bottom" width="428"/>
+
+                </div>
+              </div>
+            
+          </div>
+        </div>
+      
+        <div class="tab-pane fade" id="bars-tab-pane" role="tabpanel" aria-labelledby="bars-tab" tabindex="0">
+          <div class="accordion accordion-flush" id="accordionbars">
+            
+              <div class="accordion-item card">
+                <div class="accordion-header card-header">
+                  <h5 class="card-title d-grid gap-2" onclick="showMap('Laguna+Bob,South+Padre+Island+TX')">
+                    <a href="#" class="accordion-button btn btn-primary" data-bs-toggle="collapse" data-bs-target="#collapsebars0" aria-expanded="true" aria-controls="collapsebars0" role="button">
+                      Laguna Bob <div class="place" style="display:none">Laguna+Bob,South+Padre+Island+TX</div>
+                    </a>
+                  </h5>
+                </div>
+                <div id="collapsebars0" class="accordion-collapse accordion-body collapse show" data-bs-parent="#accordionbars">
+                  <div class="card-body">
+                    <div class="row" style="margin-bottom: 0.5rem">
+  <div class="col-3">
+    <small class="text-secondary">Links</small>
+  </div>
+  <div class="col">
+    <a href="https://lagunabob.com" class="card-link">Homepage</a>
+ <a href="https://www.zmenu.com/laguna-bob-bar-on-bay-south-padre-island-online-menu/" class="card-link">Menu</a>
+
+
+  </div>
+</div>
+
+<div class="row" style="margin-bottom: 0.5rem">
+  <div class="col-3">
+    <small class="text-secondary">Address</small>
+  </div>
+  <div class="col">
+    <address class="card-text" id="addressText" style="margin-bottom: 0.5rem; line-height: 18px">
+  <small>
+  2401 Laguna Blvd.<br/>South Padre Island<br/>TX 78597
+  </small>
+</address>
+<button type="button" class="btn btn-primary" onclick="mapsSelector('Laguna%2BBob%2CSouth%2BPadre%2BIsland%2BTX');">Get Directions</button>
+
+  </div>
+</div>
+
+<div class="row" style="margin-bottom: 0.5rem">
+  <div class="col-3">
+    <small class="text-secondary">Phone</small>
+  </div>
+  <div class="col">
+    <p class="card-text"><a href="tel:(956) 433-5499" id="phone">(956) 433-5499</a></p>
+
+  </div>
+</div>
+
+<div class="row" style="margin-bottom: 0.5rem">
+  <div class="col-3">
+    <small class="text-secondary">Hours</small>
+  </div>
+  <div class="col">
+    <div class="row">
+
+  <div class="col-4">
+    <table class="table table-sm">
+      <tbody>
+        
+          <tr><td>Mon</td><td>11:30am</td><td>-</td><td>12:00pm</td></tr>
+        
+          <tr><td>Tue</td><td>11:30am</td><td>-</td><td>12:00pm</td></tr>
+        
+          <tr><td>Wed</td><td>11:30am</td><td>-</td><td>12:00pm</td></tr>
+        
+          <tr><td>Thu</td><td>11:30am</td><td>-</td><td>12:30pm</td></tr>
+        
+          <tr><td>Fri</td><td>11:30am</td><td>-</td><td>1:00am</td></tr>
+        
+          <tr><td>Sat</td><td>11:30am</td><td>-</td><td>2:00am</td></tr>
+        
+          <tr><td>Sun</td><td>11:30am</td><td>-</td><td>12:00pm</td></tr>
+        
+      </tbody>
+    </table>
+  </div>
+</div>
+
+  </div>
+</div>
+
+<div class="row" style="margin-bottom: 0.5rem">
+  <div class="col-3">
+    <small class="text-secondary">Notes</small>
+  </div>
+  <div class="col">
+    <p class="card-text">Live Music. Great place to watch the sun set.</p>
+
+  </div>
+</div>
+
+                  </div>
+                  <img src="https://media-cdn.tripadvisor.com/media/photo-s/0d/71/ce/61/laguna-bob-bar-on-bay.jpg" class="card-img-bottom" width="428"/>
+
+                </div>
+              </div>
+            
+              <div class="accordion-item card">
+                <div class="accordion-header card-header">
+                  <h5 class="card-title d-grid gap-2" onclick="showMap('Clayton's+Beach+Bar,South+Padre+Island+TX')">
+                    <a href="#" class="accordion-button collapsed btn btn-primary" data-bs-toggle="collapse" data-bs-target="#collapsebars1" aria-expanded="false" aria-controls="collapsebars1" role="button">
+                      Clayton's Beach Bar <div class="place" style="display:none">Clayton's+Beach+Bar,South+Padre+Island+TX</div>
+                    </a>
+                  </h5>
+                </div>
+                <div id="collapsebars1" class="accordion-collapse accordion-body collapse" data-bs-parent="#accordionbars">
+                  <div class="card-body">
+                    <div class="row" style="margin-bottom: 0.5rem">
+  <div class="col-3">
+    <small class="text-secondary">Links</small>
+  </div>
+  <div class="col">
+    <a href="https://www.claytonsbeachbar.com" class="card-link">Homepage</a>
+ <a href="https://www.claytonsbeachbar.com/food-drink-menu" class="card-link">Menu</a>
+
+
+  </div>
+</div>
+
+<div class="row" style="margin-bottom: 0.5rem">
+  <div class="col-3">
+    <small class="text-secondary">Address</small>
+  </div>
+  <div class="col">
+    <address class="card-text" id="addressText" style="margin-bottom: 0.5rem; line-height: 18px">
+  <small>
+  6900 Padre Blvd<br/>South Padre Island<br/>TX 78597
+  </small>
+</address>
+<button type="button" class="btn btn-primary" onclick="mapsSelector('Clayton%27s%2BBeach%2BBar%2CSouth%2BPadre%2BIsland%2BTX');">Get Directions</button>
+
+  </div>
+</div>
+
+<div class="row" style="margin-bottom: 0.5rem">
+  <div class="col-3">
+    <small class="text-secondary">Phone</small>
+  </div>
+  <div class="col">
+    <p class="card-text"><a href="tel:(956) 761-5900" id="phone">(956) 761-5900</a></p>
+
+  </div>
+</div>
+
+<div class="row" style="margin-bottom: 0.5rem">
+  <div class="col-3">
+    <small class="text-secondary">Hours</small>
+  </div>
+  <div class="col">
+    <div class="row">
+
+  <div class="col-4">
+    <table class="table table-sm">
+      <tbody>
+        
+          <tr><td>11:30am</td><td>-</td><td>2:00am</td></tr>
+        
+      </tbody>
+    </table>
+  </div>
+</div>
+
+  </div>
+</div>
+
+<div class="row" style="margin-bottom: 0.5rem">
+  <div class="col-3">
+    <small class="text-secondary">Notes</small>
+  </div>
+  <div class="col">
+    <p class="card-text">Live Music. Sand Castles from contest still standing</p>
+
+  </div>
+</div>
+
+                  </div>
+                  <img src="https://www.theuntz.com/media/member/6/6/2/66239/claytons-beach-bar-and-grill.jpg" class="card-img-bottom" width="428"/>
+
+                </div>
+              </div>
+            
+          </div>
+        </div>
+      
+        <div class="tab-pane fade" id="sights-tab-pane" role="tabpanel" aria-labelledby="sights-tab" tabindex="0">
+          <div class="accordion accordion-flush" id="accordionsights">
+            
+              <div class="accordion-item card">
+                <div class="accordion-header card-header">
+                  <h5 class="card-title d-grid gap-2" onclick="showMap('Holiday Sand Sculpture Village South Padre Island, Texas')">
+                    <a href="#" class="accordion-button btn btn-primary" data-bs-toggle="collapse" data-bs-target="#collapsesights0" aria-expanded="true" aria-controls="collapsesights0" role="button">
+                      Holiday Sand Sculpture Village <div class="place" style="display:none">Holiday Sand Sculpture Village South Padre Island, Texas</div>
+                    </a>
+                  </h5>
+                </div>
+                <div id="collapsesights0" class="accordion-collapse accordion-body collapse show" data-bs-parent="#accordionsights">
+                  <div class="card-body">
+                    <div class="row" style="margin-bottom: 0.5rem">
+  <div class="col-3">
+    <small class="text-secondary">Links</small>
+  </div>
+  <div class="col">
+    <a href="http://www.sandcastlevillage.com/" class="card-link">Homepage</a>
+ 
+
+  </div>
+</div>
+
+<div class="row" style="margin-bottom: 0.5rem">
+  <div class="col-3">
+    <small class="text-secondary">Address</small>
+  </div>
+  <div class="col">
+    <address class="card-text" id="addressText" style="margin-bottom: 0.5rem; line-height: 18px">
+  <small>
+  W Ling St<br/>South Padre Island<br/>TX 78597
+  </small>
+</address>
+<button type="button" class="btn btn-primary" onclick="mapsSelector('Holiday+Sand+Sculpture+Village+South+Padre+Island%2C+Texas');">Get Directions</button>
+
+  </div>
+</div>
+
+<div class="row" style="margin-bottom: 0.5rem">
+  <div class="col-3">
+    <small class="text-secondary">Hours</small>
+  </div>
+  <div class="col">
+    <div class="row">
+
+  <div class="col-4">
+    <table class="table table-sm">
+      <tbody>
+        
+          <tr><td>10:00am</td><td>-</td><td>9:00pm</td></tr>
+        
+      </tbody>
+    </table>
+  </div>
+</div>
+
+  </div>
+</div>
+
+<div class="row" style="margin-bottom: 0.5rem">
+  <div class="col-3">
+    <small class="text-secondary">Notes</small>
+  </div>
+  <div class="col">
+    <p class="card-text">Next to Ferris wheel</p>
+
+  </div>
+</div>
+
+                  </div>
+                  <img src="https://www.laughwithusblog.com/wp-content/uploads/2018/12/South-Padre-Holiday-Sand-Castle-Village.jpg" class="card-img-bottom" width="428"/>
+
+                </div>
+              </div>
+            
+          </div>
+        </div>
+      
+        <div class="tab-pane fade" id="gas-tab-pane" role="tabpanel" aria-labelledby="gas-tab" tabindex="0">
+          <div class="accordion accordion-flush" id="accordiongas">
+            
+              <div class="accordion-item card">
+                <div class="accordion-header card-header">
+                  <h5 class="card-title d-grid gap-2" onclick="showMap('331 Padre Blvd, South Padre Island, TX 78597')">
+                    <a href="#" class="accordion-button btn btn-primary" data-bs-toggle="collapse" data-bs-target="#collapsegas0" aria-expanded="true" aria-controls="collapsegas0" role="button">
+                      Stripes <div class="place" style="display:none">331 Padre Blvd, South Padre Island, TX 78597</div>
+                    </a>
+                  </h5>
+                </div>
+                <div id="collapsegas0" class="accordion-collapse accordion-body collapse show" data-bs-parent="#accordiongas">
+                  <div class="card-body">
+                    <div class="row" style="margin-bottom: 0.5rem">
+  <div class="col-3">
+    <small class="text-secondary">Address</small>
+  </div>
+  <div class="col">
+    <address class="card-text" id="addressText" style="margin-bottom: 0.5rem; line-height: 18px">
+  <small>
+  331 Padre Blvd<br/>South Padre Island<br/>TX 78597
+  </small>
+</address>
+<button type="button" class="btn btn-primary" onclick="mapsSelector('331+Padre+Blvd%2C+South+Padre+Island%2C+TX+78597');">Get Directions</button>
+
+  </div>
+</div>
+
+                  </div>
+                  
+                </div>
+              </div>
+            
+              <div class="accordion-item card">
+                <div class="accordion-header card-header">
+                  <h5 class="card-title d-grid gap-2" onclick="showMap('2000 Padre Blvd, South Padre Island, TX 78597')">
+                    <a href="#" class="accordion-button collapsed btn btn-primary" data-bs-toggle="collapse" data-bs-target="#collapsegas1" aria-expanded="false" aria-controls="collapsegas1" role="button">
+                      Exxon <div class="place" style="display:none">2000 Padre Blvd, South Padre Island, TX 78597</div>
+                    </a>
+                  </h5>
+                </div>
+                <div id="collapsegas1" class="accordion-collapse accordion-body collapse" data-bs-parent="#accordiongas">
+                  <div class="card-body">
+                    <div class="row" style="margin-bottom: 0.5rem">
+  <div class="col-3">
+    <small class="text-secondary">Address</small>
+  </div>
+  <div class="col">
+    <address class="card-text" id="addressText" style="margin-bottom: 0.5rem; line-height: 18px">
+  <small>
+  2000 Padre Blvd<br/>South Padre Island<br/>TX 78597
+  </small>
+</address>
+<button type="button" class="btn btn-primary" onclick="mapsSelector('2000+Padre+Blvd%2C+South+Padre+Island%2C+TX+78597');">Get Directions</button>
+
+  </div>
+</div>
+
+                  </div>
+                  
+                </div>
+              </div>
+            
+              <div class="accordion-item card">
+                <div class="accordion-header card-header">
+                  <h5 class="card-title d-grid gap-2" onclick="showMap('2913 Padre Blvd, South Padre Island, TX 78597')">
+                    <a href="#" class="accordion-button collapsed btn btn-primary" data-bs-toggle="collapse" data-bs-target="#collapsegas2" aria-expanded="false" aria-controls="collapsegas2" role="button">
+                      Stripes <div class="place" style="display:none">2913 Padre Blvd, South Padre Island, TX 78597</div>
+                    </a>
+                  </h5>
+                </div>
+                <div id="collapsegas2" class="accordion-collapse accordion-body collapse" data-bs-parent="#accordiongas">
+                  <div class="card-body">
+                    <div class="row" style="margin-bottom: 0.5rem">
+  <div class="col-3">
+    <small class="text-secondary">Address</small>
+  </div>
+  <div class="col">
+    <address class="card-text" id="addressText" style="margin-bottom: 0.5rem; line-height: 18px">
+  <small>
+  2913 Padre Blvd<br/>South Padre Island<br/>TX 78597
+  </small>
+</address>
+<button type="button" class="btn btn-primary" onclick="mapsSelector('2913+Padre+Blvd%2C+South+Padre+Island%2C+TX+78597');">Get Directions</button>
+
+  </div>
+</div>
+
+                  </div>
+                  
+                </div>
+              </div>
+            
+              <div class="accordion-item card">
+                <div class="accordion-header card-header">
+                  <h5 class="card-title d-grid gap-2" onclick="showMap('5000 Padre Blvd, South Padre Island, TX 78597')">
+                    <a href="#" class="accordion-button collapsed btn btn-primary" data-bs-toggle="collapse" data-bs-target="#collapsegas3" aria-expanded="false" aria-controls="collapsegas3" role="button">
+                      Valero <div class="place" style="display:none">5000 Padre Blvd, South Padre Island, TX 78597</div>
+                    </a>
+                  </h5>
+                </div>
+                <div id="collapsegas3" class="accordion-collapse accordion-body collapse" data-bs-parent="#accordiongas">
+                  <div class="card-body">
+                    <div class="row" style="margin-bottom: 0.5rem">
+  <div class="col-3">
+    <small class="text-secondary">Address</small>
+  </div>
+  <div class="col">
+    <address class="card-text" id="addressText" style="margin-bottom: 0.5rem; line-height: 18px">
+  <small>
+  5000 Padre Blvd<br/>South Padre Island<br/>TX 78597
+  </small>
+</address>
+<button type="button" class="btn btn-primary" onclick="mapsSelector('5000+Padre+Blvd%2C+South+Padre+Island%2C+TX+78597');">Get Directions</button>
+
+  </div>
+</div>
+
+                  </div>
+                  
+                </div>
+              </div>
+            
+              <div class="accordion-item card">
+                <div class="accordion-header card-header">
+                  <h5 class="card-title d-grid gap-2" onclick="showMap('Blue Marlin Supermarket, South Padre Island, TX 78597')">
+                    <a href="#" class="accordion-button collapsed btn btn-primary" data-bs-toggle="collapse" data-bs-target="#collapsegas4" aria-expanded="false" aria-controls="collapsegas4" role="button">
+                      Blue Marlin Supermarket (Grocery) <div class="place" style="display:none">Blue Marlin Supermarket, South Padre Island, TX 78597</div>
+                    </a>
+                  </h5>
+                </div>
+                <div id="collapsegas4" class="accordion-collapse accordion-body collapse" data-bs-parent="#accordiongas">
+                  <div class="card-body">
+                    <div class="row" style="margin-bottom: 0.5rem">
+  <div class="col-3">
+    <small class="text-secondary">Address</small>
+  </div>
+  <div class="col">
+    <address class="card-text" id="addressText" style="margin-bottom: 0.5rem; line-height: 18px">
+  <small>
+  Blue Marlin Supermarket<br/>South Padre Island<br/>TX 78597
+  </small>
+</address>
+<button type="button" class="btn btn-primary" onclick="mapsSelector('Blue+Marlin+Supermarket%2C+South+Padre+Island%2C+TX+78597');">Get Directions</button>
+
+  </div>
+</div>
+
+                  </div>
+                  
+                </div>
+              </div>
+            
+          </div>
+        </div>
+      
+    </div>
+
+    <script async src="https://cdn.jsdelivr.net/npm/es-module-shims@1/dist/es-module-shims.min.js" crossorigin="anonymous"></script>
+    <script type="importmap">
+    {
+      "imports": {
+        "@popperjs/core": "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/esm/popper.min.js",
+        "bootstrap": "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.esm.min.js"
+      }
+    }
+    </script>
+    <script type="module">
+      import * as bootstrap from 'bootstrap'
+    </script>
+    <script lang="javascript">
+      // const myTabContent = document.getElementById("myTabContent");
+      // myTabContent.addEventListener("click", event => {
+      //   const place = event.target.getElementsByClassName("place")[0].innerText;
+      //   const map = document.getElementsByName("map")[0];
+      //   const src = "https://www.google.com/maps/embed/v1/place?key=AIzaSyDTEkMr0ljIOCS8w7WiQwm60-RTLH9MIO0&q=" + place;
+      //   map.setAttribute("src", src);
+      // });
+
+      function showMap(place) {
+        const map = document.getElementsByName("map")[0];
+        const src = "https://www.google.com/maps/embed/v1/place?key=AIzaSyDTEkMr0ljIOCS8w7WiQwm60-RTLH9MIO0&q=" + place;
+        map.setAttribute("src", src);
+      }
+
+      function mapsSelector(dest) {
+        var fullUrl = "https://www.google.com/maps/dir/?api=1&destination=" + dest;
+        if /* if we're on iOS, open in Apple Maps */
+          ((navigator.platform.indexOf("iPhone") != -1) || 
+          (navigator.platform.indexOf("iPad") != -1) || 
+          (navigator.platform.indexOf("iPod") != -1)) {
+          fullUrl = "comgooglemaps://?daddr=" + dest + "&directionsmode=driving";
+        }
+        window.open(fullUrl);
+      }
+
+    </script>
+  </body>
+</html>
