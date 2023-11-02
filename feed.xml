@@ -6,89 +6,101 @@
 </description>
     <link>http://markmorga.com/</link>
     <atom:link href="http://markmorga.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 14 Aug 2019 13:42:45 -0500</pubDate>
-    <lastBuildDate>Wed, 14 Aug 2019 13:42:45 -0500</lastBuildDate>
-    <generator>Jekyll v3.8.6</generator>
+    <pubDate>Thu, 02 Nov 2023 13:03:28 -0500</pubDate>
+    <lastBuildDate>Thu, 02 Nov 2023 13:03:28 -0500</lastBuildDate>
+    <generator>Jekyll v4.3.2</generator>
     
       <item>
         <title>Ruby Enumerable Functional Readability</title>
-        <description>&lt;p&gt;One of the functional techniques that I really enjoy using in Ruby is the subset of methods in the &lt;a href=&quot;http://ruby-doc.org/core-2.4.2/Enumerable.html&quot;&gt;&lt;code&gt;Enumerable&lt;/code&gt; module&lt;/a&gt; that give you the power to filter, transform, and otherwise boil down the contents in an enumeration in a concise and powerful way.&lt;/p&gt;
+        <description>&lt;p&gt;One of the functional techniques that I really enjoy using in Ruby is the subset of methods in the &lt;a href=&quot;http://ruby-doc.org/core-2.4.2/Enumerable.html&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Enumerable&lt;/code&gt; module&lt;/a&gt; that give you the power to filter, transform, and otherwise boil down the contents in an enumeration in a concise and powerful way.&lt;/p&gt;
 
-&lt;p&gt;The concepts I&amp;rsquo;m talking about refer to any of the methods in &lt;code&gt;Enumerable&lt;/code&gt; that take a &lt;a href=&quot;http://ruby-doc.com/docs/ProgrammingRuby/html/intro.html#S6&quot;&gt;block&lt;/a&gt; and use the result of the block to do something useful. Most commonly, I&amp;rsquo;m talking about:&lt;/p&gt;
+&lt;p&gt;The concepts I’m talking about refer to any of the methods in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Enumerable&lt;/code&gt; that take a &lt;a href=&quot;http://ruby-doc.com/docs/ProgrammingRuby/html/intro.html#S6&quot;&gt;block&lt;/a&gt; and use the result of the block to do something useful. Most commonly, I’m talking about:&lt;/p&gt;
 
-&lt;table&gt;&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Method&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&quot;http://ruby-doc.org/core-2.4.2/Enumerable.html#method-i-map&quot;&gt;&lt;code&gt;map&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Returns a new array with the results of running block once for every element in enum.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&quot;http://ruby-doc.org/core-2.4.2/Enumerable.html#method-i-select&quot;&gt;&lt;code&gt;select&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Returns an array containing all elements of enum for which the given block returns a true value.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&quot;http://ruby-doc.org/core-2.4.2/Enumerable.html#method-i-reject&quot;&gt;&lt;code&gt;reject&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Returns an array for all elements of enum for which the given block returns false.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&quot;http://ruby-doc.org/core-2.4.2/Enumerable.html#method-i-reduce&quot;&gt;&lt;code&gt;reduce&lt;/code&gt;&lt;/a&gt; (aka &lt;a href=&quot;http://ruby-doc.org/core-2.4.2/Enumerable.html#method-i-inject&quot;&gt;&lt;code&gt;inject&lt;/code&gt;&lt;/a&gt;)&lt;/td&gt;
-&lt;td&gt;Combines all elements of enum by applying a binary operation, specified by a block or a symbol that names a method or operator.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;&lt;/table&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Method&lt;/th&gt;
+      &lt;th&gt;Description&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;http://ruby-doc.org/core-2.4.2/Enumerable.html#method-i-map&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;map&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;Returns a new array with the results of running block once for every element in enum.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;http://ruby-doc.org/core-2.4.2/Enumerable.html#method-i-select&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;select&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;Returns an array containing all elements of enum for which the given block returns a true value.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;http://ruby-doc.org/core-2.4.2/Enumerable.html#method-i-reject&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;reject&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;Returns an array for all elements of enum for which the given block returns false.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;http://ruby-doc.org/core-2.4.2/Enumerable.html#method-i-reduce&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;reduce&lt;/code&gt;&lt;/a&gt; (aka &lt;a href=&quot;http://ruby-doc.org/core-2.4.2/Enumerable.html#method-i-inject&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;inject&lt;/code&gt;&lt;/a&gt;)&lt;/td&gt;
+      &lt;td&gt;Combines all elements of enum by applying a binary operation, specified by a block or a symbol that names a method or operator.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
 &lt;p&gt;The basic use-case that most programmers are familiar with is something like this:&lt;/p&gt;
 
 &lt;p&gt;Given an array of strings, convert it into an array of the length of each string.&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;ary&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;apple&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;banana&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;orange&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;pink&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;ary&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;apple&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;banana&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;orange&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;pink&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
 
 &lt;span class=&quot;n&quot;&gt;ary&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;map&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;size&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
 &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
 &lt;p&gt;These methods also take a nifty shortcut that permits you to call a method on each item in the enumeration as a substitution for the explicit block. The same result above can be returned with this shortcut method instead:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;ary&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;ary&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 
 &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
 &lt;p&gt;The result here is still pretty readable and recommended for these cases.&lt;/p&gt;
 
 &lt;p&gt;Another nifty feature of these methods is, of course, the ability to chain the method calls to achieve a more complex result.&lt;/p&gt;
 
 &lt;p&gt;For example, should you only care about the lengths of strings greater than five, you could write this:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;ary&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;select&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;len&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;ary&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;select&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;len&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
 &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Armed with this level of power, you can go a little mad sometimes and end up with a long chain of method calls that even you won&amp;rsquo;t remember what it is doing after a long weekend. &lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://markmorga.com/assets/article_images/2017-11-27-ruby-enumerable-functional-readability/psycho.jpg&quot; alt=&quot;We all go a little mad sometimes&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Armed with this level of power, you can go a little mad sometimes and end up with a long chain of method calls that even you won’t remember what it is doing after a long weekend.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://markmorga.com/assets/article_images/2017-11-27-ruby-enumerable-functional-readability/psycho.jpg&quot; alt=&quot;We all go a little mad sometimes&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;This is sometimes natures way of telling you to split the method (containing the chain) into several methods. Other times, the algorithm expressed in the chain is of intrinsic value when kept together. In this case, do you need to give up the syntactic sugar of the Enumerable chain? No.&lt;/p&gt;
 
-&lt;p&gt;Since these methods take a block, it follows that you can pass a block, or a &lt;a href=&quot;http://ruby-doc.org/core-2.4.2/Proc.html&quot;&gt;&lt;code&gt;Proc&lt;/code&gt;&lt;/a&gt;, or a &lt;a href=&quot;http://ruby-doc.org/core-2.4.2/Kernel.html#method-i-lambda&quot;&gt;&lt;code&gt;lambda&lt;/code&gt;&lt;/a&gt; to the same effect. The following examples explain the refactoring path you could take.&lt;/p&gt;
+&lt;p&gt;Since these methods take a block, it follows that you can pass a block, or a &lt;a href=&quot;http://ruby-doc.org/core-2.4.2/Proc.html&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Proc&lt;/code&gt;&lt;/a&gt;, or a &lt;a href=&quot;http://ruby-doc.org/core-2.4.2/Kernel.html#method-i-lambda&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lambda&lt;/code&gt;&lt;/a&gt; to the same effect. The following examples explain the refactoring path you could take.&lt;/p&gt;
 
-&lt;p&gt;As a toy example, given an Array of objects, return a list of the name attributes of the objects that are less than $10 and are in the categories of &amp;ldquo;tools&amp;rdquo; or &amp;ldquo;toys&amp;rdquo;.&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;no&quot;&gt;Item&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Struct&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:price&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:categories&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;p&gt;As a toy example, given an Array of objects, return a list of the name attributes of the objects that are less than $10 and are in the categories of “tools” or “toys”.&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;no&quot;&gt;Item&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Struct&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:price&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:categories&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;items&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
-    &lt;span class=&quot;no&quot;&gt;Item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Pliers&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;8.00&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;sx&quot;&gt;%w[tools handtools]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-    &lt;span class=&quot;no&quot;&gt;Item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Dremel&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;30.00&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;sx&quot;&gt;%w[tools powertools]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-    &lt;span class=&quot;no&quot;&gt;Item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Legos&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;15.00&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;sx&quot;&gt;%w[toys building]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-    &lt;span class=&quot;no&quot;&gt;Item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Spatula&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;3.00&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;sx&quot;&gt;%w[cooking kitchen]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-    &lt;span class=&quot;no&quot;&gt;Item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Yoyo&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;6.00&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;sx&quot;&gt;%w[toys]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+	&lt;span class=&quot;no&quot;&gt;Item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Pliers&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;8.00&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;sx&quot;&gt;%w[tools handtools]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+	&lt;span class=&quot;no&quot;&gt;Item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Dremel&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;30.00&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;sx&quot;&gt;%w[tools powertools]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+	&lt;span class=&quot;no&quot;&gt;Item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Legos&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;15.00&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;sx&quot;&gt;%w[toys building]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+	&lt;span class=&quot;no&quot;&gt;Item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Spatula&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;3.00&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;sx&quot;&gt;%w[cooking kitchen]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+	&lt;span class=&quot;no&quot;&gt;Item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Yoyo&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;6.00&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;sx&quot;&gt;%w[toys]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;items&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;reject&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;price&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;10.0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;select&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;sx&quot;&gt;%w[toys tools]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;any?&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;category&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;categories&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;include?&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;category&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;map&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;reject&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;price&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;10.0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;select&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;sx&quot;&gt;%w[toys tools]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;any?&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;category&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;categories&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;include?&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;category&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;map&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
 &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Pliers&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Yoyo&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
 &lt;p&gt;You can start by changing the traditional block syntax with the equivalent lambda syntax:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;higher_prices&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;price&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;10.0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;higher_prices&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;price&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;10.0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;includes_category&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;category&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;categories&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;include?&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;category&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;favorite_categories&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;sx&quot;&gt;%w[toys tools]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;any?&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;includes_category&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;curry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
@@ -98,29 +110,35 @@
   &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 
 &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; [&quot;Pliers&quot;, &quot;Yoyo&quot;]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
 &lt;p&gt;This, to me, reads better than the first example. Reading aloud:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;items reject higher prices,
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;items reject higher prices,
 select favorite categories,
 map name. 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;The lambda declarations above are fairly clear on their own above (assuming you are used to the &lt;a href=&quot;http://ruby-doc.org/core-2.4.2/Proc.html#method-i-curry&quot;&gt;&lt;code&gt;curry&lt;/code&gt;&lt;/a&gt; method - if not, check it out!)&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://markmorga.com/assets/article_images/2017-11-27-ruby-enumerable-functional-readability/lamb-curry.jpg&quot; alt=&quot;Because Curry is Delicious&quot;&gt;&lt;/p&gt;
+&lt;p&gt;The lambda declarations above are fairly clear on their own above (assuming you are used to the &lt;a href=&quot;http://ruby-doc.org/core-2.4.2/Proc.html#method-i-curry&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;curry&lt;/code&gt;&lt;/a&gt; method - if not, check it out!)&lt;/p&gt;
 
-&lt;p&gt;So the final issue to deal with is where to define your cool new lambdas. There are a number of ways to do this and it depends on your use case. &lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://markmorga.com/assets/article_images/2017-11-27-ruby-enumerable-functional-readability/lamb-curry.jpg&quot; alt=&quot;Because Curry is Delicious&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;If the lambda isn&amp;rsquo;t going to be used in other places, you can define it within the method in which is it used. This is how I used illustrated the examples. If the lambda begins to get more complex than a one or two liner, you will want to consider moving it elsewhere. &lt;/p&gt;
+&lt;p&gt;So the final issue to deal with is where to define your cool new lambdas. There are a number of ways to do this and it depends on your use case.&lt;/p&gt;
+
+&lt;p&gt;If the lambda isn’t going to be used in other places, you can define it within the method in which is it used. This is how I used illustrated the examples. If the lambda begins to get more complex than a one or two liner, you will want to consider moving it elsewhere.&lt;/p&gt;
 
 &lt;p&gt;Either to its own method:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;higher_prices&lt;/span&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;higher_prices&lt;/span&gt;
   &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;price&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;10.0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Or possibly to it&amp;rsquo;s own module or move related lambdas to a shared module. &lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;BusinessLogic&lt;/span&gt;
-  &lt;span class=&quot;kp&quot;&gt;module_function&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
+&lt;p&gt;Or possibly to it’s own module or move related lambdas to a shared module.&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;BusinessLogic&lt;/span&gt;
+  &lt;span class=&quot;kp&quot;&gt;module_function&lt;/span&gt;
+  
   &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;higher_prices&lt;/span&gt;
     &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;price&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;10.0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
@@ -151,13 +169,15 @@ map name.
 &lt;span class=&quot;no&quot;&gt;SalesBrochure&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;items&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;sales_items&lt;/span&gt;
 
 &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; [&quot;Pliers&quot;, &quot;Yoyo&quot;]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
 &lt;p&gt;This refactoring has the value of isolating the &lt;strong&gt;business logic&lt;/strong&gt; functionality of our example from the algorithm of putting together the list of items in the sale.&lt;/p&gt;
 
-&lt;p&gt;Aside: the &lt;code&gt;module_function&lt;/code&gt; method is kind of nice to use for this use-case because it makes the methods available where they are included, the methods are isolated from the namespace of the including class, and the instance methods are private so they don&amp;rsquo;t pollute your class&amp;rsquo; public instance methods.&lt;/p&gt;
+&lt;p&gt;Aside: the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;module_function&lt;/code&gt; method is kind of nice to use for this use-case because it makes the methods available where they are included, the methods are isolated from the namespace of the including class, and the instance methods are private so they don’t pollute your class’ public instance methods.&lt;/p&gt;
 
-&lt;p&gt;While we are at it, another direction we could go is to pass the lambdas into the &lt;code&gt;SalesBrochure&lt;/code&gt; which decouples the concrete implementation of the &lt;code&gt;BusinessLogic&lt;/code&gt; methods and this would permit reuse of the &lt;code&gt;SalesBrochure&lt;/code&gt; class for a number of different contexts. That factoring would look something like this:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Brochure&lt;/span&gt;
+&lt;p&gt;While we are at it, another direction we could go is to pass the lambdas into the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SalesBrochure&lt;/code&gt; which decouples the concrete implementation of the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;BusinessLogic&lt;/code&gt; methods and this would permit reuse of the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SalesBrochure&lt;/code&gt; class for a number of different contexts. That factoring would look something like this:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Brochure&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;initialize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;items&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;price_rejector&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;included_categories&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
     &lt;span class=&quot;vi&quot;&gt;@items&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;items&lt;/span&gt;
     &lt;span class=&quot;vi&quot;&gt;@price_rejector&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;price_rejector&lt;/span&gt;
@@ -175,7 +195,8 @@ map name.
 &lt;span class=&quot;no&quot;&gt;Brochure&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;items&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;BusinessLogic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;higher_prices&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;BusinessLogic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;favorite_categories&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;items&lt;/span&gt;
 
 &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; [&quot;Pliers&quot;, &quot;Yoyo&quot;]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
         <pubDate>Thu, 30 Nov 2017 00:00:00 -0600</pubDate>
         <link>http://markmorga.com/software/2017/11/30/ruby-enumerable-functional-readability.html</link>
         <guid isPermaLink="true">http://markmorga.com/software/2017/11/30/ruby-enumerable-functional-readability.html</guid>
@@ -193,52 +214,52 @@ map name.
     
       <item>
         <title>Some thoughts on Node.js</title>
-        <description>&lt;p&gt;Over the last month or so, I&amp;rsquo;ve been working with &lt;a href=&quot;https://nodejs.org/en/&quot;&gt;Node.js&lt;/a&gt; to build a tool chain, &lt;a href=&quot;https://github.com/rackerlabs/generator-ramlapi&quot;&gt;Generator RAML API&lt;/a&gt; for myself and my team as we work on building &lt;a href=&quot;http://raml.org/&quot;&gt;RAML&lt;/a&gt; API docs.&lt;/p&gt;
+        <description>&lt;p&gt;Over the last month or so, I’ve been working with &lt;a href=&quot;https://nodejs.org/en/&quot;&gt;Node.js&lt;/a&gt; to build a tool chain, &lt;a href=&quot;https://github.com/rackerlabs/generator-ramlapi&quot;&gt;Generator RAML API&lt;/a&gt; for myself and my team as we work on building &lt;a href=&quot;http://raml.org/&quot;&gt;RAML&lt;/a&gt; API docs.&lt;/p&gt;
 
 &lt;p&gt;Given that the final HTML documentation tool that we use was based on &lt;a href=&quot;https://github.com/kevinrenskers/raml2html&quot;&gt;raml2html&lt;/a&gt; with was a Node.js tool and that our schemas are usually JSON, I thought it would be good to keep the tool chain in Node.js to make it easier to install and use.&lt;/p&gt;
 
 &lt;p&gt;The plan was to use a Node-based build tool to chain together several existing Node libraries to validate the RAML, validate the JSON schema referenced in the RAML and then build the HTML docs from the contract.&lt;/p&gt;
 
-&lt;p&gt;Initially, I used &lt;a href=&quot;http://gruntjs.com/&quot;&gt;Grunt&lt;/a&gt; to build the tool chain. I built a few Grunt plugins for some of the libraries that I was using. The tooling worked some of the time, but when it failed, the nature of Grunt&amp;rsquo;s approach to configuration instead of code made it difficult for me to determine where the problems were.&lt;/p&gt;
+&lt;p&gt;Initially, I used &lt;a href=&quot;http://gruntjs.com/&quot;&gt;Grunt&lt;/a&gt; to build the tool chain. I built a few Grunt plugins for some of the libraries that I was using. The tooling worked some of the time, but when it failed, the nature of Grunt’s approach to configuration instead of code made it difficult for me to determine where the problems were.&lt;/p&gt;
 
 &lt;p&gt;I switched to &lt;a href=&quot;http://gulpjs.com/&quot;&gt;Gulp&lt;/a&gt; because I liked the fact that Gulp was code-based instead of configuration object based. I was also was interesting to play with the Gulp stream concept. That had no real value for this in generator-ramlapi*, but I can see it really being valuable in prepping a web site for deploy.&lt;/p&gt;
 
 &lt;p&gt;* it does speed things up by a few seconds by preventing the same RAML files being loaded over and over.&lt;/p&gt;
 
-&lt;hr&gt;
+&lt;hr /&gt;
 
-&lt;p&gt;I learned a lot (and I&amp;rsquo;m still learning). JavaScript in my opinion is &lt;a href=&quot;http://www.ecma-international.org/publications/standards/Ecma-262.htm&quot;&gt;getting better&lt;/a&gt;, but the following things make it hard to really embrace:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Quality of &lt;a href=&quot;https://www.npmjs.com/&quot;&gt;npm&lt;/a&gt; packages. My experience is anecdotal, but compared to my experiences in other languages, the quality of shared packages is not very good.&lt;/li&gt;
-&lt;li&gt;The &lt;a href=&quot;https://nodejs.org/en/about/&quot;&gt;asynchronous NodeJs model&lt;/a&gt; is inherently hard for developers to use correctly.
+&lt;p&gt;I learned a lot (and I’m still learning). JavaScript in my opinion is &lt;a href=&quot;http://www.ecma-international.org/publications/standards/Ecma-262.htm&quot;&gt;getting better&lt;/a&gt;, but the following things make it hard to really embrace:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;It pushes a problem that the language should solve onto the developer&amp;rsquo;s shoulders. The same asynchronous coding pattern in other languages like &lt;a href=&quot;http://twistedmatrix.com/&quot;&gt;Python&lt;/a&gt; have the same problem.&lt;/li&gt;
-&lt;li&gt;Promises vs callbacks. The &lt;a href=&quot;https://www.npmjs.com/package/async&quot;&gt;async&lt;/a&gt; npm package does provide some nice patterns that make it better but doesn&amp;rsquo;t solve the problem. An easy mistake that I made more than once is passing a callback function to an asynchronous function when it returned a &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise&quot;&gt;promise&lt;/a&gt; (or vice versa). The result is a silent failure where your callback is never called.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Error handling defaults (exceptions, error returns, error events) are bad and hard to implement correctly.
-
-&lt;ul&gt;
-&lt;li&gt;Bad:
-
-&lt;ul&gt;
-&lt;li&gt;because errors tended to get silently swallowed&lt;/li&gt;
-&lt;li&gt;unless you&amp;rsquo;ve written all of the code yourself, you need to use a patchwork version of all styles&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Hard to implement correctly because due to the dynamic nature of Node.js, it&amp;rsquo;s easy to handle an error of the wrong sort and miss errors.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+  &lt;li&gt;Quality of &lt;a href=&quot;https://www.npmjs.com/&quot;&gt;npm&lt;/a&gt; packages. My experience is anecdotal, but compared to my experiences in other languages, the quality of shared packages is not very good.&lt;/li&gt;
+  &lt;li&gt;The &lt;a href=&quot;https://nodejs.org/en/about/&quot;&gt;asynchronous NodeJs model&lt;/a&gt; is inherently hard for developers to use correctly.
+    &lt;ul&gt;
+      &lt;li&gt;It pushes a problem that the language should solve onto the developer’s shoulders. The same asynchronous coding pattern in other languages like &lt;a href=&quot;http://twistedmatrix.com/&quot;&gt;Python&lt;/a&gt; have the same problem.&lt;/li&gt;
+      &lt;li&gt;Promises vs callbacks. The &lt;a href=&quot;https://www.npmjs.com/package/async&quot;&gt;async&lt;/a&gt; npm package does provide some nice patterns that make it better but doesn’t solve the problem. An easy mistake that I made more than once is passing a callback function to an asynchronous function when it returned a &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise&quot;&gt;promise&lt;/a&gt; (or vice versa). The result is a silent failure where your callback is never called.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Error handling defaults (exceptions, error returns, error events) are bad and hard to implement correctly.
+    &lt;ul&gt;
+      &lt;li&gt;Bad:
+        &lt;ul&gt;
+          &lt;li&gt;because errors tended to get silently swallowed&lt;/li&gt;
+          &lt;li&gt;unless you’ve written all of the code yourself, you need to use a patchwork version of all styles&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Hard to implement correctly because due to the dynamic nature of Node.js, it’s easy to handle an error of the wrong sort and miss errors.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;That being said, there are a few things that I like a lot in JavaScript.&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;The prototype system is really powerful and makes some things easier to do than they are in Python or Ruby.&lt;/li&gt;
-&lt;li&gt;There&amp;rsquo;s the capability in the language to build Object Oriented software in a way that isn&amp;rsquo;t actually Class Oriented software.&lt;/li&gt;
-&lt;li&gt;Performance is really good for such a dynamic language.&lt;/li&gt;
+  &lt;li&gt;The prototype system is really powerful and makes some things easier to do than they are in Python or Ruby.&lt;/li&gt;
+  &lt;li&gt;There’s the capability in the language to build Object Oriented software in a way that isn’t actually Class Oriented software.&lt;/li&gt;
+  &lt;li&gt;Performance is really good for such a dynamic language.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;For now though, Node.js isn&amp;rsquo;t likely to become one of the top tools in my toolbox.&lt;/p&gt;
+&lt;p&gt;For now though, Node.js isn’t likely to become one of the top tools in my toolbox.&lt;/p&gt;
 </description>
         <pubDate>Mon, 14 Sep 2015 00:00:00 -0500</pubDate>
         <link>http://markmorga.com/software/2015/09/14/thoughts-on-nodejs.html</link>
@@ -257,27 +278,27 @@ map name.
     
       <item>
         <title>A couple of new interesting languages</title>
-        <description>&lt;p&gt;First some benchmarks (warning: one benchmark/language name is NSFW): &lt;a href=&quot;https://github.com/kostya/benchmarks&quot;&gt;https://github.com/kostya/benchmarks&lt;/a&gt;&lt;/p&gt;
+        <description>&lt;p&gt;First some benchmarks (warning: one benchmark/language name is NSFW): https://github.com/kostya/benchmarks&lt;/p&gt;
 
 &lt;p&gt;Further warning, benchmarks can be &lt;a href=&quot;https://en.wikipedia.org/wiki/Lies%2C_damned_lies%2C_and_statistics&quot;&gt;as truthful as any other statistics&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;1st is &lt;a href=&quot;http://crystal-lang.org/&quot;&gt;Crystal&lt;/a&gt;:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Ruby-like syntax&lt;/li&gt;
-&lt;li&gt;static type checking (but types don’t need to be declared)&lt;/li&gt;
-&lt;li&gt;compiled performance beats Go in most benchmarks above!&lt;/li&gt;
+  &lt;li&gt;Ruby-like syntax&lt;/li&gt;
+  &lt;li&gt;static type checking (but types don’t need to be declared)&lt;/li&gt;
+  &lt;li&gt;compiled performance beats Go in most benchmarks above!&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;2nd is &lt;a href=&quot;http://www.red-lang.org/&quot;&gt;Red&lt;/a&gt;:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Inspired by &lt;a href=&quot;http://rebol.com/&quot;&gt;Rebol&lt;/a&gt; (which dates back to &lt;a href=&quot;http://www.amigaos.net/&quot;&gt;AmigaOS&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;functional, imperative, and symbolic programming&lt;/li&gt;
-&lt;li&gt;prototypical inheritance&lt;/li&gt;
-&lt;li&gt;optional types with &lt;a href=&quot;http://www.red-lang.org/2015/06/054-new-datatypes-exceptions-and-set.html&quot;&gt;50+ built-in data types&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&amp;lt; 1MB install&lt;/li&gt;
-&lt;li&gt;Consists of high level Red language 95% compatible with Rebol version 2 and &lt;a href=&quot;http://static.red-lang.org/red-system-specs.html&quot;&gt;Red/System DSL&lt;/a&gt; for higher performance systems programming&lt;/li&gt;
+  &lt;li&gt;Inspired by &lt;a href=&quot;http://rebol.com/&quot;&gt;Rebol&lt;/a&gt; (which dates back to &lt;a href=&quot;http://www.amigaos.net/&quot;&gt;AmigaOS&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;functional, imperative, and symbolic programming&lt;/li&gt;
+  &lt;li&gt;prototypical inheritance&lt;/li&gt;
+  &lt;li&gt;optional types with &lt;a href=&quot;http://www.red-lang.org/2015/06/054-new-datatypes-exceptions-and-set.html&quot;&gt;50+ built-in data types&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&amp;lt; 1MB install&lt;/li&gt;
+  &lt;li&gt;Consists of high level Red language 95% compatible with Rebol version 2 and &lt;a href=&quot;http://static.red-lang.org/red-system-specs.html&quot;&gt;Red/System DSL&lt;/a&gt; for higher performance systems programming&lt;/li&gt;
 &lt;/ul&gt;
 </description>
         <pubDate>Mon, 14 Sep 2015 00:00:00 -0500</pubDate>
@@ -297,294 +318,300 @@ map name.
     
       <item>
         <title>The False Premise of Build vs Buy</title>
-        <description>&lt;aside class=&quot;tldr&quot;&gt;&lt;p&gt;In this article, I write about build vs buy and what that really means in an enterprise setting. My goal is to inform decision makers about what they are getting into (from a technical perspective) when buying enterprise applications. You have to approach the &amp;ldquo;buy&amp;rdquo; decision as though it was a &amp;ldquo;build&amp;rdquo; with a different framework.&lt;/p&gt;
+        <description>&lt;aside class=&quot;tldr&quot;&gt;&lt;p&gt;In this article, I write about build vs buy and what that really means in an enterprise setting. My goal is to inform decision makers about what they are getting into (from a technical perspective) when buying enterprise applications. You have to approach the “buy” decision as though it was a “build” with a different framework.&lt;/p&gt;
 &lt;/aside&gt;
 
-&lt;p&gt;&lt;em&gt;Note:&lt;/em&gt; this is still a work in progress. I&amp;rsquo;ll be improving it over time.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Note:&lt;/em&gt; this is still a work in progress. I’ll be improving it over time.&lt;/p&gt;
 
-&lt;p&gt;Several times a year, I get involved in a &amp;ldquo;build vs. buy&amp;rdquo; conversation. The conversation starts with a business segment leader coming to the CIO and saying &amp;ldquo;We need a &lt;em&gt;C-MESA&lt;/em&gt;* system&amp;rdquo;.  The CIO then asks his team: &amp;ldquo;Should we build it or buy it?&amp;rdquo; In many companies, it can be a source of friction between business leaders and architects/developers.&lt;/p&gt;
+&lt;p&gt;Several times a year, I get involved in a “build vs. buy” conversation. The conversation starts with a business segment leader coming to the CIO and saying “We need a &lt;em&gt;C-MESA&lt;/em&gt;* system”.  The CIO then asks his team: “Should we build it or buy it?” In many companies, it can be a source of friction between business leaders and architects/developers.&lt;/p&gt;
 
-&lt;p&gt;The short answer is often: &amp;ldquo;If you can buy it, buy it. Build it only if you have to.&amp;rdquo; The &lt;em&gt;correct&lt;/em&gt; answer is usually more nuanced and, as usual, the devil is in the details.&lt;/p&gt;
+&lt;p&gt;The short answer is often: “If you can buy it, buy it. Build it only if you have to.” The &lt;em&gt;correct&lt;/em&gt; answer is usually more nuanced and, as usual, the devil is in the details.&lt;/p&gt;
 
-&lt;p&gt;To keep this fun, I&amp;rsquo;m going to tell a story about a company named &lt;em&gt;AppSmithy&lt;/em&gt;, its fictional CIO named &lt;em&gt;Bob&lt;/em&gt; and his IT department&amp;rsquo;s senior architect named &lt;em&gt;Doug&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;To keep this fun, I’m going to tell a story about a company named &lt;em&gt;AppSmithy&lt;/em&gt;, its fictional CIO named &lt;em&gt;Bob&lt;/em&gt; and his IT department’s senior architect named &lt;em&gt;Doug&lt;/em&gt;.&lt;/p&gt;
 
 &lt;p&gt;* C-MESA: Completely Meaningless Enterprise Solution Acronym&lt;/p&gt;
 
-&lt;h2&gt;Bob&amp;rsquo;s perspective&lt;/h2&gt;
+&lt;h2 id=&quot;bobs-perspective&quot;&gt;Bob’s perspective&lt;/h2&gt;
 
-&lt;p&gt;One of AppSmithy&amp;rsquo;s departments has come to Bob demanding a solution for &lt;em&gt;C-MESA&lt;/em&gt;. Bob&amp;rsquo;s thinks back to CIO school and remembers that you should always buy solutions. Not only that, but Bob knows &lt;em&gt;exactly&lt;/em&gt; what to buy. A vendor named &lt;em&gt;OrcaForceSoft&lt;/em&gt; has a &lt;em&gt;C-MESA&lt;/em&gt; product named &lt;em&gt;Executron&lt;/em&gt; which is perfect for AppSmithy! Bob knows this for one (or more) of the following reasons:&lt;/p&gt;
+&lt;p&gt;One of AppSmithy’s departments has come to Bob demanding a solution for &lt;em&gt;C-MESA&lt;/em&gt;. Bob’s thinks back to CIO school and remembers that you should always buy solutions. Not only that, but Bob knows &lt;em&gt;exactly&lt;/em&gt; what to buy. A vendor named &lt;em&gt;OrcaForceSoft&lt;/em&gt; has a &lt;em&gt;C-MESA&lt;/em&gt; product named &lt;em&gt;Executron&lt;/em&gt; which is perfect for AppSmithy! Bob knows this for one (or more) of the following reasons:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;OrcaForceSoft&lt;/em&gt; solved the same problem at a previous company&lt;/li&gt;
-&lt;li&gt;we don&amp;rsquo;t have the people and development skill to build &lt;em&gt;C-MESA&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;no one was ever being fired for buying &lt;em&gt;OrcaForceSoft&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;OrcaForceSoft&lt;/em&gt; solved the same problem at a previous company&lt;/li&gt;
+  &lt;li&gt;we don’t have the people and development skill to build &lt;em&gt;C-MESA&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;no one was ever being fired for buying &lt;em&gt;OrcaForceSoft&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;It&amp;rsquo;s only 10:00 am and the problem is already solved &amp;hellip; except that he&amp;rsquo;s going to have to get Doug to integrate &lt;em&gt;Executron&lt;/em&gt; with the rest of &lt;em&gt;AppSmithy&lt;/em&gt;&amp;lsquo;s architecture. And that means talking to Doug about it.&lt;/p&gt;
+&lt;p&gt;It’s only 10:00 am and the problem is already solved … except that he’s going to have to get Doug to integrate &lt;em&gt;Executron&lt;/em&gt; with the rest of &lt;em&gt;AppSmithy&lt;/em&gt;’s architecture. And that means talking to Doug about it.&lt;/p&gt;
 
-&lt;h2&gt;Doug&amp;rsquo;s perspective&lt;/h2&gt;
+&lt;h2 id=&quot;dougs-perspective&quot;&gt;Doug’s perspective&lt;/h2&gt;
 
-&lt;p&gt;Doug&amp;rsquo;s title at &lt;em&gt;AppSmithy&lt;/em&gt; is &amp;ldquo;Architect&amp;rdquo;, but he still thinks of himself as a developer at heart. Doug has been at &lt;em&gt;AppSmithy&lt;/em&gt; through a few different leadership changes. Doug thinks that Bob seems to be a pretty good guy, but he&amp;rsquo;s been burned in the past by CIO decisions.&lt;/p&gt;
+&lt;p&gt;Doug’s title at &lt;em&gt;AppSmithy&lt;/em&gt; is “Architect”, but he still thinks of himself as a developer at heart. Doug has been at &lt;em&gt;AppSmithy&lt;/em&gt; through a few different leadership changes. Doug thinks that Bob seems to be a pretty good guy, but he’s been burned in the past by CIO decisions.&lt;/p&gt;
 
 &lt;p&gt;Doug meets with Bob and hears about the need for &lt;em&gt;C-MESA&lt;/em&gt; and &lt;em&gt;Executron&lt;/em&gt;. He has an immediate negative reaction for a few reasons:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;OrcaForceSoft&lt;/em&gt; is really terrible to develop on, he doesn&amp;rsquo;t want to work on it&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;OrcaForceSoft&lt;/em&gt; uses a drug-dealer pricing scheme that will bleed us dry long after the leader has moved on from the company&lt;/li&gt;
-&lt;li&gt;how do we know &lt;em&gt;Executron&lt;/em&gt; is the best solution for &lt;em&gt;C-MESA&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;we could build a better &lt;em&gt;C-MESA&lt;/em&gt; in less time than &lt;em&gt;OrcaForceSoft&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;OrcaForceSoft&lt;/em&gt; must have a really convincing and/or attractive sales-person armed with free steak lunch and country-club membership&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;OrcaForceSoft&lt;/em&gt; is really terrible to develop on, he doesn’t want to work on it&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;OrcaForceSoft&lt;/em&gt; uses a drug-dealer pricing scheme that will bleed us dry long after the leader has moved on from the company&lt;/li&gt;
+  &lt;li&gt;how do we know &lt;em&gt;Executron&lt;/em&gt; is the best solution for &lt;em&gt;C-MESA&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;we could build a better &lt;em&gt;C-MESA&lt;/em&gt; in less time than &lt;em&gt;OrcaForceSoft&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;OrcaForceSoft&lt;/em&gt; must have a really convincing and/or attractive sales-person armed with free steak lunch and country-club membership&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2&gt;After the meeting&lt;/h2&gt;
+&lt;h2 id=&quot;after-the-meeting&quot;&gt;After the meeting&lt;/h2&gt;
 
-&lt;p&gt;Both Bob and Doug are a little deflated from the talk. Bob dismisses Doug&amp;rsquo;s concerns by telling himself that developers always want to build everything. Doug leaves thinking: &amp;ldquo;here we go again - prepare for another integration death-march&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;Both Bob and Doug are a little deflated from the talk. Bob dismisses Doug’s concerns by telling himself that developers always want to build everything. Doug leaves thinking: “here we go again - prepare for another integration death-march”.&lt;/p&gt;
 
 &lt;p&gt;Bob would like Doug to be able to see that the buy decision is clear:&lt;/p&gt;
 
-&lt;table&gt;&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Build&lt;/th&gt;
-&lt;th&gt;Buy&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Find an available dev team&lt;/td&gt;
-&lt;td&gt;Select commercial software&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Reschedule planned work&lt;/td&gt;
-&lt;td&gt;Hire expert contractors to install&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Deal with slipping schedule&lt;/td&gt;
-&lt;td&gt;Accept performance bonus&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Accept less than hoped for results&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Bugs, bugs, bugs&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Maintain forever&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;&lt;/table&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Build&lt;/th&gt;
+      &lt;th&gt;Buy&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Find an available dev team&lt;/td&gt;
+      &lt;td&gt;Select commercial software&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Reschedule planned work&lt;/td&gt;
+      &lt;td&gt;Hire expert contractors to install&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Deal with slipping schedule&lt;/td&gt;
+      &lt;td&gt;Accept performance bonus&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Accept less than hoped for results&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Bugs, bugs, bugs&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Maintain forever&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
 &lt;p&gt;Doug would like Bob to see that:&lt;/p&gt;
 
-&lt;table&gt;&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Build&lt;/th&gt;
-&lt;th&gt;Buy&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Keep domain knowledge in-house&lt;/td&gt;
-&lt;td&gt;Rent commercial software - there is no buy&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Build software that works with our business process&lt;/td&gt;
-&lt;td&gt;Hire expensive contractors who will build the functionality we need that is missing&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;Integration is difficult due to inferior APIs&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;&lt;/table&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Build&lt;/th&gt;
+      &lt;th&gt;Buy&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Keep domain knowledge in-house&lt;/td&gt;
+      &lt;td&gt;Rent commercial software - there is no buy&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Build software that works with our business process&lt;/td&gt;
+      &lt;td&gt;Hire expensive contractors who will build the functionality we need that is missing&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Integration is difficult due to inferior APIs&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
-&lt;h2&gt;The moral of the story&lt;/h2&gt;
+&lt;h2 id=&quot;the-moral-of-the-story&quot;&gt;The moral of the story&lt;/h2&gt;
 
 &lt;p&gt;Depending on the real-life product and need, both Bob and Doug could be correct. So the question is: how do you know what the right decision is?&lt;/p&gt;
 
-&lt;h2&gt;Initial questions to ask yourself&lt;/h2&gt;
+&lt;h2 id=&quot;initial-questions-to-ask-yourself&quot;&gt;Initial questions to ask yourself&lt;/h2&gt;
 
 &lt;p&gt;Bob and Doug started off on the wrong foot. The first thing they could have done was to start asking questions of the business:&lt;/p&gt;
 
-&lt;h3&gt;1. What does your business &lt;em&gt;really&lt;/em&gt; need?&lt;/h3&gt;
+&lt;h3 id=&quot;1-what-does-your-business-really-need&quot;&gt;1. What does your business &lt;em&gt;really&lt;/em&gt; need?&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;There is no such thing as an Agile build vs buy decision. You will need to perform a deep evaluation of requirements.&lt;/li&gt;
-&lt;li&gt;Trying to pick a &amp;ldquo;best of breed&amp;rdquo; solution assuming that it will work for your specific needs is risky.&lt;/li&gt;
-&lt;li&gt;Are your requirements something that are core to your business? Is the business process part of your &amp;ldquo;secret sauce&amp;rdquo; that makes your business unique?
-
-&lt;ul&gt;
-&lt;li&gt;If so, this could make you prefer an in-house implementation (unless you can find a product that allows you to maintain or improve this business process with minimal development/integration).&lt;/li&gt;
-&lt;li&gt;If not, you should lean to buying a solution - unless no suitable solution can be found.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Beware of talking about implementations (build) or solutions (buy) before deeply understanding the problem is a mistake and can cause you to make the wrong decision.&lt;/li&gt;
+  &lt;li&gt;There is no such thing as an Agile build vs buy decision. You will need to perform a deep evaluation of requirements.&lt;/li&gt;
+  &lt;li&gt;Trying to pick a “best of breed” solution assuming that it will work for your specific needs is risky.&lt;/li&gt;
+  &lt;li&gt;Are your requirements something that are core to your business? Is the business process part of your “secret sauce” that makes your business unique?
+    &lt;ul&gt;
+      &lt;li&gt;If so, this could make you prefer an in-house implementation (unless you can find a product that allows you to maintain or improve this business process with minimal development/integration).&lt;/li&gt;
+      &lt;li&gt;If not, you should lean to buying a solution - unless no suitable solution can be found.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Beware of talking about implementations (build) or solutions (buy) before deeply understanding the problem is a mistake and can cause you to make the wrong decision.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3&gt;2. What is the impact to your business?&lt;/h3&gt;
+&lt;h3 id=&quot;2-what-is-the-impact-to-your-business&quot;&gt;2. What is the impact to your business?&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Is the new application going to be used to create a new business process? Duplicating an existing business process (presumably introducing efficiencies)? Replacing an existing Business Process?
-
-&lt;ul&gt;
-&lt;li&gt;Are there simpler short-cuts (glue-code) that could facilitate this improvement?&lt;/li&gt;
-&lt;li&gt;Are there existing systems in your enterprise that could fulfill the need?&lt;/li&gt;
-&lt;li&gt;Has the new business process been vetted with all concerned parties?&lt;/li&gt;
-&lt;li&gt;Unexpected change is disruptive. Is the potential disruption worth other value gained?&lt;/li&gt;
-&lt;li&gt;Are there additional processes that will be impacted by the process changes?&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Is the business ready to invest in the project by dedicating end-users and subject matter experts to consult with the development or implementation team? Taking on a project before the business is ready to fully engage with the process will make you build the wrong thing or even fail.&lt;/li&gt;
+  &lt;li&gt;Is the new application going to be used to create a new business process? Duplicating an existing business process (presumably introducing efficiencies)? Replacing an existing Business Process?
+    &lt;ul&gt;
+      &lt;li&gt;Are there simpler short-cuts (glue-code) that could facilitate this improvement?&lt;/li&gt;
+      &lt;li&gt;Are there existing systems in your enterprise that could fulfill the need?&lt;/li&gt;
+      &lt;li&gt;Has the new business process been vetted with all concerned parties?&lt;/li&gt;
+      &lt;li&gt;Unexpected change is disruptive. Is the potential disruption worth other value gained?&lt;/li&gt;
+      &lt;li&gt;Are there additional processes that will be impacted by the process changes?&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Is the business ready to invest in the project by dedicating end-users and subject matter experts to consult with the development or implementation team? Taking on a project before the business is ready to fully engage with the process will make you build the wrong thing or even fail.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Once you know what the impact and your needs are, you are armed to determine if there is a product available that truly meets your needs.&lt;/p&gt;
 
-&lt;h2&gt;Evaluating enterprise applications&lt;/h2&gt;
+&lt;h2 id=&quot;evaluating-enterprise-applications&quot;&gt;Evaluating enterprise applications&lt;/h2&gt;
 
-&lt;h3&gt;1. Beware of buying the wrong solution.&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Make sure to do a full survey of the market&lt;/li&gt;
-&lt;li&gt;Just because you already have an &lt;em&gt;OrkaForceSoft&lt;/em&gt; install-base does not mean that &lt;em&gt;OrkaForceSoft: Executron&lt;/em&gt; is what YOU need
+&lt;h3 id=&quot;1-beware-of-buying-the-wrong-solution&quot;&gt;1. Beware of buying the wrong solution.&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Competitors may have a solution that fits your needs better&lt;/li&gt;
-&lt;li&gt;&lt;span class=&quot;pullquote&quot;&gt;&lt;p&gt;Integration between a company&amp;rsquo;s components are often not as seamless as you&amp;rsquo;d expect&lt;/p&gt;
+  &lt;li&gt;Make sure to do a full survey of the market&lt;/li&gt;
+  &lt;li&gt;Just because you already have an &lt;em&gt;OrkaForceSoft&lt;/em&gt; install-base does not mean that &lt;em&gt;OrkaForceSoft: Executron&lt;/em&gt; is what YOU need
+    &lt;ul&gt;
+      &lt;li&gt;Competitors may have a solution that fits your needs better&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;pullquote&quot;&gt;&amp;lt;p&amp;gt;Integration between a company’s components are often not as seamless as you’d expect&amp;lt;/p&amp;gt;
 &lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3&gt;2. Get references for similar companies that have implemented this application.&lt;/h3&gt;
+&lt;h3 id=&quot;2-get-references-for-similar-companies-that-have-implemented-this-application&quot;&gt;2. Get references for similar companies that have implemented this application.&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Prefer companies that aren&amp;rsquo;t provided by the vendor (if you can find them)&lt;/li&gt;
-&lt;li&gt;Get independent opinions you can trust&lt;/li&gt;
-&lt;li&gt;When exploring solutions, include independent opinions, i.e.:
-
-&lt;ul&gt;
-&lt;li&gt;Not the contracting company that you would hire to implement the solution&lt;/li&gt;
-&lt;li&gt;Not the team in charge of your existing &lt;em&gt;OrcaForceSoft&lt;/em&gt; products
-
-&lt;ul&gt;
-&lt;li&gt;If you ask the man with the hammer, he will tell you that the problem is a nail&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+  &lt;li&gt;Prefer companies that aren’t provided by the vendor (if you can find them)&lt;/li&gt;
+  &lt;li&gt;Get independent opinions you can trust&lt;/li&gt;
+  &lt;li&gt;When exploring solutions, include independent opinions, i.e.:
+    &lt;ul&gt;
+      &lt;li&gt;Not the contracting company that you would hire to implement the solution&lt;/li&gt;
+      &lt;li&gt;Not the team in charge of your existing &lt;em&gt;OrcaForceSoft&lt;/em&gt; products
+        &lt;ul&gt;
+          &lt;li&gt;If you ask the man with the hammer, he will tell you that the problem is a nail&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3&gt;3. What percentage of the software do you intend to use?&lt;/h3&gt;
+&lt;h3 id=&quot;3-what-percentage-of-the-software-do-you-intend-to-use&quot;&gt;3. What percentage of the software do you intend to use?&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Does it make sense to purchase an expensive product and use only 10% of its functionality?&lt;/li&gt;
-&lt;li&gt;What if you have to implement/customize another 80% of the functionality?&lt;/li&gt;
-&lt;li&gt;Buying a solution that requires extensive changes to meet requirements can be more expensive than building what you need instead&lt;/li&gt;
-&lt;li&gt;It&amp;rsquo;s a mistake to place a higher value on breadth of features instead of support for features you actually will be using&lt;/li&gt;
+  &lt;li&gt;Does it make sense to purchase an expensive product and use only 10% of its functionality?&lt;/li&gt;
+  &lt;li&gt;What if you have to implement/customize another 80% of the functionality?&lt;/li&gt;
+  &lt;li&gt;Buying a solution that requires extensive changes to meet requirements can be more expensive than building what you need instead&lt;/li&gt;
+  &lt;li&gt;It’s a mistake to place a higher value on breadth of features instead of support for features you actually will be using&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3&gt;4. Evaluate the development cycle of the application&lt;/h3&gt;
+&lt;h3 id=&quot;4-evaluate-the-development-cycle-of-the-application&quot;&gt;4. Evaluate the development cycle of the application&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Most vendors are willing to do a &lt;em&gt;Proof of Concept&lt;/em&gt; installation if you define the success criteria up-front&lt;/li&gt;
-&lt;li&gt;Even if your developers aren&amp;rsquo;t doing the development on the product, it will be a good indicator of how difficult your installation and maintenance will be&lt;/li&gt;
-&lt;li&gt;How open is the documentation?
-
-&lt;ul&gt;
-&lt;li&gt;Documentation should be publicly available&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Examine the APIs that permit customization
-
-&lt;ul&gt;
-&lt;li&gt;Do these APIs permit the kinds of customizations that you&amp;rsquo;ll need to make?&lt;/li&gt;
-&lt;li&gt;Will you have to rely on one-off changes in the code that will be difficult to support in the future?&lt;/li&gt;
-&lt;li&gt;Can your extensions/customizations be subjected to good code practices (e.g., Version Control, Automated Testing)?&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;How difficult (or possible) is integration with other applications?
-
-&lt;ul&gt;
-&lt;li&gt;How well does it fit into your company standards for integration (i.e., SOA, REST)&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Examine the community and culture around customization of the tool.
-
-&lt;ul&gt;
-&lt;li&gt;Is the community open, welcoming and lively?&lt;/li&gt;
-&lt;li&gt;Will finding answers to questions be easy?
-
-&lt;ul&gt;
-&lt;li&gt;Is there an on-line forum where questions are answered quickly?&lt;/li&gt;
-&lt;li&gt;Are there independent communities of developers who respond to questions in places like &lt;a href=&quot;http://stackoverflow.com/&quot;&gt;Stack Overflow&lt;/a&gt;?&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Examine the upgrade process
-
-&lt;ul&gt;
-&lt;li&gt;What is the release schedule frequency?&lt;/li&gt;
-&lt;li&gt;How are your local customizations re-applied after a new release?
-
-&lt;ul&gt;
-&lt;li&gt;In a poorly structured product, the customizations you make to the software may make upgrades and bug fixes difficult to virtually impossible&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;How much down-time is required for upgrades?
-
-&lt;ul&gt;
-&lt;li&gt;Does it work for your future needs for up-time?&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+  &lt;li&gt;Most vendors are willing to do a &lt;em&gt;Proof of Concept&lt;/em&gt; installation if you define the success criteria up-front&lt;/li&gt;
+  &lt;li&gt;Even if your developers aren’t doing the development on the product, it will be a good indicator of how difficult your installation and maintenance will be&lt;/li&gt;
+  &lt;li&gt;How open is the documentation?
+    &lt;ul&gt;
+      &lt;li&gt;Documentation should be publicly available&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Examine the APIs that permit customization
+    &lt;ul&gt;
+      &lt;li&gt;Do these APIs permit the kinds of customizations that you’ll need to make?&lt;/li&gt;
+      &lt;li&gt;Will you have to rely on one-off changes in the code that will be difficult to support in the future?&lt;/li&gt;
+      &lt;li&gt;Can your extensions/customizations be subjected to good code practices (e.g., Version Control, Automated Testing)?&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;How difficult (or possible) is integration with other applications?
+    &lt;ul&gt;
+      &lt;li&gt;How well does it fit into your company standards for integration (i.e., SOA, REST)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Examine the community and culture around customization of the tool.
+    &lt;ul&gt;
+      &lt;li&gt;Is the community open, welcoming and lively?&lt;/li&gt;
+      &lt;li&gt;Will finding answers to questions be easy?
+        &lt;ul&gt;
+          &lt;li&gt;Is there an on-line forum where questions are answered quickly?&lt;/li&gt;
+          &lt;li&gt;Are there independent communities of developers who respond to questions in places like &lt;a href=&quot;http://stackoverflow.com/&quot;&gt;Stack Overflow&lt;/a&gt;?&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Examine the upgrade process
+    &lt;ul&gt;
+      &lt;li&gt;What is the release schedule frequency?&lt;/li&gt;
+      &lt;li&gt;How are your local customizations re-applied after a new release?
+        &lt;ul&gt;
+          &lt;li&gt;In a poorly structured product, the customizations you make to the software may make upgrades and bug fixes difficult to virtually impossible&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;How much down-time is required for upgrades?
+        &lt;ul&gt;
+          &lt;li&gt;Does it work for your future needs for up-time?&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3&gt;5. Does the software support the work-flow that your end-users expect?&lt;/h3&gt;
+&lt;h3 id=&quot;5-does-the-software-support-the-work-flow-that-your-end-users-expect&quot;&gt;5. Does the software support the work-flow that your end-users expect?&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Enterprise software is usually opinionated on how things should be done and implementing significantly different business process can be time-consuming.&lt;/li&gt;
-&lt;li&gt;Can your business process change to match the process inherent in the new software? Will the change be accepted?&lt;/li&gt;
-&lt;li&gt;Are you willing to make the changes to the software to make it match your current business process?&lt;/li&gt;
-&lt;li&gt;Beware of buying a solution that requires process changes that haven&amp;rsquo;t been agreed to by the users&lt;/li&gt;
+  &lt;li&gt;Enterprise software is usually opinionated on how things should be done and implementing significantly different business process can be time-consuming.&lt;/li&gt;
+  &lt;li&gt;Can your business process change to match the process inherent in the new software? Will the change be accepted?&lt;/li&gt;
+  &lt;li&gt;Are you willing to make the changes to the software to make it match your current business process?&lt;/li&gt;
+  &lt;li&gt;Beware of buying a solution that requires process changes that haven’t been agreed to by the users&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3&gt;6. Real enterprise software costs&lt;/h3&gt;
+&lt;h3 id=&quot;6-real-enterprise-software-costs&quot;&gt;6. Real enterprise software costs&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Yearly license &amp;amp; support fees
-
-&lt;ul&gt;
-&lt;li&gt;What happens when you scale your deployment?&lt;/li&gt;
-&lt;li&gt;Licensing fees will need to be negotiated periodically.&lt;/li&gt;
-&lt;li&gt;Are you buying your software from the enterprise equivalent of the corner drug dealer?
-
-&lt;ul&gt;
-&lt;li&gt;Is it &amp;ldquo;free&amp;rdquo; for the first year?&lt;/li&gt;
-&lt;li&gt;After that?&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;A team of DevOps and developers with experience in this tool.
-
-&lt;ul&gt;
-&lt;li&gt;Typically these will be specialist contractors and can be expensive.&lt;/li&gt;
-&lt;li&gt;This team won&amp;rsquo;t usually go away once the software is deployed.&lt;/li&gt;
-&lt;li&gt;Custom work will continually be demanded by your users.&lt;/li&gt;
-&lt;li&gt;The software will require maintenance releases and DevOps monitoring.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+  &lt;li&gt;Yearly license &amp;amp; support fees
+    &lt;ul&gt;
+      &lt;li&gt;What happens when you scale your deployment?&lt;/li&gt;
+      &lt;li&gt;Licensing fees will need to be negotiated periodically.&lt;/li&gt;
+      &lt;li&gt;Are you buying your software from the enterprise equivalent of the corner drug dealer?
+        &lt;ul&gt;
+          &lt;li&gt;Is it “free” for the first year?&lt;/li&gt;
+          &lt;li&gt;After that?&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;A team of DevOps and developers with experience in this tool.
+    &lt;ul&gt;
+      &lt;li&gt;Typically these will be specialist contractors and can be expensive.&lt;/li&gt;
+      &lt;li&gt;This team won’t usually go away once the software is deployed.&lt;/li&gt;
+      &lt;li&gt;Custom work will continually be demanded by your users.&lt;/li&gt;
+      &lt;li&gt;The software will require maintenance releases and DevOps monitoring.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3&gt;Building gotchas&lt;/h3&gt;
+&lt;h3 id=&quot;building-gotchas&quot;&gt;Building gotchas&lt;/h3&gt;
 
 &lt;p&gt;Building the software yourself comes with its own set of difficulties (well beyond the scope of this already lengthy piece). Here are a few items to watch for.&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Building with the wrong technology.&lt;/em&gt; It&amp;rsquo;s a common fault to use the technology stack of an available development team instead of using the stack that best addresses the problem.&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Building with the wrong team.&lt;/em&gt; A development team that works well in one domain may struggle in another.&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Over-building the solution (gold-plating).&lt;/em&gt; You have the opportunity to build something that is just good enough &amp;ndash; don&amp;rsquo;t waste it.&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;You need good engagement&lt;/em&gt; with the end-users in order to quickly and successfully build software.&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Building software is expensive.&lt;/em&gt; Consider both apparent costs and opportunity costs.&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Secret Sauce:&lt;/em&gt; if you aren&amp;rsquo;t adding to your &amp;ldquo;secret sauce&amp;rdquo; you probably shouldn&amp;rsquo;t be building it.&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;New Technology Learning Curve:&lt;/em&gt; be sure to allow for the time it will take for developers to learn a new language/framework/tool-set.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Building with the wrong technology.&lt;/em&gt; It’s a common fault to use the technology stack of an available development team instead of using the stack that best addresses the problem.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Building with the wrong team.&lt;/em&gt; A development team that works well in one domain may struggle in another.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Over-building the solution (gold-plating).&lt;/em&gt; You have the opportunity to build something that is just good enough – don’t waste it.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;You need good engagement&lt;/em&gt; with the end-users in order to quickly and successfully build software.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Building software is expensive.&lt;/em&gt; Consider both apparent costs and opportunity costs.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Secret Sauce:&lt;/em&gt; if you aren’t adding to your “secret sauce” you probably shouldn’t be building it.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;New Technology Learning Curve:&lt;/em&gt; be sure to allow for the time it will take for developers to learn a new language/framework/tool-set.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2&gt;The ugly truth about enterprise software: it&amp;rsquo;s not COTS&lt;/h2&gt;
+&lt;h2 id=&quot;the-ugly-truth-about-enterprise-software-its-not-cots&quot;&gt;The ugly truth about enterprise software: it’s not COTS&lt;/h2&gt;
 
-&lt;p&gt;The ugly truth is that Enterprise Software isn&amp;rsquo;t bought, installed and used. Enterprise Software is bought and installed, then modified, extended, folded, spindled and mutilated by expensive contractors. This leads to unexpected costs, maintenance, and wailing and gnashing of teeth.&lt;/p&gt;
+&lt;p&gt;The ugly truth is that Enterprise Software isn’t bought, installed and used. Enterprise Software is bought and installed, then modified, extended, folded, spindled and mutilated by expensive contractors. This leads to unexpected costs, maintenance, and wailing and gnashing of teeth.&lt;/p&gt;
 
-&lt;p&gt;When you buy a product like Microsoft Exchange, you will have a certain amount of work involved in configuring it for your Enterprise. Setting up rules, defining domains, adding your employees to the directory (or integrating with an existing directory), etc. However, it&amp;rsquo;s largely a discrete project &amp;ndash; plan-able and relatively predictable.&lt;/p&gt;
+&lt;p&gt;When you buy a product like Microsoft Exchange, you will have a certain amount of work involved in configuring it for your Enterprise. Setting up rules, defining domains, adding your employees to the directory (or integrating with an existing directory), etc. However, it’s largely a discrete project – plan-able and relatively predictable.&lt;/p&gt;
 
-&lt;p&gt;When you buy something like a billing suite or a sales tool, it&amp;rsquo;s a &lt;em&gt;completely&lt;/em&gt; different story.&lt;/p&gt;
+&lt;p&gt;When you buy something like a billing suite or a sales tool, it’s a &lt;em&gt;completely&lt;/em&gt; different story.&lt;/p&gt;
 
 &lt;p&gt;If your requirements are between building a system or buying (and customizing) a commercial solution, you are really deciding between: building with your developers and tool-set and building in a framework that requires external developers and yearly license fees.&lt;/p&gt;
 
-&lt;p&gt;This isn&amp;rsquo;t to say that you should build everything. But you should definitely go into the decision with open eyes about the real costs and benefits with each approach.&lt;/p&gt;
+&lt;p&gt;This isn’t to say that you should build everything. But you should definitely go into the decision with open eyes about the real costs and benefits with each approach.&lt;/p&gt;
 </description>
         <pubDate>Mon, 13 Jul 2015 00:00:00 -0500</pubDate>
         <link>http://markmorga.com/software/2015/07/13/build-vs-buy.html</link>
@@ -603,36 +630,18 @@ map name.
     
       <item>
         <title>Environments to Learn Programming</title>
-        <description>&lt;p&gt;I&amp;rsquo;ve come across some environments built to help people (and especially kids) to learn programming.&lt;/p&gt;
+        <description>&lt;p&gt;I’ve come across some environments built to help people (and especially kids) to learn programming.&lt;/p&gt;
 
-&lt;p&gt;&lt;picture&gt;
-    &lt;source srcset=&quot;http://markmorga.com/generated/article_images/2015-07-09-environments-to-learn-programming/sonic-pi-logo-900by877-ba8668.png&quot; media=&quot;(min-width: 40em) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 40em) and (min-resolution: 144dpi)&quot;&gt;
-    &lt;source srcset=&quot;http://markmorga.com/generated/article_images/2015-07-09-environments-to-learn-programming/sonic-pi-logo-600by585-ba8668.png&quot; media=&quot;(min-width: 40em)&quot;&gt;
-    &lt;source srcset=&quot;http://markmorga.com/generated/article_images/2015-07-09-environments-to-learn-programming/sonic-pi-logo-315by307-ba8668.png&quot; media=&quot;(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)&quot;&gt;
-    &lt;source srcset=&quot;http://markmorga.com/generated/article_images/2015-07-09-environments-to-learn-programming/sonic-pi-logo-210by205-ba8668.png&quot;&gt;
-    &lt;img src=&quot;http://markmorga.com/generated/article_images/2015-07-09-environments-to-learn-programming/sonic-pi-logo-210by205-ba8668.png&quot; itemprop=&quot;image&quot; class=&quot;img-float-right&quot; &gt;
-  &lt;/picture&gt;
- &lt;a href=&quot;http://sonic-pi.net/&quot;&gt;Sonic Pi&lt;/a&gt; is perfect for people with an interest in music. It’s a live coding synthesizer that lets you perform music using code (a &lt;a href=&quot;https://www.ruby-lang.org/en/&quot;&gt;Ruby&lt;/a&gt; &lt;a href=&quot;https://en.wikipedia.org/wiki/Domain-specific_language&quot;&gt;DSL&lt;/a&gt;). Check out the demos – it’s pretty cool. One of the authors actually uses it for live gigs in nightclubs.&lt;/p&gt;
+&lt;picture&gt;&lt;source sizes=&quot;(max-width: 480px) calc(100vw - 16px), (max-width: 768) 80vw, (max-width: 1024px) 50vw&quot; srcset=&quot;/generated/article_images/2015-07-09-environments-to-learn-programming/sonic-pi-logo-200-c97ef2117.webp 200w, /generated/article_images/2015-07-09-environments-to-learn-programming/sonic-pi-logo-400-c97ef2117.webp 400w, /generated/article_images/2015-07-09-environments-to-learn-programming/sonic-pi-logo-800-c97ef2117.webp 800w, /generated/article_images/2015-07-09-environments-to-learn-programming/sonic-pi-logo-1200-c97ef2117.webp 1200w, /generated/article_images/2015-07-09-environments-to-learn-programming/sonic-pi-logo-1564-c97ef2117.webp 1564w&quot; type=&quot;image/webp&quot; /&gt;&lt;source sizes=&quot;(max-width: 480px) calc(100vw - 16px), (max-width: 768) 80vw, (max-width: 1024px) 50vw&quot; srcset=&quot;/generated/article_images/2015-07-09-environments-to-learn-programming/sonic-pi-logo-200-3d8de75e8.png 200w, /generated/article_images/2015-07-09-environments-to-learn-programming/sonic-pi-logo-400-3d8de75e8.png 400w, /generated/article_images/2015-07-09-environments-to-learn-programming/sonic-pi-logo-800-3d8de75e8.png 800w, /generated/article_images/2015-07-09-environments-to-learn-programming/sonic-pi-logo-1200-3d8de75e8.png 1200w, /generated/article_images/2015-07-09-environments-to-learn-programming/sonic-pi-logo-1564-3d8de75e8.png 1564w&quot; type=&quot;image/png&quot; /&gt;&lt;img src=&quot;/generated/article_images/2015-07-09-environments-to-learn-programming/sonic-pi-logo-800-3d8de75e8.png&quot; /&gt;&lt;/picture&gt;
+&lt;p&gt;&lt;a href=&quot;http://sonic-pi.net/&quot;&gt;Sonic Pi&lt;/a&gt; is perfect for people with an interest in music. It’s a live coding synthesizer that lets you perform music using code (a &lt;a href=&quot;https://www.ruby-lang.org/en/&quot;&gt;Ruby&lt;/a&gt; &lt;a href=&quot;https://en.wikipedia.org/wiki/Domain-specific_language&quot;&gt;DSL&lt;/a&gt;). Check out the demos – it’s pretty cool. One of the authors actually uses it for live gigs in nightclubs.&lt;/p&gt;
 
-&lt;p&gt;&lt;picture&gt;
-    &lt;source srcset=&quot;http://markmorga.com/generated/article_images/2015-07-09-environments-to-learn-programming/pharo-logo-471by155-f18864.png&quot; media=&quot;(min-width: 40em) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 40em) and (min-resolution: 144dpi)&quot;&gt;
-    &lt;source srcset=&quot;http://markmorga.com/generated/article_images/2015-07-09-environments-to-learn-programming/pharo-logo-471by155-f18864.png&quot; media=&quot;(min-width: 40em)&quot;&gt;
-    &lt;source srcset=&quot;http://markmorga.com/generated/article_images/2015-07-09-environments-to-learn-programming/pharo-logo-315by104-f18864.png&quot; media=&quot;(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)&quot;&gt;
-    &lt;source srcset=&quot;http://markmorga.com/generated/article_images/2015-07-09-environments-to-learn-programming/pharo-logo-210by69-f18864.png&quot;&gt;
-    &lt;img src=&quot;http://markmorga.com/generated/article_images/2015-07-09-environments-to-learn-programming/pharo-logo-210by69-f18864.png&quot; itemprop=&quot;image&quot; class=&quot;img-float-left&quot; &gt;
-  &lt;/picture&gt;
- &lt;a href=&quot;http://pharo.org/&quot;&gt;Pharo&lt;/a&gt; is a &lt;a href=&quot;http://www.smalltalk.org/main/&quot;&gt;Smalltalk&lt;/a&gt; implementation designed for learning. Very cool features and live code browser. When you run it, it starts a tutorial to learn Smalltalk.&lt;/p&gt;
+&lt;picture&gt;&lt;source sizes=&quot;(max-width: 480px) calc(100vw - 16px), (max-width: 768) 80vw, (max-width: 1024px) 50vw&quot; srcset=&quot;/generated/article_images/2015-07-09-environments-to-learn-programming/pharo-logo-200-ca0ffe147.webp 200w, /generated/article_images/2015-07-09-environments-to-learn-programming/pharo-logo-400-ca0ffe147.webp 400w, /generated/article_images/2015-07-09-environments-to-learn-programming/pharo-logo-471-ca0ffe147.webp 471w&quot; type=&quot;image/webp&quot; /&gt;&lt;source sizes=&quot;(max-width: 480px) calc(100vw - 16px), (max-width: 768) 80vw, (max-width: 1024px) 50vw&quot; srcset=&quot;/generated/article_images/2015-07-09-environments-to-learn-programming/pharo-logo-200-94cae9d80.png 200w, /generated/article_images/2015-07-09-environments-to-learn-programming/pharo-logo-400-94cae9d80.png 400w, /generated/article_images/2015-07-09-environments-to-learn-programming/pharo-logo-471-94cae9d80.png 471w&quot; type=&quot;image/png&quot; /&gt;&lt;img src=&quot;/generated/article_images/2015-07-09-environments-to-learn-programming/pharo-logo-471-94cae9d80.png&quot; /&gt;&lt;/picture&gt;
+&lt;p&gt;&lt;a href=&quot;http://pharo.org/&quot;&gt;Pharo&lt;/a&gt; is a &lt;a href=&quot;http://www.smalltalk.org/main/&quot;&gt;Smalltalk&lt;/a&gt; implementation designed for learning. Very cool features and live code browser. When you run it, it starts a tutorial to learn Smalltalk.&lt;/p&gt;
 
 &lt;p&gt;Finally &lt;a href=&quot;http://ipython.org/&quot;&gt;iPython&lt;/a&gt; started off as an improved &lt;a href=&quot;https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop&quot;&gt;REPL&lt;/a&gt; for &lt;a href=&quot;https://www.python.org/&quot;&gt;Python&lt;/a&gt;. The notebook module added the ability for a web browser to display an interactive environment that supports the display of cells with Markdown rendering, editable code blocks that you can edit and run in the browser and graphics libraries to draw dynamic graphics. Notebooks are JSON files, so you can download lots of pre-made ones including a couple that teach Python programming. There are some &lt;a href=&quot;http://ipython.org/videos.html#videos&quot;&gt;videos&lt;/a&gt; which show off the features available.&lt;/p&gt;
 
-&lt;p&gt;&lt;picture&gt;
-    &lt;source srcset=&quot;http://markmorga.com/generated/article_images/2015-07-09-environments-to-learn-programming/jupyter-sq-text-440by440-0638b7.png&quot; media=&quot;(min-width: 40em) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 40em) and (min-resolution: 144dpi)&quot;&gt;
-    &lt;source srcset=&quot;http://markmorga.com/generated/article_images/2015-07-09-environments-to-learn-programming/jupyter-sq-text-440by440-0638b7.png&quot; media=&quot;(min-width: 40em)&quot;&gt;
-    &lt;source srcset=&quot;http://markmorga.com/generated/article_images/2015-07-09-environments-to-learn-programming/jupyter-sq-text-315by315-0638b7.png&quot; media=&quot;(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)&quot;&gt;
-    &lt;source srcset=&quot;http://markmorga.com/generated/article_images/2015-07-09-environments-to-learn-programming/jupyter-sq-text-210by210-0638b7.png&quot;&gt;
-    &lt;img src=&quot;http://markmorga.com/generated/article_images/2015-07-09-environments-to-learn-programming/jupyter-sq-text-210by210-0638b7.png&quot; itemprop=&quot;image&quot; class=&quot;img-float-right&quot; &gt;
-  &lt;/picture&gt;
-The &lt;a href=&quot;https://jupyter.org/&quot;&gt;Jupyter&lt;/a&gt; project is forking from iPython to provide the same feature set but allowing code engines that support other languages like R, Ruby, Go, etc. &lt;a href=&quot;http://ipython.org/install.html&quot;&gt;Installing and getting it all working&lt;/a&gt; is more involved than the above options so I can’t recommend it as highly, but it’s worth looking at. I can see it being a useful tool when you are exploring some techniques or munging some data.&lt;/p&gt;
+&lt;picture&gt;&lt;source sizes=&quot;(max-width: 480px) calc(100vw - 16px), (max-width: 768) 80vw, (max-width: 1024px) 50vw&quot; srcset=&quot;/generated/article_images/2015-07-09-environments-to-learn-programming/jupyter-sq-text-200-bb9715fe9.webp 200w, /generated/article_images/2015-07-09-environments-to-learn-programming/jupyter-sq-text-400-bb9715fe9.webp 400w, /generated/article_images/2015-07-09-environments-to-learn-programming/jupyter-sq-text-440-bb9715fe9.webp 440w&quot; type=&quot;image/webp&quot; /&gt;&lt;source sizes=&quot;(max-width: 480px) calc(100vw - 16px), (max-width: 768) 80vw, (max-width: 1024px) 50vw&quot; srcset=&quot;/generated/article_images/2015-07-09-environments-to-learn-programming/jupyter-sq-text-200-cc783d648.png 200w, /generated/article_images/2015-07-09-environments-to-learn-programming/jupyter-sq-text-400-cc783d648.png 400w, /generated/article_images/2015-07-09-environments-to-learn-programming/jupyter-sq-text-440-cc783d648.png 440w&quot; type=&quot;image/png&quot; /&gt;&lt;img src=&quot;/generated/article_images/2015-07-09-environments-to-learn-programming/jupyter-sq-text-440-cc783d648.png&quot; /&gt;&lt;/picture&gt;
+&lt;p&gt;The &lt;a href=&quot;https://jupyter.org/&quot;&gt;Jupyter&lt;/a&gt; project is forking from iPython to provide the same feature set but allowing code engines that support other languages like R, Ruby, Go, etc. &lt;a href=&quot;http://ipython.org/install.html&quot;&gt;Installing and getting it all working&lt;/a&gt; is more involved than the above options so I can’t recommend it as highly, but it’s worth looking at. I can see it being a useful tool when you are exploring some techniques or munging some data.&lt;/p&gt;
 </description>
         <pubDate>Thu, 09 Jul 2015 00:00:00 -0500</pubDate>
         <link>http://markmorga.com/software/2015/07/09/environments-to-learn-programming.html</link>
@@ -663,33 +672,34 @@ The &lt;a href=&quot;https://jupyter.org/&quot;&gt;Jupyter&lt;/a&gt; project is 
     
       <item>
         <title>UML Diagrams from Graphviz</title>
-        <description>&lt;p&gt;I&amp;rsquo;m not a huge fan of UML. I think it took a simple idea (standard conceptual drawings) and made it much more complex than necessary with the unwise goal of allowing commercial UML tools to flourish and make code-to-diagram round trip conversion something people might want to do. Something like MagicDraw I find horrible from a performance and usability perspective.&lt;/p&gt;
+        <description>&lt;p&gt;I’m not a huge fan of UML. I think it took a simple idea (standard conceptual drawings) and made it much more complex than necessary with the unwise goal of allowing commercial UML tools to flourish and make code-to-diagram round trip conversion something people might want to do. Something like MagicDraw I find horrible from a performance and usability perspective.&lt;/p&gt;
 
-&lt;p&gt;I&amp;rsquo;m also not a big fan of a lot of drawing software. Visio is great unless you don&amp;rsquo;t run on Windows, don&amp;rsquo;t own a copy, or care about usability. Omnigraffle on the Mac is arguably better on the usability front, but you still end up tweaking the drawing a lot more than just entering your relationships and drawing connections. With any drawing software, the saved file is not human readable - and looking at diffs in a source control system tells you nothing&lt;/p&gt;
+&lt;p&gt;I’m also not a big fan of a lot of drawing software. Visio is great unless you don’t run on Windows, don’t own a copy, or care about usability. Omnigraffle on the Mac is arguably better on the usability front, but you still end up tweaking the drawing a lot more than just entering your relationships and drawing connections. With any drawing software, the saved file is not human readable - and looking at diffs in a source control system tells you nothing&lt;/p&gt;
 
 &lt;p&gt;I like Graphviz for making quick drawings that are minimalistic and take away the tweaking factor of a lot of apps. You describe the nodes and edges and Graphviz figures out how to handle the layout of the drawing. Need to add something later? No problem, just put it in the dot file and regenerate your results.&lt;/p&gt;
 
 &lt;p&gt;Graphviz has the advantages of:&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;Runs everywhere&lt;/li&gt;
-&lt;li&gt;Free&lt;/li&gt;
-&lt;li&gt;Text based - diff friendly changes&lt;/li&gt;
-&lt;li&gt;Supports a wide variety of output formats: bmp, eps, fig, gd, gd2, gif, gtk, ico, imap, cmapx, jpg, pdf, plain, png, ps, svg, tiff, vml, vrml, wbmp, webp, xlib&lt;/li&gt;
+  &lt;li&gt;Runs everywhere&lt;/li&gt;
+  &lt;li&gt;Free&lt;/li&gt;
+  &lt;li&gt;Text based - diff friendly changes&lt;/li&gt;
+  &lt;li&gt;Supports a wide variety of output formats: bmp, eps, fig, gd, gd2, gif, gtk, ico, imap, cmapx, jpg, pdf, plain, png, ps, svg, tiff, vml, vrml, wbmp, webp, xlib&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;Graphviz&amp;rsquo;s disadvantages:&lt;/p&gt;
+&lt;p&gt;Graphviz’s disadvantages:&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;Sometimes the layout is less than perfect&lt;/li&gt;
-&lt;li&gt;The output is pretty plain unless you spend a lot of adding style in the dot (which hurts the simplicity of the input format). Or spend time tweaking the output format (which gets you back into the image software trap)&lt;/li&gt;
-&lt;li&gt;Doesn&amp;rsquo;t support UML style graphics&lt;/li&gt;
+  &lt;li&gt;Sometimes the layout is less than perfect&lt;/li&gt;
+  &lt;li&gt;The output is pretty plain unless you spend a lot of adding style in the dot (which hurts the simplicity of the input format). Or spend time tweaking the output format (which gets you back into the image software trap)&lt;/li&gt;
+  &lt;li&gt;Doesn’t support UML style graphics&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;For a long time graphviz supported the inclusion of PostScript files to define shapes, but this was only useful if you were outputting PostScript as a final result. I like using SVG as my format of choice since it can be freely scaled and works in most web browsers these days. Looking around the other day, I found a reference to the fact that Graphviz also supports the inclusion of SVG files as an image format.  With a little experimentation, I found that it works pretty well.&lt;/p&gt;
 
 &lt;p&gt;First, I created a series of UML images in SVG format for inclusion. The full set is in the GitHub project referenced below, but an example for a Component icon looks like this:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&amp;gt;&lt;/span&gt;
+
+&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;svg&lt;/span&gt;
    &lt;span class=&quot;na&quot;&gt;xmlns:svg=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://www.w3.org/2000/svg&quot;&lt;/span&gt;
    &lt;span class=&quot;na&quot;&gt;xmlns=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://www.w3.org/2000/svg&quot;&lt;/span&gt;
@@ -716,9 +726,11 @@ The &lt;a href=&quot;https://jupyter.org/&quot;&gt;Jupyter&lt;/a&gt; project is 
         &lt;span class=&quot;nt&quot;&gt;&amp;lt;use&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;x=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;72&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;y=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;4&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;xlink:href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;#component-badge&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;15&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;11&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/g&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/svg&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
 &lt;p&gt;Then you can create a file describing your Component Diagram which looks like this:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;digraph&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;SampleComponentDiagram&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;digraph&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;SampleComponentDiagram&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;n&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Sample Component Diagram&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
   &lt;span class=&quot;n&quot;&gt;fontname&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Helvetica&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
   &lt;span class=&quot;n&quot;&gt;fontsize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;10&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
@@ -802,23 +814,26 @@ The &lt;a href=&quot;https://jupyter.org/&quot;&gt;Jupyter&lt;/a&gt; project is 
 
   &lt;span class=&quot;n&quot;&gt;loggingJournal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;riak&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
 &lt;p&gt;Running the file through graphviz like this:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;dot &lt;span class=&quot;nt&quot;&gt;-Tsvg&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-O&lt;/span&gt; sample.dot
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;dot &lt;span class=&quot;nt&quot;&gt;-Tsvg&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-O&lt;/span&gt; sample.dot
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
 &lt;p&gt;Results in an image that looks like this:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/article_images/2012-08-10-uml-diagrams-from-graphviz/sample.dot.png&quot; alt=&quot;Sample Component Diagram&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/article_images/2012-08-10-uml-diagrams-from-graphviz/sample.dot.png&quot; alt=&quot;Sample Component Diagram&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Which is not too bad of a start. From here, there&amp;rsquo;s a few things I think I could do to make it even better.&lt;/p&gt;
+&lt;p&gt;Which is not too bad of a start. From here, there’s a few things I think I could do to make it even better.&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;Pre-process the dot file. Come up with an annotation to denote the type of image to include for a node without having to reference the image file.&lt;/li&gt;
-&lt;li&gt;Assign ids and classes as appropriate in the output which is handy for animating the resulting SVG or otherwise working with the SVG DOM later.&lt;/li&gt;
-&lt;li&gt;Post-process the SVG output to look nicer. Apply a better look to the sub-graphs, round the corners, add add gradients, etc. This sort of thing has been done before with XSLT.&lt;/li&gt;
+  &lt;li&gt;Pre-process the dot file. Come up with an annotation to denote the type of image to include for a node without having to reference the image file.&lt;/li&gt;
+  &lt;li&gt;Assign ids and classes as appropriate in the output which is handy for animating the resulting SVG or otherwise working with the SVG DOM later.&lt;/li&gt;
+  &lt;li&gt;Post-process the SVG output to look nicer. Apply a better look to the sub-graphs, round the corners, add add gradients, etc. This sort of thing has been done before with XSLT.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;I think this approach is reasonable for some UML types: component, use case, collaboration, activity, and maybe deployment. Sequence diagrams are different in layout and probably aren&amp;rsquo;t worth the effort to attempt.&lt;/p&gt;
+&lt;p&gt;I think this approach is reasonable for some UML types: component, use case, collaboration, activity, and maybe deployment. Sequence diagrams are different in layout and probably aren’t worth the effort to attempt.&lt;/p&gt;
 </description>
         <pubDate>Fri, 10 Aug 2012 00:00:00 -0500</pubDate>
         <link>http://markmorga.com/software/2012/08/10/uml-diagrams-from-graphviz.html</link>
@@ -839,55 +854,60 @@ The &lt;a href=&quot;https://jupyter.org/&quot;&gt;Jupyter&lt;/a&gt; project is 
     
       <item>
         <title>Making the Windows Shell Livable</title>
-        <description>&lt;p&gt;Back when I last &amp;ldquo;did&amp;rdquo; Windows development, .Net didn&amp;rsquo;t exist and the Windows CMD prompt was one of the first things I replaced (with Cygwin). Unfortunately, last time I helped someone with a Windows machine the Cygwin install didn&amp;rsquo;t go well - it seemed to be mired in the past, was slow, and the
+        <description>&lt;p&gt;Back when I last “did” Windows development, .Net didn’t exist and the Windows CMD prompt was one of the first things I replaced (with Cygwin). Unfortunately, last time I helped someone with a Windows machine the Cygwin install didn’t go well - it seemed to be mired in the past, was slow, and the
 git version included did not work for some reason with the repos we needed to use.&lt;/p&gt;
 
-&lt;p&gt;Fast forward to the last couple of weeks. I&amp;rsquo;m in the process of learning C# and .Net to help build a new framework with a team and I&amp;rsquo;m running Windows 7 in a VM. So I&amp;rsquo;m coming to Windows fresh after a break of almost 8 years. The good news so far has been than C# strikes me much better than Java did (when I last used it) and that the .Net environment is pretty easy to get learning.  Some DLL hell still exists (which I ran into using the ZeroMQ NuGet libraries), but for the most part it has been fairly pleasant. Unfortunately,
+&lt;p&gt;Fast forward to the last couple of weeks. I’m in the process of learning C# and .Net to help build a new framework with a team and I’m running Windows 7 in a VM. So I’m coming to Windows fresh after a break of almost 8 years. The good news so far has been than C# strikes me much better than Java did (when I last used it) and that the .Net environment is pretty easy to get learning.  Some DLL hell still exists (which I ran into using the ZeroMQ NuGet libraries), but for the most part it has been fairly pleasant. Unfortunately,
 the old Windows CMD prompt is unchanged from all those years ago. Despair sets in.&lt;/p&gt;
 
-&lt;p&gt;Then I learned about &lt;a href=&quot;http://technet.microsoft.com/en-us/library/bb978526.aspx&quot;&gt;PowerShell&lt;/a&gt;. After giving it a whirl and learning a thing or two, I&amp;rsquo;ve finally got a very usable shell configuration for Windows development that doesn&amp;rsquo;t make me weep every time I have to use it. Here&amp;rsquo;s how I have it configured.&lt;/p&gt;
+&lt;p&gt;Then I learned about &lt;a href=&quot;http://technet.microsoft.com/en-us/library/bb978526.aspx&quot;&gt;PowerShell&lt;/a&gt;. After giving it a whirl and learning a thing or two, I’ve finally got a very usable shell configuration for Windows development that doesn’t make me weep every time I have to use it. Here’s how I have it configured.&lt;/p&gt;
 
 &lt;p&gt;On my VM, PowerShell comes pre-installed, you may need to download it depending on your version of Windows.&lt;/p&gt;
 
-&lt;h2&gt;Console2&lt;/h2&gt;
+&lt;h2 id=&quot;console2&quot;&gt;Console2&lt;/h2&gt;
 
-&lt;p&gt;First I installed &lt;a href=&quot;http://sourceforge.net/projects/console/&quot;&gt;Console2&lt;/a&gt;. Console is a Windows GUI which wraps the shell of your choice and adds: multiple tabs, text editor-like text selection, different background types, alpha and color-key transparency, configurable font, different window styles, hot-key mapping, etc.  This step isn&amp;rsquo;t strictly necessary
+&lt;p&gt;First I installed &lt;a href=&quot;http://sourceforge.net/projects/console/&quot;&gt;Console2&lt;/a&gt;. Console is a Windows GUI which wraps the shell of your choice and adds: multiple tabs, text editor-like text selection, different background types, alpha and color-key transparency, configurable font, different window styles, hot-key mapping, etc.  This step isn’t strictly necessary
 but I like having a more responsive window for my shell and I use tabs often in iTerm on the mac.&lt;/p&gt;
 
-&lt;p&gt;I configure Console to use PowerShell by starting Console, selecting the Edit-&amp;gt;Settings menu, then selecting the PowerShell exe in the &amp;ldquo;Shell&amp;rdquo; chooser which on my machine is located at: &amp;ldquo;C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;I configure Console to use PowerShell by starting Console, selecting the Edit-&amp;gt;Settings menu, then selecting the PowerShell exe in the “Shell” chooser which on my machine is located at: “C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe”.&lt;/p&gt;
 
-&lt;h2&gt;Git&lt;/h2&gt;
+&lt;h2 id=&quot;git&quot;&gt;Git&lt;/h2&gt;
 
 &lt;p&gt;A lot of Windows developers seem GUI bound which is an unfair self-limitation to impose. I install the git version from the primary &lt;a href=&quot;http://git-scm.com&quot;&gt;Git&lt;/a&gt; site. &lt;a href=&quot;http://git-scm.com/download/win&quot;&gt;Download&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;When installing, Git offers you the choice to install git for Git Bash only or for general use. I chose the general purpose case.&lt;/p&gt;
 
-&lt;h2&gt;Configuring Git&lt;/h2&gt;
+&lt;h2 id=&quot;configuring-git&quot;&gt;Configuring Git&lt;/h2&gt;
 
-&lt;p&gt;Note to self - you need to configure git to use .ssh keys in order for things to work correctly with remote repos. I&amp;rsquo;ll post something on this later.&lt;/p&gt;
+&lt;p&gt;Note to self - you need to configure git to use .ssh keys in order for things to work correctly with remote repos. I’ll post something on this later.&lt;/p&gt;
 
-&lt;h2&gt;Installing Posh-Git into PowerShell&lt;/h2&gt;
+&lt;h2 id=&quot;installing-posh-git-into-powershell&quot;&gt;Installing Posh-Git into PowerShell&lt;/h2&gt;
 
 &lt;p&gt;Once you have git installed and configured, to get the most from Powershell, I recommend installing posh-git.&lt;/p&gt;
 
 &lt;p&gt;First set the security for your PowerShell instance. Run PowerShell as Administrator and type:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;&lt;span class=&quot;nf&quot;&gt;Set-ExecutionPolicy&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;RemoteSigned&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Confirm&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Make sure git can be run from your shell. If not, add it to your user&amp;rsquo;s PATH.&lt;/p&gt;
+
+&lt;div class=&quot;language-powershell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;Set-ExecutionPolicy&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;RemoteSigned&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Confirm&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Make sure git can be run from your shell. If not, add it to your user’s PATH.&lt;/p&gt;
 
 &lt;p&gt;Type the following commands to install PsGet and Posh-Git:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new-object&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Net.WebClient&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;DownloadString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;http://psget.net/GetPsGet.ps1&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;iex&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;install-module&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;posh-git&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;To make it available at all times, install it in the PowerShell profile script. On my machine, this is located in my Documents folder: &lt;code&gt;WindowsPowerShell\Microsoft.PowerShell_profile.ps1&lt;/code&gt;.&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;&lt;span class=&quot;nf&quot;&gt;Push-Location&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Split-Path&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Path&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;$MyInvocation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;MyCommand&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Definition&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Parent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+
+&lt;div class=&quot;language-powershell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new-object&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Net.WebClient&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;DownloadString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;http://psget.net/GetPsGet.ps1&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;iex&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;install-module&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;posh-git&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;To make it available at all times, install it in the PowerShell profile script. On my machine, this is located in my Documents folder: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;WindowsPowerShell\Microsoft.PowerShell_profile.ps1&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;language-powershell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;Push-Location&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Split-Path&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Path&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;$MyInvocation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;MyCommand&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Definition&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Parent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 
 &lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# Load posh-git module from current directory&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# Import-Module .\posh-git&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 
 &lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# If module is installed in a default location ($env:PSModulePath),&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# use this instead (see about_Modules for more information):&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Import-Module&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;posh-git&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Import-Module&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;posh-git&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 
 &lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# Set up a simple prompt, adding the git prompt parts inside git repos&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;prompt&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
@@ -896,23 +916,24 @@ but I like having a more responsive window for my shell and I use tabs often in 
     &lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# Reset color, which can be messed up by Enable-GitColors&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
     &lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;$Host&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;UI&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;RawUI&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;ForegroundColor&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$GitPromptSettings&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;DefaultForegroundColor&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 
-    &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Write-Host&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$pwd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-nonewline&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Write-Host&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$pwd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-nonewline&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 
-    &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Write-VcsStatus&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Write-VcsStatus&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 
     &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;nn&quot;&gt;global&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;LASTEXITCODE&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$realLASTEXITCODE&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
     &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&amp;gt; &quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 
-&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Enable-GitColors&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Enable-GitColors&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 
-&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Pop-Location&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Exit out of Console/PowerShell and the next time you start up, you&amp;rsquo;ll see extra functionality for Git while in directories that are Git repositories.&lt;/p&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Pop-Location&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Exit out of Console/PowerShell and the next time you start up, you’ll see extra functionality for Git while in directories that are Git repositories.&lt;/p&gt;
 
 &lt;p&gt;You can now use tab completion to complete both git commands and to fill in branch or remote names in addition to file names.&lt;/p&gt;
 
-&lt;p&gt;When you type &amp;ldquo;git status&amp;rdquo;, you will see color highlighting of files that helps understanding what is staged versus what isn&amp;rsquo;t yet.&lt;/p&gt;
+&lt;p&gt;When you type “git status”, you will see color highlighting of files that helps understanding what is staged versus what isn’t yet.&lt;/p&gt;
 
 &lt;p&gt;Have fun.  Let me know if you have any tips for PowerShell that I should pick up.&lt;/p&gt;
 </description>
@@ -937,50 +958,50 @@ but I like having a more responsive window for my shell and I use tabs often in 
         <title>Spoiler Free Avatar Review</title>
         <description>&lt;p&gt;The bottom line, it’s well worth seeing with a couple of caveats below.&lt;/p&gt;
 
-&lt;h2&gt;The Good:&lt;/h2&gt;
+&lt;h2 id=&quot;the-good&quot;&gt;The Good:&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;The most amazing visuals that I’ve seen in a movie.  The imagery is like seeing great science fiction paintings come to life.&lt;/li&gt;
-&lt;li&gt;The 3d on a 4k digital projection is by far the best I’ve ever seen.  It does take a bit to get used to and there are moments that look somewhat video game-like.&lt;/li&gt;
+  &lt;li&gt;The most amazing visuals that I’ve seen in a movie.  The imagery is like seeing great science fiction paintings come to life.&lt;/li&gt;
+  &lt;li&gt;The 3d on a 4k digital projection is by far the best I’ve ever seen.  It does take a bit to get used to and there are moments that look somewhat video game-like.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2&gt;The Bad:&lt;/h2&gt;
+&lt;h2 id=&quot;the-bad&quot;&gt;The Bad:&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;The story is pretty pedestrian and has a lot of cliches&lt;/li&gt;
-&lt;li&gt;Most of the characters are two dimensional&lt;/li&gt;
-&lt;li&gt;I would have liked aliens that were a little more alien and a little less “thinly veiled Native Americans”&lt;/li&gt;
+  &lt;li&gt;The story is pretty pedestrian and has a lot of cliches&lt;/li&gt;
+  &lt;li&gt;Most of the characters are two dimensional&lt;/li&gt;
+  &lt;li&gt;I would have liked aliens that were a little more alien and a little less “thinly veiled Native Americans”&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2&gt;The Really Bad:&lt;/h2&gt;
+&lt;h2 id=&quot;the-really-bad&quot;&gt;The Really Bad:&lt;/h2&gt;
 
 &lt;p&gt;Like the Dude said:&lt;/p&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;The Dude:&lt;/em&gt; I don’t see any connection to Vietnam, Walter.&lt;/p&gt;
+  &lt;p&gt;&lt;em&gt;The Dude:&lt;/em&gt; I don’t see any connection to Vietnam, Walter.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;Walter Sobchak:&lt;/em&gt; Well, there isn’t a literal connection, Dude.&lt;/p&gt;
+  &lt;p&gt;&lt;em&gt;Walter Sobchak:&lt;/em&gt; Well, there isn’t a literal connection, Dude.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;The Dude:&lt;/em&gt; Walter, face it, there isn’t any connection.&lt;/p&gt;
+  &lt;p&gt;&lt;em&gt;The Dude:&lt;/em&gt; Walter, face it, there isn’t any connection.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;ol&gt;
-&lt;li&gt;The Vietcong weren’t primarily armed with bows and arrows.&lt;/li&gt;
-&lt;li&gt;To imply (as this film seems to) that Al Qaeda and/or the Taliban were just innocent people sitting on a resource we wanted to steal is ridiculous.&lt;/li&gt;
-&lt;li&gt;To imply further that Al Qaeda or the Taliban were just declared terrorists (despite doing nothing to provoke us) to justify attacking them is outright offensive.&lt;/li&gt;
-&lt;li&gt;“Daisy Cutters?”  Seriously?  Afraid that the audience wouldn’t get your subtle effort at analogy?&lt;/li&gt;
+  &lt;li&gt;The Vietcong weren’t primarily armed with bows and arrows.&lt;/li&gt;
+  &lt;li&gt;To imply (as this film seems to) that Al Qaeda and/or the Taliban were just innocent people sitting on a resource we wanted to steal is ridiculous.&lt;/li&gt;
+  &lt;li&gt;To imply further that Al Qaeda or the Taliban were just declared terrorists (despite doing nothing to provoke us) to justify attacking them is outright offensive.&lt;/li&gt;
+  &lt;li&gt;“Daisy Cutters?”  Seriously?  Afraid that the audience wouldn’t get your subtle effort at analogy?&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;The class and race politics in Avatar are almost of caricature of rich, white, liberal guilt and self-loathing.&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Business (and the military**) = universally bad (hate nature, greedy, lie, cheat, steal)&lt;/li&gt;
-&lt;li&gt;Shamanistic and low technology people = universally good (love nature, peaceful – except, of course, when righteously killing the above)&lt;/li&gt;
+  &lt;li&gt;Business (and the military**) = universally bad (hate nature, greedy, lie, cheat, steal)&lt;/li&gt;
+  &lt;li&gt;Shamanistic and low technology people = universally good (love nature, peaceful – except, of course, when righteously killing the above)&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;** Except for the female soldier of color.&lt;/p&gt;
 
-&lt;h2&gt;The Bottom Line&lt;/h2&gt;
+&lt;h2 id=&quot;the-bottom-line&quot;&gt;The Bottom Line&lt;/h2&gt;
 
 &lt;p&gt;James Cameron spent tens of thousands of hours to build one of the most beautiful and engaging worlds yet seen in the movies.  Unfortunately, he should have spent a weekend with a real science fiction author to come up with a story deserving of that world.&lt;/p&gt;
 </description>
@@ -999,7 +1020,7 @@ but I like having a more responsive window for my shell and I use tabs often in 
     
       <item>
         <title>The Year In Review According to Dave Barry</title>
-        <description>&lt;p&gt;There&amp;rsquo;s too much comedy gold here to cherry pick.  &lt;a href=&quot;http://www.washingtonpost.com/wp-dyn/content/article/2008/12/19/AR2008121901343.html&quot;&gt;Read the whole thing!&lt;/a&gt;&lt;/p&gt;
+        <description>&lt;p&gt;There’s too much comedy gold here to cherry pick.  &lt;a href=&quot;http://www.washingtonpost.com/wp-dyn/content/article/2008/12/19/AR2008121901343.html&quot;&gt;Read the whole thing!&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 28 Dec 2008 00:00:00 -0600</pubDate>
         <link>http://markmorga.com/funny/2008/12/28/the-year-in-review-according-to-dave-barry.html</link>
@@ -1016,21 +1037,21 @@ but I like having a more responsive window for my shell and I use tabs often in 
     
       <item>
         <title>Film personality test</title>
-        <description>&lt;p&gt;via &lt;a href=&quot;http://www.kottke.org/08/12/film-personality-test%22&quot;&gt;Kottke&lt;/a&gt; via &lt;a href=&quot;http://nelsnelson.blogspot.com/2008/12/kottke-favorite-movie-per-director-re.html&quot;&gt;Nels&lt;/a&gt;&lt;/p&gt;
+        <description>&lt;p&gt;via &lt;a href=&quot;http://www.kottke.org/08/12/film-personality-test&amp;quot;&quot;&gt;Kottke&lt;/a&gt; via &lt;a href=&quot;http://nelsnelson.blogspot.com/2008/12/kottke-favorite-movie-per-director-re.html&quot;&gt;Nels&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Choose your favorite movie per director.&lt;/p&gt;
 
 &lt;p&gt;1) Joel Coen, 2) Wes Anderson, 3) Hal Ashby, 4) Kevin Smith, 5) Quentin Tarantino, 6) Stanley Kubrick, 7) P.T. Anderson, 8) Errol Morris&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;Joel Coen: The Big Lebowski&lt;/li&gt;
-&lt;li&gt;Wes Anderson: Rushmore&lt;/li&gt;
-&lt;li&gt;Hal Ashby: Being There (Full disclosure, I barely remember Shampoo and haven&amp;rsquo;t seen Harold and Maude)&lt;/li&gt;
-&lt;li&gt;Kevin Smith: Dogma&lt;/li&gt;
-&lt;li&gt;Quentin Tarantino: Kill Bill&lt;/li&gt;
-&lt;li&gt;Stanley Kubrick: The Shining&lt;/li&gt;
-&lt;li&gt;P.T. Anderson: Punch-Drunk Love&lt;/li&gt;
-&lt;li&gt;Errol Morris: The Thin Blue Line&lt;/li&gt;
+  &lt;li&gt;Joel Coen: The Big Lebowski&lt;/li&gt;
+  &lt;li&gt;Wes Anderson: Rushmore&lt;/li&gt;
+  &lt;li&gt;Hal Ashby: Being There (Full disclosure, I barely remember Shampoo and haven’t seen Harold and Maude)&lt;/li&gt;
+  &lt;li&gt;Kevin Smith: Dogma&lt;/li&gt;
+  &lt;li&gt;Quentin Tarantino: Kill Bill&lt;/li&gt;
+  &lt;li&gt;Stanley Kubrick: The Shining&lt;/li&gt;
+  &lt;li&gt;P.T. Anderson: Punch-Drunk Love&lt;/li&gt;
+  &lt;li&gt;Errol Morris: The Thin Blue Line&lt;/li&gt;
 &lt;/ol&gt;
 </description>
         <pubDate>Tue, 02 Dec 2008 00:00:00 -0600</pubDate>

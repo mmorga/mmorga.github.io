@@ -37,7 +37,7 @@
 
     <main class="content" role="main">
       <article class="post">
-                <div class="noarticleimage">
+          <div class="noarticleimage">
           
           <div class="post-meta">
             <h1 class="post-title">.htaccess and moving Wordpress</h1>
@@ -50,16 +50,17 @@
           </div>
         </div>
 
-                <section class="post-content">
+          <section class="post-content">
           <div class="post-reading">
             <i class="fa fa-clock-o"></i>
              <span class="post-reading-time"></span> read
           </div>
           <a name="topofpage"></a>
-          <p>Initially, I installed Wordpress to the /blog directory of my website.  After using it a while I decided that I really wanted nothing else at the top level of my website and moved my blog to the top level following the <a href="http://codex.wordpress.org/Giving_WordPress_Its_Own_Directory">directions here</a>.  Things worked just fine after the move except that anyone going to the old blog location <a href="http://www.markmorga.com/blog">http://www.markmorga.com/blog</a> would get the Wordpress header and footer with a 404 error message and no blog.</p>
+          <p>Initially, I installed Wordpress to the /blog directory of my website.  After using it a while I decided that I really wanted nothing else at the top level of my website and moved my blog to the top level following the <a href="http://codex.wordpress.org/Giving_WordPress_Its_Own_Directory">directions here</a>.  Things worked just fine after the move except that anyone going to the old blog location http://www.markmorga.com/blog would get the Wordpress header and footer with a 404 error message and no blog.</p>
 
-<p>I played with the .htaccess a bit myself with no luck.  What I wanted to do was to have any reference to /blog to be redirected to / but any /blog/&hellip; references still go to their destinations.  Eventually, I threw the problem over to <a href="http://anton.lr2.com/">Anton</a> to have a look at. He poked at it long enough to get angry at Apache and ultimately came up with the following solution:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;IfModule mod_rewrite.c&gt;
+<p>I played with the .htaccess a bit myself with no luck.  What I wanted to do was to have any reference to /blog to be redirected to / but any /blog/… references still go to their destinations.  Eventually, I threw the problem over to <a href="http://anton.lr2.com/">Anton</a> to have a look at. He poked at it long enough to get angry at Apache and ultimately came up with the following solution:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;IfModule mod_rewrite.c&gt;
         RewriteEngine On
         RewriteBase /
 
@@ -67,15 +68,15 @@
         RewriteRule blog/ / [R=301,L]
         RewriteRule blog/feed/ /feed/ [R=301,L]
 &lt;/IfModule&gt;
-</code></pre></div>
-<p>Here the first two lines turn on the rewrite engine for the base directory /.  The RewriteCond line indicates that these rules won&rsquo;t apply to URIs that match to /blog/* (where the * is one or more characters), The first RewriteRule rewrites the /blog URI to / and the second RewriteRule redirects the old feed URI to the new /feed location.</p>
+</code></pre></div></div>
+
+<p>Here the first two lines turn on the rewrite engine for the base directory /.  The RewriteCond line indicates that these rules won’t apply to URIs that match to /blog/* (where the * is one or more characters), The first RewriteRule rewrites the /blog URI to / and the second RewriteRule redirects the old feed URI to the new /feed location.</p>
 
 <p>Thanks, Anton!</p>
 
-
         </section>
 
-                  <footer class="post-footer">
+            <footer class="post-footer">
             <section class="share">
               <span style="font-size: 125%;font-weight:bold;">Share this post</span>
               
@@ -118,7 +119,8 @@ s.setAttribute('data-timestamp', +new Date());
 
           </footer>
 
-      </article>
+</article>
+
     </main>
 
     <!-- content end -->
@@ -129,7 +131,7 @@ s.setAttribute('data-timestamp', +new Date());
   <section class="poweredby">Proudly published with <a href="http://jekyllrb.com"> Jekyll</a></section>
   <a class="subscribe" href="/feed.xml"> <span class="tooltip"> <i class="fa fa-rss"></i> You should subscribe to my feed.</span></a>
   <div class="inner">
-    <section class="copyright">All content copyright <a href="/">Mark Morga</a> &copy; 2019<br>All rights reserved.</section>
+    <section class="copyright">All content copyright <a href="/">Mark Morga</a> &copy; 2023<br>All rights reserved.</section>
   </div>
 </footer>
 

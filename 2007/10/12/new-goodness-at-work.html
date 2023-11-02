@@ -37,7 +37,7 @@
 
     <main class="content" role="main">
       <article class="post">
-                <div class="noarticleimage">
+          <div class="noarticleimage">
           
           <div class="post-meta">
             <h1 class="post-title">New Goodness at Work</h1>
@@ -50,47 +50,49 @@
           </div>
         </div>
 
-                <section class="post-content">
+          <section class="post-content">
           <div class="post-reading">
             <i class="fa fa-clock-o"></i>
              <span class="post-reading-time"></span> read
           </div>
           <a name="topofpage"></a>
-          <p>For the last week, I&rsquo;ve been embedded with a group of contractors at work who have been developing some new internal tools using <a href="http://www.rubyonrails.org/">Ruby on Rails</a>.  I intend to blog a bit about what my experiences have been as time goes by so that I can capture the ideas that I&rsquo;ve been picking up from my time on the team.</p>
+          <p>For the last week, I’ve been embedded with a group of contractors at work who have been developing some new internal tools using <a href="http://www.rubyonrails.org/">Ruby on Rails</a>.  I intend to blog a bit about what my experiences have been as time goes by so that I can capture the ideas that I’ve been picking up from my time on the team.</p>
 
-<p>The team practices <a href="http://www.extremeprogramming.org">Extreme Programming</a> which is the software development methodology which I&rsquo;ve been interested in for the last six or seven years.  It was the reason that I sought out the job with Symantec a few years ago and nothing that I&rsquo;ve done in the time since has compared in regard to my productivity and my enjoyment at work.</p>
+<p>The team practices <a href="http://www.extremeprogramming.org">Extreme Programming</a> which is the software development methodology which I’ve been interested in for the last six or seven years.  It was the reason that I sought out the job with Symantec a few years ago and nothing that I’ve done in the time since has compared in regard to my productivity and my enjoyment at work.</p>
 
-<p>First of all, the quality of the team is immediately evident.  They are a group of very committed and focussed individuals.  They spend more time than most teams ensuring that the object models and code are as clean, simple, and organized as possible.  When they find a way of improving some aspect of their work, they take the time to build a tool to make that task simpler, then make sure everyone on the team has access to the tool.  For instance, in the past week, one of the development pairs (XP involves pair programming) began working on an <a href="http://www.ubuntu.com/">Ubuntu Linux</a> dev box instead of the standard <a href="http://www.apple.com/macmini/">Mac Mini</a> stations.  They had identified the <a href="http://www.jedit.org/">JEdit</a> editor as a suitable candidate to replace <a href="http://macromates.com/">TextMate</a> on the Linux platform.  TextMate provides several features that JEdit doesn&rsquo;t have out of the box and they (or other members of their organization) have developed several Bundles for TextMate that improve their efficiency in coding.  The leader of the Linux effort took the time to identify identical plugins for JEdit and wrote one or more plugins to provide identical (or similar) functionality for the most used TextMate features.  Too often, I&rsquo;ve seen programmers either suffering silently with inadequate tools, or building small tools for themselves without sharing them with others.  One other thing about editors - this team really knows its editing tools - I&rsquo;m constantly asking what the key combo was that my partner used to do some cool operation in the text that otherwise I might have done manually.  This was a thought from <a href="http://www.amazon.com/Pragmatic-Programmer-Journeyman-Master/dp/020161622X/ref=pd_bbs_sr_2/103-1315520-0115803?ie=UTF8&s=books&qid=1192231071&sr=8-2">The Pragmatic Programmer</a> that these guys have really taken to heart.</p>
+<p>First of all, the quality of the team is immediately evident.  They are a group of very committed and focussed individuals.  They spend more time than most teams ensuring that the object models and code are as clean, simple, and organized as possible.  When they find a way of improving some aspect of their work, they take the time to build a tool to make that task simpler, then make sure everyone on the team has access to the tool.  For instance, in the past week, one of the development pairs (XP involves pair programming) began working on an <a href="http://www.ubuntu.com/">Ubuntu Linux</a> dev box instead of the standard <a href="http://www.apple.com/macmini/">Mac Mini</a> stations.  They had identified the <a href="http://www.jedit.org/">JEdit</a> editor as a suitable candidate to replace <a href="http://macromates.com/">TextMate</a> on the Linux platform.  TextMate provides several features that JEdit doesn’t have out of the box and they (or other members of their organization) have developed several Bundles for TextMate that improve their efficiency in coding.  The leader of the Linux effort took the time to identify identical plugins for JEdit and wrote one or more plugins to provide identical (or similar) functionality for the most used TextMate features.  Too often, I’ve seen programmers either suffering silently with inadequate tools, or building small tools for themselves without sharing them with others.  One other thing about editors - this team really knows its editing tools - I’m constantly asking what the key combo was that my partner used to do some cool operation in the text that otherwise I might have done manually.  This was a thought from <a href="http://www.amazon.com/Pragmatic-Programmer-Journeyman-Master/dp/020161622X/ref=pd_bbs_sr_2/103-1315520-0115803?ie=UTF8&amp;s=books&amp;qid=1192231071&amp;sr=8-2">The Pragmatic Programmer</a> that these guys have really taken to heart.</p>
 
-<p>They are obsessed by testing.  They test every conceivable aspect of the code (always with automated tests) and use <a href="http://en.wikipedia.org/wiki/Test-driven_development">Test Driven Design (TDD)</a> exclusively.  This provides many code quality benefits, but most developers don&rsquo;t have the self-discipline to accomplish this.  The pair programming that they practice is also helpful in this regard (more on this below).  They go beyond the standard Ruby on Rails ways of doing automated testing in the following ways.  They use the <a href="http://unit-test-ar.rubyforge.org/">UnitRecord</a>, <a href="http://mocha.rubyforge.org/">Mocha</a>, and <a href="http://dust.rubyforge.org/">Dust</a> testing extension libraries.</p>
+<p>They are obsessed by testing.  They test every conceivable aspect of the code (always with automated tests) and use <a href="http://en.wikipedia.org/wiki/Test-driven_development">Test Driven Design (TDD)</a> exclusively.  This provides many code quality benefits, but most developers don’t have the self-discipline to accomplish this.  The pair programming that they practice is also helpful in this regard (more on this below).  They go beyond the standard Ruby on Rails ways of doing automated testing in the following ways.  They use the <a href="http://unit-test-ar.rubyforge.org/">UnitRecord</a>, <a href="http://mocha.rubyforge.org/">Mocha</a>, and <a href="http://dust.rubyforge.org/">Dust</a> testing extension libraries.</p>
 
 <p>UnitRecord is a tool which permits removing database access from your ActiveRecord based classes.  This greatly reduces the time it takes for each test to run - which is a good thing when you have the number of tests that this team produces.</p>
 
 <p>Dust is a tool which permits you to write test cases like this:</p>
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">functional_tests</span> <span class="k">do</span>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">functional_tests</span> <span class="k">do</span>
   <span class="nb">test</span> <span class="s2">"given no name, when validated, then error is in the objects error collection"</span> <span class="k">do</span>
     <span class="n">instance</span> <span class="o">=</span> <span class="no">Klass</span><span class="p">.</span><span class="nf">new</span>
     <span class="n">instance</span><span class="p">.</span><span class="nf">valid?</span>
     <span class="n">assert_equal</span> <span class="s2">"can't be empty"</span><span class="p">,</span> <span class="n">instance</span><span class="p">.</span><span class="nf">errors</span><span class="p">.</span><span class="nf">on</span><span class="p">(</span><span class="ss">:name</span><span class="p">)</span>
   <span class="k">end</span>
 <span class="k">end</span>
-</code></pre></div>
-<p>instead of deriving a class from <code>Test::Unit::TestCase</code> and adding methods that start with <code>test_</code></p>
+</code></pre></div></div>
 
-<p>Mocha is my favorite of the new tools.  It is a library which provides the ability to mock and stub out classes and methods in a manner similar to jMock (which it is inspired by), but it provides a cool feature that I don&rsquo;t believe that jMock does:  it &ldquo;&hellip;allows you to mock and stub methods on real (non-mock) classes and instances. &rdquo;  This is a big time saver and lets you isolation test classes without having to refactor the code to avoid dependencies.</p>
+<p>instead of deriving a class from <code class="language-plaintext highlighter-rouge">Test::Unit::TestCase</code> and adding methods that start with <code class="language-plaintext highlighter-rouge">test_</code></p>
+
+<p>Mocha is my favorite of the new tools.  It is a library which provides the ability to mock and stub out classes and methods in a manner similar to jMock (which it is inspired by), but it provides a cool feature that I don’t believe that jMock does:  it “…allows you to mock and stub methods on real (non-mock) classes and instances. “  This is a big time saver and lets you isolation test classes without having to refactor the code to avoid dependencies.</p>
 
 <p>For <a href="http://en.wikipedia.org/wiki/Pair_programming">pair programming</a>, the team pairs share a common mac mini which has two monitors, keyboards, and mice (the monitors are mirrored so each developer looks at his own screen and sees the same as his partner).  To share time at the keyboard, they play a game which they refer to as ping-pong.  The first developer writes a test which the second must write code to satisfy.  The second developer then writes a test for the first developer to write code.  In this manner, each developer gets practice writing code and tests.</p>
 
-<p>The team has an obsession about simplicity.  I value the simplest solutions, but often I have caught myself planning code for the future when I learn that my partner has a simpler way which involves less complexity.  For example:  don&rsquo;t add a database table unless necessary - write a hard-coded class instead.</p>
+<p>The team has an obsession about simplicity.  I value the simplest solutions, but often I have caught myself planning code for the future when I learn that my partner has a simpler way which involves less complexity.  For example:  don’t add a database table unless necessary - write a hard-coded class instead.</p>
 
 <p>This insistence on simplicity extends to maintenance as well.  When the stories for the iteration have been written, one of the pairs was tasked with cleaning up a class in one of our applications which had become a little cluttered over time.  The team briefly discussed potential candidates for cleanup and once agreement was reached, the pair started on the refactoring activity.</p>
 
-<p>It has been a good week at work and I&rsquo;m looking forward to other ideas that I can steal from them in the future - like <a href="http://www.gotapi.com/html">GotAPI</a> a handy website reference of most common web programming and languages.</p>
+<p>It has been a good week at work and I’m looking forward to other ideas that I can steal from them in the future - like <a href="http://www.gotapi.com/html">GotAPI</a> a handy website reference of most common web programming and languages.</p>
 
 
         </section>
 
-                  <footer class="post-footer">
+            <footer class="post-footer">
             <section class="share">
               <span style="font-size: 125%;font-weight:bold;">Share this post</span>
               
@@ -133,7 +135,8 @@ s.setAttribute('data-timestamp', +new Date());
 
           </footer>
 
-      </article>
+</article>
+
     </main>
 
     <!-- content end -->
@@ -144,7 +147,7 @@ s.setAttribute('data-timestamp', +new Date());
   <section class="poweredby">Proudly published with <a href="http://jekyllrb.com"> Jekyll</a></section>
   <a class="subscribe" href="/feed.xml"> <span class="tooltip"> <i class="fa fa-rss"></i> You should subscribe to my feed.</span></a>
   <div class="inner">
-    <section class="copyright">All content copyright <a href="/">Mark Morga</a> &copy; 2019<br>All rights reserved.</section>
+    <section class="copyright">All content copyright <a href="/">Mark Morga</a> &copy; 2023<br>All rights reserved.</section>
   </div>
 </footer>
 

@@ -37,7 +37,7 @@
 
     <main class="content" role="main">
       <article class="post">
-                <div class="article-image">
+          <div class="article-image">
           
           <div class="post-image-image" style="background-image: url(/assets/images/golden-gate-splash.jpg)"></div>
           
@@ -55,63 +55,62 @@
           </div>
         </div>
 
-                <section class="post-content">
+          <section class="post-content">
           <div class="post-reading">
             <i class="fa fa-clock-o"></i>
              <span class="post-reading-time"></span> read
           </div>
           <a name="topofpage"></a>
-          <p>Over the last month or so, I&rsquo;ve been working with <a href="https://nodejs.org/en/">Node.js</a> to build a tool chain, <a href="https://github.com/rackerlabs/generator-ramlapi">Generator RAML API</a> for myself and my team as we work on building <a href="http://raml.org/">RAML</a> API docs.</p>
+          <p>Over the last month or so, I’ve been working with <a href="https://nodejs.org/en/">Node.js</a> to build a tool chain, <a href="https://github.com/rackerlabs/generator-ramlapi">Generator RAML API</a> for myself and my team as we work on building <a href="http://raml.org/">RAML</a> API docs.</p>
 
 <p>Given that the final HTML documentation tool that we use was based on <a href="https://github.com/kevinrenskers/raml2html">raml2html</a> with was a Node.js tool and that our schemas are usually JSON, I thought it would be good to keep the tool chain in Node.js to make it easier to install and use.</p>
 
 <p>The plan was to use a Node-based build tool to chain together several existing Node libraries to validate the RAML, validate the JSON schema referenced in the RAML and then build the HTML docs from the contract.</p>
 
-<p>Initially, I used <a href="http://gruntjs.com/">Grunt</a> to build the tool chain. I built a few Grunt plugins for some of the libraries that I was using. The tooling worked some of the time, but when it failed, the nature of Grunt&rsquo;s approach to configuration instead of code made it difficult for me to determine where the problems were.</p>
+<p>Initially, I used <a href="http://gruntjs.com/">Grunt</a> to build the tool chain. I built a few Grunt plugins for some of the libraries that I was using. The tooling worked some of the time, but when it failed, the nature of Grunt’s approach to configuration instead of code made it difficult for me to determine where the problems were.</p>
 
 <p>I switched to <a href="http://gulpjs.com/">Gulp</a> because I liked the fact that Gulp was code-based instead of configuration object based. I was also was interesting to play with the Gulp stream concept. That had no real value for this in generator-ramlapi*, but I can see it really being valuable in prepping a web site for deploy.</p>
 
 <p>* it does speed things up by a few seconds by preventing the same RAML files being loaded over and over.</p>
 
-<hr>
+<hr />
 
-<p>I learned a lot (and I&rsquo;m still learning). JavaScript in my opinion is <a href="http://www.ecma-international.org/publications/standards/Ecma-262.htm">getting better</a>, but the following things make it hard to really embrace:</p>
-
-<ul>
-<li>Quality of <a href="https://www.npmjs.com/">npm</a> packages. My experience is anecdotal, but compared to my experiences in other languages, the quality of shared packages is not very good.</li>
-<li>The <a href="https://nodejs.org/en/about/">asynchronous NodeJs model</a> is inherently hard for developers to use correctly.
+<p>I learned a lot (and I’m still learning). JavaScript in my opinion is <a href="http://www.ecma-international.org/publications/standards/Ecma-262.htm">getting better</a>, but the following things make it hard to really embrace:</p>
 
 <ul>
-<li>It pushes a problem that the language should solve onto the developer&rsquo;s shoulders. The same asynchronous coding pattern in other languages like <a href="http://twistedmatrix.com/">Python</a> have the same problem.</li>
-<li>Promises vs callbacks. The <a href="https://www.npmjs.com/package/async">async</a> npm package does provide some nice patterns that make it better but doesn&rsquo;t solve the problem. An easy mistake that I made more than once is passing a callback function to an asynchronous function when it returned a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">promise</a> (or vice versa). The result is a silent failure where your callback is never called.</li>
-</ul></li>
-<li>Error handling defaults (exceptions, error returns, error events) are bad and hard to implement correctly.
-
-<ul>
-<li>Bad:
-
-<ul>
-<li>because errors tended to get silently swallowed</li>
-<li>unless you&rsquo;ve written all of the code yourself, you need to use a patchwork version of all styles</li>
-</ul></li>
-<li>Hard to implement correctly because due to the dynamic nature of Node.js, it&rsquo;s easy to handle an error of the wrong sort and miss errors.</li>
-</ul></li>
+  <li>Quality of <a href="https://www.npmjs.com/">npm</a> packages. My experience is anecdotal, but compared to my experiences in other languages, the quality of shared packages is not very good.</li>
+  <li>The <a href="https://nodejs.org/en/about/">asynchronous NodeJs model</a> is inherently hard for developers to use correctly.
+    <ul>
+      <li>It pushes a problem that the language should solve onto the developer’s shoulders. The same asynchronous coding pattern in other languages like <a href="http://twistedmatrix.com/">Python</a> have the same problem.</li>
+      <li>Promises vs callbacks. The <a href="https://www.npmjs.com/package/async">async</a> npm package does provide some nice patterns that make it better but doesn’t solve the problem. An easy mistake that I made more than once is passing a callback function to an asynchronous function when it returned a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">promise</a> (or vice versa). The result is a silent failure where your callback is never called.</li>
+    </ul>
+  </li>
+  <li>Error handling defaults (exceptions, error returns, error events) are bad and hard to implement correctly.
+    <ul>
+      <li>Bad:
+        <ul>
+          <li>because errors tended to get silently swallowed</li>
+          <li>unless you’ve written all of the code yourself, you need to use a patchwork version of all styles</li>
+        </ul>
+      </li>
+      <li>Hard to implement correctly because due to the dynamic nature of Node.js, it’s easy to handle an error of the wrong sort and miss errors.</li>
+    </ul>
+  </li>
 </ul>
 
 <p>That being said, there are a few things that I like a lot in JavaScript.</p>
 
 <ul>
-<li>The prototype system is really powerful and makes some things easier to do than they are in Python or Ruby.</li>
-<li>There&rsquo;s the capability in the language to build Object Oriented software in a way that isn&rsquo;t actually Class Oriented software.</li>
-<li>Performance is really good for such a dynamic language.</li>
+  <li>The prototype system is really powerful and makes some things easier to do than they are in Python or Ruby.</li>
+  <li>There’s the capability in the language to build Object Oriented software in a way that isn’t actually Class Oriented software.</li>
+  <li>Performance is really good for such a dynamic language.</li>
 </ul>
 
-<p>For now though, Node.js isn&rsquo;t likely to become one of the top tools in my toolbox.</p>
-
+<p>For now though, Node.js isn’t likely to become one of the top tools in my toolbox.</p>
 
         </section>
 
-                  <footer class="post-footer">
+            <footer class="post-footer">
             <section class="share">
               <span style="font-size: 125%;font-weight:bold;">Share this post</span>
               
@@ -154,7 +153,8 @@ s.setAttribute('data-timestamp', +new Date());
 
           </footer>
 
-      </article>
+</article>
+
     </main>
 
     <!-- content end -->
@@ -165,7 +165,7 @@ s.setAttribute('data-timestamp', +new Date());
   <section class="poweredby">Proudly published with <a href="http://jekyllrb.com"> Jekyll</a></section>
   <a class="subscribe" href="/feed.xml"> <span class="tooltip"> <i class="fa fa-rss"></i> You should subscribe to my feed.</span></a>
   <div class="inner">
-    <section class="copyright">All content copyright <a href="/">Mark Morga</a> &copy; 2019<br>All rights reserved.</section>
+    <section class="copyright">All content copyright <a href="/">Mark Morga</a> &copy; 2023<br>All rights reserved.</section>
   </div>
 </footer>
 
