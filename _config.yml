@@ -50,13 +50,6 @@ social:
     share_title:
     share_link:
 
-  - icon:	google-plus
-    url:	https://plus.google.com/+MarkMorga
-    desc:	Add me on google+
-    share_url:
-    share_title:
-    share_link:
-
 exclude:
   - bin
   - Gemfile
