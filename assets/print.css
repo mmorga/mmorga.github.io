@@ -1,12 +1,12 @@
-.article-image{
-page-break-after:never
+.article-image {
+  page-break-after: never;
 }
 .post-content,
-.bottom-teaser.cf{
-  padding-top:0!important
+.bottom-teaser.cf {
+  padding-top: 0 !important;
 }
-.bottom-teaser.cf{
-  margin:0
+.bottom-teaser.cf {
+  margin: 0;
 }
 .post-reading,
 .bottom-teaser.cf .is-right,
@@ -18,6 +18,6 @@ page-break-after:never
 .home-template .post-meta .post-tags-set,
 .pagination,
 .author-image,
-.subscribe icon-feed{
-  display:none;
+.subscribe icon-feed {
+  display: none;
 }
