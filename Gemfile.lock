@@ -1,8 +1,9 @@
-PATH
-  remote: /Users/markmorga/Documents/projects/comanche-hill-jekyll-theme
+GIT
+  remote: https://github.com/mmorga/comanche-hill-jekyll-theme.git
+  revision: a0776c614a80538ad5552451222ef1ee8d9f6036
   specs:
     comanche-hill-jekyll-theme (1.0.0)
-      jekyll (~> 4.3)
+      jekyll (~> 4.4)
 
 GEM
   remote: https://rubygems.org/

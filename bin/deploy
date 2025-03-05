@@ -1,0 +1,17 @@
+#!/bin/bash
+set -x
+set -e
+set -o pipefail
+
+bundle exec jekyll build
+
+if [ ! -e _site ]; then
+  echo -e "\nJekyll didn't generate anything in _site!"
+  exit 1
+fi
+
+cd _site
+
+git add .
+git commit -am "new version $(date)" --allow-empty
+git push

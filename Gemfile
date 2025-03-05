@@ -7,7 +7,6 @@ gem "jekyll-paginate"
 gem "jekyll-plantuml"
 gem "jekyll_figure"
 gem "jemoji"
-gem "comanche-hill-jekyll-theme", path: "/Users/markmorga/Documents/projects/comanche-hill-jekyll-theme"
-
+gem "comanche-hill-jekyll-theme", git: "https://github.com/mmorga/comanche-hill-jekyll-theme.git"
 gem "redcarpet"
 gem "bourbon"

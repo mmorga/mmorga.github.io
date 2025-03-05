@@ -1,6 +1,6 @@
 .bundle
 .DS_Store
-_site
+_site/
 .sass-cache
 .gist-cache
 .pygments-cache
@@ -8,3 +8,5 @@ markmorga.sublime-workspace
 node_modules
 .jekyll-metadata
 bin/
+.jekyll-cache/
+.ruby-lsp/
