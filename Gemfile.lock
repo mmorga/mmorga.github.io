@@ -1,8 +1,8 @@
 GIT
   remote: https://github.com/mmorga/comanche-hill-jekyll-theme.git
-  revision: a0776c614a80538ad5552451222ef1ee8d9f6036
+  revision: 596d74b67afa6d59618540dc700ff56a62f33835
   specs:
-    comanche-hill-jekyll-theme (1.0.0)
+    comanche-hill-jekyll-theme (1.0.1)
       jekyll (~> 4.4)
 
 GEM
@@ -40,7 +40,7 @@ GEM
     ffi (1.17.1-x86_64-darwin)
     forwardable-extended (2.6.0)
     gemoji (4.1.0)
-    google-protobuf (4.29.3-x86_64-darwin)
+    google-protobuf (4.30.0-x86_64-darwin)
       bigdecimal
       rake (>= 13)
     html-pipeline (2.14.3)
@@ -101,7 +101,7 @@ GEM
     mime-types (3.6.0)
       logger
       mime-types-data (~> 3.2015)
-    mime-types-data (3.2025.0220)
+    mime-types-data (3.2025.0304)
     minitest (5.25.4)
     nokogiri (1.18.3-x86_64-darwin)
       racc (~> 1.4)
